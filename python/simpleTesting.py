@@ -173,11 +173,17 @@ def processWitness(inputWitness, id):
 def tokenizeFiles(name, matchString):
     # 2022-06-21 ebb: FIX this. I'm getting a TypeError: string indices must be integers
     # change to with open() syntax we had before?
-    f1818file = open(name, 'rb')
-    f1823file = open('../simpleInput/1823_fullFlat_' + matchString, 'rb')
-    fThomasfile = open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb')
-    f1831file = open('../simpleInput/1831_fullFlat_' + matchString, 'rb')
-    fMSfile = open('../simpleInput/msColl_' + matchString, 'rb')
+    #f1818file = open(name, 'rb')
+    #f1823file = open('../simpleInput/1823_fullFlat_' + matchString, 'rb')
+    #fThomasfile = open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb')
+    #f1831file = open('../simpleInput/1831_fullFlat_' + matchString, 'rb')
+    #fMSfile = open('../simpleInput/msColl_' + matchString, 'rb')
+    #inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
+    f1818file = '../simpleInput/1823_fullFlat_' + matchString
+    f1823file = '../simpleInput/1823_fullFlat_' + matchString
+    fThomasfile = '../simpleInput/Thomas_fullFlat_' + matchString
+    f1831file = '../simpleInput/1831_fullFlat_' + matchString
+    fMSfile = '../simpleInput/msColl_' + matchString
     inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
     inputIDs = ['f1818', 'f1823', 'fThomas', 'f1831', 'fMS']
     for f, i in zip(inputFiles, inputIDs):
@@ -186,21 +192,22 @@ def tokenizeFiles(name, matchString):
         return tokenList
 
 def tokenize(inputFile):
-    return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+        return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
 
 for name in glob.glob('../simpleInput/1818_fullFlat_*'):
     try:
         matchString = name.split("fullFlat_", 1)[1]
         # ebb: above gets C30.xml for example
-        matchStr = matchString.split(".", 1)[0]
+       # matchStr = matchString.split(".", 1)[0]
         # ebb: above strips off the file extension
         tokenLists = tokenizeFiles(name, matchString)
-        collation_input = {"witnesses": tokenLists}
-        outputFile = open('../simpleOutput/collation_' + matchString, 'w')
+        print(tokenLists)
+       # collation_input = {"witnesses": tokenLists}
+       # outputFile = open('../simpleOutput/collation_' + matchString, 'w')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
-        table = collate(collation_input, output='xml', segmentation=True)
-        print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+       # table = collate(collation_input, output='xml', segmentation=True)
+       # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
         # print(table, file=outputFile)
     except IOError:
         pass
