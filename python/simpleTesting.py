@@ -1,3 +1,5 @@
+from typing import BinaryIO
+
 from collatex import *
 from xml.dom import pulldom
 import re
@@ -179,17 +181,23 @@ def tokenizeFiles(name, matchString):
     #f1831file = open('../simpleInput/1831_fullFlat_' + matchString, 'rb')
     #fMSfile = open('../simpleInput/msColl_' + matchString, 'rb')
     #inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
-    f1818file = '../simpleInput/1823_fullFlat_' + matchString
-    f1823file = '../simpleInput/1823_fullFlat_' + matchString
-    fThomasfile = '../simpleInput/Thomas_fullFlat_' + matchString
-    f1831file = '../simpleInput/1831_fullFlat_' + matchString
-    fMSfile = '../simpleInput/msColl_' + matchString
-    inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
-    inputIDs = ['f1818', 'f1823', 'fThomas', 'f1831', 'fMS']
-    for f, i in zip(inputFiles, inputIDs):
-        tokens = tokenize(f)
-        tokenList = processWitness(tokens, i)
-        return tokenList
+    f1823file: BinaryIO
+    with open(name, 'rb') as f1818file, \
+            open('../collationChunks/1823_fullFlat_' + matchString, 'rb') as f1823file, \
+            open('../collationChunks/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
+            open('../collationChunks/1831_fullFlat_' + matchString, 'rb') as f1831file, \
+            open('../collationChunks/msColl_' + matchString, 'rb') as fMSfile:
+    # f1818file = '../simpleInput/1823_fullFlat_' + matchString
+    # f1823file = '../simpleInput/1823_fullFlat_' + matchString
+    # fThomasfile = '../simpleInput/Thomas_fullFlat_' + matchString
+    # f1831file = '../simpleInput/1831_fullFlat_' + matchString
+    # fMSfile = '../simpleInput/msColl_' + matchString
+        inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
+        inputIDs = ['f1818', 'f1823', 'fThomas', 'f1831', 'fMS']
+        for f, i in zip(inputFiles, inputIDs):
+            tokens = tokenize(f)
+            tokenList = processWitness(tokens, i)
+            return tokenList
 
 def tokenize(inputFile):
         return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
@@ -201,14 +209,14 @@ for name in glob.glob('../simpleInput/1818_fullFlat_*'):
        # matchStr = matchString.split(".", 1)[0]
         # ebb: above strips off the file extension
         tokenLists = tokenizeFiles(name, matchString)
-        print(tokenLists)
-       # collation_input = {"witnesses": tokenLists}
-       # outputFile = open('../simpleOutput/collation_' + matchString, 'w')
+        collation_input = {"witnesses": tokenLists}
+        outputFile = open('../simpleOutput/collation_' + matchString, 'w')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
-       # table = collate(collation_input, output='xml', segmentation=True)
-       # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
-        # print(table, file=outputFile)
+        print(collation_input)
+        table = collate(collation_input, output='xml', segmentation=True)
+        print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+
     except IOError:
         pass
 
