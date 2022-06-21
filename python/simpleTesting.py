@@ -173,31 +173,25 @@ def processWitness(inputWitness, id):
     return {'id': id, 'tokens': [processToken(token) for token in inputWitness]}
 
 def tokenizeFiles(name, matchString):
-    # 2022-06-21 ebb: FIX this. I'm getting a TypeError: string indices must be integers
-    # change to with open() syntax we had before?
-    #f1818file = open(name, 'rb')
-    #f1823file = open('../simpleInput/1823_fullFlat_' + matchString, 'rb')
-    #fThomasfile = open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb')
-    #f1831file = open('../simpleInput/1831_fullFlat_' + matchString, 'rb')
-    #fMSfile = open('../simpleInput/msColl_' + matchString, 'rb')
-    #inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
-    f1823file: BinaryIO
     with open(name, 'rb') as f1818file, \
-            open('../collationChunks/1823_fullFlat_' + matchString, 'rb') as f1823file, \
-            open('../collationChunks/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
-            open('../collationChunks/1831_fullFlat_' + matchString, 'rb') as f1831file, \
-            open('../collationChunks/msColl_' + matchString, 'rb') as fMSfile:
-    # f1818file = '../simpleInput/1823_fullFlat_' + matchString
-    # f1823file = '../simpleInput/1823_fullFlat_' + matchString
-    # fThomasfile = '../simpleInput/Thomas_fullFlat_' + matchString
-    # f1831file = '../simpleInput/1831_fullFlat_' + matchString
-    # fMSfile = '../simpleInput/msColl_' + matchString
-        inputFiles = [f1818file, f1823file, fThomasfile, f1831file, fMSfile]
-        inputIDs = ['f1818', 'f1823', 'fThomas', 'f1831', 'fMS']
-        for f, i in zip(inputFiles, inputIDs):
-            tokens = tokenize(f)
-            tokenList = processWitness(tokens, i)
-            return tokenList
+            open('../simpleInput/1823_fullFlat_' + matchString, 'rb') as f1823file, \
+            open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
+            open('../simpleInput/1831_fullFlat_' + matchString, 'rb') as f1831file, \
+            open('../simpleInput/msColl_' + matchString, 'rb') as fMSfile:
+        f1818_tokens = tokenize(f1818file)
+        f1823_tokens = tokenize(f1823file)
+        fThomas_tokens = tokenize(fThomasfile)
+        f1831_tokens = tokenize(f1831file)
+        fMS_tokens = tokenize(fMSfile)
+
+        f1818_tokenlist = processWitness(f1818_tokens, 'f1818')
+        fThomas_tokenlist = processWitness(fThomas_tokens, 'fThomas')
+        f1823_tokenlist = processWitness(f1823_tokens, 'f1823')
+        f1831_tokenlist = processWitness(f1831_tokens, 'f1831')
+        fMS_tokenlist = processWitness(fMS_tokens, 'fMS')
+
+        return [f1818_tokenlist, f1823_tokenlist, fThomas_tokenlist, f1831_tokenlist, fMS_tokenlist]
+
 
 def tokenize(inputFile):
         return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
@@ -210,11 +204,12 @@ for name in glob.glob('../simpleInput/1818_fullFlat_*'):
         # ebb: above strips off the file extension
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
+        print(collation_input)
         outputFile = open('../simpleOutput/collation_' + matchString, 'w')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
-        print(collation_input)
         table = collate(collation_input, output='xml', segmentation=True)
+        print(table)
         print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
 
     except IOError:
