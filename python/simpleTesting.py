@@ -59,6 +59,8 @@ RE_CLOSEQT = re.compile(r'”')
 RE_GAP = re.compile(r'<gap\s[^<]*/>')
 # &lt;milestone unit="tei:p"/&gt;
 RE_sgaP = re.compile(r'<milestone\sunit="tei:p"[^<]*/>')
+# NEW REGEX PATTERNS HERE
+RE_MOD = re.compile(r'<mod\s[^<]*/>')
 
 # ebb: RE_MDEL = those pesky deletions of two letters or less that we want to normalize out of the collation, but preserve in the output.
 
@@ -75,12 +77,12 @@ RE_sgaP = re.compile(r'<milestone\sunit="tei:p"[^<]*/>')
 # 2017-05-30 ebb: collated but the tags are not). Decision to make the comments into self-closing elements with text
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
-ignore = ['sourceDoc', 'xml', 'comment', 'w', 'mod', 'anchor', 'include', 'delSpan', 'addSpan', 'add', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
+# ignore = ['mod', 'add', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
 # 2021-09-06 ebb: Let's try putting pb and lb up in ignore where I think they belong.
 # 2021-09-06: ebb: NO. that's a problem because we eliminate pb and lb from the collation output,
 # and we need them for location markers.
 blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'note', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['lb', 'gap', 'del',  'hi']
+inlineEmpty = ['lb', 'gap', 'del',  'hi', 'mod', 'add']
 # 2018-05-12 (mysteriously removed but reinstated 2018-09-27) ebb: I'm setting a white space on either side of the inlineEmpty elements in line 103
 # 2018-07-20: ebb: CHECK: are there white spaces on either side of empty elements in the output?
 inlineContent = ['metamark', 'mdel', 'shi']
@@ -103,10 +105,10 @@ def extract(input_xml):
     output = ''
     for event, node in doc:
         # elements to ignore: xml
-        if event == pulldom.START_ELEMENT and node.localName in ignore:
-            continue
+        # if event == pulldom.START_ELEMENT and node.localName in ignore:
+        #    continue
         # copy comments intact
-        elif event == pulldom.COMMENT:
+        if event == pulldom.COMMENT:
             doc.expandNode(node)
             output += node.toxml()
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
@@ -138,8 +140,7 @@ def extract(input_xml):
 def normalize(inputText):
 # 2018-09-23 ebb THIS WORKS, SOMETIMES, BUT NOT EVERWHERE: RE_MULTICAPS.sub(format(re.findall(RE_MULTICAPS, inputText, flags=0)).title(), \
 # RE_INNERCAPS.sub(format(re.findall(RE_INNERCAPS, inputText, flags=0)).lower(), \
-    return RE_MILESTONE.sub('', \
-        RE_INCLUDE.sub('', \
+    return RE_INCLUDE.sub('', \
         RE_AB.sub('', \
         RE_HEAD.sub('', \
         RE_AMP.sub('and', \
@@ -150,6 +151,7 @@ def normalize(inputText):
         RE_PB.sub('', \
         RE_PARA.sub('<p/>', \
         RE_sgaP.sub('<p/>', \
+        RE_MILESTONE.sub('', \
         RE_LG.sub('<lg/>', \
         RE_L.sub('<l/>', \
         RE_CIT.sub('', \
@@ -159,7 +161,8 @@ def normalize(inputText):
         RE_GAP.sub('', \
         RE_DELSTART.sub('<del>', \
         RE_ADDSTART.sub('<add>', \
-        RE_METAMARK.sub('', inputText)))))))))))))))))))))).lower()
+        RE_MOD.sub('', \
+        RE_METAMARK.sub('', inputText))))))))))))))))))))))).lower()
 
 # to lowercase the normalized tokens, add .lower() to the end.
 #    return regexPageBreak('',inputText)
@@ -195,6 +198,10 @@ def tokenizeFiles(name, matchString):
 
 def tokenize(inputFile):
         return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+# 2022-06-21 ebb and yxj: We think this function is what we need to modify:
+# the making of tokens is problematic because it is fusing text nodes with element tags.
+# Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
+# to find `<.+?>` and split before and after it somehow to make sure markup is in its own token.
 
 for name in glob.glob('../simpleInput/1818_fullFlat_*'):
     try:
