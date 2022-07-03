@@ -121,7 +121,7 @@ def extract(input_xml):
             output += node.toxml()
         # ebb: empty inline elements that do not take surrounding white spaces:
         elif event == pulldom.START_ELEMENT and node.localName in inlineEmpty:
-            output += node.toxml()
+            output += '\n' + node.toxml()
         # non-empty inline elements: mdel, shi, metamark
         elif event == pulldom.START_ELEMENT and node.localName in inlineContent:
             output += regexEmptyTag.sub('>', node.toxml())
@@ -197,27 +197,31 @@ def tokenizeFiles(name, matchString):
 
 
 def tokenize(inputFile):
-        return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+        return extract(inputFile).split('\n')
 # 2022-06-21 ebb and yxj: We think this function is what we need to modify:
 # the making of tokens is problematic because it is fusing text nodes with element tags.
 # Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
 # to find `<.+?>` and split before and after it somehow to make sure markup is in its own token.
 
+# 2022-07-03 yxj: The original version is  regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+# Remove sub functions in tokenize function
+# Add  '\n' before inline inlineEmpty nodes in extract function
+
 for name in glob.glob('../simpleInput/1818_fullFlat_*'):
     try:
         matchString = name.split("fullFlat_", 1)[1]
         # ebb: above gets C30.xml for example
-       # matchStr = matchString.split(".", 1)[0]
+        # matchStr = matchString.split(".", 1)[0]
         # ebb: above strips off the file extension
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
-        print(collation_input)
+        # print(collation_input)
         outputFile = open('../simpleOutput/collation_' + matchString, 'w')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
         print(table)
-        print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+        # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
 
     except IOError:
         pass
