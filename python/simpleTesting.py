@@ -218,12 +218,12 @@ for name in glob.glob('../simpleInput/1818_fullFlat_*'):
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
         # print(collation_input)
-        outputFile = open('../simpleOutput/collation_' + matchString, 'w')
+        outputFile = open('../simpleOutput/collation_' + matchString, 'w', encoding='utf-8')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
         print(table)
-        # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+        print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
 
     except IOError:
         pass
