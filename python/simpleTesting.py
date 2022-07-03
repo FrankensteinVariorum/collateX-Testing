@@ -203,7 +203,9 @@ def tokenize(inputFile):
 # Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
 # to find `<.+?>` and split before and after it somehow to make sure markup is in its own token.
 
-# 2022-07-03 yxj: The original version is  regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+# 2022-07-03 yxj: The original version of tokenize function is:
+# return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+# I modify: 
 # Remove sub functions in tokenize function
 # Add  '\n' before inline inlineEmpty nodes in extract function
 
