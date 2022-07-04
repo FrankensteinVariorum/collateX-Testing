@@ -82,12 +82,14 @@ RE_MOD = re.compile(r'<mod\s[^<]*/>')
 # 2021-09-06: ebb: NO. that's a problem because we eliminate pb and lb from the collation output,
 # and we need them for location markers.
 blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'note', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['lb', 'gap', 'del',  'hi', 'mod', 'add']
+inlineEmpty = ['lb', 'gap',  'hi', 'mod', 'del']
 # 2018-05-12 (mysteriously removed but reinstated 2018-09-27) ebb: I'm setting a white space on either side of the inlineEmpty elements in line 103
 # 2018-07-20: ebb: CHECK: are there white spaces on either side of empty elements in the output?
 inlineContent = ['metamark', 'mdel', 'shi']
 #2018-07-17 ebb: I moved the following list up into inlineEmpty, since they are all now empty elements: blockElement = ['lg', 'l', 'note', 'cit', 'quote', 'bibl']
 # ebb: Tried removing 'comment', from blockElement list above, because we don't want these to be collated.
+
+inlineAdd = ['add']
 
 # 10-23-2017 ebb rv:
 
@@ -121,6 +123,8 @@ def extract(input_xml):
             output += node.toxml()
         # ebb: empty inline elements that do not take surrounding white spaces:
         elif event == pulldom.START_ELEMENT and node.localName in inlineEmpty:
+            output += node.toxml()
+        elif event == pulldom.START_ELEMENT and node.localName in inlineAdd:
             output += '\n' + node.toxml()
         # non-empty inline elements: mdel, shi, metamark
         elif event == pulldom.START_ELEMENT and node.localName in inlineContent:
@@ -159,8 +163,8 @@ def normalize(inputText):
         RE_OPENQT.sub('"', \
         RE_CLOSEQT.sub('"', \
         RE_GAP.sub('', \
-        RE_DELSTART.sub('<del>', \
-        RE_ADDSTART.sub('<add>', \
+        RE_DELSTART.sub('<del/>', \
+        RE_ADDSTART.sub('<add/>', \
         RE_MOD.sub('', \
         RE_METAMARK.sub('', inputText))))))))))))))))))))))).lower()
 
@@ -197,17 +201,15 @@ def tokenizeFiles(name, matchString):
 
 
 def tokenize(inputFile):
-        return regexBlankLine.sub('\n',extract(inputFile)).split('\n')
+        return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
 # 2022-06-21 ebb and yxj: We think this function is what we need to modify:
 # the making of tokens is problematic because it is fusing text nodes with element tags.
 # Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
 # to find `<.+?>` and split before and after it somehow to make sure markup is in its own token.
 
-# 2022-07-03 yxj: The original version of tokenize function is:
-# return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
-# I modify: 
-# Remove regexLeadingBlankLine.sub() in tokenize function
-# Add  '\n' before inline inlineEmpty nodes in extract function
+# 2022-07-03 yxj: modify extract function:
+# declare a list inlineAdd for <add>
+# add  '\n' before <add> nodes in extract function
 
 for name in glob.glob('../simpleInput/1818_fullFlat_*'):
     try:
@@ -223,7 +225,7 @@ for name in glob.glob('../simpleInput/1818_fullFlat_*'):
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
         print(table)
-        # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+        print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
 
     except IOError:
         pass
