@@ -201,7 +201,7 @@ def tokenizeFiles(name, matchString):
 
 
 def tokenize(inputFile):
-        return regexLeadingBlankLine.sub('', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+        return regexLeadingBlankLine.sub('\n', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
 # 2022-06-21 ebb and yxj: We think this function is what we need to modify:
 # the making of tokens is problematic because it is fusing text nodes with element tags.
 # Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
