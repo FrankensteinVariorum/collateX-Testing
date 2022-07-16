@@ -211,7 +211,8 @@ for name in glob.glob('../collationChunks/1818_fullFlat_C27.xml'):
             # table = collate(collation_input, output='tei', segmentation=True)
             # table = collate(collation_input, segmentation=True, layout='vertical')
             table = collate(collation_input, output='xml', segmentation=True)
-            print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+            print(collation_input)
+            # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
             # print(table, file=outputFile)
     except IOError:
         pass

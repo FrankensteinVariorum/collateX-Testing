@@ -27,7 +27,6 @@ regexPageBreak = re.compile(r'<pb.+?/>')
 RE_MARKUP = re.compile(r'<.+?>')
 RE_PARA = re.compile(r'<p\s[^<]+?/>')
 RE_INCLUDE = re.compile(r'<include[^<]*/>')
-RE_MILESTONE = re.compile(r'<milestone[^<]*/>')
 RE_HEAD = re.compile(r'<head[^<]*/>')
 RE_AB = re.compile(r'<ab[^<]*/>')
 # 2018-10-1 ebb: ampersands are apparently not treated in python regex as entities any more than angle brackets.
@@ -39,14 +38,16 @@ RE_AMP = re.compile(r'&')
 # RE_MULTICAPS = re.compile(r'(?<=\W|\s|\>)[A-Z][A-Z]+[A-Z]*\s')
 # RE_INNERCAPS = re.compile(r'(?<=hi\d"/>)[A-Z]+[A-Z]+[A-Z]+[A-Z]*')
 # TITLE_MultiCaps = match(RE_MULTICAPS).lower()
-RE_DELSTART = re.compile(r'<del[^<]*>')
-RE_ADDSTART = re.compile(r'<add[^<]*>')
+RE_DELSTART = re.compile(r'<del[^<]+?sID[^<]+>')
+RE_DELEND = re.compile(r'<del[^<]+?eID[^<]+>')
+RE_ADDSTART = re.compile(r'<add[^<]+?sID[^<]+>')
+RE_ADDEND = re.compile(r'<add[^<]+?eID[^<]+>')
 RE_MDEL = re.compile(r'<mdel[^<]*>.+?</mdel>')
 RE_SHI = re.compile(r'<shi[^<]*>.+?</shi>')
 RE_METAMARK = re.compile(r'<metamark[^<]*>.+?</metamark>')
 RE_HI = re.compile(r'<hi\s[^<]*/>')
 RE_PB = re.compile(r'<pb[^<]*/>')
-RE_LB = re.compile(r'<lb.*?/>')
+RE_LB = re.compile(r'<lb[^<]*?/>')
 # 2021-09-06: ebb and djb: On <lb> collation troubles: LOOK FOR DOT MATCHES ALL FLAG
 # b/c this is likely spanning multiple lines, and getting split by the tokenizing algorithm.
 # 2021-09-10: ebb with mb and jc: trying .*? and DOTALL flag
@@ -58,9 +59,12 @@ RE_OPENQT = re.compile(r'“')
 RE_CLOSEQT = re.compile(r'”')
 RE_GAP = re.compile(r'<gap\s[^<]*/>')
 # &lt;milestone unit="tei:p"/&gt;
-RE_sgaP = re.compile(r'<milestone\sunit="tei:p"[^<]*/>')
-# NEW REGEX PATTERNS HERE
+RE_sgaP = re.compile(r'<milestone[^<]+?unit="tei:p"[^<]*/>')
+RE_MILESTONE = re.compile(r'<milestone[^<:]+?>')
+# 2022-07-16 ebb: The original version was just capturing all milestone elements, including the SGA paragraph markers!
 RE_MOD = re.compile(r'<mod\s[^<]*/>')
+RE_MULTI_LEFTANGLE = re.compile(r'<{2,}')
+RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 
 # ebb: RE_MDEL = those pesky deletions of two letters or less that we want to normalize out of the collation, but preserve in the output.
 
@@ -77,19 +81,17 @@ RE_MOD = re.compile(r'<mod\s[^<]*/>')
 # 2017-05-30 ebb: collated but the tags are not). Decision to make the comments into self-closing elements with text
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
-# ignore = ['mod', 'add', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
+ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
 # 2021-09-06 ebb: Let's try putting pb and lb up in ignore where I think they belong.
 # 2021-09-06: ebb: NO. that's a problem because we eliminate pb and lb from the collation output,
 # and we need them for location markers.
+# 2022-07-16 ebb: Elements in the ignore list are completely skipped in our algorithm,
+# so they won't be output. We tried removing the ignore
+# list to handle all the removal of tags only by normalizing, and in general maybe it's better to have less rather than more in here.
+# Remember that elements from S-GA that need to be sign-posts for us should be output as inputText.
 blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'note', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['lb', 'gap',  'hi', 'mod', 'del']
-# 2018-05-12 (mysteriously removed but reinstated 2018-09-27) ebb: I'm setting a white space on either side of the inlineEmpty elements in line 103
-# 2018-07-20: ebb: CHECK: are there white spaces on either side of empty elements in the output?
+inlineEmpty = ['lb', 'gap',  'hi', 'add', 'del']
 inlineContent = ['metamark', 'mdel', 'shi']
-#2018-07-17 ebb: I moved the following list up into inlineEmpty, since they are all now empty elements: blockElement = ['lg', 'l', 'note', 'cit', 'quote', 'bibl']
-# ebb: Tried removing 'comment', from blockElement list above, because we don't want these to be collated.
-
-inlineAdd = ['add']
 
 # 10-23-2017 ebb rv:
 
@@ -119,13 +121,17 @@ def extract(input_xml):
         # isolate the markup into separate tokens, which is really what we'd want.
         # So, I'm removing the white spaces here.
         # NOTE: Removing the white space seems to improve/expand app alignment
+        # 2022-07-16 ebb: With help from yxj, found that adding \n to each side of blockEmpty and inlineEmpty elements
+        # stops the problem of forming tokens that fuse element tags to words.
         elif event == pulldom.START_ELEMENT and node.localName in blockEmpty:
-            output += node.toxml()
+            output += '\n' + node.toxml() + '\n'
         # ebb: empty inline elements that do not take surrounding white spaces:
         elif event == pulldom.START_ELEMENT and node.localName in inlineEmpty:
-            output += node.toxml()
-        elif event == pulldom.START_ELEMENT and node.localName in inlineAdd:
-            output += '\n' + node.toxml()
+            output += '\n' + node.toxml() + '\n'
+        # elif event == pulldom.START_ELEMENT and node.localName in inlineAdd:
+        #     output += '\n' + node.toxml()
+        # 2022-07=16 ebb: The thinking here from yxj was to insert a newline to control the tokenizing
+        # I am wondering if we can do that in the normalizing algorithm instead.
         # non-empty inline elements: mdel, shi, metamark
         elif event == pulldom.START_ELEMENT and node.localName in inlineContent:
             output += regexEmptyTag.sub('>', node.toxml())
@@ -144,7 +150,10 @@ def extract(input_xml):
 def normalize(inputText):
 # 2018-09-23 ebb THIS WORKS, SOMETIMES, BUT NOT EVERWHERE: RE_MULTICAPS.sub(format(re.findall(RE_MULTICAPS, inputText, flags=0)).title(), \
 # RE_INNERCAPS.sub(format(re.findall(RE_INNERCAPS, inputText, flags=0)).lower(), \
-    return RE_INCLUDE.sub('', \
+# 2022-07-16 ebb: Adding newlines here is too late: it just inserts a newline into a token.
+    return RE_MULTI_LEFTANGLE.sub('<',\
+        RE_MULTI_LEFTANGLE.sub('>', \
+        RE_INCLUDE.sub('', \
         RE_AB.sub('', \
         RE_HEAD.sub('', \
         RE_AMP.sub('and', \
@@ -163,10 +172,12 @@ def normalize(inputText):
         RE_OPENQT.sub('"', \
         RE_CLOSEQT.sub('"', \
         RE_GAP.sub('', \
-        RE_DELSTART.sub('<del/>', \
-        RE_ADDSTART.sub('<add/>', \
+        RE_DELSTART.sub('<delstart/>', \
+        RE_DELEND.sub('<delend/>', \
+        RE_ADDSTART.sub('<addstart/>', \
+        RE_ADDEND.sub('<addend/>', \
         RE_MOD.sub('', \
-        RE_METAMARK.sub('', inputText))))))))))))))))))))))).lower()
+        RE_METAMARK.sub('', inputText))))))))))))))))))))))))))).lower()
 
 # to lowercase the normalized tokens, add .lower() to the end.
 #    return regexPageBreak('',inputText)

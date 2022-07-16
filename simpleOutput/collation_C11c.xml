@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<cx:apparatus xmlns:cx="http://interedition.eu/collatex/ns/1.0">
+	<app>
+		<rdgGrp n="['', '&lt;delstart/&gt;', 'i', '&lt;delend/&gt;', '&lt;delstart/&gt;', 'but', 'i', 'entreated', 'him', 'not', '&lt;delend/&gt;', '&lt;delstart/&gt;', '&lt;addstart/&gt;', 'to', 'undertake', 'it', '&lt;addend/&gt;', '&lt;delend/&gt;', '&lt;delstart/&gt;', 'because', '&lt;delend/&gt;', '&lt;addstart/&gt;', '', '&lt;addend/&gt;', '&lt;delstart/&gt;', '&lt;addstart/&gt;', 'for', '&lt;addend/&gt;', '&lt;delend/&gt;', '', '&lt;delstart/&gt;', 'although', '&lt;delend/&gt;', 'his', 'health', 'is', 'better', 'now', '', 'tha', '&lt;addstart/&gt;', 'n', '&lt;addend/&gt;', 'it', 'has', 'been', 'since', 'the', 'death', '', 'of', 'my', 'beloved', 'aunt,', 'yet', '&lt;delstart/&gt;', 'tha', '&lt;delend/&gt;', '&lt;addstart/&gt;', 'the', '&lt;addend/&gt;', 'fatigue', '', 'might', '&lt;addstart/&gt;', 'have', '&lt;addend/&gt;', '&lt;delstart/&gt;', 'make', 'him', 'very', 'ill', '&lt;delend/&gt;', '&lt;delstart/&gt;', 'and', '&lt;delend/&gt;', '']">
+			<rdg wit="fMS"> &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12067&quot;/&gt; I &lt;del eID=&quot;c56-0058__main__d2e12067&quot;/&gt; &lt;del next=&quot;#c56-0058.02&quot; sID=&quot;c56-0058__main__d2e12071&quot;/&gt; but I entreated him not &lt;del eID=&quot;c56-0058__main__d2e12071&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12074&quot;/&gt; &lt;add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d2e12076&quot;/&gt; to undertake it &lt;add eID=&quot;c56-0058__main__d2e12076&quot;/&gt; &lt;del eID=&quot;c56-0058__main__d2e12074&quot;/&gt; &lt;del next=&quot;#c56-0058.03&quot; rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058.02&quot; sID=&quot;c56-0058__main__d2e12080&quot;/&gt; because &lt;del eID=&quot;c56-0058__main__d2e12080&quot;/&gt; &lt;add place=&quot;sublinear&quot; sID=&quot;c56-0058__main__d2e12085&quot;/&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; &lt;add eID=&quot;c56-0058__main__d2e12085&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12091&quot;/&gt; &lt;add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d2e12093&quot;/&gt; for &lt;add eID=&quot;c56-0058__main__d2e12093&quot;/&gt; &lt;del eID=&quot;c56-0058__main__d2e12091&quot;/&gt; &lt;lb n=&quot;c56-0058__main__13&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058.03&quot; sID=&quot;c56-0058__main__d2e12100&quot;/&gt; although &lt;del eID=&quot;c56-0058__main__d2e12100&quot;/&gt; his health is better now &lt;lb n=&quot;c56-0058__main__14&quot;/&gt; tha&lt;mdel&gt;t&lt;/mdel&gt; &lt;add place=&quot;intralinear&quot; sID=&quot;c56-0058__main__d2e12113&quot;/&gt; n &lt;add eID=&quot;c56-0058__main__d2e12113&quot;/&gt; it has been since the death &lt;lb n=&quot;c56-0058__main__15&quot;/&gt; of My beloved Aunt, yet &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12121&quot;/&gt; tha &lt;del eID=&quot;c56-0058__main__d2e12121&quot;/&gt; &lt;add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d2e12124&quot;/&gt; the &lt;add eID=&quot;c56-0058__main__d2e12124&quot;/&gt; fatigue &lt;lb n=&quot;c56-0058__main__16&quot;/&gt; might &lt;add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d2e12131&quot;/&gt; have &lt;add eID=&quot;c56-0058__main__d2e12131&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12136&quot;/&gt; make him very ill &lt;del eID=&quot;c56-0058__main__d2e12136&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12139&quot;/&gt; and &lt;del eID=&quot;c56-0058__main__d2e12139&quot;/&gt; &lt;lb n=&quot;c56-0058__main__17&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['clerval']">
+			<rdg wit="f1818">Clerval </rdg>
+			<rdg wit="f1823">Clerval </rdg>
+			<rdg wit="fThomas">Clerval </rdg>
+			<rdg wit="f1831">Clerval </rdg>
+			<rdg wit="fMS">Clerval </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['always']">
+			<rdg wit="f1818">always </rdg>
+			<rdg wit="f1823">always </rdg>
+			<rdg wit="fThomas">always </rdg>
+			<rdg wit="fMS">always </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['wr', '&lt;addstart/&gt;', 'i', '&lt;addend/&gt;', 'te', '&lt;addstart/&gt;', 's', '&lt;addend/&gt;']">
+			<rdg wit="fMS">wr&lt;mdel&gt;o&lt;/mdel&gt; &lt;add place=&quot;intralinear&quot; sID=&quot;c56-0058__main__d2e12149&quot;/&gt; i &lt;add eID=&quot;c56-0058__main__d2e12149&quot;/&gt; te &lt;add place=&quot;intralinear&quot; sID=&quot;c56-0058__main__d2e12154&quot;/&gt; s &lt;add eID=&quot;c56-0058__main__d2e12154&quot;/&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['writes']">
+			<rdg wit="f1818">writes </rdg>
+			<rdg wit="f1823">writes </rdg>
+			<rdg wit="fThomas">writes </rdg>
+			<rdg wit="f1831">writes </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['that']">
+			<rdg wit="f1818">that </rdg>
+			<rdg wit="f1823">that </rdg>
+			<rdg wit="fThomas">that </rdg>
+			<rdg wit="f1831">that </rdg>
+			<rdg wit="fMS">that </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['indeed']">
+			<rdg wit="f1831">indeed </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['you']">
+			<rdg wit="f1818">you </rdg>
+			<rdg wit="f1823">you </rdg>
+			<rdg wit="fThomas">you </rdg>
+			<rdg wit="f1831">you </rdg>
+			<rdg wit="fMS">you </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['', 'were']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__18&quot;/&gt; were </rdg>
+		</rdgGrp>
+		<rdgGrp n="['are']">
+			<rdg wit="f1818">are </rdg>
+			<rdg wit="f1823">are </rdg>
+			<rdg wit="fThomas">are </rdg>
+			<rdg wit="f1831">are </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['getting']">
+			<rdg wit="f1818">getting </rdg>
+			<rdg wit="f1823">getting </rdg>
+			<rdg wit="fThomas">getting </rdg>
+			<rdg wit="f1831">getting </rdg>
+			<rdg wit="fMS">getting </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['better', '&lt;delstart/&gt;', 'and', '&lt;delend/&gt;', '&lt;addstart/&gt;', '', '&lt;addend/&gt;', '', '&lt;addstart/&gt;']">
+			<rdg wit="fMS">better &lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12161&quot;/&gt; and &lt;del eID=&quot;c56-0058__main__d2e12161&quot;/&gt; &lt;add place=&quot;sublinear&quot; sID=&quot;c56-0058__main__d2e12164&quot;/&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; &lt;add eID=&quot;c56-0058__main__d2e12164&quot;/&gt; &lt;mdel&gt;I&lt;/mdel&gt; &lt;add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d2e12173&quot;/&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['better.']">
+			<rdg wit="f1831">better. </rdg>
+		</rdgGrp>
+		<rdgGrp n="['better;']">
+			<rdg wit="f1818">better; </rdg>
+			<rdg wit="f1823">better; </rdg>
+			<rdg wit="fThomas">better; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['i']">
+			<rdg wit="f1818">I </rdg>
+			<rdg wit="f1823">I </rdg>
+			<rdg wit="fThomas">I </rdg>
+			<rdg wit="f1831">I </rdg>
+			<rdg wit="fMS">I </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;delstart/&gt;', 'arden', '&lt;delend/&gt;']">
+			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; sID=&quot;c56-0058__main__d2e12175&quot;/&gt; arden &lt;del eID=&quot;c56-0058__main__d2e12175&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['eagerly']">
+			<rdg wit="f1818">eagerly </rdg>
+			<rdg wit="f1823">eagerly </rdg>
+			<rdg wit="fThomas">eagerly </rdg>
+			<rdg wit="f1831">eagerly </rdg>
+			<rdg wit="fMS">eagerly </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;addend/&gt;']">
+			<rdg wit="fMS">&lt;add eID=&quot;c56-0058__main__d2e12173&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['hope']">
+			<rdg wit="f1818">hope </rdg>
+			<rdg wit="f1823">hope </rdg>
+			<rdg wit="fThomas">hope </rdg>
+			<rdg wit="f1831">hope </rdg>
+			<rdg wit="fMS">hope </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['that']">
+			<rdg wit="f1818">that </rdg>
+			<rdg wit="f1823">that </rdg>
+			<rdg wit="fThomas">that </rdg>
+			<rdg wit="f1831">that </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['you']">
+			<rdg wit="f1818">you </rdg>
+			<rdg wit="f1823">you </rdg>
+			<rdg wit="fThomas">you </rdg>
+			<rdg wit="f1831">you </rdg>
+			<rdg wit="fMS">you </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__19&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['will', 'confirm', 'this']">
+			<rdg wit="f1818">will confirm this </rdg>
+			<rdg wit="f1823">will confirm this </rdg>
+			<rdg wit="fThomas">will confirm this </rdg>
+			<rdg wit="f1831">will confirm this </rdg>
+			<rdg wit="fMS">will confirm this </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;addstart/&gt;']">
+			<rdg wit="fMS">&lt;add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d2e12182&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['intelligence']">
+			<rdg wit="f1818">intelligence </rdg>
+			<rdg wit="f1823">intelligence </rdg>
+			<rdg wit="fThomas">intelligence </rdg>
+			<rdg wit="f1831">intelligence </rdg>
+			<rdg wit="fMS">intelligence </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;addend/&gt;']">
+			<rdg wit="fMS">&lt;add eID=&quot;c56-0058__main__d2e12182&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['soon', 'in', 'your', 'own']">
+			<rdg wit="f1818">soon in your own </rdg>
+			<rdg wit="f1823">soon in your own </rdg>
+			<rdg wit="fThomas">soon in your own </rdg>
+			<rdg wit="f1831">soon in your own </rdg>
+			<rdg wit="fMS">soon in your own </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['hand-writing;']">
+			<rdg wit="f1818">hand-writing; </rdg>
+			<rdg wit="fThomas">hand-writing; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['handwriting.', '&lt;p/&gt;']">
+			<rdg wit="f1831">handwriting. &lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p3&quot;/&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['handwriting;']">
+			<rdg wit="f1823">handwriting; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1831"> </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__20&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['handwriting']">
+			<rdg wit="fMS">handwriting </rdg>
+		</rdgGrp>
+	</app>
+</cx:apparatus>
+<!-- 2022-07-16 15:32:05.144921 -->

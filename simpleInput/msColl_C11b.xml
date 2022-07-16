@@ -34,30 +34,4 @@
     <add eID="c56-0058__main__d2e12055"/>
     <add hand="#pbs" place="superlinear" sID="c56-0058__main__d2e12061"/>undertaking<add eID="c56-0058__main__d2e12061"/>
     <mod eID="c56-0058__main__d2e12053"/> a journey to Ingolstadt. <lb n="c56-0058__main__12"/> 
-    <del rend="strikethrough" sID="c56-0058__main__d2e12067"/>I<del eID="c56-0058__main__d2e12067"/>
-    <del next="#c56-0058.02" sID="c56-0058__main__d2e12071"/>but I entreated him not<del eID="c56-0058__main__d2e12071"/>
-    <del rend="strikethrough" sID="c56-0058__main__d2e12074"/>
-    <add hand="#pbs" place="superlinear" sID="c56-0058__main__d2e12076"/>to undertake it<add eID="c56-0058__main__d2e12076"/>
-    <del eID="c56-0058__main__d2e12074"/>
-    <del next="#c56-0058.03" rend="strikethrough" xml:id="c56-0058.02" sID="c56-0058__main__d2e12080"/>because<del eID="c56-0058__main__d2e12080"/>
-    <mod sID="c56-0058__main__d2e12083"/>
-    <add place="sublinear" sID="c56-0058__main__d2e12085"/>
-    <metamark function="insert">^</metamark>
-    <add eID="c56-0058__main__d2e12085"/>
-    <del rend="strikethrough" sID="c56-0058__main__d2e12091"/>
-    <add place="superlinear" sID="c56-0058__main__d2e12093"/>for<add eID="c56-0058__main__d2e12093"/>
-    <del eID="c56-0058__main__d2e12091"/>
-    <mod eID="c56-0058__main__d2e12083"/> 
-    <lb n="c56-0058__main__13"/> 
-    <del rend="strikethrough" xml:id="c56-0058.03" sID="c56-0058__main__d2e12100"/>although<del eID="c56-0058__main__d2e12100"/>
-    <delSpan rend="vertical_line" spanTo="#c56-0058.04"/>his health is better now <lb n="c56-0058__main__14"/> tha<mod sID="c56-0058__main__d2e12108"/>
-    <mdel>t</mdel>
-    <add place="intralinear" sID="c56-0058__main__d2e12113"/>n<add eID="c56-0058__main__d2e12113"/>
-    <mod eID="c56-0058__main__d2e12108"/> it has been since the death <lb n="c56-0058__main__15"/> of My beloved Aunt, yet <mod sID="c56-0058__main__d2e12119"/>
-    <del rend="strikethrough" sID="c56-0058__main__d2e12121"/>tha<del eID="c56-0058__main__d2e12121"/>
-    <add place="superlinear" sID="c56-0058__main__d2e12124"/>the<add eID="c56-0058__main__d2e12124"/>
-    <mod eID="c56-0058__main__d2e12119"/> fatigue <lb n="c56-0058__main__16"/> might <add hand="#pbs" place="superlinear" sID="c56-0058__main__d2e12131"/>have<add eID="c56-0058__main__d2e12131"/>
-    <anchor xml:id="c56-0058.04"/>
-    <del rend="strikethrough" sID="c56-0058__main__d2e12136"/>make him very ill<del eID="c56-0058__main__d2e12136"/>
-    <del rend="strikethrough" sID="c56-0058__main__d2e12139"/>and<del eID="c56-0058__main__d2e12139"/> 
 </xml>
