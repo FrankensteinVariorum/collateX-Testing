@@ -1,71 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
-   <comment xmlns:xi="http://www.w3.org/2001/XInclude"
-            text="ebb: for standoff inclusion, add XInclude namespace to root element: xmlns:xi='http://www.w3.org/2001/XInclude', and apply   xi: namespace prefix to include elements in the document.   "/>
-   <header xmlns:xi="http://www.w3.org/2001/XInclude">
+   <comment text="ebb: for standoff inclusion, add XInclude namespace to root element: xmlns:xi='http://www.w3.org/2001/XInclude', and apply   xi: namespace prefix to include elements in the document.   "/>
+   <header>
       <include href="../standOff_Includes/1818_header.xml" parse="xml"/>
    </header>
-   <text xmlns:xi="http://www.w3.org/2001/XInclude">
+   <text>
       <anchor type="collate" xml:id="C01"/>
       <milestone unit="volume" n="1"/>
       <milestone unit="frontmatter" type="start" n="1"/>
-      <milestone unit="frontmatter" type="start" n="1"/>
-      <pb xml:id="F1818_v1_001"/>
-      <!--<head>FRANKENSTEIN; <hi rend="smallcaps">OR</hi>, THE MODERN PROMETHEUS.</head>
-      <pb xml:id="F1818_v1_002"/>-->
-      <!--blank page-->
-      <pb xml:id="F1818_v1_003"/>
-      <head sID="frontmatter1_frontmatter1_div1_head1"/>FRANKENSTEIN; <hi sID="frontmatter1_frontmatter1_div1_head1_hi1"/>OR<hi eID="frontmatter1_frontmatter1_div1_head1_hi1"/>, THE MODERN PROMETHEUS.<head eID="frontmatter1_frontmatter1_div1_head1"/>
-      <!--rm: centered ornamental -->
-      <head sID="frontmatter1_frontmatter1_div1_head2"/>IN THREE VOLUMES.<head eID="frontmatter1_frontmatter1_div1_head2"/>
-      <!--rm: centered ornamental -->
-      <epigraph sID="frontmatter1_frontmatter1_div1_epigraph1"/>
-      <cit sID="frontmatter1_frontmatter1_div1_epigraph1_cit1"/>
-      <quote sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1"/>
-      <lg sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1"/>
-      <l sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1_l1"/>Did I request thee, Maker, from my clay<l eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1_l1"/>
-      <l sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1_l2"/>To mould me man? Did I solicit thee<l eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1_l2"/>
-      <l sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1_l3"/>From darkness to promote me?—<l eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1_l3"/>
-      <lg eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1_lg1"/>
-      <quote eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_quote1"/>
-      <bibl sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_bibl1"/>P<hi sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_bibl1_hi1"/>ARADISE<hi eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_bibl1_hi1"/> L<hi sID="frontmatter1_frontmatter1_div1_epigraph1_cit1_bibl1_hi2"/>OST<hi eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_bibl1_hi2"/>.<bibl eID="frontmatter1_frontmatter1_div1_epigraph1_cit1_bibl1"/>
-      <cit eID="frontmatter1_frontmatter1_div1_epigraph1_cit1"/>
-      <epigraph eID="frontmatter1_frontmatter1_div1_epigraph1"/>
-      <!--rm: centered underscore -->
-      <head sID="frontmatter1_frontmatter1_div1_head3"/>VOL. I.<head eID="frontmatter1_frontmatter1_div1_head3"/>
-      <!--rm: centered double-underscore -->
-      <ab sID="frontmatter1_frontmatter1_div1_ab1"/>
-      <hi sID="frontmatter1_frontmatter1_div1_ab1_hi1"/>London:<hi eID="frontmatter1_frontmatter1_div1_ab1_hi1"/>
-      <ab eID="frontmatter1_frontmatter1_div1_ab1"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab2"/>
-      <hi sID="frontmatter1_frontmatter1_div1_ab2_hi1"/>PRINTED FOR<hi eID="frontmatter1_frontmatter1_div1_ab2_hi1"/>
-      <ab eID="frontmatter1_frontmatter1_div1_ab2"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab3"/>LACKINGTON, HUGHES, HARDING, MAVOR, &amp; JONES,<ab eID="frontmatter1_frontmatter1_div1_ab3"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab4"/>FINSBURY SQUARE.<ab eID="frontmatter1_frontmatter1_div1_ab4"/>
-      <!--rm: centered underscore -->
-      <ab sID="frontmatter1_frontmatter1_div1_ab5"/>1818.<ab eID="frontmatter1_frontmatter1_div1_ab5"/>
-      <pb xml:id="F1818_v1_004"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab6"/>
-      <hi sID="frontmatter1_frontmatter1_div1_ab6_hi1"/>Printed by Macdonald and Son, Cloth Fair, London<hi eID="frontmatter1_frontmatter1_div1_ab6_hi1"/>
-      <ab eID="frontmatter1_frontmatter1_div1_ab6"/>
-      <!-- library stamp: FüRSTLICHE | BIBLIOTHEK | IN CORVEY. -->
-      <pb xml:id="F1818_v1_005"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab7"/>TO<ab eID="frontmatter1_frontmatter1_div1_ab7"/>
-      <head sID="frontmatter1_frontmatter1_div1_head4"/>WILLIAM GODWIN,<head eID="frontmatter1_frontmatter1_div1_head4"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab8"/>
-      <hi sID="frontmatter1_frontmatter1_div1_ab8_hi1"/>AUTHOR OF POLITICAL JUSTICE, CALEB WILLIAMS, &amp;c.<hi eID="frontmatter1_frontmatter1_div1_ab8_hi1"/>
-      <ab eID="frontmatter1_frontmatter1_div1_ab8"/>
-      <head sID="frontmatter1_frontmatter1_div1_head5"/>THESE VOLUMES<head eID="frontmatter1_frontmatter1_div1_head5"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab9"/>
-      <hi sID="frontmatter1_frontmatter1_div1_ab9_hi1"/>Are respectfully inscribed<hi eID="frontmatter1_frontmatter1_div1_ab9_hi1"/>
-      <ab eID="frontmatter1_frontmatter1_div1_ab9"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab10"/>
-      <hi sID="frontmatter1_frontmatter1_div1_ab10_hi1"/>BY<hi eID="frontmatter1_frontmatter1_div1_ab10_hi1"/>
-      <ab eID="frontmatter1_frontmatter1_div1_ab10"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab11"/>THE AUTHOR.<ab eID="frontmatter1_frontmatter1_div1_ab11"/>
-      <pb xml:id="F1818_v1_006"/>
-      <!--blank page-->
-      <milestone unit="frontmatter" type="end" n="1"/>
+      <include href="../standOff_Includes/1818_frontMatter1.xml" parse="xml"/>
       <milestone unit="frontmatter" type="end" n="1"/>
       <milestone unit="preface" type="start" n="1"/>
       <pb xml:id="F1818_v1_007" n="viii"/>
@@ -1970,45 +1913,7 @@
       <head sID="novel1_letter4_div4_head6"/>END OF VOL. I.<head eID="novel1_letter4_div4_head6"/>
       <milestone unit="volume" n="2"/>
       <milestone unit="frontmatter" type="start" n="2"/>
-      <milestone unit="frontmatter" type="start" n="2"/>
-      <pb xml:id="F1818_v2_003"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head1"/>FRANKENSTEIN; <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head1_hi1"/>OR<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head1_hi1"/>, THE MODERN PROMETHEUS.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head1"/>
-      <!--rm: centered ornamental -->
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head2"/>IN THREE VOLUMES.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head2"/>
-      <!--rm: centered ornamental -->
-      <epigraph sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1"/>
-      <cit sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1"/>
-      <quote sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1"/>
-      <lg sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1"/>
-      <l sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1_l1"/>Did I request thee, Maker, from my clay<l eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1_l1"/>
-      <l sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1_l2"/>To mould me man? Did I solicit thee<l eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1_l2"/>
-      <l sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1_l3"/>From darkness to promote me?—<l eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1_l3"/>
-      <lg eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1_lg1"/>
-      <quote eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_quote1"/>
-      <bibl sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_bibl1"/>P<hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_bibl1_hi1"/>ARADISE<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_bibl1_hi1"/> L<hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_bibl1_hi2"/>OST<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_bibl1_hi2"/>.<bibl eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1_bibl1"/>
-      <cit eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1_cit1"/>
-      <epigraph eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_epigraph1"/>
-      <!--rm: centered underscore -->
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head3"/>VOL. II.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head3"/>
-      <!--rm: centered double-underscore -->
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab1"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab1_hi1"/>London:<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab1_hi1"/>
-      <ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab1"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab2"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab2_hi1"/>PRINTED FOR<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab2_hi1"/>
-      <ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab2"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab3"/>LACKINGTON, HUGHES, HARDING, MAVOR, &amp; JONES,<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab3"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab4"/>FINSBURY SQUARE.<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab4"/>
-      <!--rm: centered underscore -->
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab5"/>1818.<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_ab5"/>
-      <pb xml:id="F1818_v2_004"/>
-      <!-- library stamp -->
-      <pb xml:id="F1818_v2_005"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head4"/>FRANKENSTEIN; <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head4_hi1"/>OR<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head4_hi1"/>, <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head4_hi2"/>THE MODERN
-        PROMETHEUS<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head4_hi2"/>
-      <head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div8_div1_head4"/>
-      <!--rm: centered ornamental -->
-      <milestone unit="frontmatter" type="end" n="2"/>
+      <include href="../standOff_Includes/1818_frontMatter2.xml" parse="xml"/>
       <milestone unit="frontmatter" type="end" n="2"/>
       <anchor type="collate" xml:id="C15"/>
       <milestone unit="chapter" type="start" n="8"/>
@@ -3598,45 +3503,7 @@
       <head sID="novel1_letter4_div4_head7"/>END OF VOL. II<head eID="novel1_letter4_div4_head7"/>
       <milestone unit="volume" n="3"/>
       <milestone unit="frontmatter" type="start" n="3"/>
-      <milestone unit="frontmatter" type="start" n="3"/>
-      <!-- we had not yet discussed what to do with redundant front-copy -->
-      <pb xml:id="F1818_v3_003"/>
-      <head sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head1"/>FRANKENSTEIN; <hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head1_hi1"/>OR,<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head1_hi1"/> THE MODERN PROMETHEUS.<head eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head1"/>
-      <!-- RM: centered ornamental -->
-      <head sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head2"/>IN THREE VOLUMES<head eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head2"/>
-      <!-- RM: centered ornamental -->
-      <epigraph sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1"/>
-      <cit sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1"/>
-      <quote sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1"/>
-      <lg sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1"/>
-      <l sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1_l1"/>Did I request thee, Maker, from my clay<l eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1_l1"/>
-      <l sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1_l2"/>To mould me man? Did I solicit thee<l eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1_l2"/>
-      <l sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1_l3"/>From darkness to promote me?—<l eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1_l3"/>
-      <lg eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1_lg1"/>
-      <quote eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_quote1"/>
-      <bibl sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_bibl1"/>P<hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_bibl1_hi1"/>ARADISE<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_bibl1_hi1"/> L<hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_bibl1_hi2"/>OST<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_bibl1_hi2"/>.<bibl eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1_bibl1"/>
-      <cit eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1_cit1"/>
-      <epigraph eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_epigraph1"/>
-      <!-- rm: centered underline -->
-      <head sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head3"/>VOL. III.<head eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head3"/>
-      <!-- rm: centered double-underline -->
-      <ab sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab1"/>
-      <hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab1_hi1"/>London:<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab1_hi1"/>
-      <ab eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab1"/>
-      <ab sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab2"/>
-      <hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab2_hi1"/>PRINTED FOR<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab2_hi1"/>
-      <ab eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab2"/>
-      <ab sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab3"/>LACKINGTON, HUGHES, HARDING, MAVOR, &amp; JONES,<ab eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab3"/>
-      <ab sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab4"/>FINSBURY SQUARE.<ab eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab4"/>
-      <ab sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab5"/>1818<ab eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_ab5"/>
-      <pb xml:id="F1818_v3_004"/>
-      <!-- blank page with library stamp -->
-      <pb xml:id="F1818_v3_005" n="v3_001"/>
-      <head sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head4"/>FRANKENSTEIN; <hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head4_hi1"/>OR,<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head4_hi1"/>
-      <hi sID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head4_hi2"/>THE MODERN PROMETHEUS.<hi eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head4_hi2"/>
-      <head eID="novel1_letter4_frontmatter2_frontmatter1_div4_div18_div1_head4"/>
-      <!-- rm: centered ornamental -->
-      <milestone unit="frontmatter" type="end" n="3"/>
+      <include href="../standOff_Includes/1818_frontMatter3.xml" parse="xml"/>
       <milestone unit="frontmatter" type="end" n="3"/>
       <anchor type="collate" xml:id="C24"/>
       <milestone unit="chapter" type="start" n="17"/>
@@ -5585,11 +5452,7 @@
       <milestone unit="letter" type="end" n="4"/>
       <milestone unit="novel" type="end" n="1"/>
       <milestone unit="backmatter" type="start" n="1"/>
-      <milestone unit="backmatter" type="start" n="1"/>
-      <ab sID="backmatter1_backmatter1_div1_ab1"/>
-      <hi sID="backmatter1_backmatter1_div1_ab1_hi1"/>Printed by Macdonald &amp; Son, Cloth Fair, London<hi eID="backmatter1_backmatter1_div1_ab1_hi1"/>
-      <ab eID="backmatter1_backmatter1_div1_ab1"/>
-      <milestone unit="backmatter" type="end" n="1"/>
+      <include href="../standOff_Includes/1818_backMatter.xml" parse="xml"/>
       <milestone unit="backmatter" type="end" n="1"/>
    </text>
 </xml>

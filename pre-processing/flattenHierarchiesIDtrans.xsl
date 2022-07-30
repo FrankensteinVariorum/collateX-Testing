@@ -5,7 +5,7 @@
     version="3.0">
 
     <xsl:mode on-no-match="shallow-copy"/>
-    <xsl:variable name="printColl" as="document-node()+" select="collection('print-full')"/>
+    <xsl:variable name="printColl" as="document-node()+" select="collection('print-full/?select=*.xml')[tokenize(base-uri(), '/')[last()][not(contains(., 'C'))]]"/>
     <xsl:template match="/">
         <xsl:for-each select="$printColl//xml">
             <xsl:variable name="currFile" as="xs:string">

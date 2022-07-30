@@ -1,39 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
-   <comment xmlns:xi="http://www.w3.org/2001/XInclude"
-            text="ebb: for standoff inclusion, add XInclude namespace to root element: xmlns:xi='http://www.w3.org/2001/XInclude', and apply     xi: namespace prefix to include elements in the document.   "/>
-   <header xmlns:xi="http://www.w3.org/2001/XInclude">
+   <comment text="ebb: for standoff inclusion, add XInclude namespace to root element: xmlns:xi='http://www.w3.org/2001/XInclude', and apply     xi: namespace prefix to include elements in the document.   "/>
+   <header>
       <include href="../standOff_Includes/1823_header.xml" parse="xml"/>
    </header>
-   <text xmlns:xi="http://www.w3.org/2001/XInclude">
+   <text>
       <anchor type="collate" xml:id="C01"/>
       <milestone unit="volume" n="1"/>
       <milestone unit="frontmatter" type="start" n="1"/>
-      <milestone unit="frontmatter" type="start" n="1"/>
-      <pb xml:id="F1823_v1_008"/>
-      <head sID="frontmatter1_frontmatter1_div1_head1"/>FRANKENSTEIN: <hi sID="frontmatter1_frontmatter1_div1_head1_hi1"/>OR<hi eID="frontmatter1_frontmatter1_div1_head1_hi1"/>, THE MODERN PROMETHEUS.<head eID="frontmatter1_frontmatter1_div1_head1"/>
-      <pb xml:id="F1823_v1_009"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab1"/>LONDON<ab eID="frontmatter1_frontmatter1_div1_ab1"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab2"/>PRINTED BY THOMAS DAVISON, WHITEFRIARS.<ab eID="frontmatter1_frontmatter1_div1_ab2"/>
-      <pb xml:id="F1823_v1_010"/>
-      <head sID="frontmatter1_frontmatter1_div1_head2"/>FRANKENSTEIN: <hi sID="frontmatter1_frontmatter1_div1_head2_hi1"/>OR<hi eID="frontmatter1_frontmatter1_div1_head2_hi1"/>, <hi sID="frontmatter1_frontmatter1_div1_head2_hi2"/>THE MODERN PROMETHEUS<hi eID="frontmatter1_frontmatter1_div1_head2_hi2"/>.<head eID="frontmatter1_frontmatter1_div1_head2"/>
-      <head sID="frontmatter1_frontmatter1_div1_head3"/>
-      <hi sID="frontmatter1_frontmatter1_div1_head3_hi1"/>BY<hi eID="frontmatter1_frontmatter1_div1_head3_hi1"/>
-      <head eID="frontmatter1_frontmatter1_div1_head3"/>
-      <head sID="frontmatter1_frontmatter1_div1_head4"/>MARY WOLLSTONECRAFT SHELLEY.<head eID="frontmatter1_frontmatter1_div1_head4"/>
-      <!--ebb: centered underscore a few lines below-->
-      <head sID="frontmatter1_frontmatter1_div1_head5"/>IN TWO VOLUMES.<head eID="frontmatter1_frontmatter1_div1_head5"/>
-      <head sID="frontmatter1_frontmatter1_div1_head6"/>VOL. I.<head eID="frontmatter1_frontmatter1_div1_head6"/>
-      <!--ebb: centered underscore a few lines below-->
-      <head sID="frontmatter1_frontmatter1_div1_head7"/>
-      <hi sID="frontmatter1_frontmatter1_div1_head7_hi1"/>A NEW EDITION<hi eID="frontmatter1_frontmatter1_div1_head7_hi1"/>.<head eID="frontmatter1_frontmatter1_div1_head7"/>
-      <!--ebb: centered double-underscore a few lines below-->
-      <ab sID="frontmatter1_frontmatter1_div1_ab3"/>LONDON:<ab eID="frontmatter1_frontmatter1_div1_ab3"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab4"/>PRINTED FOR G. AND W. B. WHITTAKER,<ab eID="frontmatter1_frontmatter1_div1_ab4"/>
-      <ab sID="frontmatter1_frontmatter1_div1_ab5"/>AVE-MARIA-LANE.<ab eID="frontmatter1_frontmatter1_div1_ab5"/>
-      <!--ebb: centered shorter underscore one line below-->
-      <ab sID="frontmatter1_frontmatter1_div1_ab6"/>1823.<ab eID="frontmatter1_frontmatter1_div1_ab6"/>
-      <milestone unit="frontmatter" type="end" n="1"/>
+      <include href="../standOff_Includes/1823_frontMatter1.xml" parse="xml"/>
       <milestone unit="frontmatter" type="end" n="1"/>
       <pb xml:id="F1823_v1_012"/>
       <milestone unit="preface" type="start" n="1"/>
@@ -2616,48 +2591,7 @@
       <head eID="novel1_letter4_div4_head6"/>
       <milestone unit="volume" n="2"/>
       <milestone unit="frontmatter" type="start" n="2"/>
-      <milestone unit="frontmatter" type="start" n="2"/>
-      <pb xml:id="F1823_v2_269"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab1"/>LONDON:<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab1"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab2"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab2_hi1"/>PRINTED BY THOMAS DAVISON, WHITEFRIARS.<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab2_hi1"/>
-      <ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab2"/>
-      <pb xml:id="F1823_v2_270"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head1"/>FRANKENSTEIN: <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head1_hi1"/>OR<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head1_hi1"/>, THE MODERN PROMETHEUS.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head1"/>
-      <pb xml:id="F1823_v2_271"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head2"/>LONDON:<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head2"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head3"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head3_hi1"/>PRINTED BY THOMAS DAVISON, WHITEFMARS.<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head3_hi1"/>
-      <head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head3"/>
-      <pb xml:id="F1823_v2_272"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head4"/>FRANKENSTEIN:<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head4"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_hi1"/>OR<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_hi1"/>, <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_hi2"/>THE MODERN PROMETHEUS<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_hi2"/>.
-    <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head5"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head5_hi1"/>BY<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head5_hi1"/>
-      <head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head5"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head6"/>MARY WOLLSTONECRAFT SHELLEY.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head6"/>
-      <!--ebb: centered underscore.-->
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head7"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head7_hi1"/>IN TWO VOLUMES.<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head7_hi1"/>
-      <head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head7"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head8"/>VOL. II.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head8"/>
-      <!--ebb: centered underscore.-->
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head9"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head9_hi1"/>A NEW EDITION<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head9_hi1"/>
-      <head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head9"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab3"/>LONDON:<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab3"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab4"/>PRINTED FOR G. AND W. B. WHITTAKER,<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab4"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab5"/>
-      <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab5_hi1"/>AVE-MARIA-LANE.<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab5_hi1"/>
-      <ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab5"/>
-      <ab sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab6"/>1823.<ab eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_ab6"/>
-      <pb xml:id="F1823_v2_273"/>
-      <!-- RM: blank page -->
-      <!-- RM: edits to here 04/26/2017 -->
-      <pb xml:id="F1823_v2_274"/>
-      <head sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head10"/>FRANKENSTEIN; <hi sID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head10_hi1"/>OR<hi eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head10_hi1"/>, THE MODERN PROMETHEUS.<head eID="novel1_letter4_frontmatter1_frontmatter1_div4_div12_div1_head10"/>
-      <!-- rm: ornamental underline -->
-      <milestone unit="frontmatter" type="end" n="2"/>
+      <include href="../standOff_Includes/1823_frontMatter2.xml" parse="xml"/>
       <milestone unit="frontmatter" type="end" n="2"/>
       <anchor type="collate" xml:id="C19"/>
       <milestone unit="chapter" type="start" n="12"/>
@@ -5484,21 +5418,7 @@
       <milestone unit="letter" type="end" n="4"/>
       <milestone unit="novel" type="end" n="1"/>
       <milestone unit="backmatter" type="start" n="1"/>
-      <milestone unit="backmatter" type="start" n="1"/>
-      <ab sID="backmatter1_backmatter1_div1_ab1"/>LONDON:<ab eID="backmatter1_backmatter1_div1_ab1"/>
-      <ab sID="backmatter1_backmatter1_div1_ab2"/>
-      <hi sID="backmatter1_backmatter1_div1_ab2_hi1"/>PRINTED BY THOMAS DAVISON, WHITEFRIARS.<hi eID="backmatter1_backmatter1_div1_ab2_hi1"/>
-      <ab eID="backmatter1_backmatter1_div1_ab2"/>
-      <pb xml:id="F1823_v2_554"/>
-      <comment sID="backmatter1_backmatter1_div1_comment1"/> blank page <comment eID="backmatter1_backmatter1_div1_comment1"/>
-      <pb xml:id="F1823_v2_555"/>
-      <comment sID="backmatter1_backmatter1_div1_comment2"/> blank page <comment eID="backmatter1_backmatter1_div1_comment2"/>
-      <pb xml:id="F1823_v2_556"/>
-      <comment sID="backmatter1_backmatter1_div1_comment3"/> library stamp <comment eID="backmatter1_backmatter1_div1_comment3"/>
-      <ab sID="backmatter1_backmatter1_div1_ab3"/>Österreichische Nationalbibliothek<ab eID="backmatter1_backmatter1_div1_ab3"/>
-      <ab sID="backmatter1_backmatter1_div1_ab4"/>+Z177109505<ab eID="backmatter1_backmatter1_div1_ab4"/>
-      <comment sID="backmatter1_backmatter1_div1_comment4"/> end final 3 images of inner leaf and back cover <comment eID="backmatter1_backmatter1_div1_comment4"/>
-      <milestone unit="backmatter" type="end" n="1"/>
+      <include href="../standOff_Includes/1823_backMatter.xml" parse="xml"/>
       <milestone unit="backmatter" type="end" n="1"/>
    </text>
 </xml>
