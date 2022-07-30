@@ -21,7 +21,7 @@
     </xsl:template>
     
     
-    <xsl:template match="text//*[text() | *][not(self::div)]">
+    <xsl:template match="text//*[text() | *][not(self::div) and not(self::note[@resp]) and not(self::add) and not(self::del)]">
         <xsl:variable name="nodeName" as="xs:string" select="name()"/>
         <xsl:variable name="locationFlag">
             <xsl:for-each select="ancestor::div">
@@ -80,6 +80,24 @@
                 </xsl:otherwise>
             </xsl:choose>
             </milestone>
+    </xsl:template>
+    <xsl:template match="note">
+        <xsl:element name="{name()}">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="(add | del)[not(ancestor::add) and not(ancestor::del)]">
+        <xsl:element name="{name()}">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="(add | del)[ancestor::add or ancestor::del]">
+        <xsl:element name="{name()}-INNER">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:element> 
     </xsl:template>
     
 </xsl:stylesheet>
