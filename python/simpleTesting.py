@@ -192,10 +192,10 @@ def processWitness(inputWitness, id):
 
 def tokenizeFiles(name, matchString):
     with open(name, 'rb') as f1818file, \
-            open('../simpleInput/1823_fullFlat_' + matchString, 'rb') as f1823file, \
-            open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
-            open('../simpleInput/1831_fullFlat_' + matchString, 'rb') as f1831file, \
-            open('../simpleInput/msColl_' + matchString, 'rb') as fMSfile:
+            open('../fv-source-bigChunk27/1823_fullFlat_' + matchString, 'rb') as f1823file, \
+            open('../fv-source-bigChunk27/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
+            open('../fv-source-bigChunk27/1831_fullFlat_' + matchString, 'rb') as f1831file, \
+            open('../fv-source-bigChunk27/msColl_' + matchString, 'rb') as fMSfile:
         f1818_tokens = tokenize(f1818file)
         f1823_tokens = tokenize(f1823file)
         fThomas_tokens = tokenize(fThomasfile)
@@ -222,7 +222,7 @@ def tokenize(inputFile):
 # declare a list inlineAdd for <add>
 # add  '\n' before <add> nodes in extract function
 
-for name in glob.glob('../simpleInput/1818_fullFlat_*'):
+for name in glob.glob('../fv-source-bigChunk27/1818_fullFlat_*'):
     try:
         matchString = name.split("fullFlat_", 1)[1]
         # ebb: above gets C30.xml for example
