@@ -163,7 +163,7 @@ def normalize(inputText):
         RE_LB.sub('', \
         RE_PB.sub('', \
         RE_PARA.sub('<p/>', \
-        RE_sgaP.sub('<p/>', \
+        RE_sgaP.sub('<p/>''<p/>', \
         RE_MILESTONE.sub('', \
         RE_LG.sub('<lg/>', \
         RE_L.sub('<l/>', \
@@ -231,7 +231,7 @@ for name in glob.glob('../fv-source-bigChunk27/1818_fullFlat_*'):
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
         # print(collation_input)
-        outputFile = open('../simpleOutput/collation_' + matchString, 'w', encoding='utf-8')
+        outputFile = open('../simpleOutput/modCollation_' + matchString, 'w', encoding='utf-8')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
