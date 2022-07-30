@@ -1,8 +1,7 @@
 # Collation problems from tokenized markup
 2022-07-29
 
--[ ] Mega-problem: 
-Alignment failure around empty tokens dividing witnesses incorrectly:
+- [ ]  Alignment disruption across multiple apps, due to alignment of empty normalized tokens
 
 ```xml
 <app>
@@ -42,7 +41,7 @@ Alignment failure around empty tokens dividing witnesses incorrectly:
 		</rdgGrp>
 	</app>
 ```	
--[ ] SGA Manuscript paragraphs only make one token at starting point, so they don't align with paragraph endings / beginnings. 
+- [ ]  SGA Manuscript paragraphs only make one token at starting point, so they don't align with paragraph endings / beginnings. 
 
 ```xml
 <app>
