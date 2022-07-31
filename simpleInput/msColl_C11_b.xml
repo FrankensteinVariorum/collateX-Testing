@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+   <anchor type="subcollate" xml:id="C11-b"/>
+   <lb n="c56-0057__Pt2__main__4"/> "To V. Frankenstien <lb n="c56-0057__Pt2__main__5"/> Geneva <mod sID="c56-0057__Pt2__main__d5e11758"/>
+   <del rend="strikethrough" xml:id="c56-0057__Pt2__main__d5e11760">Apri</del>
+   <mdel>l</mdel>
+   <sga-add place="superlinear" sID="c56-0057__Pt2__main__d5e11765"/>March<sga-add eID="c56-0057__Pt2__main__d5e11765"/>
+   <mod eID="c56-0057__Pt2__main__d5e11758"/> 18<shi rend="underline">
+         </shi> 17— <lb n="c56-0057__Pt2__main__6"/> "My dear Cousin<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0057__Pt2__main__7"/> "I cannot describe to you the <w ana="start"/>uneasi<zone eID="c56-0057__Pt2__main"/>
+   <surface eID="ox-ms_abinger_c56-0057__Pt2"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="27v"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0058.xml"
+            id="ox-ms_abinger_c56-0058"
+            sID="ox-ms_abinger_c56-0058"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0058.jp2"/>
+   <zone type="main" sID="c56-0058__main"/>
+   <lb n="c56-0058__main__1"/>ness<w ana="end"/> we have all felt concerning your <lb n="c56-0058__main__2"/> health<unclear>.</unclear> We cannot help imagining that <lb n="c56-0058__main__3"/> your friend Clerval conceals the <w ana="start"/>ex<lb n="c56-0058__main__4"/>tent<w ana="end"/> of your disorder, for it is now <lb n="c56-0058__main__5"/> several months since we have seen <lb n="c56-0058__main__6"/> your handwriting and all this time <lb n="c56-0058__main__7"/> you have been obliged to dictate to <lb n="c56-0058__main__8"/> Henry – Surely Victor you must have <lb n="c56-0058__main__9"/> been very ill <mod sID="c56-0058__main__d5e11820"/>
+   <sga-add place="superlinear" sID="c56-0058__main__d5e11822"/>and this makes us very wretched as much so <metamark function="displacement" xml:id="c56-0058.01">X</metamark>
+   <zone corresp="#c56-0058.01"
+         type="left_margin"
+         sID="c56-0058__left_margin"/>
+   <addSpan spanTo="#c56-0058.05"/>
+   <lb n="c56-0058__left_margin__1"/> nearly as <mdel>t</mdel>
+   <lb n="c56-0058__left_margin__2"/> after the death <lb n="c56-0058__left_margin__3"/> of your dear <lb n="c56-0058__left_margin__4"/> mother<anchor xml:id="c56-0058.05"/>
+   <zone eID="c56-0058__left_margin"/>
+   <sga-add eID="c56-0058__main__d5e11822"/>
+   <mod eID="c56-0058__main__d5e11820"/>. My father was almost <lb n="c56-0058__main__10"/> persuaded <mod sID="c56-0058__main__d5e11849"/>
+   <del rend="strikethrough" xml:id="c56-0058__main__d5e11851">of this</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0058__main__d5e11854"/>that you were indeed dangerously ill,<sga-add eID="c56-0058__main__d5e11854"/>
+   <mod eID="c56-0058__main__d5e11849"/> and could hardly <lb n="c56-0058__main__11"/>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0058__main__d5e11861"/>be<sga-add eID="c56-0058__main__d5e11861"/> re<mod sID="c56-0058__main__d5e11864"/>
+   <mdel>f</mdel>
+   <sga-add place="intralinear" sID="c56-0058__main__d5e11868"/>st<sga-add eID="c56-0058__main__d5e11868"/>
+   <mod eID="c56-0058__main__d5e11864"/>rain<sga-add hand="#pbs" place="intralinear" sID="c56-0058__main__d5e11872"/>ed<sga-add eID="c56-0058__main__d5e11872"/> from <mod sID="c56-0058__main__d5e11875"/>
+   <sga-add place="sublinear" sID="c56-0058__main__d5e11877"/>
+   <metamark function="insert">߶</metamark>
+   <sga-add eID="c56-0058__main__d5e11877"/>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0058__main__d5e11883"/>undertaking<sga-add eID="c56-0058__main__d5e11883"/>
+   <mod eID="c56-0058__main__d5e11875"/> a journey to Ingolstadt. </xml>

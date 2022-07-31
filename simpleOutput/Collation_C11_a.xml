@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<cx:apparatus xmlns:cx="http://interedition.eu/collatex/ns/1.0">
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1818"> </rdg>
+			<rdg wit="f1823"> </rdg>
+			<rdg wit="fThomas"> </rdg>
+			<rdg wit="f1831"> </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1818">&lt;milestone unit=&quot;chapter&quot; type=&quot;start&quot; n=&quot;5&quot;/&gt; </rdg>
+			<rdg wit="f1823">&lt;milestone unit=&quot;chapter&quot; type=&quot;start&quot; n=&quot;5&quot;/&gt; </rdg>
+			<rdg wit="fThomas">&lt;milestone unit=&quot;chapter&quot; type=&quot;start&quot; n=&quot;5&quot;/&gt; </rdg>
+			<rdg wit="f1831">&lt;milestone unit=&quot;chapter&quot; type=&quot;start&quot; n=&quot;6&quot;/&gt; </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0057__Pt2__main__1&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['', 'chapter']">
+			<rdg wit="f1818">&lt;head sID=&quot;novel1_letter4_chapter5_div4_div5_head1&quot;/&gt; CHAPTER </rdg>
+			<rdg wit="f1823">&lt;head sID=&quot;novel1_letter4_chapter5_div4_div5_head1&quot;/&gt; CHAPTER </rdg>
+			<rdg wit="fThomas">&lt;head sID=&quot;novel1_letter4_chapter5_div4_div5_head1&quot;/&gt; CHAPTER </rdg>
+			<rdg wit="f1831">&lt;head sID=&quot;novel1_letter4_chapter6_div4_div6_head1&quot;/&gt; CHAPTER </rdg>
+		</rdgGrp>
+		<rdgGrp n="['&lt;milestone spanto=&quot;#c56-0057.02&quot; unit=&quot;tei:head&quot;/&gt;', 'ch', 'v–', '113', '&lt;p/&gt;']">
+			<rdg wit="fMS">&lt;milestone spanTo=&quot;#c56-0057.02&quot; unit=&quot;tei:head&quot;/&gt; Ch V– 113 &lt;milestone unit=&quot;tei:p-END&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['v.']">
+			<rdg wit="f1818">V. </rdg>
+			<rdg wit="f1823">V. </rdg>
+			<rdg wit="fThomas">V. </rdg>
+		</rdgGrp>
+		<rdgGrp n="['vi.']">
+			<rdg wit="f1831">VI. </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1818">&lt;head eID=&quot;novel1_letter4_chapter5_div4_div5_head1&quot;/&gt; </rdg>
+			<rdg wit="f1823">&lt;head eID=&quot;novel1_letter4_chapter5_div4_div5_head1&quot;/&gt; </rdg>
+			<rdg wit="fThomas">&lt;head eID=&quot;novel1_letter4_chapter5_div4_div5_head1&quot;/&gt; </rdg>
+			<rdg wit="f1831">&lt;head eID=&quot;novel1_letter4_chapter6_div4_div6_head1&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;p/&gt;']">
+			<rdg wit="f1818">&lt;p sID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
+			<rdg wit="f1823">&lt;p sID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
+			<rdg wit="fThomas">&lt;p sID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
+			<rdg wit="f1831">&lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p1&quot;/&gt; </rdg>
+			<rdg wit="fMS">&lt;milestone unit=&quot;tei:p-START&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['', 'he']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0057__Pt2__main__2&quot;/&gt; He </rdg>
+		</rdgGrp>
+		<rdgGrp n="['clerval']">
+			<rdg wit="f1818">C&lt;hi sID=&quot;novel1_letter4_chapter5_div4_div5_p1_hi1&quot;/&gt;LERVAL&lt;hi eID=&quot;novel1_letter4_chapter5_div4_div5_p1_hi1&quot;/&gt; </rdg>
+			<rdg wit="f1823">C&lt;hi sID=&quot;novel1_letter4_chapter5_div4_div5_p1_hi1&quot;/&gt;LERVAL&lt;hi eID=&quot;novel1_letter4_chapter5_div4_div5_p1_hi1&quot;/&gt; </rdg>
+			<rdg wit="fThomas">C&lt;hi sID=&quot;novel1_letter4_chapter5_div4_div5_p1_hi1&quot;/&gt;LERVAL&lt;hi eID=&quot;novel1_letter4_chapter5_div4_div5_p1_hi1&quot;/&gt; </rdg>
+			<rdg wit="f1831">C&lt;hi sID=&quot;novel1_letter4_chapter6_div4_div6_p1_hi1&quot;/&gt;LERVAL&lt;hi eID=&quot;novel1_letter4_chapter6_div4_div6_p1_hi1&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['then', 'put', 'the', 'following', 'letter']">
+			<rdg wit="f1818">then put the following letter </rdg>
+			<rdg wit="f1823">then put the following letter </rdg>
+			<rdg wit="fThomas">then put the following letter </rdg>
+			<rdg wit="f1831">then put the following letter </rdg>
+			<rdg wit="fMS">then put the following letter </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0057__Pt2__main__3&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['into', 'my', 'hands.']">
+			<rdg wit="f1818">into my hands. </rdg>
+			<rdg wit="f1823">into my hands. </rdg>
+			<rdg wit="fThomas">into my hands. </rdg>
+			<rdg wit="f1831">into my hands. </rdg>
+			<rdg wit="fMS">into my hands. </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;p/&gt;']">
+			<rdg wit="f1818">&lt;p eID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
+			<rdg wit="f1823">&lt;p eID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
+			<rdg wit="fThomas">&lt;p eID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1818"> </rdg>
+			<rdg wit="f1823"> </rdg>
+			<rdg wit="fThomas"> </rdg>
+			<rdg wit="f1831"> </rdg>
+			<rdg wit="fMS"> </rdg>
+		</rdgGrp>
+	</app>
+</cx:apparatus>
+<!-- 2022-07-31 08:16:14.255562 -->

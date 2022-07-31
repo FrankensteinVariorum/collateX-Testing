@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><xml><anchor type="collate" xml:id="C11"/>
+<?xml version="1.0" encoding="UTF-8"?><xml><anchor type="collate" xml:id="C11"/><anchor type="subcollate" xml:id="C11-a"/>
    <surface lrx="5364" lry="7104" partOf="#ox-frankenstein_volume_i" ulx="0" uly="0" folio="27r" shelfmark="MS. Abinger c. 56" base="ox-ms_abinger_c56/ox-ms_abinger_c56-0057.xml" id="ox-ms_abinger_c56-0057__Pt2" part="coll_B" sID="ox-ms_abinger_c56-0057__Pt2"/>
    <zone type="main" sID="c56-0057__Pt2__main"/>
    <lb n="c56-0057__Pt2__main__1"/> 
@@ -7,7 +7,7 @@
    <anchor xml:id="c56-0057.02"/>
    <milestone unit="tei:p-END"/>
    <milestone unit="tei:p-START"/>
-   <lb n="c56-0057__Pt2__main__2"/> He then put the following letter <lb n="c56-0057__Pt2__main__3"/> into my hands. <lb n="c56-0057__Pt2__main__4"/> "To V. Frankenstien <lb n="c56-0057__Pt2__main__5"/> Geneva <mod sID="c56-0057__Pt2__main__d5e11758"/>
+   <lb n="c56-0057__Pt2__main__2"/> He then put the following letter <lb n="c56-0057__Pt2__main__3"/> into my hands. <anchor type="subcollate" xml:id="C11-b"/><lb n="c56-0057__Pt2__main__4"/> "To V. Frankenstien <lb n="c56-0057__Pt2__main__5"/> Geneva <mod sID="c56-0057__Pt2__main__d5e11758"/>
    <del rend="strikethrough" xml:id="c56-0057__Pt2__main__d5e11760">Apri</del>
    <mdel>l</mdel>
    <sga-add place="superlinear" sID="c56-0057__Pt2__main__d5e11765"/>March<sga-add eID="c56-0057__Pt2__main__d5e11765"/>
@@ -39,7 +39,7 @@
    <metamark function="insert">߶</metamark>
    <sga-add eID="c56-0058__main__d5e11877"/>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0058__main__d5e11883"/>undertaking<sga-add eID="c56-0058__main__d5e11883"/>
-   <mod eID="c56-0058__main__d5e11875"/> a journey to Ingolstadt. <lb n="c56-0058__main__12"/> 
+   <mod eID="c56-0058__main__d5e11875"/> a journey to Ingolstadt. <anchor type="subcollate" xml:id="C11-c"/><lb n="c56-0058__main__12"/> 
    <del rend="strikethrough" xml:id="c56-0058__main__d5e11889">I</del>
    <del next="#c56-0058.02" xml:id="c56-0058__main__d5e11893">but I entreated him not</del>
    <del rend="strikethrough" xml:id="c56-0058__main__d5e11896">
@@ -77,30 +77,30 @@
    <mdel>I</mdel>
    <sga-add place="superlinear" sID="c56-0058__main__d5e11992"/>I <del rend="strikethrough" xml:id="c56-0058__main__d5e11994">arden</del> eagerly<sga-add eID="c56-0058__main__d5e11992"/>
    <mod eID="c56-0058__main__d5e11979"/> hope you <lb n="c56-0058__main__19"/> will confirm this <sga-add hand="#pbs" place="superlinear" sID="c56-0058__main__d5e12001"/>intelligence<sga-add eID="c56-0058__main__d5e12001"/> soon in your
-      own <lb n="c56-0058__main__20"/> handwriting for indeed, indeed Victor <lb n="c56-0058__main__21"/> we are all very <mod sID="c56-0058__main__d5e12009"/>
+   own <lb n="c56-0058__main__20"/> handwriting <anchor type="subcollate" xml:id="C11-d"/>for indeed, indeed Victor <lb n="c56-0058__main__21"/> we are all very <mod sID="c56-0058__main__d5e12009"/>
    <del rend="strikethrough" xml:id="c56-0058__main__d5e12011">uneasy</del>
    <sga-add place="sublinear" sID="c56-0058__main__d5e12014"/>
    <metamark function="insert">^</metamark>
    <sga-add eID="c56-0058__main__d5e12014"/>
    <sga-add place="superlinear" sID="c56-0058__main__d5e12020"/>miserable on this account<sga-add eID="c56-0058__main__d5e12020"/>
-   <mod eID="c56-0058__main__d5e12009"/>. Relieve <lb n="c56-0058__main__22"/> us from this fear and we shall <lb n="c56-0058__main__23"/> be the happiest creatures in the <lb n="c56-0058__main__24"/> world.– My uncles health <del rend="strikethrough" xml:id="c56-0058__main__d5e12030">impro</del> is <lb n="c56-0058__main__25"/> now <mod sID="c56-0058__main__d5e12036"/>
+   <mod eID="c56-0058__main__d5e12009"/>. Relieve <lb n="c56-0058__main__22"/> us from this fear and we shall <lb n="c56-0058__main__23"/> be the happiest creatures in the <lb n="c56-0058__main__24"/> world.– <anchor type="subcollate" xml:id="C11-e"/>My uncles health <del rend="strikethrough" xml:id="c56-0058__main__d5e12030">impro</del> is <lb n="c56-0058__main__25"/> now <mod sID="c56-0058__main__d5e12036"/>
    <del rend="strikethrough" xml:id="c56-0058__main__d5e12038">well &amp;</del>
    <del rend="strikethrough" xml:id="c56-0058__main__d5e12041">
       <sga-add hand="#pbs" place="superlinear" sID="c56-0058__main__d5e12043"/>
       <unclear>far</unclear>
       <sga-add eID="c56-0058__main__d5e12043"/>
    </del>
-   <mod eID="c56-0058__main__d5e12036"/> vigorous that he appears <lb n="c56-0058__main__26"/> ten years younger since last <lb n="c56-0058__main__27"/> winter. Ernest also is so much <w ana="start"/>im<lb n="c56-0058__main__28"/>proved<w ana="end"/>, <del rend="strikethrough" xml:id="c56-0058__main__d5e12061">
+   <mod eID="c56-0058__main__d5e12036"/> vigorous <anchor type="subcollate" xml:id="C11-f"/>that he appears <lb n="c56-0058__main__26"/> ten years younger since last <lb n="c56-0058__main__27"/> winter. Ernest also is so much <w ana="start"/>im<lb n="c56-0058__main__28"/>proved<w ana="end"/>, <del rend="strikethrough" xml:id="c56-0058__main__d5e12061">
       <sga-add hand="#pbs" place="intralinear" sID="c56-0058__main__d5e12063"/>so<sga-add eID="c56-0058__main__d5e12063"/>
    </del> that
-      you would hardly <lb n="c56-0058__main__29"/> know him; he is now nearly sixteen <lb n="c56-0058__main__30"/> you know and has <del rend="strikethrough" xml:id="c56-0058__main__d5e12071">quite</del> lost that<zone eID="c56-0058__main"/>
+   you would hardly <lb n="c56-0058__main__29"/> know him; <anchor type="subcollate" xml:id="C11-g"/>he is now nearly sixteen <lb n="c56-0058__main__30"/> you know and <anchor type="subcollate" xml:id="C11-h"/>has <del rend="strikethrough" xml:id="c56-0058__main__d5e12071">quite</del> lost that<zone eID="c56-0058__main"/>
    <surface eID="ox-ms_abinger_c56-0058"/>
    <surface lrx="5364" lry="7104" partOf="#ox-frankenstein_volume_i" ulx="0" uly="0" folio="28a recto" shelfmark="MS. Abinger c. 56" base="ox-ms_abinger_c56/ox-ms_abinger_c56-0059.xml" id="ox-ms_abinger_c56-0059" sID="ox-ms_abinger_c56-0059"/>
    <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0059.jp2"/>
    <zone type="main" sID="c56-0059__main"/>
-   <lb n="c56-0059__main__1"/> sickly appearance that he had <lb n="c56-0059__main__2"/> some years ago – he is quite well &amp; <shi rend="underline">hearty</shi>
+   <lb n="c56-0059__main__1"/> sickly appearance that he had <lb n="c56-0059__main__2"/> some years ago – he is quite <anchor type="subcollate" xml:id="C11-i"/>well &amp; <shi rend="underline">hearty</shi>
    <lb n="c56-0059__main__3"/> if I <del rend="strikethrough" xml:id="c56-0059__main__d5e12091">y</del> may use that term for it is <lb n="c56-0059__main__4"/> very expressive.<milestone unit="tei:p-END"/>
-   <milestone unit="tei:p-START"/>
+   <anchor type="subcollate" xml:id="C11-j"/><milestone unit="tei:p-START"/>
    <lb n="c56-0059__main__5"/> "My uncle and I conversed <del rend="strikethrough" xml:id="c56-0059__main__d5e12101">the</del>
    <lb n="c56-0059__main__6"/> last night a long time about what <lb n="c56-0059__main__7"/> 
    <anchor xml:id="c56-0059.01"/>
@@ -117,8 +117,8 @@
    <zone corresp="#c56-0059.02" type="left_margin" sID="c56-0059__left_margin"/>
    <lb n="c56-0059__left_margin__1"/> 
    <sga-add sID="c56-0059__left_margin__d5e12141"/> him<sga-add eID="c56-0059__left_margin__d5e12141"/>
-   <zone eID="c56-0059__left_margin"/>of the habit of application and now <lb n="c56-0059__main__10"/> that he enjoys good health <del rend="strikethrough" xml:id="c56-0059__main__d5e12146">we</del> he <lb n="c56-0059__main__11"/> is continually in the open air <del rend="strikethrough" xml:id="c56-0059__main__d5e12151">on</del>
-   <lb n="c56-0059__main__12"/> climbing the hills or rowing on the <lb n="c56-0059__main__13"/> lake. I, therefore, proposed that <lb n="c56-0059__main__14"/> he should<sga-add hand="#pbs" place="superlinear" sID="c56-0059__main__d5e12161"/>be<sga-add eID="c56-0059__main__d5e12161"/> a farmer which you <lb n="c56-0059__main__15"/> know cousin is a favourite scheme <lb n="c56-0059__main__16"/> of mine –A farmer's is a very healthy <lb n="c56-0059__main__17"/> 
+   <zone eID="c56-0059__left_margin"/>of the habit of application and now <lb n="c56-0059__main__10"/> that he enjoys good health <del rend="strikethrough" xml:id="c56-0059__main__d5e12146">we</del> he <lb n="c56-0059__main__11"/> is continually <anchor type="subcollate" xml:id="C11-k"/>in the open air <del rend="strikethrough" xml:id="c56-0059__main__d5e12151">on</del>
+   <lb n="c56-0059__main__12"/> climbing the hills or rowing on the <lb n="c56-0059__main__13"/> lake. <anchor type="subcollate" xml:id="C11-l"/>I, therefore, proposed that <lb n="c56-0059__main__14"/> he should<sga-add hand="#pbs" place="superlinear" sID="c56-0059__main__d5e12161"/>be<sga-add eID="c56-0059__main__d5e12161"/> a farmer which you <lb n="c56-0059__main__15"/> know cousin is a favourite scheme <lb n="c56-0059__main__16"/> of mine –A farmer's is a very healthy <lb n="c56-0059__main__17"/> 
    <del rend="strikethrough" xml:id="c56-0059__main__d5e12171">&amp;</del> happy life; and the least hurtful <lb n="c56-0059__main__18"/> or rather the most benificial <del rend="strikethrough" xml:id="c56-0059__main__d5e12176">of any</del>
    <lb n="c56-0059__main__19"/> profession.<mod sID="c56-0059__main__d5e12181"/>
    <sga-add place="sublinear" sID="c56-0059__main__d5e12183"/>
@@ -175,7 +175,7 @@
    <del rend="strikethrough" xml:id="c56-0060__main__d5e12355">ou<sga-add place="intralinear" sID="c56-0060__main__d5e12357"/>g<sga-add eID="c56-0060__main__d5e12357"/>t</del> ought to be an
       advocate myself; <lb n="c56-0060__main__7"/> which put an end to the conversation <lb n="c56-0060__main__8"/> on that subject<milestone unit="tei:p-END"/>
    <milestone unit="tei:p-START"/>
-   <lb n="c56-0060__main__9"/> And now I must tell you a little <lb n="c56-0060__main__10"/> story that will please you. Do you <lb n="c56-0060__main__11"/> not remember <del rend="strikethrough" xml:id="c56-0060__main__d5e12374">Ju</del> Justine <del rend="strikethrough" xml:id="c56-0060__main__d5e12377">Martin</del>?<anchor xml:id="c56-0060.01"/>
+   <lb n="c56-0060__main__9"/> And now I must tell you a little <lb n="c56-0060__main__10"/> story that will please you. <anchor type="subcollate" xml:id="C11-m"/>Do you <lb n="c56-0060__main__11"/> not remember <del rend="strikethrough" xml:id="c56-0060__main__d5e12374">Ju</del> Justine <del rend="strikethrough" xml:id="c56-0060__main__d5e12377">Martin</del>?<anchor xml:id="c56-0060.01"/>
    <zone corresp="#c56-0060.01" type="left_margin" sID="c56-0060__left_margin"/>
    <lb n="c56-0060__left_margin__1"/> 
    <sga-add sID="c56-0060__left_margin__d5e12386"/>
@@ -222,7 +222,7 @@
    <zone eID="c56-0060__left_margin"/>
    <sga-add eID="c56-0060__main__d5e12477"/>
    <del rend="strikethrough" xml:id="c56-0060__main__d5e12618">Where</del>
-   <delSpan rend="strikethrough" spanTo="#c56-0060.05"/>she was taught <lb n="c56-0060__main__25"/> all the duties of servant &amp; was very <lb n="c56-0060__main__26"/> kindly treated.<anchor xml:id="c56-0060.05"/> I dare say that you now <lb n="c56-0060__main__27"/> remember all about it, for Justine <lb n="c56-0060__main__28"/> was a great favourite of yours, &amp; I <lb n="c56-0060__main__29"/> 
+   <delSpan rend="strikethrough" spanTo="#c56-0060.05"/>she was taught <lb n="c56-0060__main__25"/> all the duties of servant &amp; was very <lb n="c56-0060__main__26"/> kindly treated.<anchor type="subcollate" xml:id="C11-n"/><anchor xml:id="c56-0060.05"/> I dare say that you now <lb n="c56-0060__main__27"/> remember all about it, for Justine <anchor type="subcollate" xml:id="C11-o"/><lb n="c56-0060__main__28"/> was a great favourite of yours, &amp; I <lb n="c56-0060__main__29"/> 
    <mod sID="c56-0060__main__d5e12637"/>
    <del rend="strikethrough" xml:id="c56-0060__main__d5e12639">remember</del>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0060__main__d5e12642"/>recollect<sga-add eID="c56-0060__main__d5e12642"/>

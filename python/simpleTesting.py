@@ -23,8 +23,8 @@ regexNonWhitespace = re.compile(r'\S+')
 regexEmptyTag = re.compile(r'/>$')
 regexBlankLine = re.compile(r'\n{2,}')
 regexLeadingBlankLine = re.compile(r'^\n')
-regexPageBreak = re.compile(r'<pb.+?/>')
-RE_MARKUP = re.compile(r'<.+?>')
+regexPageBreak = re.compile(r'<pb.+?/>', re.DOTALL)
+RE_MARKUP = re.compile(r'<.+?>', re.DOTALL)
 RE_PARA = re.compile(r'<p\s[^<]+?/>')
 RE_INCLUDE = re.compile(r'<include[^<]*/>')
 RE_HEAD = re.compile(r'<head[^<]*/>')
@@ -38,16 +38,19 @@ RE_AMP = re.compile(r'&')
 # RE_MULTICAPS = re.compile(r'(?<=\W|\s|\>)[A-Z][A-Z]+[A-Z]*\s')
 # RE_INNERCAPS = re.compile(r'(?<=hi\d"/>)[A-Z]+[A-Z]+[A-Z]+[A-Z]*')
 # TITLE_MultiCaps = match(RE_MULTICAPS).lower()
-RE_NOTE = re.compile(r'<note\s[^<]*>.+?</note>')
-RE_DEL = re.compile(r'<del\s[^<]*>.+?</del>')
-RE_ADD = re.compile(r'<add\s[^<]*>.+?</add>')
-# RE_DELSTART = re.compile(r'<del[^<]+?sID[^<]+>')
-# RE_DELEND = re.compile(r'<del[^<]+?eID[^<]+>')
+# RE_NOTE = re.compile(r'<note[^<]*?>.+?</note>', re.MULTILINE | re.DOTALL)
+# RE_DEL = re.compile(r'<del[^<\-]*?>.+?</del>', re.MULTILINE | re.DOTALL)
+RE_ADDSTART = re.compile(r'<add[^<\-]*?>')
+RE_ADDEND = re.compile(r'</add>')
+RE_NOTE_START = re.compile(r'<note[^<]*?>')
+RE_NOTE_END = re.compile(r'</note>')
+RE_DELSTART = re.compile(r'<del[^<]*?>')
+RE_DELEND = re.compile(r'</del>')
 RE_SGA_ADDSTART = re.compile(r'<sga-add[^<]+?sID[^<]+>')
 RE_SGA_ADDEND = re.compile(r'<sga-add[^<]+?eID[^<]+>')
-RE_MDEL = re.compile(r'<mdel[^<]*>.+?</mdel>')
-RE_SHI = re.compile(r'<shi[^<]*>.+?</shi>')
-RE_METAMARK = re.compile(r'<metamark[^<]*>.+?</metamark>')
+RE_MDEL = re.compile(r'<mdel[^<]*>.+?</mdel>', re.MULTILINE | re.DOTALL)
+RE_SHI = re.compile(r'<shi[^<]*>.+?</shi>', re.MULTILINE | re.DOTALL)
+RE_METAMARK = re.compile(r'<metamark[^<]*>.+?</metamark>', re.MULTILINE | re.DOTALL)
 RE_HI = re.compile(r'<hi\s[^<]*/>')
 RE_PB = re.compile(r'<pb[^<]*/>')
 RE_LB = re.compile(r'<lb[^<]*?/>')
@@ -112,8 +115,8 @@ def extract(input_xml):
     output = ''
     for event, node in doc:
         # elements to ignore: xml
-        # if event == pulldom.START_ELEMENT and node.localName in ignore:
-        #    continue
+        if event == pulldom.START_ELEMENT and node.localName in ignore:
+            continue
         # copy comments intact
         if event == pulldom.COMMENT:
             doc.expandNode(node)
@@ -130,19 +133,19 @@ def extract(input_xml):
             output += '\n' + node.toxml() + '\n'
         # ebb: empty inline elements that do not take surrounding white spaces:
         elif event == pulldom.START_ELEMENT and node.localName in inlineEmpty:
-            output += '\n' + node.toxml() + '\n'
+            output += node.toxml()
         # elif event == pulldom.START_ELEMENT and node.localName in inlineAdd:
         #     output += '\n' + node.toxml()
         # 2022-07=16 ebb: The thinking here from yxj was to insert a newline to control the tokenizing
         # I am wondering if we can do that in the normalizing algorithm instead.
         # non-empty inline elements: mdel, shi, metamark
         elif event == pulldom.START_ELEMENT and node.localName in inlineContent:
-            output += regexEmptyTag.sub('>', node.toxml())
+            output += '\n' + regexEmptyTag.sub('>', node.toxml())
         elif event == pulldom.END_ELEMENT and node.localName in inlineContent:
-            output += '</' + node.localName + '>'
+            output += '</' + node.localName + '>' + '\n'
         # elif event == pulldom.START_ELEMENT and node.localName in blockElement:
         #    output += '\n<' + node.localName + '>\n'
-        #elif event == pulldom.END_ELEMENT and node.localName in blockElement:
+        # elif event == pulldom.END_ELEMENT and node.localName in blockElement:
         #    output += '\n</' + node.localName + '>'
         elif event == pulldom.CHARACTERS:
             output += normalizeSpace(node.data)
@@ -151,12 +154,18 @@ def extract(input_xml):
     return output
 
 def normalize(inputText):
-# 2018-09-23 ebb THIS WORKS, SOMETIMES, BUT NOT EVERWHERE: RE_MULTICAPS.sub(format(re.findall(RE_MULTICAPS, inputText, flags=0)).title(), \
-# RE_INNERCAPS.sub(format(re.findall(RE_INNERCAPS, inputText, flags=0)).lower(), \
 # 2022-07-16 ebb: Adding newlines here is too late: it just inserts a newline into a token.
     return RE_MULTI_LEFTANGLE.sub('<',\
         RE_MULTI_LEFTANGLE.sub('>', \
         RE_INCLUDE.sub('', \
+        RE_DELSTART.sub('<delstart/>', \
+        RE_DELEND.sub('<delend/>', \
+        RE_ADDSTART.sub('<addedThomas-start/>', \
+        RE_ADDEND.sub('<addedThomas-end/>', \
+        RE_SGA_ADDSTART.sub('', \
+        RE_SGA_ADDEND.sub('', \
+        RE_NOTE_START.sub('<note_start/>', \
+        RE_NOTE_END.sub('<note_end/>', \
         RE_AB.sub('', \
         RE_HEAD.sub('', \
         RE_AMP.sub('and', \
@@ -175,13 +184,8 @@ def normalize(inputText):
         RE_OPENQT.sub('"', \
         RE_CLOSEQT.sub('"', \
         RE_GAP.sub('', \
-        RE_DEL.sub('<deletedPassage/>', \
-        RE_ADD.sub('<addedThomasPassage/>', \
-        RE_SGA_ADDSTART.sub('<addstart/>', \
-        RE_SGA_ADDEND.sub('<addend/>', \
-        RE_NOTE.sub('<note/>', \
         RE_MOD.sub('', \
-        RE_METAMARK.sub('', inputText)))))))))))))))))))))))))))).lower()
+        RE_METAMARK.sub('', inputText))))))))))))))))))))))))))))))).lower()
 
 # to lowercase the normalized tokens, add .lower() to the end.
 #    return regexPageBreak('',inputText)

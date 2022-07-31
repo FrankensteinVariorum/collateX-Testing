@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<cx:apparatus xmlns:cx="http://interedition.eu/collatex/ns/1.0">
+	<app>
+		<rdgGrp n="['full', 'of', 'activity', 'and', 'spirit.', 'he', 'is', 'desirous', 'to', 'be', 'a', 'true', 'swiss,', 'and', 'to', 'enter', 'into', 'foreign', 'service;', '', 'but', 'we', 'cannot', 'part', 'with', 'him,', 'at', 'least', 'until', 'his', 'elder', 'brother', 'return', 'to', 'us.', 'my', 'uncle', 'is', 'not', 'pleased', 'with', 'the', 'idea', 'of', 'a', 'military', 'career', 'in', 'a', 'distant', 'country;', 'but', 'ernest', 'never', 'had', 'your', 'powers', 'of', 'application.', 'he', 'looks', 'upon', 'study', 'as', 'an', 'odious', 'fetter;—his', 'time', 'is', 'spent']">
+			<rdg wit="f1831">full of activity and spirit. He is desirous to be a true Swiss, and to enter into foreign service; &lt;pb xml:id=&quot;F1831_v_066&quot; n=&quot;50&quot;/&gt; but we cannot part with him, at least until his elder brother return to us. My uncle is not pleased with the idea of a military career in a distant country; but Ernest never had your powers of application. He looks upon study as an odious fetter;—his time is spent </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['in', 'the', 'open']">
+			<rdg wit="f1818">in the open </rdg>
+			<rdg wit="f1823">in the open </rdg>
+			<rdg wit="fThomas">in the open </rdg>
+			<rdg wit="f1831">in the open </rdg>
+			<rdg wit="fMS">in the open </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['air', '&lt;delstart/&gt;on&lt;delstart/&gt;', '']">
+			<rdg wit="fMS">air &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12151&quot;&gt;on&lt;/del&gt; &lt;lb n=&quot;c56-0059__main__12&quot;/&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['air,']">
+			<rdg wit="f1818">air, </rdg>
+			<rdg wit="f1823">air, </rdg>
+			<rdg wit="fThomas">air, </rdg>
+			<rdg wit="f1831">air, </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['climbing', 'the']">
+			<rdg wit="f1818">climbing the </rdg>
+			<rdg wit="f1823">climbing the </rdg>
+			<rdg wit="fThomas">climbing the </rdg>
+			<rdg wit="f1831">climbing the </rdg>
+			<rdg wit="fMS">climbing the </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['hills']">
+			<rdg wit="f1831">hills </rdg>
+			<rdg wit="fMS">hills </rdg>
+		</rdgGrp>
+		<rdgGrp n="['hills,']">
+			<rdg wit="f1818">hills, </rdg>
+			<rdg wit="f1823">hills, </rdg>
+			<rdg wit="fThomas">hills, </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['or', 'rowing', 'on', 'the']">
+			<rdg wit="f1818">or rowing on the </rdg>
+			<rdg wit="f1823">or rowing on the </rdg>
+			<rdg wit="fThomas">or rowing on the </rdg>
+			<rdg wit="f1831">or rowing on the </rdg>
+			<rdg wit="fMS">or rowing on the </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0059__main__13&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['lake.', '']">
+			<rdg wit="f1818">lake.  </rdg>
+			<rdg wit="f1823">lake.  </rdg>
+			<rdg wit="fThomas">lake.  </rdg>
+			<rdg wit="f1831">lake.  </rdg>
+			<rdg wit="fMS">lake.  </rdg>
+		</rdgGrp>
+	</app>
+</cx:apparatus>
+<!-- 2022-07-31 08:16:14.255562 -->

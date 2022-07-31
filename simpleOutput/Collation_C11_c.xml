@@ -1,0 +1,257 @@
+<?xml version="1.0" ?>
+<cx:apparatus xmlns:cx="http://interedition.eu/collatex/ns/1.0">
+	<app>
+		<rdgGrp n="['', '&lt;delstart/&gt;i&lt;delstart/&gt;', '&lt;delstart/&gt;but']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__12&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11889&quot;&gt;I&lt;/del&gt; &lt;del next=&quot;#c56-0058.02&quot; xml:id=&quot;c56-0058__main__d5e11893&quot;&gt;but </rdg>
+		</rdgGrp>
+		<rdgGrp n="['it', 'was', 'from', 'my', 'own', 'elizabeth:—', '&lt;p/&gt;', '&lt;p/&gt;', '&quot;my', 'dearest', 'cousin,', '&lt;p/&gt;', '&lt;p/&gt;', '&quot;you', 'have', 'been', 'ill,', 'very', 'ill,', 'and', 'even', 'the', 'constant', 'letters', 'of', 'dear', 'kind', 'henry', 'are', 'not', 'sufficient', 'to', 'reassure', 'me', 'on', 'your', 'account.', 'you', 'are', 'forbidden', 'to', 'write—to', 'hold', 'a', 'pen;', 'yet', 'one', 'word', 'from', 'you,', 'dear', 'victor,', 'is', 'necessary', 'to', 'calm', 'our', 'apprehensions.', 'for', 'a', 'long', 'time']">
+			<rdg wit="f1831">It was from my own Elizabeth:— &lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p1&quot;/&gt; &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p2&quot;/&gt; “My dearest Cousin, &lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p2&quot;/&gt; &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p3&quot;/&gt; “You have been ill, very ill, and even the constant letters of dear kind Henry are not sufficient to reassure me on your account. You are forbidden to write—to hold a pen; yet one word from you, dear Victor, is necessary to calm our apprehensions. For a long time </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['i']">
+			<rdg wit="f1831">I </rdg>
+			<rdg wit="fMS">I </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['entreated', 'him', 'not&lt;delstart/&gt;', '&lt;delstart/&gt;to', 'undertake', 'it&lt;delstart/&gt;', '&lt;delstart/&gt;because&lt;delstart/&gt;', '', '&lt;delstart/&gt;for&lt;delstart/&gt;', '', '&lt;delstart/&gt;although&lt;delstart/&gt;']">
+			<rdg wit="fMS">entreated him not&lt;/del&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11896&quot;&gt;to undertake it&lt;/del&gt; &lt;del next=&quot;#c56-0058.03&quot; rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11902&quot;&gt;because&lt;/del&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11913&quot;&gt;for&lt;/del&gt; &lt;lb n=&quot;c56-0058__main__13&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11922&quot;&gt;although&lt;/del&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['have', 'thought', 'that', 'each', 'post', 'would', 'bring', 'this', 'line,', 'and', 'my', 'persuasions', 'have', 'restrained', 'my', 'uncle', 'from', 'undertaking', 'a', 'journey', 'to', 'ingolstadt.', 'i', 'have', 'prevented']">
+			<rdg wit="f1831">have thought that each post would bring this line, and my persuasions have restrained my uncle from undertaking a journey to Ingolstadt. I have prevented </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['his']">
+			<rdg wit="f1831">his </rdg>
+			<rdg wit="fMS">his </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['encountering', 'the', 'inconveniences', 'and', 'perhaps', 'dangers', 'of', 'so', 'long', 'a', 'journey;', 'yet', 'how', 'often', 'have', 'i', 'regretted', 'not', 'being', 'able', 'to', 'perform']">
+			<rdg wit="f1831">encountering the inconveniences and perhaps dangers of so long a journey; yet how often have I regretted not being able to perform </rdg>
+		</rdgGrp>
+		<rdgGrp n="['health', 'is', 'better', 'now', '', 'tha', '', 'n']">
+			<rdg wit="fMS">health is better now &lt;lb n=&quot;c56-0058__main__14&quot;/&gt; tha &lt;mdel&gt;t&lt;/mdel&gt; n </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['it']">
+			<rdg wit="f1831">it </rdg>
+			<rdg wit="fMS">it </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['has', 'been', 'since']">
+			<rdg wit="fMS">has been since </rdg>
+		</rdgGrp>
+		<rdgGrp n="['myself!', 'i', 'figure', 'to', 'myself', 'that']">
+			<rdg wit="f1831">myself! I figure to myself that </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['the']">
+			<rdg wit="f1831">the </rdg>
+			<rdg wit="fMS">the </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['death', '']">
+			<rdg wit="fMS">death &lt;lb n=&quot;c56-0058__main__15&quot;/&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['task']">
+			<rdg wit="f1831">task </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['of']">
+			<rdg wit="f1831">of </rdg>
+			<rdg wit="fMS">of </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['attending', 'on', 'your', 'sick', 'bed', 'has', 'devolved', 'on', 'some', 'mercenary', 'old', 'nurse,', 'who', 'could', 'never', 'guess', 'your', 'wishes,', 'nor', 'minister', 'to', 'them', 'with']">
+			<rdg wit="f1831">attending on your sick bed has devolved on some mercenary old nurse, who could never guess your wishes, nor minister to them with </rdg>
+		</rdgGrp>
+		<rdgGrp n="['my', 'beloved', 'aunt,', 'yet', '&lt;delstart/&gt;tha&lt;delstart/&gt;']">
+			<rdg wit="fMS">My beloved Aunt, yet &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11942&quot;&gt;tha&lt;/del&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['the']">
+			<rdg wit="f1831">the </rdg>
+			<rdg wit="fMS">the </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['care', 'and', 'affection', 'of', 'your', 'poor', 'cousin.', 'yet', 'that', 'is', 'over', 'now:']">
+			<rdg wit="f1831">care and affection of your poor cousin. Yet that is over now: </rdg>
+		</rdgGrp>
+		<rdgGrp n="['fatigue', '', 'might', 'have', '&lt;delstart/&gt;make', 'him', 'very', 'ill&lt;delstart/&gt;', '&lt;delstart/&gt;and&lt;delstart/&gt;', '']">
+			<rdg wit="fMS">fatigue &lt;lb n=&quot;c56-0058__main__16&quot;/&gt; might have &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11957&quot;&gt;make him very ill&lt;/del&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11960&quot;&gt;and&lt;/del&gt; &lt;lb n=&quot;c56-0058__main__17&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['clerval']">
+			<rdg wit="f1818">Clerval </rdg>
+			<rdg wit="f1823">Clerval </rdg>
+			<rdg wit="fThomas">Clerval </rdg>
+			<rdg wit="f1831">Clerval </rdg>
+			<rdg wit="fMS">Clerval </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['always']">
+			<rdg wit="f1818">always </rdg>
+			<rdg wit="f1823">always </rdg>
+			<rdg wit="fThomas">always </rdg>
+			<rdg wit="fMS">always </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['wr', '', 'ites']">
+			<rdg wit="fMS">wr &lt;mdel&gt;o&lt;/mdel&gt; ites </rdg>
+		</rdgGrp>
+		<rdgGrp n="['writes']">
+			<rdg wit="f1818">writes </rdg>
+			<rdg wit="f1823">writes </rdg>
+			<rdg wit="fThomas">writes </rdg>
+			<rdg wit="f1831">writes </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['that']">
+			<rdg wit="f1818">that </rdg>
+			<rdg wit="f1823">that </rdg>
+			<rdg wit="fThomas">that </rdg>
+			<rdg wit="f1831">that </rdg>
+			<rdg wit="fMS">that </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['indeed']">
+			<rdg wit="f1831">indeed </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['you']">
+			<rdg wit="f1818">you </rdg>
+			<rdg wit="f1823">you </rdg>
+			<rdg wit="fThomas">you </rdg>
+			<rdg wit="f1831">you </rdg>
+			<rdg wit="fMS">you </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['', 'were']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__18&quot;/&gt; were </rdg>
+		</rdgGrp>
+		<rdgGrp n="['are']">
+			<rdg wit="f1818">are </rdg>
+			<rdg wit="f1823">are </rdg>
+			<rdg wit="fThomas">are </rdg>
+			<rdg wit="f1831">are </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['getting']">
+			<rdg wit="f1818">getting </rdg>
+			<rdg wit="f1823">getting </rdg>
+			<rdg wit="fThomas">getting </rdg>
+			<rdg wit="f1831">getting </rdg>
+			<rdg wit="fMS">getting </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['better', '&lt;delstart/&gt;and&lt;delstart/&gt;', '', '']">
+			<rdg wit="fMS">better &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11981&quot;&gt;and&lt;/del&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; &lt;mdel&gt;I&lt;/mdel&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['better.']">
+			<rdg wit="f1831">better. </rdg>
+		</rdgGrp>
+		<rdgGrp n="['better;']">
+			<rdg wit="f1818">better; </rdg>
+			<rdg wit="f1823">better; </rdg>
+			<rdg wit="fThomas">better; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['i']">
+			<rdg wit="f1818">I </rdg>
+			<rdg wit="f1823">I </rdg>
+			<rdg wit="fThomas">I </rdg>
+			<rdg wit="f1831">I </rdg>
+			<rdg wit="fMS">I </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;delstart/&gt;arden&lt;delstart/&gt;']">
+			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11994&quot;&gt;arden&lt;/del&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['eagerly', 'hope']">
+			<rdg wit="f1818">eagerly hope </rdg>
+			<rdg wit="f1823">eagerly hope </rdg>
+			<rdg wit="fThomas">eagerly hope </rdg>
+			<rdg wit="f1831">eagerly hope </rdg>
+			<rdg wit="fMS">eagerly hope </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['that']">
+			<rdg wit="f1818">that </rdg>
+			<rdg wit="f1823">that </rdg>
+			<rdg wit="fThomas">that </rdg>
+			<rdg wit="f1831">that </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['you']">
+			<rdg wit="f1818">you </rdg>
+			<rdg wit="f1823">you </rdg>
+			<rdg wit="fThomas">you </rdg>
+			<rdg wit="f1831">you </rdg>
+			<rdg wit="fMS">you </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__19&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['will', 'confirm', 'this', 'intelligence', 'soon', 'in', 'your', 'own']">
+			<rdg wit="f1818">will confirm this intelligence soon in your own </rdg>
+			<rdg wit="f1823">will confirm this intelligence soon in your own </rdg>
+			<rdg wit="fThomas">will confirm this intelligence soon in your own </rdg>
+			<rdg wit="f1831">will confirm this intelligence soon in your own </rdg>
+			<rdg wit="fMS">will confirm this intelligence soon in your own </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['', 'handwriting']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__20&quot;/&gt; handwriting </rdg>
+		</rdgGrp>
+		<rdgGrp n="['hand-writing;']">
+			<rdg wit="f1818">hand-writing; </rdg>
+			<rdg wit="fThomas">hand-writing; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['handwriting.', '&lt;p/&gt;']">
+			<rdg wit="f1831">handwriting. &lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p3&quot;/&gt; </rdg>
+		</rdgGrp>
+		<rdgGrp n="['handwriting;']">
+			<rdg wit="f1823">handwriting; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1818"> </rdg>
+			<rdg wit="f1823"> </rdg>
+			<rdg wit="f1831"> </rdg>
+			<rdg wit="fMS"> </rdg>
+		</rdgGrp>
+	</app>
+</cx:apparatus>
+<!-- 2022-07-31 08:16:14.255562 -->

@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<cx:apparatus xmlns:cx="http://interedition.eu/collatex/ns/1.0">
+	<app>
+		<rdgGrp n="['', '&lt;p/&gt;', '&quot;get', 'well—and', 'return', 'to', 'us.', 'you', 'will', 'find', 'a', 'happy,', 'cheerful', 'home,', 'and', 'friends', 'who', 'love', 'you', 'dearly.']">
+			<rdg wit="f1831"> &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt; “Get well—and return to us. You will find a happy, cheerful home, and friends who love you dearly. </rdg>
+		</rdgGrp>
+		<rdgGrp n="['my', 'uncles']">
+			<rdg wit="fMS">My uncles </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['your', 'father’s']">
+			<rdg wit="f1818">Your father’s </rdg>
+			<rdg wit="f1823">Your father’s </rdg>
+			<rdg wit="fThomas">Your father’s </rdg>
+			<rdg wit="f1831">Your father’s </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['health']">
+			<rdg wit="f1818">health </rdg>
+			<rdg wit="f1823">health </rdg>
+			<rdg wit="fThomas">health </rdg>
+			<rdg wit="f1831">health </rdg>
+			<rdg wit="fMS">health </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;delstart/&gt;impro&lt;delstart/&gt;']">
+			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12030&quot;&gt;impro&lt;/del&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['is']">
+			<rdg wit="f1818">is </rdg>
+			<rdg wit="f1823">is </rdg>
+			<rdg wit="fThomas">is </rdg>
+			<rdg wit="f1831">is </rdg>
+			<rdg wit="fMS">is </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__25&quot;/&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['now']">
+			<rdg wit="f1818">now </rdg>
+			<rdg wit="f1823">now </rdg>
+			<rdg wit="fThomas">now </rdg>
+			<rdg wit="fMS">now </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['&lt;delstart/&gt;well', 'and&lt;delstart/&gt;', '&lt;delstart/&gt;far&lt;delstart/&gt;', 'vigorous']">
+			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12038&quot;&gt;well &amp;&lt;/del&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12041&quot;&gt;far&lt;/del&gt; vigorous </rdg>
+		</rdgGrp>
+		<rdgGrp n="['so']">
+			<rdg wit="f1818">so </rdg>
+			<rdg wit="f1823">so </rdg>
+			<rdg wit="fThomas">so </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['vigorous,']">
+			<rdg wit="f1818">vigorous, </rdg>
+			<rdg wit="f1823">vigorous, </rdg>
+			<rdg wit="fThomas">vigorous, </rdg>
+			<rdg wit="f1831">vigorous, </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['']">
+			<rdg wit="f1818"> </rdg>
+			<rdg wit="f1823"> </rdg>
+			<rdg wit="fThomas"> </rdg>
+			<rdg wit="f1831"> </rdg>
+			<rdg wit="fMS"> </rdg>
+		</rdgGrp>
+	</app>
+</cx:apparatus>
+<!-- 2022-07-31 08:16:14.255562 -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+   <anchor type="subcollate" xml:id="C11-j"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0059__main__5"/> "My uncle and I conversed <del rend="strikethrough" xml:id="c56-0059__main__d5e12101">the</del>
+   <lb n="c56-0059__main__6"/> last night a long time about what <lb n="c56-0059__main__7"/>
+   <anchor xml:id="c56-0059.01"/>
+   <zone corresp="#c56-0059.01"
+         type="left_margin"
+         sID="c56-0059__left_margin"/>
+   <lb n="c56-0059__left_margin__1"/>
+   <sga-add sID="c56-0059__left_margin__d5e12115"/> profession<sga-add eID="c56-0059__left_margin__d5e12115"/>
+   <zone eID="c56-0059__left_margin"/>Ernest <mod sID="c56-0059__main__d5e12118"/>
+   <del rend="strikethrough" xml:id="c56-0059__main__d5e12120">
+      <shi rend="underline">should be</shi>
+   </del>
+   <sga-add place="superlinear" sID="c56-0059__main__d5e12126"/>should follow<sga-add eID="c56-0059__main__d5e12126"/>
+   <mod eID="c56-0059__main__d5e12118"/>. His constant <lb n="c56-0059__main__8"/> ill health when young has deprived <lb n="c56-0059__main__9"/>
+   <anchor xml:id="c56-0059.02"/>
+   <zone corresp="#c56-0059.02"
+         type="left_margin"
+         sID="c56-0059__left_margin"/>
+   <lb n="c56-0059__left_margin__1"/>
+   <sga-add sID="c56-0059__left_margin__d5e12141"/> him<sga-add eID="c56-0059__left_margin__d5e12141"/>
+   <zone eID="c56-0059__left_margin"/>of the habit of application and now <lb n="c56-0059__main__10"/> that he enjoys good health <del rend="strikethrough" xml:id="c56-0059__main__d5e12146">we</del> he <lb n="c56-0059__main__11"/> is continually </xml>
