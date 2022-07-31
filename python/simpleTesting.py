@@ -43,8 +43,8 @@ RE_DEL = re.compile(r'<del\s[^<]*>.+?</del>')
 RE_ADD = re.compile(r'<add\s[^<]*>.+?</add>')
 # RE_DELSTART = re.compile(r'<del[^<]+?sID[^<]+>')
 # RE_DELEND = re.compile(r'<del[^<]+?eID[^<]+>')
-RE_SGA-ADDSTART = re.compile(r'<sga-add[^<]+?sID[^<]+>')
-RE_SGA-ADDEND = re.compile(r'<sga-add[^<]+?eID[^<]+>')
+RE_SGA_ADDSTART = re.compile(r'<sga-add[^<]+?sID[^<]+>')
+RE_SGA_ADDEND = re.compile(r'<sga-add[^<]+?eID[^<]+>')
 RE_MDEL = re.compile(r'<mdel[^<]*>.+?</mdel>')
 RE_SHI = re.compile(r'<shi[^<]*>.+?</shi>')
 RE_METAMARK = re.compile(r'<metamark[^<]*>.+?</metamark>')
@@ -177,8 +177,8 @@ def normalize(inputText):
         RE_GAP.sub('', \
         RE_DEL.sub('<deletedPassage/>', \
         RE_ADD.sub('<addedThomasPassage/>', \
-        RE_SGA-ADDSTART.sub('<addstart/>', \
-        RE_SGA-ADDEND.sub('<addend/>', \
+        RE_SGA_ADDSTART.sub('<addstart/>', \
+        RE_SGA_ADDEND.sub('<addend/>', \
         RE_NOTE.sub('<note/>', \
         RE_MOD.sub('', \
         RE_METAMARK.sub('', inputText)))))))))))))))))))))))))))).lower()
@@ -196,10 +196,10 @@ def processWitness(inputWitness, id):
 
 def tokenizeFiles(name, matchString):
     with open(name, 'rb') as f1818file, \
-            open('../fv-source-bigChunk27/1823_fullFlat_' + matchString, 'rb') as f1823file, \
-            open('../fv-source-bigChunk27/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
-            open('../fv-source-bigChunk27/1831_fullFlat_' + matchString, 'rb') as f1831file, \
-            open('../fv-source-bigChunk27/msColl_' + matchString, 'rb') as fMSfile:
+            open('../simpleInput/1823_fullFlat_' + matchString, 'rb') as f1823file, \
+            open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
+            open('../simpleInput/1831_fullFlat_' + matchString, 'rb') as f1831file, \
+            open('../simpleInput/msColl_' + matchString, 'rb') as fMSfile:
         f1818_tokens = tokenize(f1818file)
         f1823_tokens = tokenize(f1823file)
         fThomas_tokens = tokenize(fThomasfile)
@@ -226,7 +226,7 @@ def tokenize(inputFile):
 # declare a list inlineAdd for <add>
 # add  '\n' before <add> nodes in extract function
 
-for name in glob.glob('../fv-source-bigChunk27/1818_fullFlat_*'):
+for name in glob.glob('../simpleInput/1818_fullFlat_*'):
     try:
         matchString = name.split("fullFlat_", 1)[1]
         # ebb: above gets C30.xml for example
@@ -235,7 +235,7 @@ for name in glob.glob('../fv-source-bigChunk27/1818_fullFlat_*'):
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
         # print(collation_input)
-        outputFile = open('../simpleOutput/modCollation_' + matchString, 'w', encoding='utf-8')
+        outputFile = open('../simpleOutput/Collation_' + matchString, 'w', encoding='utf-8')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
