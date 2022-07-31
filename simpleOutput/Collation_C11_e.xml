@@ -4,62 +4,23 @@
 		<rdgGrp n="['', '&lt;p/&gt;', '&quot;get', 'well—and', 'return', 'to', 'us.', 'you', 'will', 'find', 'a', 'happy,', 'cheerful', 'home,', 'and', 'friends', 'who', 'love', 'you', 'dearly.']">
 			<rdg wit="f1831"> &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt; “Get well—and return to us. You will find a happy, cheerful home, and friends who love you dearly. </rdg>
 		</rdgGrp>
-		<rdgGrp n="['my', 'uncles']">
-			<rdg wit="fMS">My uncles </rdg>
+		<rdgGrp n="['my', 'uncles', 'health', '&lt;delstart/&gt;impro&lt;delend/&gt;', 'is', '', 'now', '&lt;delstart/&gt;well andamp;&lt;delend/&gt;', '&lt;delstart/&gt;', '      ', '      &lt;unclear&gt;far&lt;/unclear&gt;', '      ', '   &lt;delend/&gt;', 'vigorous']">
+			<rdg wit="fMS">My uncles health &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12030&quot;&gt;impro&lt;/del&gt; is &lt;lb n=&quot;c56-0058__main__25&quot;/&gt; now &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12038&quot;&gt;well &amp;amp;&lt;/del&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12041&quot;&gt;       &lt;sga-add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e12043&quot;/&gt;       &lt;unclear&gt;far&lt;/unclear&gt;       &lt;sga-add eID=&quot;c56-0058__main__d5e12043&quot;/&gt;    &lt;/del&gt; vigorous </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['your', 'father’s']">
-			<rdg wit="f1818">Your father’s </rdg>
-			<rdg wit="f1823">Your father’s </rdg>
-			<rdg wit="fThomas">Your father’s </rdg>
-			<rdg wit="f1831">Your father’s </rdg>
+		<rdgGrp n="['your', 'father’s', 'health', 'is']">
+			<rdg wit="f1818">Your father’s health is </rdg>
+			<rdg wit="f1823">Your father’s health is </rdg>
+			<rdg wit="fThomas">Your father’s health is </rdg>
+			<rdg wit="f1831">Your father’s health is </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['health']">
-			<rdg wit="f1818">health </rdg>
-			<rdg wit="f1823">health </rdg>
-			<rdg wit="fThomas">health </rdg>
-			<rdg wit="f1831">health </rdg>
-			<rdg wit="fMS">health </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['&lt;delstart/&gt;impro&lt;delstart/&gt;']">
-			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12030&quot;&gt;impro&lt;/del&gt; </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['is']">
-			<rdg wit="f1818">is </rdg>
-			<rdg wit="f1823">is </rdg>
-			<rdg wit="fThomas">is </rdg>
-			<rdg wit="f1831">is </rdg>
-			<rdg wit="fMS">is </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__25&quot;/&gt; </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['now']">
-			<rdg wit="f1818">now </rdg>
-			<rdg wit="f1823">now </rdg>
-			<rdg wit="fThomas">now </rdg>
-			<rdg wit="fMS">now </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['&lt;delstart/&gt;well', 'and&lt;delstart/&gt;', '&lt;delstart/&gt;far&lt;delstart/&gt;', 'vigorous']">
-			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12038&quot;&gt;well &amp;&lt;/del&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12041&quot;&gt;far&lt;/del&gt; vigorous </rdg>
-		</rdgGrp>
-		<rdgGrp n="['so']">
-			<rdg wit="f1818">so </rdg>
-			<rdg wit="f1823">so </rdg>
-			<rdg wit="fThomas">so </rdg>
+		<rdgGrp n="['now', 'so']">
+			<rdg wit="f1818">now so </rdg>
+			<rdg wit="f1823">now so </rdg>
+			<rdg wit="fThomas">now so </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -80,4 +41,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

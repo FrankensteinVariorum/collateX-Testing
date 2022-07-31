@@ -9,7 +9,7 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['&lt;delstart/&gt;quite&lt;delstart/&gt;']">
+		<rdgGrp n="['&lt;delstart/&gt;quite&lt;delend/&gt;']">
 			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12071&quot;&gt;quite&lt;/del&gt; </rdg>
 		</rdgGrp>
 	</app>
@@ -95,4 +95,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

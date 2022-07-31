@@ -25,10 +25,10 @@ regexBlankLine = re.compile(r'\n{2,}')
 regexLeadingBlankLine = re.compile(r'^\n')
 regexPageBreak = re.compile(r'<pb.+?/>', re.DOTALL)
 RE_MARKUP = re.compile(r'<.+?>', re.DOTALL)
-RE_PARA = re.compile(r'<p\s[^<]+?/>')
-RE_INCLUDE = re.compile(r'<include[^<]*/>')
-RE_HEAD = re.compile(r'<head[^<]*/>')
-RE_AB = re.compile(r'<ab[^<]*/>')
+RE_PARA = re.compile(r'<p\s.+?/>')
+RE_INCLUDE = re.compile(r'<include.*?/>')
+RE_HEAD = re.compile(r'<head.*?/>')
+RE_AB = re.compile(r'<ab.*?/>')
 # 2018-10-1 ebb: ampersands are apparently not treated in python regex as entities any more than angle brackets.
 # RE_AMP_NSB = re.compile(r'\S&amp;\s')
 # RE_AMP_NSE = re.compile(r'\s&amp;\S')
@@ -40,23 +40,21 @@ RE_AMP = re.compile(r'&')
 # TITLE_MultiCaps = match(RE_MULTICAPS).lower()
 # RE_NOTE = re.compile(r'<note[^<]*?>.+?</note>', re.MULTILINE | re.DOTALL)
 # RE_DEL = re.compile(r'<del[^<\-]*?>.+?</del>', re.MULTILINE | re.DOTALL)
-RE_ADDSTART = re.compile(r'<add[^<\-]*?>')
+RE_ADDSTART = re.compile(r'<add.*?>')
 RE_ADDEND = re.compile(r'</add>')
-RE_NOTE_START = re.compile(r'<note[^<]*?>')
+RE_NOTE_START = re.compile(r'<note.*?>')
 RE_NOTE_END = re.compile(r'</note>')
-RE_DELSTART = re.compile(r'<del[^<]*?>')
+RE_DELSTART = re.compile(r'<del.*?>')
 RE_DELEND = re.compile(r'</del>')
-RE_SGA_ADDSTART = re.compile(r'<sga-add[^<]+?sID[^<]+>')
-RE_SGA_ADDEND = re.compile(r'<sga-add[^<]+?eID[^<]+>')
-RE_MDEL = re.compile(r'<mdel[^<]*>.+?</mdel>', re.MULTILINE | re.DOTALL)
-RE_SHI = re.compile(r'<shi[^<]*>.+?</shi>', re.MULTILINE | re.DOTALL)
-RE_METAMARK = re.compile(r'<metamark[^<]*>.+?</metamark>', re.MULTILINE | re.DOTALL)
-RE_HI = re.compile(r'<hi\s[^<]*/>')
-RE_PB = re.compile(r'<pb[^<]*/>')
-RE_LB = re.compile(r'<lb[^<]*?/>')
-# 2021-09-06: ebb and djb: On <lb> collation troubles: LOOK FOR DOT MATCHES ALL FLAG
-# b/c this is likely spanning multiple lines, and getting split by the tokenizing algorithm.
-# 2021-09-10: ebb with mb and jc: trying .*? and DOTALL flag
+RE_SGA_ADDSTART = re.compile(r'<sga-add.+?sID.+?>')
+RE_SGA_ADDEND = re.compile(r'<sga-add.+?eID.+?>')
+RE_MDEL = re.compile(r'<mdel.*?>.+?</mdel>')
+RE_SHI = re.compile(r'<shi.*?>.+?</shi>')
+RE_METAMARK = re.compile(r'<metamark.*?>.+?</metamark>')
+RE_HI = re.compile(r'<hi\s.+?/>')
+RE_PB = re.compile(r'<pb.*?/>')
+RE_LB = re.compile(r'<lb.*?/>')
+# ebb: considered: re.DOTALL ? Probably don't need it b/c these regexes are being performed on tokens.
 RE_LG = re.compile(r'<lg[^<]*/>')
 RE_L = re.compile(r'<l\s[^<]*/>')
 RE_CIT = re.compile(r'<cit\s[^<]*/>')
@@ -87,18 +85,11 @@ RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 # 2017-05-30 ebb: collated but the tags are not). Decision to make the comments into self-closing elements with text
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
-ignore = ['sga-add', 'mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
-# 2021-09-06 ebb: Let's try putting pb and lb up in ignore where I think they belong.
-# 2021-09-06: ebb: NO. that's a problem because we eliminate pb and lb from the collation output,
-# and we need them for location markers.
-# 2022-07-16 ebb: Elements in the ignore list are completely skipped in our algorithm,
-# so they won't be output. We tried removing the ignore
-# list to handle all the removal of tags only by normalizing, and in general maybe it's better to have less rather than more in here.
-# Remember that elements from S-GA that need to be sign-posts for us should be output as inputText.
+ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
 blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['lb', 'gap',  'hi']
-inlineContent = ['del', 'add', 'del-INNER', 'add-INNER', 'note', 'metamark', 'mdel', 'shi']
-
+inlineEmpty = ['sga-add', 'lb', 'gap',  'hi']
+inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
+inlineVariationEvent = ['del', 'add', 'note']
 # 10-23-2017 ebb rv:
 
 def normalizeSpace(inText):
@@ -118,9 +109,12 @@ def extract(input_xml):
         if event == pulldom.START_ELEMENT and node.localName in ignore:
             continue
         # copy comments intact
-        if event == pulldom.COMMENT:
+        # if event == pulldom.COMMENT:
+        #     doc.expandNode(node)
+        #     output += node.toxml()
+        if event == pulldom.START_ELEMENT and node.localName in inlineVariationEvent:
             doc.expandNode(node)
-            output += node.toxml()
+            output += '\n' + node.toxml() + '\n'
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
         # We COULD set white spaces around these like this ' ' + node.toxml() + ' '
         # but what seems to happen is that the white spaces get added to tokens; they aren't used to
@@ -158,14 +152,14 @@ def normalize(inputText):
     return RE_MULTI_LEFTANGLE.sub('<',\
         RE_MULTI_LEFTANGLE.sub('>', \
         RE_INCLUDE.sub('', \
-        RE_DELSTART.sub('<delstart/>', \
         RE_DELEND.sub('<delend/>', \
-        RE_ADDSTART.sub('<addedThomas-start/>', \
+        RE_DELSTART.sub('<delstart/>', \
         RE_ADDEND.sub('<addedThomas-end/>', \
-        RE_SGA_ADDSTART.sub('', \
+        RE_ADDSTART.sub('<addedThomas-start/>', \
         RE_SGA_ADDEND.sub('', \
-        RE_NOTE_START.sub('<note_start/>', \
+        RE_SGA_ADDSTART.sub('', \
         RE_NOTE_END.sub('<note_end/>', \
+        RE_NOTE_START.sub('<note_start/>', \
         RE_AB.sub('', \
         RE_HEAD.sub('', \
         RE_AMP.sub('and', \

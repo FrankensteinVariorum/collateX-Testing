@@ -26,7 +26,7 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['&lt;delstart/&gt;the&lt;delstart/&gt;', '', 'last', 'night']">
+		<rdgGrp n="['&lt;delstart/&gt;the&lt;delend/&gt;', '', 'last', 'night']">
 			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12101&quot;&gt;the&lt;/del&gt; &lt;lb n=&quot;c56-0059__main__6&quot;/&gt; last night </rdg>
 		</rdgGrp>
 	</app>
@@ -54,8 +54,8 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['', 'professionernest', '&lt;delstart/&gt;', '&lt;shi rend=&quot;underline&quot;&gt;should', 'be&lt;/shi&gt;', '&lt;delstart/&gt;']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0059__main__7&quot;/&gt;&lt;lb n=&quot;c56-0059__left_margin__1&quot;/&gt; professionErnest &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12120&quot;&gt; &lt;shi rend=&quot;underline&quot;&gt;should be&lt;/shi&gt; &lt;/del&gt; </rdg>
+		<rdgGrp n="['', 'professionernest', '&lt;delstart/&gt;', '      ', '   &lt;delend/&gt;']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0059__main__7&quot;/&gt;&lt;lb n=&quot;c56-0059__left_margin__1&quot;/&gt;&lt;sga-add sID=&quot;c56-0059__left_margin__d5e12115&quot;/&gt; profession&lt;sga-add eID=&quot;c56-0059__left_margin__d5e12115&quot;/&gt;Ernest &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12120&quot;&gt;       &lt;shi rend=&quot;underline&quot;&gt;should be&lt;/shi&gt;    &lt;/del&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['profession', 'ernest']">
 			<rdg wit="f1818">profession Ernest </rdg>
@@ -68,7 +68,7 @@
 			<rdg wit="f1818">should follow. His constant </rdg>
 			<rdg wit="f1823">should follow. His constant </rdg>
 			<rdg wit="fThomas">should follow. His constant </rdg>
-			<rdg wit="fMS">should follow. His constant </rdg>
+			<rdg wit="fMS">&lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0059__main__d5e12126&quot;/&gt;should follow&lt;sga-add eID=&quot;c56-0059__main__d5e12126&quot;/&gt;. His constant </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -91,7 +91,7 @@
 	</app>
 	<app>
 		<rdgGrp n="['', 'himof']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0059__main__9&quot;/&gt;&lt;lb n=&quot;c56-0059__left_margin__1&quot;/&gt; himof </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0059__main__9&quot;/&gt;&lt;lb n=&quot;c56-0059__left_margin__1&quot;/&gt;&lt;sga-add sID=&quot;c56-0059__left_margin__d5e12141&quot;/&gt; him&lt;sga-add eID=&quot;c56-0059__left_margin__d5e12141&quot;/&gt;of </rdg>
 		</rdgGrp>
 		<rdgGrp n="['him', 'of']">
 			<rdg wit="f1818">him of </rdg>
@@ -157,7 +157,7 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['health', '&lt;delstart/&gt;we&lt;delstart/&gt;']">
+		<rdgGrp n="['health', '&lt;delstart/&gt;we&lt;delend/&gt;']">
 			<rdg wit="fMS">health &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12146&quot;&gt;we&lt;/del&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['health,']">
@@ -193,4 +193,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

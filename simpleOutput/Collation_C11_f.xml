@@ -35,8 +35,8 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['&lt;delstart/&gt;so&lt;delstart/&gt;']">
-			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12061&quot;&gt;so&lt;/del&gt; </rdg>
+		<rdgGrp n="['&lt;delstart/&gt;', '      so', '   &lt;delend/&gt;']">
+			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12061&quot;&gt;       &lt;sga-add hand=&quot;#pbs&quot; place=&quot;intralinear&quot; sID=&quot;c56-0058__main__d5e12063&quot;/&gt;so&lt;sga-add eID=&quot;c56-0058__main__d5e12063&quot;/&gt;    &lt;/del&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -80,4 +80,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

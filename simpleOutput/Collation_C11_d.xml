@@ -27,8 +27,8 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['&lt;delstart/&gt;uneasy&lt;delstart/&gt;', '']">
-			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12011&quot;&gt;uneasy&lt;/del&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; </rdg>
+		<rdgGrp n="['&lt;delstart/&gt;uneasy&lt;delend/&gt;', '', '']">
+			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e12011&quot;&gt;uneasy&lt;/del&gt; &lt;sga-add place=&quot;sublinear&quot; sID=&quot;c56-0058__main__d5e12014&quot;/&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -36,7 +36,7 @@
 			<rdg wit="f1818">miserable on this account. Relieve </rdg>
 			<rdg wit="f1823">miserable on this account. Relieve </rdg>
 			<rdg wit="fThomas">miserable on this account. Relieve </rdg>
-			<rdg wit="fMS">miserable on this account. Relieve </rdg>
+			<rdg wit="fMS">&lt;sga-add eID=&quot;c56-0058__main__d5e12014&quot;/&gt;&lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e12020&quot;/&gt;miserable on this account&lt;sga-add eID=&quot;c56-0058__main__d5e12020&quot;/&gt;. Relieve </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -103,4 +103,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

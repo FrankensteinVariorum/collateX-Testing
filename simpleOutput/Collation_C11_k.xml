@@ -15,7 +15,7 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['air', '&lt;delstart/&gt;on&lt;delstart/&gt;', '']">
+		<rdgGrp n="['air', '&lt;delstart/&gt;on&lt;delend/&gt;', '']">
 			<rdg wit="fMS">air &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12151&quot;&gt;on&lt;/del&gt; &lt;lb n=&quot;c56-0059__main__12&quot;/&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['air,']">
@@ -69,4 +69,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

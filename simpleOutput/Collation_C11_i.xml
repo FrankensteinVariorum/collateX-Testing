@@ -19,7 +19,7 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['', '', 'if', 'i', '&lt;delstart/&gt;y&lt;delstart/&gt;', 'may', 'use', 'that', 'term', 'for', 'it', 'is', '', 'very', 'expressive.']">
+		<rdgGrp n="['', '', 'if', 'i', '&lt;delstart/&gt;y&lt;delend/&gt;', 'may', 'use', 'that', 'term', 'for', 'it', 'is', '', 'very', 'expressive.']">
 			<rdg wit="fMS">&lt;shi rend=&quot;underline&quot;&gt;hearty&lt;/shi&gt; &lt;lb n=&quot;c56-0059__main__3&quot;/&gt; if I &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0059__main__d5e12091&quot;&gt;y&lt;/del&gt; may use that term for it is &lt;lb n=&quot;c56-0059__main__4&quot;/&gt; very expressive. </rdg>
 		</rdgGrp>
 		<rdgGrp n="['active.']">
@@ -46,4 +46,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->

@@ -25,7 +25,7 @@
 			<rdg wit="f1831">&lt;head sID=&quot;novel1_letter4_chapter6_div4_div6_head1&quot;/&gt; CHAPTER </rdg>
 		</rdgGrp>
 		<rdgGrp n="['&lt;milestone spanto=&quot;#c56-0057.02&quot; unit=&quot;tei:head&quot;/&gt;', 'ch', 'v–', '113', '&lt;p/&gt;']">
-			<rdg wit="fMS">&lt;milestone spanTo=&quot;#c56-0057.02&quot; unit=&quot;tei:head&quot;/&gt; Ch V– 113 &lt;milestone unit=&quot;tei:p-END&quot;/&gt; </rdg>
+			<rdg wit="fMS">&lt;milestone spanTo=&quot;#c56-0057.02&quot; unit=&quot;tei:head&quot;/&gt; &lt;sga-add place=&quot;interlinear&quot; sID=&quot;c56-0057__Pt2__main__d5e11742&quot;/&gt;Ch V– 113&lt;sga-add eID=&quot;c56-0057__Pt2__main__d5e11742&quot;/&gt; &lt;milestone unit=&quot;tei:p-END&quot;/&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -106,4 +106,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-07-31 08:16:14.255562 -->
+<!-- 2022-07-31 14:50:40.891590 -->
