@@ -1,17 +1,17 @@
 from typing import BinaryIO
-
+# 2022-07-30 ebb: We are altering this python script to handle inputs marked in a new way.
+# ALL file have <note>...</note>
+# Thomas edition has <add>....</add>, <del>....</del>,
+# as well as <add-INNER>...</add-INNER> and <del-INNER>...</del-INNER>
+# msColl edition has <sga-add sID="..""/> and <sga-add eID="..""/>: to be set in IGNORE list
+# msColl edition has <del>...</del> and <del-INNER>...</del-INNER>
+# msColl edition has <milestone unit="tei:p-START"/> and <milestone unit="tei:p-END"/>
+# We now try to create very long tokens out of these to improve the collation alignments.
 from collatex import *
 from xml.dom import pulldom
 import re
 import glob
 from datetime import datetime, date
-# import pytz
-# from tzlocal import get_localzone
-
-# today = date.today()
-# utc_dt = datetime(today, tzinfo=pytz.utc)
-# dateTime = utc_dt.astimezone(get_localzone())
-# strDateTime = str(dateTime)
 
 now = datetime.utcnow()
 nowStr = str(now)
@@ -38,10 +38,13 @@ RE_AMP = re.compile(r'&')
 # RE_MULTICAPS = re.compile(r'(?<=\W|\s|\>)[A-Z][A-Z]+[A-Z]*\s')
 # RE_INNERCAPS = re.compile(r'(?<=hi\d"/>)[A-Z]+[A-Z]+[A-Z]+[A-Z]*')
 # TITLE_MultiCaps = match(RE_MULTICAPS).lower()
-RE_DELSTART = re.compile(r'<del[^<]+?sID[^<]+>')
-RE_DELEND = re.compile(r'<del[^<]+?eID[^<]+>')
-RE_ADDSTART = re.compile(r'<add[^<]+?sID[^<]+>')
-RE_ADDEND = re.compile(r'<add[^<]+?eID[^<]+>')
+RE_NOTE = re.compile(r'<note\s[^<]*>.+?</note>')
+RE_DEL = re.compile(r'<del\s[^<]*>.+?</del>')
+RE_ADD = re.compile(r'<add\s[^<]*>.+?</add>')
+# RE_DELSTART = re.compile(r'<del[^<]+?sID[^<]+>')
+# RE_DELEND = re.compile(r'<del[^<]+?eID[^<]+>')
+RE_SGA-ADDSTART = re.compile(r'<sga-add[^<]+?sID[^<]+>')
+RE_SGA-ADDEND = re.compile(r'<sga-add[^<]+?eID[^<]+>')
 RE_MDEL = re.compile(r'<mdel[^<]*>.+?</mdel>')
 RE_SHI = re.compile(r'<shi[^<]*>.+?</shi>')
 RE_METAMARK = re.compile(r'<metamark[^<]*>.+?</metamark>')
@@ -59,7 +62,7 @@ RE_OPENQT = re.compile(r'“')
 RE_CLOSEQT = re.compile(r'”')
 RE_GAP = re.compile(r'<gap\s[^<]*/>')
 # &lt;milestone unit="tei:p"/&gt;
-RE_sgaP = re.compile(r'<milestone[^<]+?unit="tei:p"[^<]*/>')
+RE_sgaP = re.compile(r'<milestone[^<]+?unit="tei:p[^<]*/>')
 RE_MILESTONE = re.compile(r'<milestone[^<:]+?>')
 # 2022-07-16 ebb: The original version was just capturing all milestone elements, including the SGA paragraph markers!
 RE_MOD = re.compile(r'<mod\s[^<]*/>')
@@ -81,7 +84,7 @@ RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 # 2017-05-30 ebb: collated but the tags are not). Decision to make the comments into self-closing elements with text
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
-ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
+ignore = ['sga-add', 'mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
 # 2021-09-06 ebb: Let's try putting pb and lb up in ignore where I think they belong.
 # 2021-09-06: ebb: NO. that's a problem because we eliminate pb and lb from the collation output,
 # and we need them for location markers.
@@ -89,9 +92,9 @@ ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSp
 # so they won't be output. We tried removing the ignore
 # list to handle all the removal of tags only by normalizing, and in general maybe it's better to have less rather than more in here.
 # Remember that elements from S-GA that need to be sign-posts for us should be output as inputText.
-blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'note', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['lb', 'gap',  'hi', 'add', 'del']
-inlineContent = ['metamark', 'mdel', 'shi']
+blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'ab', 'head']
+inlineEmpty = ['lb', 'gap',  'hi']
+inlineContent = ['del', 'add', 'del-INNER', 'add-INNER', 'note', 'metamark', 'mdel', 'shi']
 
 # 10-23-2017 ebb rv:
 
@@ -163,7 +166,7 @@ def normalize(inputText):
         RE_LB.sub('', \
         RE_PB.sub('', \
         RE_PARA.sub('<p/>', \
-        RE_sgaP.sub('<p/>''<p/>', \
+        RE_sgaP.sub('<p/>', \
         RE_MILESTONE.sub('', \
         RE_LG.sub('<lg/>', \
         RE_L.sub('<l/>', \
@@ -172,12 +175,13 @@ def normalize(inputText):
         RE_OPENQT.sub('"', \
         RE_CLOSEQT.sub('"', \
         RE_GAP.sub('', \
-        RE_DELSTART.sub('<delstart/>', \
-        RE_DELEND.sub('<delend/>', \
-        RE_ADDSTART.sub('<addstart/>', \
-        RE_ADDEND.sub('<addend/>', \
+        RE_DEL.sub('<deletedPassage/>', \
+        RE_ADD.sub('<addedThomasPassage/>', \
+        RE_SGA-ADDSTART.sub('<addstart/>', \
+        RE_SGA-ADDEND.sub('<addend/>', \
+        RE_NOTE.sub('<note/>', \
         RE_MOD.sub('', \
-        RE_METAMARK.sub('', inputText))))))))))))))))))))))))))).lower()
+        RE_METAMARK.sub('', inputText)))))))))))))))))))))))))))).lower()
 
 # to lowercase the normalized tokens, add .lower() to the end.
 #    return regexPageBreak('',inputText)
