@@ -12,7 +12,7 @@
         such that passages that change around paragraph or chapter or 
         letter boundaries in the source texts can be captured as moments of variation.
         
-        I have updated the stylesheet to *not* flatten certain elements that we never expect 
+        I have updated the stylesheet so it does *not* flatten certain elements that we never expect 
         to be broken around structural hierarchy elements: these are <add>, <del>, and <note> elements 
         that represent Mary Shelley's comments added to the Thomas edition. We will attempt 
         to treat these whole elements as very long single tokens for the purposes of

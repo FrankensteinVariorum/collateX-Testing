@@ -4,13 +4,22 @@
 exclude-result-prefixes="#all"
     version="3.0">
     <!--2018-07-20 ebb: This stylesheet plants "location flags" on <lb/> elements to mark their XPath position, and it sets "trojan-horse" style start and end markers with @th:sID and @th:eID on other elements as they are being flattened. On up-conversion following collation, we may convert the trojan-horse marker elements back into xml:ids again, should we decide to build from our S-GA "bridge" files. -->
+    <!--2022-07 ebb: I am updating this stylesheet to 
+        * transform <milestone unit="tei:p"/> elements into end and start milestone markers
+        * transform <add> elements into <sga-add> (and treat them as trojan style elements). We want these element tags from the S-GA edition only to be ignored in the collation, but need to preserve their contents for collation.
+        * output <del> elements as whole elements so that they can be treated as very long single tokens in the collation, for the purposes of improving the alignment of our collation output. 
+        * also output <note> elements as whole elements, so they, too can be treated as very long single tokens. 
+        
+        These changes may improve the collation alignment of the S-GA document with the print edition documents.
+
+    -->
    <xsl:output method="xml" indent="no"/>
     <xsl:template match="@* | node()">
         <xsl:copy copy-namespaces="no">
             <xsl:apply-templates select="@* | node()[not(namespace::*)]"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:variable name="msColl-full" as="document-node()+" select="collection('msColl-full')"/>
+    <xsl:variable name="msColl-full" as="document-node()+" select="collection('msColl-full/?select=*.xml')"/>
     <xsl:template match="/">
         <xsl:for-each select="$msColl-full//xml">
             <xsl:variable name="currFile" as="xs:string" select="tokenize(base-uri(.), '/')[last()] ! substring-before(., '.xml')"/>
@@ -85,7 +94,7 @@ exclude-result-prefixes="#all"
             </xsl:attribute>    
           </xsl:element>     
     </xsl:template>
-    <xsl:template match="mod | add | del">
+    <xsl:template match="mod">
         <xsl:variable name="locFlag">
             <xsl:value-of select="substring-after(ancestor::surface/@xml:id, 'abinger_')"/><xsl:text>__</xsl:text><xsl:value-of select="ancestor::zone[1]/@type"/><xsl:text>__</xsl:text><xsl:value-of select="generate-id(.)"/> 
         </xsl:variable>  
@@ -102,4 +111,60 @@ exclude-result-prefixes="#all"
             </xsl:attribute>   
            </xsl:element>   
     </xsl:template>
+    <xsl:template match="add">
+        <xsl:variable name="locFlag">
+            <xsl:value-of select="substring-after(ancestor::surface/@xml:id, 'abinger_')"/><xsl:text>__</xsl:text><xsl:value-of select="ancestor::zone[1]/@type"/><xsl:text>__</xsl:text><xsl:value-of select="generate-id(.)"/> 
+        </xsl:variable>  
+        <xsl:element name="sga-{local-name()}">
+            <xsl:copy-of select="@*" copy-namespaces="no"/>
+            <xsl:attribute name="sID">
+                <xsl:value-of select="$locFlag"/>
+            </xsl:attribute>
+        </xsl:element>     
+        <xsl:apply-templates/>
+        <xsl:element name="sga-{local-name()}"> 
+            <xsl:attribute name="eID">
+                <xsl:value-of select="$locFlag"/>
+            </xsl:attribute>   
+        </xsl:element>   
+    </xsl:template>
+    <xsl:template match="del[not(ancestor::del)]">
+        <xsl:variable name="locFlag">
+            <xsl:value-of select="substring-after(ancestor::surface/@xml:id, 'abinger_')"/><xsl:text>__</xsl:text><xsl:value-of select="ancestor::zone[1]/@type"/><xsl:text>__</xsl:text><xsl:value-of select="generate-id(.)"/> 
+        </xsl:variable>  
+        <xsl:element name="{local-name()}">
+            <xsl:copy-of select="@*" copy-namespaces="no"/>
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="$locFlag"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>     
+    </xsl:template>
+    <xsl:template match="del[ancestor::del]">
+        <xsl:variable name="locFlag">
+            <xsl:value-of select="substring-after(ancestor::surface/@xml:id, 'abinger_')"/><xsl:text>__</xsl:text><xsl:value-of select="ancestor::zone[1]/@type"/><xsl:text>__</xsl:text><xsl:value-of select="generate-id(.)"/> 
+        </xsl:variable>  
+        <xsl:element name="{local-name()}-INNER">
+            <xsl:copy-of select="@*" copy-namespaces="no"/>
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="$locFlag"/>
+            </xsl:attribute>'
+            <xsl:apply-templates/>
+        </xsl:element>     
+    </xsl:template>
+    <xsl:template match="milestone[@unit='tei:p']">
+        <xsl:element name="{local-name()}">
+            <xsl:copy-of select="@*[not(name() = 'unit')]" copy-namespaces="no"/>
+            <xsl:attribute name="unit">
+                <xsl:text>tei:p-END</xsl:text>
+            </xsl:attribute>
+        </xsl:element>
+        <xsl:element name="{local-name()}">
+            <xsl:copy-of select="@*[not(name() = 'unit')]" copy-namespaces="no"/>
+            <xsl:attribute name="unit">
+                <xsl:text>tei:p-START</xsl:text>
+            </xsl:attribute>
+        </xsl:element>
+    </xsl:template>
+      
 </xsl:stylesheet>
