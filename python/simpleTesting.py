@@ -63,9 +63,12 @@ RE_OPENQT = re.compile(r'“')
 RE_CLOSEQT = re.compile(r'”')
 RE_GAP = re.compile(r'<gap\s[^<]*/>')
 # &lt;milestone unit="tei:p"/&gt;
-RE_sgaP = re.compile(r'<milestone[^<]+?unit="tei:p[^<]*/>')
-RE_MILESTONE = re.compile(r'<milestone[^<:]+?>')
-# 2022-07-16 ebb: The original version was just capturing all milestone elements, including the SGA paragraph markers!
+RE_sgaP = re.compile(r'<milestone[^<]+?unit="tei:p.+?/>')
+RE_MILESTONE = re.compile(r'<milestone.+?>')
+# 2022-07-16 amended 07-31 ebb: Milestone subbing is a special problem: In S-GA paragraphs
+# are marked w/ milestone elements with @unit="tei:p"
+# and also milestones are used for other things like "tei:seg""
+# So we'll do a regex substitution for the paragraphs first, and THEN move to the other milestones.
 RE_MOD = re.compile(r'<mod\s[^<]*/>')
 RE_MULTI_LEFTANGLE = re.compile(r'<{2,}')
 RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
@@ -160,7 +163,7 @@ def normalize(inputText):
         RE_SGA_ADDSTART.sub('', \
         RE_NOTE_END.sub('<note_end/>', \
         RE_NOTE_START.sub('<note_start/>', \
-        RE_AB.sub('', \
+        RE_AB.sub('<ab/>', \
         RE_HEAD.sub('', \
         RE_AMP.sub('and', \
         RE_MDEL.sub('', \
@@ -194,10 +197,10 @@ def processWitness(inputWitness, id):
 
 def tokenizeFiles(name, matchString):
     with open(name, 'rb') as f1818file, \
-            open('../simpleInput/1823_fullFlat_' + matchString, 'rb') as f1823file, \
-            open('../simpleInput/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
-            open('../simpleInput/1831_fullFlat_' + matchString, 'rb') as f1831file, \
-            open('../simpleInput/msColl_' + matchString, 'rb') as fMSfile:
+            open('../collChunk-11/1823_fullFlat_' + matchString, 'rb') as f1823file, \
+            open('../collChunk-11/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
+            open('../collChunk-11/1831_fullFlat_' + matchString, 'rb') as f1831file, \
+            open('../collChunk-11/msColl_' + matchString, 'rb') as fMSfile:
         f1818_tokens = tokenize(f1818file)
         f1823_tokens = tokenize(f1823file)
         fThomas_tokens = tokenize(fThomasfile)
@@ -224,7 +227,7 @@ def tokenize(inputFile):
 # declare a list inlineAdd for <add>
 # add  '\n' before <add> nodes in extract function
 
-for name in glob.glob('../simpleInput/1818_fullFlat_*'):
+for name in glob.glob('../collChunk-11/1818_fullFlat_*'):
     try:
         matchString = name.split("fullFlat_", 1)[1]
         # ebb: above gets C30.xml for example
