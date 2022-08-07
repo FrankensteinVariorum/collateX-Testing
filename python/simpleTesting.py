@@ -17,7 +17,7 @@ now = datetime.utcnow()
 nowStr = str(now)
 
 print('test: ', dir(Collation))
-
+regexHyphen = re.compile(r'-')
 regexWhitespace = re.compile(r'\s+')
 regexNonWhitespace = re.compile(r'\S+')
 regexEmptyTag = re.compile(r'/>$')
@@ -25,6 +25,7 @@ regexBlankLine = re.compile(r'\n{2,}')
 regexLeadingBlankLine = re.compile(r'^\n')
 regexPageBreak = re.compile(r'<pb.+?/>', re.DOTALL)
 RE_MARKUP = re.compile(r'<.+?>', re.DOTALL)
+RE_WORDMARKER = re.compile(r'<w ana.+?/>')
 RE_PARA = re.compile(r'<p\s.+?/>')
 RE_INCLUDE = re.compile(r'<include.*?/>')
 RE_HEAD = re.compile(r'<head.*?/>')
@@ -88,15 +89,15 @@ RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 # 2017-05-30 ebb: collated but the tags are not). Decision to make the comments into self-closing elements with text
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
-ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'w', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
+ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
 blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['sga-add', 'lb', 'gap',  'hi']
+inlineEmpty = ['sga-add', 'lb', 'gap',  'hi', 'w']
 inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
 inlineVariationEvent = ['del', 'add', 'note']
 # 10-23-2017 ebb rv:
 
 def normalizeSpace(inText):
-    """Replaces all whitespace spans with single space characters"""
+    """ Replaces all whitespace spans with a newline character for tokenization."""
     if regexNonWhitespace.search(inText):
         return regexWhitespace.sub('\n', inText)
     else:
@@ -152,41 +153,44 @@ def extract(input_xml):
 
 def normalize(inputText):
 # 2022-07-16 ebb: Adding newlines here is too late: it just inserts a newline into a token.
-    return RE_MULTI_LEFTANGLE.sub('<',\
-        RE_MULTI_LEFTANGLE.sub('>', \
-        RE_INCLUDE.sub('', \
-        RE_DELEND.sub('<delend/>', \
-        RE_DELSTART.sub('<delstart/>', \
-        RE_ADDEND.sub('<addedThomas-end/>', \
-        RE_ADDSTART.sub('<addedThomas-start/>', \
-        RE_SGA_ADDEND.sub('', \
-        RE_SGA_ADDSTART.sub('', \
-        RE_NOTE_END.sub('<note_end/>', \
-        RE_NOTE_START.sub('<note_start/>', \
-        RE_AB.sub('<ab/>', \
-        RE_HEAD.sub('', \
-        RE_AMP.sub('and', \
-        RE_MDEL.sub('', \
-        RE_SHI.sub('', \
-        RE_HI.sub('', \
-        RE_LB.sub('', \
-        RE_PB.sub('', \
-        RE_PARA.sub('<p/>', \
-        RE_sgaP.sub('<p/>', \
-        RE_MILESTONE.sub('', \
-        RE_LG.sub('<lg/>', \
-        RE_L.sub('<l/>', \
-        RE_CIT.sub('', \
-        RE_QUOTE.sub('', \
-        RE_OPENQT.sub('"', \
-        RE_CLOSEQT.sub('"', \
-        RE_GAP.sub('', \
-        RE_MOD.sub('', \
-        RE_METAMARK.sub('', inputText))))))))))))))))))))))))))))))).lower()
+# 2022-08-06 ebb: I have rewritten this series of operations using a normalized variable for legibility.
+# These need to run in sequence: the order of replacements matters.
+# The lower() at the end lowercases all the normalized strings to simplify the comparison.
 
-# to lowercase the normalized tokens, add .lower() to the end.
-#    return regexPageBreak('',inputText)
-# ebb: The normalize function makes it possible to return normalized tokens that screen out some markup, but not all.
+    normalized = RE_METAMARK.sub('', inputText)
+    normalized = RE_MOD.sub('', normalized)
+    normalized = RE_GAP.sub('', normalized)
+    normalized = RE_CLOSEQT.sub('"', normalized)
+    normalized = RE_OPENQT.sub('"', normalized)
+    normalized = RE_QUOTE.sub('', normalized)
+    normalized = RE_CIT.sub('', normalized)
+    normalized = RE_L.sub('<l/>', normalized)
+    normalized = RE_LG.sub('<lg/>', normalized)
+    normalized = RE_AB.sub('<ab/>', normalized)
+# 2022-08-06 Consider replacing <ab> with nothing?
+# These just seem to wrap headings or starts of letters in the print editions
+    normalized = RE_sgaP.sub('<p/>', normalized)
+    normalized = RE_PB.sub('', normalized)
+    normalized = RE_LB.sub('', normalized)
+    normalized = RE_NOTE_START.sub('<note_start/>', normalized)
+    normalized = RE_NOTE_END.sub('<note_end/>', normalized)
+    normalized = RE_SGA_ADDSTART.sub('', normalized)
+    normalized = RE_SGA_ADDEND.sub('', normalized)
+    normalized = RE_ADDSTART.sub('<addedThomas-start/>', normalized)
+    normalized = RE_ADDEND.sub('<addedThomas-end/>', normalized)
+    normalized = RE_DELSTART.sub('<delstart/>', normalized)
+    normalized = RE_DELEND.sub('<delend/>', normalized)
+    normalized = RE_WORDMARKER.sub('', normalized)
+    normalized = RE_HI.sub('', normalized)
+    normalized = RE_SHI.sub('', normalized)
+    normalized = RE_MDEL.sub('', normalized)
+    normalized = RE_AMP.sub('and', normalized)
+    normalized = RE_HEAD.sub('', normalized)
+    normalized = RE_INCLUDE.sub('',  normalized)
+    normalized = RE_MULTI_RIGHTANGLE.sub('>', normalized)
+    normalized = RE_MULTI_LEFTANGLE.sub('<', normalized)
+    normalized = normalized.lower()
+    return normalized
 
 def processToken(inputText):
     return {"t": inputText + ' ', "n": normalize(inputText)}
