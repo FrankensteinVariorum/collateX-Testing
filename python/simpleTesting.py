@@ -132,10 +132,6 @@ def extract(input_xml):
         # ebb: empty inline elements that do not take surrounding white spaces:
         elif event == pulldom.START_ELEMENT and node.localName in inlineEmpty:
             output += node.toxml()
-        # elif event == pulldom.START_ELEMENT and node.localName in inlineAdd:
-        #     output += '\n' + node.toxml()
-        # 2022-07=16 ebb: The thinking here from yxj was to insert a newline to control the tokenizing
-        # I am wondering if we can do that in the normalizing algorithm instead.
         # non-empty inline elements: mdel, shi, metamark
         elif event == pulldom.START_ELEMENT and node.localName in inlineContent:
             output += '\n' + regexEmptyTag.sub('>', node.toxml())

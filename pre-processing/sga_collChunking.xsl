@@ -8,7 +8,7 @@
         <xsl:for-each-group select="//anchor[@type='collate']/following-sibling::node()" group-starting-with="anchor[@type='collate']">
             <!--2018-05-07 ebb: Things discovered the hard way: when creating new XML out of groups of elements like this, the elements that define the groups really must be at the same hierarchical level. Otherwise the output is full of weird duplicated stuff. Don't use the following:: axis here. Make sure the input is properly flattened accordingly. -->
             <!--2018-04-01 ebb: CHANGE THE FILE DIRECTORY BELOW (to collChunkFrags_c58) as needed. -->
-            <xsl:result-document href="collationChunks/{substring-before(tokenize(ancestor::xml/base-uri(), '/')[last()], '.')}_{current()/@xml:id}.xml" method="xml" indent="no">
+            <xsl:result-document href="collationChunksAmended/{substring-before(tokenize(ancestor::xml/base-uri(), '/')[last()], '.')}_{current()/@xml:id}.xml" method="xml" indent="no">
                 <xml>
                     
                     <xsl:apply-templates select="current-group()"/>
@@ -25,6 +25,16 @@
     <!--2018-05-12 ebb: With the next template rule, I'm making sure there's a white space following every lb element that isn't inside word-boundary markup. This may help to prevent squishing of word tokens together in the output collation. -->
     <xsl:template match="lb[not(following-sibling::node()[2]/@ana='end')]">
         <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
+    </xsl:template>
+    <xsl:template match="milestone[@unit='tei:p-END']">
+        <xsl:choose>
+            <xsl:when test="not(preceding-sibling::milestone[contains(@unit, 'tei:p') and preceding-sibling::anchor[@type='collate'][1] eq current()/preceding-sibling::anchor[@type='collate'][1]])">
+                <!-- ebb: Process nothing and remove this milestone -->
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>
