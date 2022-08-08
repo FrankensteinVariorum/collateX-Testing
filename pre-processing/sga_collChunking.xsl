@@ -22,13 +22,21 @@
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
-    <!--2018-05-12 ebb: With the next template rule, I'm making sure there's a white space following every lb element that isn't inside word-boundary markup. This may help to prevent squishing of word tokens together in the output collation. -->
+    <!--2018-05-12 ebb: With the next template rule, I'm making sure there's a white space following every lb element that isn't inside word-boundary markup. This may help to prevent squishing of normalized word tokens together in the output collation 
+    -->
     <xsl:template match="lb[not(following-sibling::node()[2]/@ana='end')]">
         <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
     </xsl:template>
+    <!--2022-08-08 ebb: This template similarly ensures a space preceding the end of every sga-add endtag marker, again to prevent fused word tokens during the collation normalization process. -->
+    <xsl:template match="sga-add[@eID]">
+        <xsl:text> </xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
+    </xsl:template>
     <xsl:template match="milestone[@unit='tei:p-END']">
+        <xsl:variable name="current" as="element()" select="current()"/>
+        <xsl:variable name="currentCollAnchor" as="attribute()" select="$current/preceding::anchor[@type='collate'][1]/@xml:id"/>
+        
         <xsl:choose>
-            <xsl:when test="not(preceding-sibling::milestone[contains(@unit, 'tei:p') and preceding-sibling::anchor[@type='collate'][1] eq current()/preceding-sibling::anchor[@type='collate'][1]])">
+            <xsl:when test="not(preceding-sibling::milestone[contains(@unit, 'tei:p') and preceding-sibling::anchor[@type='collate'][1]/@xml:id eq $currentCollAnchor])">
                 <!-- ebb: Process nothing and remove this milestone -->
             </xsl:when>
             <xsl:otherwise>

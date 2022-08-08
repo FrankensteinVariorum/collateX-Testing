@@ -50,7 +50,9 @@ RE_DELEND = re.compile(r'</del>')
 RE_SGA_ADDSTART = re.compile(r'<sga-add.+?sID.+?>')
 RE_SGA_ADDEND = re.compile(r'<sga-add.+?eID.+?>')
 RE_MDEL = re.compile(r'<mdel.*?>.+?</mdel>')
-RE_SHI = re.compile(r'<shi.*?>.+?</shi>')
+# RE_SHI = re.compile(r'<shi.*?>.+?</shi>')
+RE_SHI_START = re.compile(r'<shi.*?>')
+RE_SHI_END = re.compile(r'</shi>')
 RE_METAMARK = re.compile(r'<metamark.*?>.+?</metamark>')
 RE_HI = re.compile(r'<hi\s.+?/>')
 RE_PB = re.compile(r'<pb.*?/>')
@@ -73,6 +75,9 @@ RE_MILESTONE = re.compile(r'<milestone.+?>')
 RE_MOD = re.compile(r'<mod\s[^<]*/>')
 RE_MULTI_LEFTANGLE = re.compile(r'<{2,}')
 RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
+RE_COLL_START = re.compile(r'<collationAlign.*?>')
+RE_COLL_END = re.compile(r'</collationAlign>')
+RE_DOTHYPHEN = re.compile(r'\.-')
 
 # ebb: RE_MDEL = those pesky deletions of two letters or less that we want to normalize out of the collation, but preserve in the output.
 
@@ -90,10 +95,10 @@ RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
 ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
-blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'ab', 'head']
-inlineEmpty = ['sga-add', 'lb', 'gap',  'hi', 'w']
+blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'head']
+inlineEmpty = ['sga-add', 'lb', 'gap',  'hi', 'w', 'ab']
 inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
-inlineVariationEvent = ['del', 'add', 'note']
+inlineVariationEvent = ['del', 'add', 'note', 'collationAlign']
 # 10-23-2017 ebb rv:
 
 def normalizeSpace(inText):
@@ -162,10 +167,11 @@ def normalize(inputText):
     normalized = RE_CIT.sub('', normalized)
     normalized = RE_L.sub('<l/>', normalized)
     normalized = RE_LG.sub('<lg/>', normalized)
-    normalized = RE_AB.sub('<ab/>', normalized)
-# 2022-08-06 Consider replacing <ab> with nothing?
-# These just seem to wrap headings or starts of letters in the print editions
+    normalized = RE_AB.sub('', normalized)
+# 2022-08-06 <ab> wraps headings or starts of letters in the print editions
+    normalized = RE_PARA.sub('<p/>', normalized)
     normalized = RE_sgaP.sub('<p/>', normalized)
+    normalized = RE_MILESTONE.sub('', normalized)
     normalized = RE_PB.sub('', normalized)
     normalized = RE_LB.sub('', normalized)
     normalized = RE_NOTE_START.sub('<note_start/>', normalized)
@@ -176,11 +182,29 @@ def normalize(inputText):
     normalized = RE_ADDEND.sub('<addedThomas-end/>', normalized)
     normalized = RE_DELSTART.sub('<delstart/>', normalized)
     normalized = RE_DELEND.sub('<delend/>', normalized)
+    normalized = RE_COLL_START.sub('', normalized)
+    normalized = RE_COLL_END.sub('', normalized)
     normalized = RE_WORDMARKER.sub('', normalized)
     normalized = RE_HI.sub('', normalized)
-    normalized = RE_SHI.sub('', normalized)
+# 2022-08-08 ebb: Sometimes <hi> in the print editions seems irrelevant, in highlighting words at
+# chapter beginnings. However, it also sometimes indicates emphasis on a word.
+# Example: one or two little <hi sID="xxx"/>wives<hi eID="novel1_letter4_chapter6_div4_div6_p9_hi1"/>
+# On analysis of <hi> and <shi> in the print and SG-A editions, it is difficult to distinguish
+# meaningful highlights from conventional superscripts/underlining, so it seems best to ignore it in normalization,
+# or return to the source texts and add markup to distinguish passages giving emphasis.
+#  normalized = RE_SHI.sub('', normalized)
+    normalized = RE_SHI_START.sub('', normalized)
+    normalized = RE_SHI_END.sub('', normalized)
+# 2022-08-08 ebb: <shi> elements mark briefly highlighted words or passages in the S-GA edition.
+# The highlights themselves are not usually significant, but the text inside must be preserved for comparison.
+# Example: <shi rend="underline">should be</shi>
+# Previously, we were eliminating these passages entirely from the normalization, which was a serious error!
+# We have not been considering highlighting or emphasis <hi> or <shi> as a significant difference in the normalization.
     normalized = RE_MDEL.sub('', normalized)
+# 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
+# We do not think these are significant for comparison with the other editions, so we normalize them out.
     normalized = RE_AMP.sub('and', normalized)
+    normalized = RE_DOTHYPHEN.sub('.', normalized)
     normalized = RE_HEAD.sub('', normalized)
     normalized = RE_INCLUDE.sub('',  normalized)
     normalized = RE_MULTI_RIGHTANGLE.sub('>', normalized)
