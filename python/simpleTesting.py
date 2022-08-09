@@ -47,8 +47,8 @@ RE_NOTE_START = re.compile(r'<note.*?>')
 RE_NOTE_END = re.compile(r'</note>')
 RE_DELSTART = re.compile(r'<del.*?>')
 RE_DELEND = re.compile(r'</del>')
-RE_SGA_ADDSTART = re.compile(r'<sga-add.+?sID.+?>')
-RE_SGA_ADDEND = re.compile(r'<sga-add.+?eID.+?>')
+RE_SGA_ADDSTART = re.compile(r'<sga-add.+?sID.+?/>')
+RE_SGA_ADDEND = re.compile(r'<sga-add.+?eID.+?/>')
 RE_MDEL = re.compile(r'<mdel.*?>.+?</mdel>')
 # RE_SHI = re.compile(r'<shi.*?>.+?</shi>')
 RE_SHI_START = re.compile(r'<shi.*?>')
@@ -77,7 +77,9 @@ RE_MULTI_LEFTANGLE = re.compile(r'<{2,}')
 RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 RE_COLL_START = re.compile(r'<collationAlign.*?>')
 RE_COLL_END = re.compile(r'</collationAlign>')
-RE_DOTHYPHEN = re.compile(r'\.-')
+RE_DOTDASH = re.compile(r'\.–')
+# RE_DOTDASH captures a period followed by a dash, frequently seen in the S-GA edition, and not a word-dividing hyphen.
+# 2022-08-08 ebb: I'm currently treating the "dotdash" as just a period for normalization to improve alignments.
 
 # ebb: RE_MDEL = those pesky deletions of two letters or less that we want to normalize out of the collation, but preserve in the output.
 
@@ -95,8 +97,8 @@ RE_DOTHYPHEN = re.compile(r'\.-')
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
 ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
-blockEmpty = ['pb', 'p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'head']
-inlineEmpty = ['sga-add', 'lb', 'gap',  'hi', 'w', 'ab']
+blockEmpty = ['p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'head']
+inlineEmpty = ['pb', 'sga-add', 'lb', 'gap',  'hi', 'w', 'ab']
 inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
 inlineVariationEvent = ['del', 'add', 'note', 'collationAlign']
 # 10-23-2017 ebb rv:
@@ -159,7 +161,8 @@ def normalize(inputText):
 # The lower() at the end lowercases all the normalized strings to simplify the comparison.
 
     normalized = RE_METAMARK.sub('', inputText)
-    normalized = RE_MOD.sub('', normalized)
+ #  normalized = RE_MOD.sub('', normalized)
+# <mod> is in the ignore list like anchor, etc, so why are we presuming it's being read?
     normalized = RE_GAP.sub('', normalized)
     normalized = RE_CLOSEQT.sub('"', normalized)
     normalized = RE_OPENQT.sub('"', normalized)
@@ -204,7 +207,7 @@ def normalize(inputText):
 # 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
 # We do not think these are significant for comparison with the other editions, so we normalize them out.
     normalized = RE_AMP.sub('and', normalized)
-    normalized = RE_DOTHYPHEN.sub('.', normalized)
+    normalized = RE_DOTDASH.sub('.', normalized)
     normalized = RE_HEAD.sub('', normalized)
     normalized = RE_INCLUDE.sub('',  normalized)
     normalized = RE_MULTI_RIGHTANGLE.sub('>', normalized)
