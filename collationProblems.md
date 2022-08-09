@@ -1,7 +1,8 @@
 # Collation problems from tokenized markup
 2022-07-29
 
-- [ ]  Alignment disruption across multiple apps, due to alignment of empty normalized tokens
+- [x]  Alignment disruption across multiple apps, due to alignment of empty normalized tokens
+*Solved! moved `<pb>` to inlineEmpty set in the Python collation script. The extract() function does not add newline characters around inlineEmpty set of elements.*
 
 ```xml
 <app>
@@ -41,7 +42,8 @@
 		</rdgGrp>
 	</app>
 ```	
-- [ ]  SGA Manuscript paragraphs only make one token at starting point, so they don't align with paragraph endings / beginnings. 
+- [x]  SGA Manuscript paragraphs only make one token at starting point, so they don't align with paragraph endings / beginnings. 
+*Solved by pre-processing to add end-p tags to match across all the editions.*
 
 ```xml
 <app>
@@ -75,5 +77,5 @@
 	</app>
 
 ```
-Correct this by changing how these are normalized in the Python script?
+
 
