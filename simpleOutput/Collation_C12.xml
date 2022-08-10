@@ -1825,23 +1825,12 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['and', 'reverence', 'that', 'knew']">
-			<rdg wit="f1818">and reverence that knew </rdg>
-			<rdg wit="f1823">and reverence that knew </rdg>
-			<rdg wit="fThomas">and reverence that knew </rdg>
-			<rdg wit="f1831">and reverence that knew </rdg>
-			<rdg wit="fMS">and reverence that knew </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['no']">
-			<rdg wit="f1823">no </rdg>
-			<rdg wit="f1831">no </rdg>
-			<rdg wit="fMS">no </rdg>
-		</rdgGrp>
-		<rdgGrp n="['nobounds,']">
-			<rdg wit="f1818">no&lt;pb xml:id=&quot;F1818_v1_139&quot; n=&quot;127&quot;/&gt;bounds, </rdg>
-			<rdg wit="fThomas">no&lt;pb xml:id=&quot;F1818_v1_139&quot; n=&quot;127&quot;/&gt;bounds, </rdg>
+		<rdgGrp n="['and', 'reverence', 'that', 'knew', 'no']">
+			<rdg wit="f1818">and reverence that knew no&lt;pb xml:id=&quot;F1818_v1_139&quot; n=&quot;127&quot;/&gt; </rdg>
+			<rdg wit="f1823">and reverence that knew no </rdg>
+			<rdg wit="fThomas">and reverence that knew no&lt;pb xml:id=&quot;F1818_v1_139&quot; n=&quot;127&quot;/&gt; </rdg>
+			<rdg wit="f1831">and reverence that knew no </rdg>
+			<rdg wit="fMS">and reverence that knew no </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -1850,19 +1839,12 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['bounds,']">
-			<rdg wit="f1823">bounds, </rdg>
-			<rdg wit="f1831">bounds, </rdg>
-			<rdg wit="fMS">bounds, </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['yet', 'i', 'could', 'never']">
-			<rdg wit="f1818">yet I could never </rdg>
-			<rdg wit="f1823">yet I could never </rdg>
-			<rdg wit="fThomas">yet I could never </rdg>
-			<rdg wit="f1831">yet I could never </rdg>
-			<rdg wit="fMS">yet I could never </rdg>
+		<rdgGrp n="['bounds,', 'yet', 'i', 'could', 'never']">
+			<rdg wit="f1818">bounds, yet I could never </rdg>
+			<rdg wit="f1823">bounds, yet I could never </rdg>
+			<rdg wit="fThomas">bounds, yet I could never </rdg>
+			<rdg wit="f1831">bounds, yet I could never </rdg>
+			<rdg wit="fMS">bounds, yet I could never </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -6588,4 +6570,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-08-10 18:31:28.779596 -->
+<!-- 2022-08-10 18:40:03.671305 -->
