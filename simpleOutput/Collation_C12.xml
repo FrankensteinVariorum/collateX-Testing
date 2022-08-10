@@ -2461,34 +2461,16 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['', '&quot;of']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0068__main__15&quot;/&gt; &quot;of </rdg>
+		<rdgGrp n="[' andquot;of countenance.—aye, aye,']">
+			<rdg wit="fMS">&lt;longToken&gt;&lt;lb n=&quot;c56-0068__main__15&quot;/&gt; &amp;quot;of countenance.—Aye, Aye,&lt;/longToken&gt; </rdg>
 		</rdgGrp>
-		<rdgGrp n="['of']">
-			<rdg wit="f1818">of </rdg>
-			<rdg wit="f1823">of </rdg>
-			<rdg wit="fThomas">of </rdg>
-			<rdg wit="f1831">of </rdg>
+		<rdgGrp n="['of countenance.—ay, ay,&quot;']">
+			<rdg wit="f1823">&lt;longToken&gt;of countenance.—Ay, ay,”&lt;/longToken&gt; </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;of countenance.—Ay, ay,”&lt;/longToken&gt; </rdg>
 		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['countenance.—ay,', 'ay,&quot;']">
-			<rdg wit="f1823">countenance.—Ay, ay,” </rdg>
-			<rdg wit="f1831">countenance.—Ay, ay,” </rdg>
-		</rdgGrp>
-		<rdgGrp n="['countenance.—aye,']">
-			<rdg wit="f1818">countenance.—Aye, </rdg>
-			<rdg wit="fThomas">countenance.—Aye, </rdg>
-			<rdg wit="fMS">countenance.—Aye, </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['aye,&quot;']">
-			<rdg wit="f1818">aye,” </rdg>
-			<rdg wit="fThomas">aye,” </rdg>
-		</rdgGrp>
-		<rdgGrp n="['aye,']">
-			<rdg wit="fMS">Aye, </rdg>
+		<rdgGrp n="['of countenance.—aye, aye,&quot;']">
+			<rdg wit="f1818">&lt;longToken&gt;of countenance.—Aye, aye,”&lt;/longToken&gt; </rdg>
+			<rdg wit="fThomas">&lt;longToken&gt;of countenance.—Aye, aye,”&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2655,8 +2637,8 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['know', 'm', '', '', '&quot;clerval;']">
-			<rdg wit="fMS">know M &lt;shi rend=&quot;sup&quot;&gt;&lt;/shi&gt; &lt;lb n=&quot;c56-0068__main__21&quot;/&gt; &quot;Clerval; </rdg>
+		<rdgGrp n="['know', 'm', '         ', '    andquot;']">
+			<rdg wit="fMS">know &lt;longToken&gt;M&lt;shi rend=&quot;sup&quot;&gt;          &lt;/shi&gt;    &lt;lb n=&quot;c56-0068__main__21&quot;/&gt; &amp;quot;&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['know,', 'm.']">
 			<rdg wit="f1818">know, M. </rdg>
@@ -2673,6 +2655,7 @@
 			<rdg wit="f1818">Clerval; </rdg>
 			<rdg wit="f1823">Clerval; </rdg>
 			<rdg wit="fThomas">Clerval; </rdg>
+			<rdg wit="fMS">Clerval; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2869,34 +2852,14 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['had', 'never', 'sympathised', 'in', 'my', 'tastes', 'for']">
-			<rdg wit="f1831">had never sympathised in my tastes for </rdg>
+		<rdgGrp n="['had', 'never', 'sympathised', 'in', 'my', 'tastes']">
+			<rdg wit="f1831">had never sympathised in my tastes </rdg>
 		</rdgGrp>
-		<rdgGrp n="['was', 'no']">
-			<rdg wit="f1818">was no </rdg>
-			<rdg wit="f1823">was no </rdg>
-			<rdg wit="fThomas">was no </rdg>
-			<rdg wit="fMS">was no </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['natural']">
-			<rdg wit="f1818">natural </rdg>
-			<rdg wit="f1823">natural </rdg>
-			<rdg wit="fThomas">natural </rdg>
-			<rdg wit="f1831">natural </rdg>
-			<rdg wit="fMS">natural </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['philosopher.']">
-			<rdg wit="f1818">philosopher. </rdg>
-			<rdg wit="f1823">philosopher. </rdg>
-			<rdg wit="fThomas">philosopher. </rdg>
-			<rdg wit="fMS">philosopher. </rdg>
-		</rdgGrp>
-		<rdgGrp n="['science;', 'and']">
-			<rdg wit="f1831">science; and </rdg>
+		<rdgGrp n="['was', 'no', 'natural', 'philosopher.']">
+			<rdg wit="f1818">was no natural philosopher. </rdg>
+			<rdg wit="f1823">was no natural philosopher. </rdg>
+			<rdg wit="fThomas">was no natural philosopher. </rdg>
+			<rdg wit="fMS">was no natural philosopher. </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2905,31 +2868,30 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['his']">
-			<rdg wit="f1818">His </rdg>
-			<rdg wit="f1823">His </rdg>
-			<rdg wit="fThomas">His </rdg>
-			<rdg wit="f1831">his </rdg>
-			<rdg wit="fMS">His </rdg>
+		<rdgGrp n="['his', 'imagination', 'was', 'too', 'vivid']">
+			<rdg wit="f1818">His imagination was too vivid </rdg>
+			<rdg wit="f1823">His imagination was too vivid </rdg>
+			<rdg wit="fThomas">His imagination was too vivid </rdg>
+			<rdg wit="fMS">His imagination was too vivid </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['imagination', 'was', 'too', 'vivid', 'for']">
-			<rdg wit="f1818">imagination was too vivid for </rdg>
-			<rdg wit="f1823">imagination was too vivid for </rdg>
-			<rdg wit="fThomas">imagination was too vivid for </rdg>
-			<rdg wit="fMS">imagination was too vivid for&lt;lb n=&quot;c56-0069__main__1&quot;/&gt; </rdg>
-		</rdgGrp>
-		<rdgGrp n="['literary', 'pursuits', 'differed', 'wholly', 'from', 'those', 'which', 'had', 'occupied', 'me.', 'he', 'came', 'to']">
-			<rdg wit="f1831">literary pursuits differed wholly from those which had occupied me. He came to </rdg>
+		<rdgGrp n="['for']">
+			<rdg wit="f1818">for </rdg>
+			<rdg wit="f1823">for </rdg>
+			<rdg wit="fThomas">for </rdg>
+			<rdg wit="f1831">for </rdg>
+			<rdg wit="fMS">for&lt;lb n=&quot;c56-0069__main__1&quot;/&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
+		<rdgGrp n="['natural', 'science;']">
+			<rdg wit="f1831">natural science; </rdg>
+		</rdgGrp>
 		<rdgGrp n="['the']">
 			<rdg wit="f1818">the </rdg>
 			<rdg wit="f1823">the </rdg>
 			<rdg wit="fThomas">the </rdg>
-			<rdg wit="f1831">the </rdg>
 			<rdg wit="fMS">the </rdg>
 		</rdgGrp>
 	</app>
@@ -2941,9 +2903,6 @@
 			<rdg wit="f1818">minutæ </rdg>
 			<rdg wit="f1823">minutæ </rdg>
 			<rdg wit="fThomas">minutæ </rdg>
-		</rdgGrp>
-		<rdgGrp n="['university', 'with', 'the', 'design', 'of', 'making', 'himself', 'complete', 'master', 'of', 'the', 'oriental', 'languages,', 'as', 'thus', 'he', 'should']">
-			<rdg wit="f1831">university with the design of making himself complete master of the oriental languages, as thus he should </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2984,10 +2943,18 @@
 		<rdgGrp n="['', 'study', 'for']">
 			<rdg wit="fMS">&lt;sga-add eID=&quot;c56-0069__main__d5e14216&quot;/&gt; study for </rdg>
 		</rdgGrp>
-		<rdgGrp n="['study;', 'and']">
-			<rdg wit="f1818">study; and </rdg>
-			<rdg wit="f1823">study; and </rdg>
-			<rdg wit="fThomas">study; and </rdg>
+		<rdgGrp n="['study;']">
+			<rdg wit="f1818">study; </rdg>
+			<rdg wit="f1823">study; </rdg>
+			<rdg wit="fThomas">study; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['and']">
+			<rdg wit="f1818">and </rdg>
+			<rdg wit="f1823">and </rdg>
+			<rdg wit="fThomas">and </rdg>
+			<rdg wit="f1831">and </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2996,6 +2963,9 @@
 			<rdg wit="f1823">he </rdg>
 			<rdg wit="fThomas">he </rdg>
 			<rdg wit="fMS">he </rdg>
+		</rdgGrp>
+		<rdgGrp n="['his', 'literary', '            pursuits differed wholly from those which had occupied me. he came to the university', '            with the design of making himself complete master of the oriental languages, as thus he', 'should']">
+			<rdg wit="f1831">his &lt;longToken&gt;literary             pursuits differed wholly from those which had occupied me. He came to the university             with the design of making himself complete master of the oriental languages, as thus he&lt;/longToken&gt; should </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3026,8 +2996,13 @@
 		</rdgGrp>
 	</app>
 	<app>
+		<rdgGrp n="['for the plan of life he had marked out for himself. resolved to', '            pursue no inglorious career, he turned his eyes toward the east, as affording scope for', '            his spirit of enterprise.', 'the']">
+			<rdg wit="f1831">&lt;longToken&gt;for the plan of life he had marked out for himself. Resolved to             pursue no inglorious career, he turned his eyes toward the East, as affording scope for             his spirit of enterprise.&lt;/longToken&gt; The </rdg>
+		</rdgGrp>
 		<rdgGrp n="['for']">
-			<rdg wit="f1831">for </rdg>
+			<rdg wit="f1818">for </rdg>
+			<rdg wit="f1823">for </rdg>
+			<rdg wit="fThomas">for </rdg>
 			<rdg wit="fMS">for </rdg>
 		</rdgGrp>
 	</app>
@@ -3035,41 +3010,61 @@
 		<rdgGrp n="['&lt;delstart/&gt;', '       ', '      ', '       ', '       him ', '   &lt;delend/&gt;']">
 			<rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14224&quot;&gt;        &lt;sga-add place=&quot;sublinear&quot; sID=&quot;c56-0069__main__d5e14226&quot;/&gt;       &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt;        &lt;sga-add eID=&quot;c56-0069__main__d5e14226&quot;/&gt;        &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0069__main__d5e14232&quot;/&gt;him &lt;sga-add eID=&quot;c56-0069__main__d5e14232&quot;/&gt;    &lt;/del&gt; </rdg>
 		</rdgGrp>
-		<rdgGrp n="['the', 'plan', 'of', 'life', 'he', 'had', 'marked', 'out']">
-			<rdg wit="f1831">the plan of life he had marked out </rdg>
+	</app>
+	<app>
+		<rdgGrp n="['self-instruction', 'on', 'his', 'return']">
+			<rdg wit="f1818">self-instruction on his return </rdg>
+			<rdg wit="f1823">self-instruction on his return </rdg>
+			<rdg wit="fThomas">self-instruction on his return </rdg>
+			<rdg wit="fMS">&lt;w ana=&quot;start&quot;/&gt;self-instruc&lt;lb n=&quot;c56-0069__main__4&quot;/&gt;tion&lt;w ana=&quot;end&quot;/&gt; on his return </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['for']">
-			<rdg wit="f1818">for </rdg>
-			<rdg wit="f1823">for </rdg>
-			<rdg wit="fThomas">for </rdg>
-			<rdg wit="f1831">for </rdg>
+		<rdgGrp n="['to', 'geneva.']">
+			<rdg wit="f1818">to Geneva. </rdg>
+			<rdg wit="f1823">to Geneva. </rdg>
+			<rdg wit="fThomas">to Geneva. </rdg>
+		</rdgGrp>
+		<rdgGrp n="['–', '&lt;delstart/&gt;greek&lt;delend/&gt;', 'persian', '', '&lt;delstart/&gt;andamp;&lt;delend/&gt;', 'arabic']">
+			<rdg wit="fMS">– &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14244&quot;&gt;Greek&lt;/del&gt; Persian &lt;lb n=&quot;c56-0069__main__5&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14249&quot;&gt;&amp;amp;&lt;/del&gt; Arabic </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['himself.', 'resolved', 'to', 'pursue', 'no', 'inglorious', 'career,', 'he', 'turned']">
-			<rdg wit="f1831">himself. Resolved to pursue no inglorious career, he turned </rdg>
-		</rdgGrp>
-		<rdgGrp n="['self-instruction', 'on']">
-			<rdg wit="f1818">self-instruction on </rdg>
-			<rdg wit="f1823">self-instruction on </rdg>
-			<rdg wit="fThomas">self-instruction on </rdg>
-			<rdg wit="fMS">&lt;w ana=&quot;start&quot;/&gt;self-instruc&lt;lb n=&quot;c56-0069__main__4&quot;/&gt;tion&lt;w ana=&quot;end&quot;/&gt; on </rdg>
+		<rdgGrp n="['persian,', 'arabic,']">
+			<rdg wit="f1818">Persian, Arabic, </rdg>
+			<rdg wit="f1823">Persian, Arabic, </rdg>
+			<rdg wit="fThomas">Persian, Arabic, </rdg>
+			<rdg wit="f1831">Persian, Arabic, </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['his']">
-			<rdg wit="f1831">his </rdg>
-			<rdg wit="fMS">his </rdg>
+		<rdgGrp n="['and']">
+			<rdg wit="f1818">and </rdg>
+			<rdg wit="f1823">and </rdg>
+			<rdg wit="fThomas">and </rdg>
+			<rdg wit="f1831">and </rdg>
+			<rdg wit="fMS">&amp; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['eyes', 'toward', 'the', 'east,', 'as', 'affording', 'scope', 'for']">
-			<rdg wit="f1831">eyes toward the East, as affording scope for </rdg>
+		<rdgGrp n="['hebrew']">
+			<rdg wit="fMS">Hebrew </rdg>
 		</rdgGrp>
-		<rdgGrp n="['return', '–', '&lt;delstart/&gt;greek&lt;delend/&gt;', 'persian', '', '&lt;delstart/&gt;andamp;&lt;delend/&gt;', 'arabic', 'and', 'hebrew', 'gained', 'his', 'attention', '&lt;delstart/&gt;when&lt;delend/&gt;', '', '', 'so', 'soon', 'as', '', '']">
-			<rdg wit="fMS">return – &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14244&quot;&gt;Greek&lt;/del&gt; Persian &lt;lb n=&quot;c56-0069__main__5&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14249&quot;&gt;&amp;amp;&lt;/del&gt; Arabic &amp; Hebrew gained his &lt;w ana=&quot;start&quot;/&gt;atten&lt;lb n=&quot;c56-0069__main__6&quot;/&gt;tion&lt;w ana=&quot;end&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14261&quot;&gt;when&lt;/del&gt; &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0069__main__d5e14264&quot;/&gt; &lt;metamark function=&quot;displacement&quot; xml:id=&quot;c56-0069.01&quot;&gt;X&lt;/metamark&gt; &lt;lb n=&quot;c56-0069__left_margin__1&quot;/&gt;&lt;sga-add hand=&quot;#pbs&quot; sID=&quot;c56-0069__left_margin__d5e14273&quot;/&gt;so soon as &lt;metamark function=&quot;displacement&quot;&gt;X&lt;/metamark&gt; &lt;sga-add eID=&quot;c56-0069__left_margin__d5e14273&quot;/&gt;&lt;sga-add eID=&quot;c56-0069__main__d5e14264&quot;/&gt; </rdg>
+		<rdgGrp n="['hebrew,']">
+			<rdg wit="f1818">Hebrew, </rdg>
+			<rdg wit="f1823">Hebrew, </rdg>
+			<rdg wit="fThomas">Hebrew, </rdg>
+		</rdgGrp>
+		<rdgGrp n="['sanscrit', 'languages', 'engaged']">
+			<rdg wit="f1831">Sanscrit languages engaged </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['gained']">
+			<rdg wit="f1818">gained </rdg>
+			<rdg wit="f1823">gained </rdg>
+			<rdg wit="fThomas">gained </rdg>
+			<rdg wit="fMS">gained </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3078,42 +3073,18 @@
 			<rdg wit="f1823">his </rdg>
 			<rdg wit="fThomas">his </rdg>
 			<rdg wit="f1831">his </rdg>
+			<rdg wit="fMS">his </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['return', 'to', 'geneva.']">
-			<rdg wit="f1818">return to Geneva. </rdg>
-			<rdg wit="f1823">return to Geneva. </rdg>
-			<rdg wit="fThomas">return to Geneva. </rdg>
+		<rdgGrp n="['attention', '&lt;delstart/&gt;when&lt;delend/&gt;', '', '', 'so', 'soon', 'as', '', '']">
+			<rdg wit="fMS">&lt;w ana=&quot;start&quot;/&gt;atten&lt;lb n=&quot;c56-0069__main__6&quot;/&gt;tion&lt;w ana=&quot;end&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0069__main__d5e14261&quot;&gt;when&lt;/del&gt; &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0069__main__d5e14264&quot;/&gt; &lt;metamark function=&quot;displacement&quot; xml:id=&quot;c56-0069.01&quot;&gt;X&lt;/metamark&gt; &lt;lb n=&quot;c56-0069__left_margin__1&quot;/&gt;&lt;sga-add hand=&quot;#pbs&quot; sID=&quot;c56-0069__left_margin__d5e14273&quot;/&gt;so soon as &lt;metamark function=&quot;displacement&quot;&gt;X&lt;/metamark&gt; &lt;sga-add eID=&quot;c56-0069__left_margin__d5e14273&quot;/&gt;&lt;sga-add eID=&quot;c56-0069__main__d5e14264&quot;/&gt; </rdg>
 		</rdgGrp>
-		<rdgGrp n="['spirit', 'of', 'enterprise.', 'the']">
-			<rdg wit="f1831">spirit of enterprise. The </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['persian,', 'arabic,', 'and']">
-			<rdg wit="f1818">Persian, Arabic, and </rdg>
-			<rdg wit="f1823">Persian, Arabic, and </rdg>
-			<rdg wit="fThomas">Persian, Arabic, and </rdg>
-			<rdg wit="f1831">Persian, Arabic, and </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['hebrew,', 'gained']">
-			<rdg wit="f1818">Hebrew, gained </rdg>
-			<rdg wit="f1823">Hebrew, gained </rdg>
-			<rdg wit="fThomas">Hebrew, gained </rdg>
-		</rdgGrp>
-		<rdgGrp n="['sanscrit', 'languages', 'engaged']">
-			<rdg wit="f1831">Sanscrit languages engaged </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['his', 'attention,']">
-			<rdg wit="f1818">his attention, </rdg>
-			<rdg wit="f1823">his attention, </rdg>
-			<rdg wit="fThomas">his attention, </rdg>
-			<rdg wit="f1831">his attention, </rdg>
+		<rdgGrp n="['attention,']">
+			<rdg wit="f1818">attention, </rdg>
+			<rdg wit="f1823">attention, </rdg>
+			<rdg wit="fThomas">attention, </rdg>
+			<rdg wit="f1831">attention, </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3122,8 +3093,8 @@
 			<rdg wit="f1823">after </rdg>
 			<rdg wit="fThomas">after </rdg>
 		</rdgGrp>
-		<rdgGrp n="['and', 'i', 'was', 'easily', 'induced', 'to', 'enter', 'on']">
-			<rdg wit="f1831">and I was easily induced to enter on </rdg>
+		<rdgGrp n="['and i was easily induced to enter on the same studies.']">
+			<rdg wit="f1831">&lt;longToken&gt;and I was easily induced to enter on the same studies.&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3154,7 +3125,6 @@
 	</app>
 	<app>
 		<rdgGrp n="['the']">
-			<rdg wit="f1831">the </rdg>
 			<rdg wit="fMS">the </rdg>
 		</rdgGrp>
 	</app>
@@ -3164,9 +3134,6 @@
 			<rdg wit="f1823">Greek and </rdg>
 			<rdg wit="fThomas">Greek and </rdg>
 			<rdg wit="fMS">Greek &amp; </rdg>
-		</rdgGrp>
-		<rdgGrp n="['same', 'studies.']">
-			<rdg wit="f1831">same studies. </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3248,32 +3215,12 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['now', 'that', 'i']">
-			<rdg wit="f1818">now that I </rdg>
-			<rdg wit="f1823">now that I </rdg>
-			<rdg wit="fThomas">now that I </rdg>
-			<rdg wit="f1831">now that I </rdg>
-			<rdg wit="fMS">now that I </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['wished', 'to']">
-			<rdg wit="f1823">wished to </rdg>
-			<rdg wit="f1831">wished to </rdg>
-			<rdg wit="fMS">wished to </rdg>
-		</rdgGrp>
-		<rdgGrp n="['wishedto']">
-			<rdg wit="f1818">wished&lt;pb xml:id=&quot;F1818_v1_141&quot; n=&quot;129&quot;/&gt;to </rdg>
-			<rdg wit="fThomas">wished&lt;pb xml:id=&quot;F1818_v1_141&quot; n=&quot;129&quot;/&gt;to </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['fly', 'from']">
-			<rdg wit="f1818">fly from </rdg>
-			<rdg wit="f1823">fly from </rdg>
-			<rdg wit="fThomas">fly from </rdg>
-			<rdg wit="f1831">fly from </rdg>
-			<rdg wit="fMS">fly from </rdg>
+		<rdgGrp n="['now', 'that', 'i', 'wished', 'to', 'fly', 'from']">
+			<rdg wit="f1818">now that I wished&lt;pb xml:id=&quot;F1818_v1_141&quot; n=&quot;129&quot;/&gt; to fly from </rdg>
+			<rdg wit="f1823">now that I wished to fly from </rdg>
+			<rdg wit="fThomas">now that I wished&lt;pb xml:id=&quot;F1818_v1_141&quot; n=&quot;129&quot;/&gt; to fly from </rdg>
+			<rdg wit="f1831">now that I wished to fly from </rdg>
+			<rdg wit="fMS">now that I wished to fly from </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -6559,4 +6506,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-08-10 19:50:33.032196 -->
+<!-- 2022-08-10 20:38:45.433290 -->
