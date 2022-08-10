@@ -1448,8 +1448,8 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['i fear that he will become an idler, unless we yield the', '            point, and permit him to enter on the profession which he has selected.&lt;p/&gt;', '   &lt;p/&gt;&quot;little alteration, except the growth of our dear children, has taken place since you', '            left us. the blue lake, and snow-clad mountains, they never change;—and i think our', '            placid home, and our contented hearts are regulated by the same immutable laws. my', '            trifling occupations take up my time and amuse me, and i am rewarded for any exertions', '            by seeing none but happy, kind faces around me. since you left us, but one change has', '            taken place in our little household.', 'do']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;I fear that he will become an idler, unless we yield the             point, and permit him to enter on the profession which he has selected.&lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt;    &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p5&quot;/&gt;“Little alteration, except the growth of our dear children, has taken place since you             left us. The blue lake, and snow-clad mountains, they never change;—and I think our             placid home, and our contented hearts are regulated by the same immutable laws. My             trifling occupations take up my time and amuse me, and I am rewarded for any exertions             by seeing none but happy, kind faces around me. Since you left us, but one change has             taken place in our little household.&lt;/collationAlign&gt; Do </rdg>
+		<rdgGrp n="['i fear that he will become an idler, unless we yield the', '            point, and permit him to enter on the profession which he has selected.&lt;p/&gt;', '   &lt;p/&gt;&quot;little alteration, except the growth of our dear children, has taken place since you', '            left us. the blue lake, and snow-clad mountains, they never change;—and i think our', '            placid home, and our contented hearts are regulated by the same immutable laws. my', '            trifling occupations take up my time and amuse me, and i am rewarded for any exertions', '            by seeing none but happy, kind faces around me. since you left us, but one change has', '            taken place in our little household.', 'do you remember on what occasion justine moritz', '               entered our family?']">
+			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;I fear that he will become an idler, unless we yield the             point, and permit him to enter on the profession which he has selected.&lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt;    &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p5&quot;/&gt;“Little alteration, except the growth of our dear children, has taken place since you             left us. The blue lake, and snow-clad mountains, they never change;—and I think our             placid home, and our contented hearts are regulated by the same immutable laws. My             trifling occupations take up my time and amuse me, and I am rewarded for any exertions             by seeing none but happy, kind faces around me. Since you left us, but one change has             taken place in our little household.&lt;/collationAlign&gt; &lt;collationAlign&gt;Do you remember on what occasion Justine Moritz                entered our family?&lt;/collationAlign&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['i', 'therefore']">
 			<rdg wit="f1818">I therefore </rdg>
@@ -1505,20 +1505,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['which']">
-			<rdg wit="f1818">which </rdg>
-			<rdg wit="f1823">which </rdg>
-			<rdg wit="fThomas">which </rdg>
-			<rdg wit="fMS">which </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['you']">
-			<rdg wit="f1818">you </rdg>
-			<rdg wit="f1823">you </rdg>
-			<rdg wit="fThomas">you </rdg>
-			<rdg wit="f1831">you </rdg>
-			<rdg wit="fMS">you </rdg>
+		<rdgGrp n="['which', 'you']">
+			<rdg wit="f1818">which you </rdg>
+			<rdg wit="f1823">which you </rdg>
+			<rdg wit="fThomas">which you </rdg>
+			<rdg wit="fMS">which you </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -1529,9 +1520,6 @@
 			<rdg wit="f1818">know, Cousin, </rdg>
 			<rdg wit="f1823">know, cousin, </rdg>
 			<rdg wit="fThomas">know, Cousin, </rdg>
-		</rdgGrp>
-		<rdgGrp n="['remember']">
-			<rdg wit="f1831">remember </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2246,23 +2234,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['on']">
-			<rdg wit="f1818">on </rdg>
-			<rdg wit="f1823">on </rdg>
-			<rdg wit="fThomas">on </rdg>
-			<rdg wit="f1831">on </rdg>
-			<rdg wit="fMS">on </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['that']">
-			<rdg wit="f1818">that </rdg>
-			<rdg wit="f1823">that </rdg>
-			<rdg wit="fThomas">that </rdg>
-			<rdg wit="fMS">that </rdg>
-		</rdgGrp>
-		<rdgGrp n="['what', 'occasion', 'justine', 'moritz', 'entered', 'our', 'family?']">
-			<rdg wit="f1831">what occasion Justine Moritz entered our family? </rdg>
+		<rdgGrp n="['on', 'that']">
+			<rdg wit="f1818">on that </rdg>
+			<rdg wit="f1823">on that </rdg>
+			<rdg wit="fThomas">on that </rdg>
+			<rdg wit="fMS">on that </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -6845,4 +6821,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-08-09 01:51:28.113359 -->
+<!-- 2022-08-10 17:18:54.950997 -->

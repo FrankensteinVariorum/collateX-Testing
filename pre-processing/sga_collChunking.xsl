@@ -45,4 +45,20 @@
         </xsl:choose>
     </xsl:template>
     
+
+    <!-- 2022-08-08 ebb: Discovered that characters immediately following <mod eID="..."/> aren't picked up as normalized tokens, 
+        so let's add a space after those. -->
+    
+    <xsl:template match="mod[@eID]">
+        <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
+    </xsl:template>
+    
+    <!-- Apparently we *also* need to make sure there's a space before sga-add START markers. 
+Add this with an "or" pipe to the template match in the preprocessing XSLT>  -->
+    <xsl:template match="sga-add[@sID]">
+        <xsl:text> </xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
+    </xsl:template>
+    
+    
+    
 </xsl:stylesheet>

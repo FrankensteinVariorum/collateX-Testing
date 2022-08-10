@@ -27,7 +27,7 @@
     
     
     <!-- ############################# -->
-    <!-- NOTE YET ADDED TO PRE-PROCESSING XSLT  -->
+    <!-- NOT YET ADDED TO PRE-PROCESSING XSLT  -->
     <!-- 2022-08-08 ebb: Discovered that characters immediately following <mod eID="..."/> aren't picked up as normalized tokens, 
         so let's add a space after those. -->
   
