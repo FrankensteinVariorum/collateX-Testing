@@ -145,7 +145,7 @@
     <sga-add eID="c56-0067__main__d5e13904"/>
     <sga-add place="superlinear" sID="c56-0067__main__d5e13910"/>his <sga-add eID="c56-0067__main__d5e13910"/>
    <mod eID="c56-0067__main__d5e13900"/> 
- <lb n="c56-0067__main__18"/> ignorance &amp; the conversation took <lb n="c56-0067__main__19"/> a more general turn. I thanked him <lb n="c56-0067__main__20"/> from my heart, but I did not speak. <lb n="c56-0067__main__21"/> <collationAlign>I plainly saw</collationAlign> that he was surprised, <lb n="c56-0067__main__22"/> but he never attempted to draw <lb n="c56-0067__main__23"/> my secret from me, and although <lb n="c56-0067__main__24"/> I loved him with a mixture of <lb n="c56-0067__main__25"/> 
+ <lb n="c56-0067__main__18"/> ignorance &amp; the conversation took <lb n="c56-0067__main__19"/> a more general turn. I thanked him <lb n="c56-0067__main__20"/> from my heart, but I did not speak. <lb n="c56-0067__main__21"/> <longToken>I plainly saw</longToken> that he was surprised, <lb n="c56-0067__main__22"/> but he never attempted to draw <lb n="c56-0067__main__23"/> my secret from me, and although <lb n="c56-0067__main__24"/> I loved him with a mixture of <lb n="c56-0067__main__25"/> 
    <mod sID="c56-0067__main__d5e13931"/>
    <del rend="strikethrough" xml:id="c56-0067__main__d5e13933">love</del>
    <anchor xml:id="c56-0067.07"/>
@@ -181,7 +181,7 @@
    <mdel>m</mdel>
     <sga-add place="intralinear" sID="c56-0068__main__d5e14042"/>n <sga-add eID="c56-0068__main__d5e14042"/>
    <mod eID="c56-0068__main__d5e14038"/> 
-   <lb n="c56-0068__main__6"/> "the fellow," cried he "Why M<shi rend="sup">r</shi>. Clerval <lb n="c56-0068__main__7"/> "I tell you he has <del rend="strikethrough" xml:id="c56-0068__main__d5e14054">beaut</del> outstript <lb n="c56-0068__main__8"/> <collationAlign>"us all– ay</collationAlign> stare if you please but <lb n="c56-0068__main__9"/> "it is nevertheless true – A youngster <lb n="c56-0068__main__10"/> "who but <del rend="strikethrough" xml:id="c56-0068__main__d5e14064">two</del> three years ago believed <lb n="c56-0068__main__11"/> "Cornelius Agrippa <mod sID="c56-0068__main__d5e14069"/>
+   <lb n="c56-0068__main__6"/> "the fellow," cried he "Why M<shi rend="sup">r</shi>. Clerval <lb n="c56-0068__main__7"/> "I tell you he has <del rend="strikethrough" xml:id="c56-0068__main__d5e14054">beaut</del> outstript <lb n="c56-0068__main__8"/> <longToken>"us all– ay</longToken> stare if you please but <lb n="c56-0068__main__9"/> "it is nevertheless true – A youngster <lb n="c56-0068__main__10"/> "who but <del rend="strikethrough" xml:id="c56-0068__main__d5e14064">two</del> three years ago believed <lb n="c56-0068__main__11"/> "Cornelius Agrippa <mod sID="c56-0068__main__d5e14069"/>
    <del rend="strikethrough" xml:id="c56-0068__main__d5e14071">to be</del>
     <sga-add place="sublinear" sID="c56-0068__main__d5e14074"/>
    <metamark function="insert">^</metamark>

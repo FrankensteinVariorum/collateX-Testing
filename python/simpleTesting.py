@@ -75,8 +75,8 @@ RE_MILESTONE = re.compile(r'<milestone.+?>')
 RE_MOD = re.compile(r'<mod\s[^<]*/>')
 RE_MULTI_LEFTANGLE = re.compile(r'<{2,}')
 RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
-RE_COLL_START = re.compile(r'<collationAlign.*?>')
-RE_COLL_END = re.compile(r'</collationAlign>')
+RE_LT_START = re.compile(r'<longToken.*?>')
+RE_LT_END = re.compile(r'</longToken>')
 RE_DOTDASH = re.compile(r'\.–')
 # RE_DOTDASH captures a period followed by a dash, frequently seen in the S-GA edition, and not a word-dividing hyphen.
 # 2022-08-08 ebb: I'm currently treating the "dotdash" as just a period for normalization to improve alignments.
@@ -100,7 +100,7 @@ ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 
 blockEmpty = ['p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'head']
 inlineEmpty = ['pb', 'sga-add', 'lb', 'gap',  'hi', 'w', 'ab']
 inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
-inlineVariationEvent = ['del', 'add', 'note', 'collationAlign']
+inlineVariationEvent = ['del', 'add', 'note', 'longToken']
 # 10-23-2017 ebb rv:
 
 def normalizeSpace(inText):
@@ -185,8 +185,8 @@ def normalize(inputText):
     normalized = RE_ADDEND.sub('<addedThomas-end/>', normalized)
     normalized = RE_DELSTART.sub('<delstart/>', normalized)
     normalized = RE_DELEND.sub('<delend/>', normalized)
-    normalized = RE_COLL_START.sub('', normalized)
-    normalized = RE_COLL_END.sub('', normalized)
+    normalized = RE_LT_START.sub('', normalized)
+    normalized = RE_LT_END.sub('', normalized)
     normalized = RE_WORDMARKER.sub('', normalized)
     normalized = RE_HI.sub('', normalized)
 # 2022-08-08 ebb: Sometimes <hi> in the print editions seems irrelevant, in highlighting words at

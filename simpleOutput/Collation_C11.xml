@@ -17,7 +17,7 @@
 			<rdg wit="f1831">&lt;head sID=&quot;novel1_letter4_chapter6_div4_div6_head1&quot;/&gt; CHAPTER </rdg>
 		</rdgGrp>
 		<rdgGrp n="['ch', 'v', '– 113']">
-			<rdg wit="fMS">&lt;sga-add place=&quot;interlinear&quot; sID=&quot;c56-0057__Pt2__main__d5e11742&quot;/&gt;Ch V &lt;collationAlign&gt;– 113&lt;/collationAlign&gt; </rdg>
+			<rdg wit="fMS">&lt;sga-add place=&quot;interlinear&quot; sID=&quot;c56-0057__Pt2__main__d5e11742&quot;/&gt;Ch V &lt;longToken&gt;– 113&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -82,7 +82,7 @@
 			<rdg wit="f1823">&lt;p eID=&quot;novel1_letter4_chapter5_div4_div5_p1&quot;/&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['it was', '            from my own elizabeth:—']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;It was             from my own Elizabeth:—&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;It was             from my own Elizabeth:—&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -194,7 +194,7 @@
 			<rdg wit="fMS">&quot;I cannot describe to you the &lt;w ana=&quot;start&quot;/&gt;uneasi&lt;lb n=&quot;c56-0058__main__1&quot;/&gt;ness&lt;w ana=&quot;end&quot;/&gt; we have all felt concerning your </rdg>
 		</rdgGrp>
 		<rdgGrp n="['&quot;you have been ill, very ill, and even the constant letters of dear kind henry are not', '            sufficient to reassure me on your account. you are forbidden to write—to hold a pen; yet', '            one word from you, dear victor, is necessary to calm our apprehensions. for a long time', '            i have thought that each post would bring this line, and my persuasions have', 'restrained']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;“You have been ill, very ill, and even the constant letters of dear kind Henry are not             sufficient to reassure me on your account. You are forbidden to write—to hold a pen; yet             one word from you, dear Victor, is necessary to calm our apprehensions. For a long time             I have thought that each post would bring this line, and my persuasions have&lt;/collationAlign&gt; restrained </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;“You have been ill, very ill, and even the constant letters of dear kind Henry are not             sufficient to reassure me on your account. You are forbidden to write—to hold a pen; yet             one word from you, dear Victor, is necessary to calm our apprehensions. For a long time             I have thought that each post would bring this line, and my persuasions have&lt;/longToken&gt; restrained </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -559,10 +559,10 @@
 	</app>
 	<app>
 		<rdgGrp n="['', '&lt;delstart/&gt;i&lt;delend/&gt;', '   &lt;delstart/&gt;but i entreated him not&lt;delend/&gt;', '   &lt;delstart/&gt;', '       to undertake it  ', '   &lt;delend/&gt;', '   &lt;delstart/&gt;because&lt;delend/&gt;', '   &lt;mod sid=&quot;c56-0058__main__d5e11905&quot;/&gt;', '    ', '   ', '     ', '   &lt;delstart/&gt;', '       for  ', '   &lt;delend/&gt;', '   &lt;mod eid=&quot;c56-0058__main__d5e11905&quot;/&gt; ', '    ', '   &lt;delstart/&gt;although&lt;delend/&gt;', '   &lt;delstart/&gt;his health is better now  tha&lt;mod sid=&quot;c56-0058__main__d5e11930&quot;/&gt;', '   ', '    n  ', '   &lt;mod eid=&quot;c56-0058__main__d5e11930&quot;/&gt;  it has been since the death  of my beloved aunt, yet &lt;mod sid=&quot;c56-0058__main__d5e11940&quot;/&gt;', '   &lt;delstart/&gt;tha&lt;delend/&gt;', '    the  ', '   &lt;mod eid=&quot;c56-0058__main__d5e11940&quot;/&gt;  fatigue  might  have  ', '   &lt;anchor xml:id=&quot;c56-0058.04&quot;/&gt;', '   &lt;delstart/&gt;make him very ill&lt;delend/&gt;', '   &lt;delstart/&gt;and&lt;delend/&gt;', '']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__12&quot;/&gt; &lt;collationAlign&gt;&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11889&quot;&gt;I&lt;/del&gt;    &lt;del next=&quot;#c56-0058.02&quot; xml:id=&quot;c56-0058__main__d5e11893&quot;&gt;but I entreated him not&lt;/del&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11896&quot;&gt;        &lt;sga-add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11898&quot;/&gt;to undertake it &lt;sga-add eID=&quot;c56-0058__main__d5e11898&quot;/&gt;     &lt;/del&gt;    &lt;del next=&quot;#c56-0058.03&quot; rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11902&quot;&gt;because&lt;/del&gt;    &lt;mod sID=&quot;c56-0058__main__d5e11905&quot;/&gt;     &lt;sga-add place=&quot;sublinear&quot; sID=&quot;c56-0058__main__d5e11907&quot;/&gt;    &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt;     &lt;sga-add eID=&quot;c56-0058__main__d5e11907&quot;/&gt;     &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11913&quot;&gt;        &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11915&quot;/&gt;for &lt;sga-add eID=&quot;c56-0058__main__d5e11915&quot;/&gt;     &lt;/del&gt;    &lt;mod eID=&quot;c56-0058__main__d5e11905&quot;/&gt;     &lt;lb n=&quot;c56-0058__main__13&quot;/&gt;     &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11922&quot;&gt;although&lt;/del&gt;    &lt;delSpan rend=&quot;vertical_line&quot; spanTo=&quot;#c56-0058.04&quot;/&gt;his health is better now &lt;lb n=&quot;c56-0058__main__14&quot;/&gt; tha&lt;mod sID=&quot;c56-0058__main__d5e11930&quot;/&gt;    &lt;mdel&gt;t&lt;/mdel&gt;     &lt;sga-add place=&quot;intralinear&quot; sID=&quot;c56-0058__main__d5e11934&quot;/&gt;n &lt;sga-add eID=&quot;c56-0058__main__d5e11934&quot;/&gt;     &lt;mod eID=&quot;c56-0058__main__d5e11930&quot;/&gt;  it has been since the death &lt;lb n=&quot;c56-0058__main__15&quot;/&gt; of My beloved Aunt, yet &lt;mod sID=&quot;c56-0058__main__d5e11940&quot;/&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11942&quot;&gt;tha&lt;/del&gt;     &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11945&quot;/&gt;the &lt;sga-add eID=&quot;c56-0058__main__d5e11945&quot;/&gt;     &lt;mod eID=&quot;c56-0058__main__d5e11940&quot;/&gt;  fatigue &lt;lb n=&quot;c56-0058__main__16&quot;/&gt; might  &lt;sga-add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11952&quot;/&gt;have &lt;sga-add eID=&quot;c56-0058__main__d5e11952&quot;/&gt;     &lt;anchor xml:id=&quot;c56-0058.04&quot;/&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11957&quot;&gt;make him very ill&lt;/del&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11960&quot;&gt;and&lt;/del&gt;&lt;/collationAlign&gt; &lt;lb n=&quot;c56-0058__main__17&quot;/&gt; </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0058__main__12&quot;/&gt; &lt;longToken&gt;&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11889&quot;&gt;I&lt;/del&gt;    &lt;del next=&quot;#c56-0058.02&quot; xml:id=&quot;c56-0058__main__d5e11893&quot;&gt;but I entreated him not&lt;/del&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11896&quot;&gt;        &lt;sga-add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11898&quot;/&gt;to undertake it &lt;sga-add eID=&quot;c56-0058__main__d5e11898&quot;/&gt;     &lt;/del&gt;    &lt;del next=&quot;#c56-0058.03&quot; rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11902&quot;&gt;because&lt;/del&gt;    &lt;mod sID=&quot;c56-0058__main__d5e11905&quot;/&gt;     &lt;sga-add place=&quot;sublinear&quot; sID=&quot;c56-0058__main__d5e11907&quot;/&gt;    &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt;     &lt;sga-add eID=&quot;c56-0058__main__d5e11907&quot;/&gt;     &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11913&quot;&gt;        &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11915&quot;/&gt;for &lt;sga-add eID=&quot;c56-0058__main__d5e11915&quot;/&gt;     &lt;/del&gt;    &lt;mod eID=&quot;c56-0058__main__d5e11905&quot;/&gt;     &lt;lb n=&quot;c56-0058__main__13&quot;/&gt;     &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11922&quot;&gt;although&lt;/del&gt;    &lt;delSpan rend=&quot;vertical_line&quot; spanTo=&quot;#c56-0058.04&quot;/&gt;his health is better now &lt;lb n=&quot;c56-0058__main__14&quot;/&gt; tha&lt;mod sID=&quot;c56-0058__main__d5e11930&quot;/&gt;    &lt;mdel&gt;t&lt;/mdel&gt;     &lt;sga-add place=&quot;intralinear&quot; sID=&quot;c56-0058__main__d5e11934&quot;/&gt;n &lt;sga-add eID=&quot;c56-0058__main__d5e11934&quot;/&gt;     &lt;mod eID=&quot;c56-0058__main__d5e11930&quot;/&gt;  it has been since the death &lt;lb n=&quot;c56-0058__main__15&quot;/&gt; of My beloved Aunt, yet &lt;mod sID=&quot;c56-0058__main__d5e11940&quot;/&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11942&quot;&gt;tha&lt;/del&gt;     &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11945&quot;/&gt;the &lt;sga-add eID=&quot;c56-0058__main__d5e11945&quot;/&gt;     &lt;mod eID=&quot;c56-0058__main__d5e11940&quot;/&gt;  fatigue &lt;lb n=&quot;c56-0058__main__16&quot;/&gt; might  &lt;sga-add hand=&quot;#pbs&quot; place=&quot;superlinear&quot; sID=&quot;c56-0058__main__d5e11952&quot;/&gt;have &lt;sga-add eID=&quot;c56-0058__main__d5e11952&quot;/&gt;     &lt;anchor xml:id=&quot;c56-0058.04&quot;/&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11957&quot;&gt;make him very ill&lt;/del&gt;    &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0058__main__d5e11960&quot;&gt;and&lt;/del&gt;&lt;/longToken&gt; &lt;lb n=&quot;c56-0058__main__17&quot;/&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['i have prevented his encountering the', '            inconveniences and perhaps dangers of so long a journey; yet how often have i regretted', '            not being able to perform it myself! i figure to myself that the task of attending on', '            your sick bed has devolved on some mercenary old nurse, who could never guess your', '            wishes, nor minister to them with the care and affection of your poor cousin. yet that', '            is over now:']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;I have prevented his encountering the             inconveniences and perhaps dangers of so long a journey; yet how often have I regretted             not being able to perform it myself! I figure to myself that the task of attending on             your sick bed has devolved on some mercenary old nurse, who could never guess your             wishes, nor minister to them with the care and affection of your poor cousin. Yet that             is over now:&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;I have prevented his encountering the             inconveniences and perhaps dangers of so long a journey; yet how often have I regretted             not being able to perform it myself! I figure to myself that the task of attending on             your sick bed has devolved on some mercenary old nurse, who could never guess your             wishes, nor minister to them with the care and affection of your poor cousin. Yet that             is over now:&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -740,7 +740,7 @@
 			<rdg wit="fThomas">hand-writing; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['handwriting.', '&lt;p/&gt;', '&lt;p/&gt;', '&quot;get well—and return to us. you will find a happy, cheerful home, and friends who love', '   you dearly.']">
-			<rdg wit="f1831">handwriting. &lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p3&quot;/&gt; &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt; &lt;collationAlign type=&quot;newPassage&quot;&gt;“Get well—and return to us. You will find a happy, cheerful home, and friends who love    you dearly.&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">handwriting. &lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p3&quot;/&gt; &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt; &lt;longToken&gt;“Get well—and return to us. You will find a happy, cheerful home, and friends who love    you dearly.&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['handwriting;']">
 			<rdg wit="f1823">handwriting; </rdg>
@@ -927,7 +927,7 @@
 	</app>
 	<app>
 		<rdgGrp n="['and he asks but to see you,—but to be', '            assured that you are well; and not a care will ever cloud his benevolent countenance.', 'how', 'pleased']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;and he asks but to see you,—but to be             assured that you are well; and not a care will ever cloud his benevolent countenance.&lt;/collationAlign&gt; How pleased </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;and he asks but to see you,—but to be             assured that you are well; and not a care will ever cloud his benevolent countenance.&lt;/longToken&gt; How pleased </rdg>
 		</rdgGrp>
 		<rdgGrp n="['that', 'he', 'appears']">
 			<rdg wit="f1818">that he appears </rdg>
@@ -1342,7 +1342,7 @@
 			<rdg wit="fMS">&lt;lb n=&quot;c56-0059__main__10&quot;/&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['sixteen,', 'and', ' full of activity and spirit. ', 'he is desirous to be a true swiss, and to enter into', '            foreign service; but we cannot part with him, at least', '            until his elder brother return to us. my uncle is not pleased with the idea of a', '            military career in a distant country; but ernest never had your powers of application.', '            he looks upon study as an odious fetter;—his time is spent']">
-			<rdg wit="f1831">sixteen, and &lt;collationAlign type=&quot;revision&quot;&gt; full of activity and spirit. &lt;/collationAlign&gt; &lt;collationAlign type=&quot;newPassage&quot;&gt;He is desirous to be a true Swiss, and to enter into             foreign service;&lt;pb xml:id=&quot;F1831_v_066&quot; n=&quot;50&quot;/&gt; but we cannot part with him, at least             until his elder brother return to us. My uncle is not pleased with the idea of a             military career in a distant country; but Ernest never had your powers of application.             He looks upon study as an odious fetter;—his time is spent&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">sixteen, and &lt;longToken&gt; full of activity and spirit. &lt;/longToken&gt; &lt;longToken&gt;He is desirous to be a true Swiss, and to enter into             foreign service;&lt;pb xml:id=&quot;F1831_v_066&quot; n=&quot;50&quot;/&gt; but we cannot part with him, at least             until his elder brother return to us. My uncle is not pleased with the idea of a             military career in a distant country; but Ernest never had your powers of application.             He looks upon study as an odious fetter;—his time is spent&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -1448,8 +1448,8 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['i fear that he will become an idler, unless we yield the', '            point, and permit him to enter on the profession which he has selected.&lt;p/&gt;', '   &lt;p/&gt;&quot;little alteration, except the growth of our dear children, has taken place since you', '            left us. the blue lake, and snow-clad mountains, they never change;—and i think our', '            placid home, and our contented hearts are regulated by the same immutable laws. my', '            trifling occupations take up my time and amuse me, and i am rewarded for any exertions', '            by seeing none but happy, kind faces around me. since you left us, but one change has', '            taken place in our little household.', 'do you remember on what occasion justine moritz', '               entered our family?']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;I fear that he will become an idler, unless we yield the             point, and permit him to enter on the profession which he has selected.&lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt;    &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p5&quot;/&gt;“Little alteration, except the growth of our dear children, has taken place since you             left us. The blue lake, and snow-clad mountains, they never change;—and I think our             placid home, and our contented hearts are regulated by the same immutable laws. My             trifling occupations take up my time and amuse me, and I am rewarded for any exertions             by seeing none but happy, kind faces around me. Since you left us, but one change has             taken place in our little household.&lt;/collationAlign&gt; &lt;collationAlign&gt;Do you remember on what occasion Justine Moritz                entered our family?&lt;/collationAlign&gt; </rdg>
+		<rdgGrp n="['i fear that he will become an idler, unless we yield the', '            point, and permit him to enter on the profession which he has selected.&lt;p/&gt;', '   &lt;p/&gt;&quot;little alteration, except the growth of our dear children, has taken place since you', '            left us. the blue lake, and snow-clad mountains, they never change;—and i think our', '            placid home, and our contented hearts are regulated by the same immutable laws. my', '            trifling occupations take up my time and amuse me, and i am rewarded for any exertions', '            by seeing none but happy, kind faces around me. since you left us, but one change has', '            taken place in our little household.', 'do you remember on what occasion justine moritz', '               entered our family?', 'pobably']">
+			<rdg wit="f1831">&lt;longToken&gt;I fear that he will become an idler, unless we yield the             point, and permit him to enter on the profession which he has selected.&lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p4&quot;/&gt;    &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p5&quot;/&gt;“Little alteration, except the growth of our dear children, has taken place since you             left us. The blue lake, and snow-clad mountains, they never change;—and I think our             placid home, and our contented hearts are regulated by the same immutable laws. My             trifling occupations take up my time and amuse me, and I am rewarded for any exertions             by seeing none but happy, kind faces around me. Since you left us, but one change has             taken place in our little household.&lt;/longToken&gt; &lt;longToken&gt;Do you remember on what occasion Justine Moritz                entered our family?&lt;/longToken&gt; Pobably </rdg>
 		</rdgGrp>
 		<rdgGrp n="['i', 'therefore']">
 			<rdg wit="f1818">I therefore </rdg>
@@ -2362,7 +2362,6 @@
 			<rdg wit="f1818">Probably </rdg>
 			<rdg wit="f1823">Probably </rdg>
 			<rdg wit="fThomas">Probably </rdg>
-			<rdg wit="f1831">Probably </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3201,7 +3200,7 @@
 			<rdg wit="f1831">&lt;p eID=&quot;novel1_letter4_chapter6_div4_div6_p5&quot;/&gt; &lt;p sID=&quot;novel1_letter4_chapter6_div4_div6_p6&quot;/&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['&lt;zone eid=&quot;c56-0060__left_margin&quot;/&gt;', '   &lt;zone eid=&quot;c56-0060__left_margin&quot;/&gt;', '     ', '   &lt;delstart/&gt;where&lt;delend/&gt;', '   &lt;delstart/&gt;she was taught  all the duties of servant andamp; was very  kindly treated.']">
-			<rdg wit="fMS">&lt;collationAlign&gt;&lt;zone eID=&quot;c56-0060__left_margin&quot;/&gt;    &lt;zone eID=&quot;c56-0060__left_margin&quot;/&gt;     &lt;sga-add eID=&quot;c56-0060__main__d5e12477&quot;/&gt;     &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0060__main__d5e12618&quot;&gt;Where&lt;/del&gt;    &lt;delSpan rend=&quot;strikethrough&quot; spanTo=&quot;#c56-0060.05&quot;/&gt;she was taught &lt;lb n=&quot;c56-0060__main__25&quot;/&gt; all the duties of servant &amp;amp; was very &lt;lb n=&quot;c56-0060__main__26&quot;/&gt; kindly treated.&lt;/collationAlign&gt; </rdg>
+			<rdg wit="fMS">&lt;longToken&gt;&lt;zone eID=&quot;c56-0060__left_margin&quot;/&gt;    &lt;zone eID=&quot;c56-0060__left_margin&quot;/&gt;     &lt;sga-add eID=&quot;c56-0060__main__d5e12477&quot;/&gt;     &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0060__main__d5e12618&quot;&gt;Where&lt;/del&gt;    &lt;delSpan rend=&quot;strikethrough&quot; spanTo=&quot;#c56-0060.05&quot;/&gt;she was taught &lt;lb n=&quot;c56-0060__main__25&quot;/&gt; all the duties of servant &amp;amp; was very &lt;lb n=&quot;c56-0060__main__26&quot;/&gt; kindly treated.&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3211,7 +3210,7 @@
 			<rdg wit="fThomas">&lt;pb xml:id=&quot;F1818_v1_131&quot; n=&quot;119&quot;/&gt;“After what I have said, </rdg>
 		</rdgGrp>
 		<rdgGrp n="['&quot;justine, you may remember, ']">
-			<rdg wit="f1831">&lt;collationAlign type=&quot;newPassage&quot;&gt;“Justine, you may remember, &lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;“Justine, you may remember, &lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -5727,7 +5726,7 @@
 	</app>
 	<app>
 		<rdgGrp n="['health', '— his chin comes down in  a beautiful oval &lt;delstart/&gt;a&lt;delend/&gt; after this description i can only say what our visitors  say a thousand times a day–\'he is too  pretty for a boy\'.&lt;mod sid=&quot;c56-0063__main__d5e13189&quot;/&gt;', '    ', '   ', '']">
-			<rdg wit="fMS">health &lt;collationAlign&gt;— his chin comes down in &lt;lb n=&quot;c56-0063__main__25&quot;/&gt; a beautiful oval &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0063__main__d5e13175&quot;&gt;a&lt;/del&gt; After this &lt;w ana=&quot;start&quot;/&gt;descrip&lt;lb n=&quot;c56-0063__main__26&quot;/&gt;tion&lt;w ana=&quot;end&quot;/&gt; I can only say what our visitors &lt;lb n=&quot;c56-0063__main__27&quot;/&gt; say a thousand times a day–'He is too &lt;lb n=&quot;c56-0063__main__28&quot;/&gt; pretty for a boy'.&lt;mod sID=&quot;c56-0063__main__d5e13189&quot;/&gt;     &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0063__main__d5e13191&quot;/&gt;    &lt;metamark function=&quot;displacement&quot; xml:id=&quot;c56-0063.03&quot;&gt;X&lt;/metamark&gt;&lt;/collationAlign&gt; &lt;lb n=&quot;c56-0063__left_margin__1&quot;/&gt; </rdg>
+			<rdg wit="fMS">health &lt;longToken&gt;— his chin comes down in &lt;lb n=&quot;c56-0063__main__25&quot;/&gt; a beautiful oval &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0063__main__d5e13175&quot;&gt;a&lt;/del&gt; After this &lt;w ana=&quot;start&quot;/&gt;descrip&lt;lb n=&quot;c56-0063__main__26&quot;/&gt;tion&lt;w ana=&quot;end&quot;/&gt; I can only say what our visitors &lt;lb n=&quot;c56-0063__main__27&quot;/&gt; say a thousand times a day–'He is too &lt;lb n=&quot;c56-0063__main__28&quot;/&gt; pretty for a boy'.&lt;mod sID=&quot;c56-0063__main__d5e13189&quot;/&gt;     &lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0063__main__d5e13191&quot;/&gt;    &lt;metamark function=&quot;displacement&quot; xml:id=&quot;c56-0063.03&quot;&gt;X&lt;/metamark&gt;&lt;/longToken&gt; &lt;lb n=&quot;c56-0063__left_margin__1&quot;/&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['health.']">
 			<rdg wit="f1818">health. </rdg>
@@ -6821,4 +6820,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-08-10 17:18:54.950997 -->
+<!-- 2022-08-10 19:53:31.524947 -->

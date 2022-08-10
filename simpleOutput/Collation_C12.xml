@@ -1725,7 +1725,7 @@
 	</app>
 	<app>
 		<rdgGrp n="['', 'i plainly saw']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0067__main__21&quot;/&gt; &lt;collationAlign&gt;I plainly saw&lt;/collationAlign&gt; </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0067__main__21&quot;/&gt; &lt;longToken&gt;I plainly saw&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['i', 'saw', 'plainly']">
 			<rdg wit="f1818">I saw plainly </rdg>
@@ -2177,15 +2177,15 @@
 	</app>
 	<app>
 		<rdgGrp n="['', 'andquot;us all– ay']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0068__main__8&quot;/&gt; &lt;collationAlign&gt;&amp;quot;us all– ay&lt;/collationAlign&gt; </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0068__main__8&quot;/&gt; &lt;longToken&gt;&amp;quot;us all– ay&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['us all. ay,']">
-			<rdg wit="f1823">&lt;collationAlign&gt;us all. Ay,&lt;/collationAlign&gt; </rdg>
-			<rdg wit="f1831">&lt;collationAlign&gt;us all. Ay,&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1823">&lt;longToken&gt;us all. Ay,&lt;/longToken&gt; </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;us all. Ay,&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['us all. aye,']">
-			<rdg wit="f1818">&lt;collationAlign&gt;us all. Aye,&lt;/collationAlign&gt; </rdg>
-			<rdg wit="fThomas">&lt;collationAlign&gt;us all. Aye,&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1818">&lt;longToken&gt;us all. Aye,&lt;/longToken&gt; </rdg>
+			<rdg wit="fThomas">&lt;longToken&gt;us all. Aye,&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2338,7 +2338,7 @@
 			<rdg wit="fThomas">Cornelius </rdg>
 		</rdgGrp>
 		<rdgGrp n="['in cornelius']">
-			<rdg wit="f1831">&lt;collationAlign&gt;in Cornelius&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">&lt;longToken&gt;in Cornelius&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -6559,4 +6559,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-08-10 19:19:06.243910 -->
+<!-- 2022-08-10 19:50:33.032196 -->
