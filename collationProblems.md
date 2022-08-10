@@ -5,7 +5,7 @@ Updated: 2022-08-10
 - [ ] For the post-processing production pipeline, we need to **move** all the solitary content-bearing witnesses either up or down to their preceding or following app elements. Here is a helpful XPath expression to isolate all the content-bearing solitary witnesses:
 
 ```
-//app[count(descendant::rdg) = 1][rdgGrp/@n ! matches(., '[a-z]{2,}')]
+//app[count(descendant::rdg) = 1][rdgGrp/@n ! matches(., '[a-z]{2,}')]//rdg
 ```
 
 - [x]  Alignment disruption across multiple apps, due to alignment of empty normalized tokens
