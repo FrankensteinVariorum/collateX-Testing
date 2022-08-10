@@ -2176,24 +2176,16 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['', '&quot;us', 'all–', 'ay']">
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0068__main__8&quot;/&gt; &quot;us all– ay </rdg>
+		<rdgGrp n="['', 'andquot;us all– ay']">
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0068__main__8&quot;/&gt; &lt;collationAlign&gt;&amp;quot;us all– ay&lt;/collationAlign&gt; </rdg>
 		</rdgGrp>
-		<rdgGrp n="['us', 'all.']">
-			<rdg wit="f1818">us all. </rdg>
-			<rdg wit="f1823">us all. </rdg>
-			<rdg wit="fThomas">us all. </rdg>
-			<rdg wit="f1831">us all. </rdg>
+		<rdgGrp n="['us all. ay,']">
+			<rdg wit="f1823">&lt;collationAlign&gt;us all. Ay,&lt;/collationAlign&gt; </rdg>
+			<rdg wit="f1831">&lt;collationAlign&gt;us all. Ay,&lt;/collationAlign&gt; </rdg>
 		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['ay,']">
-			<rdg wit="f1823">Ay, </rdg>
-			<rdg wit="f1831">Ay, </rdg>
-		</rdgGrp>
-		<rdgGrp n="['aye,']">
-			<rdg wit="f1818">Aye, </rdg>
-			<rdg wit="fThomas">Aye, </rdg>
+		<rdgGrp n="['us all. aye,']">
+			<rdg wit="f1818">&lt;collationAlign&gt;us all. Aye,&lt;/collationAlign&gt; </rdg>
+			<rdg wit="fThomas">&lt;collationAlign&gt;us all. Aye,&lt;/collationAlign&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2340,16 +2332,13 @@
 		<rdgGrp n="['', '&quot;cornelius']">
 			<rdg wit="fMS">&lt;lb n=&quot;c56-0068__main__11&quot;/&gt; &quot;Cornelius </rdg>
 		</rdgGrp>
-		<rdgGrp n="['in']">
-			<rdg wit="f1831">in </rdg>
-		</rdgGrp>
-	</app>
-	<app>
 		<rdgGrp n="['cornelius']">
 			<rdg wit="f1818">Cornelius </rdg>
 			<rdg wit="f1823">Cornelius </rdg>
 			<rdg wit="fThomas">Cornelius </rdg>
-			<rdg wit="f1831">Cornelius </rdg>
+		</rdgGrp>
+		<rdgGrp n="['in cornelius']">
+			<rdg wit="f1831">&lt;collationAlign&gt;in Cornelius&lt;/collationAlign&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -6570,4 +6559,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-08-10 18:40:03.671305 -->
+<!-- 2022-08-10 19:19:06.243910 -->
