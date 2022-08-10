@@ -8,7 +8,7 @@
         <xsl:for-each-group select="//anchor[@type='collate']/following-sibling::node()" group-starting-with="anchor[@type='collate']">
             <!--2018-05-07 ebb: Things discovered the hard way: when creating new XML out of groups of elements like this, the elements that define the groups really must be at the same hierarchical level. Otherwise the output is full of weird duplicated stuff. Don't use the following:: axis here. Make sure the input is properly flattened accordingly. -->
             <!--2018-04-01 ebb: CHANGE THE FILE DIRECTORY BELOW (to collChunkFrags_c58) as needed. -->
-            <xsl:result-document href="collationChunksAmended/{substring-before(tokenize(ancestor::xml/base-uri(), '/')[last()], '.')}_{current()/@xml:id}.xml" method="xml" indent="no">
+            <xsl:result-document href="collationChunksAmended/{substring-before(tokenize(ancestor::xml/base-uri(), '/')[last()], '.')  ! substring-before(., '_')}_{current()/@xml:id}.xml" method="xml" indent="no">
                 <xml>
                     
                     <xsl:apply-templates select="current-group()"/>
@@ -22,11 +22,14 @@
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
+    <!--2022-08-10 ebb yxj: We do NOT think we want this next template at ALL in the pre-processing now with our new methods! We should REMOVE it from the preprocessing.  -->
     <!--2018-05-12 ebb: With the next template rule, I'm making sure there's a white space following every lb element that isn't inside word-boundary markup. This may help to prevent squishing of normalized word tokens together in the output collation 
     -->
-    <xsl:template match="lb[not(following-sibling::node()[2]/@ana='end')]">
+   <!-- <xsl:template match="lb[not(following-sibling::node()[2]/@ana='end')]">
         <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
-    </xsl:template>
+    </xsl:template>-->
+    
+    
     <!--2022-08-08 ebb: This template similarly ensures a space preceding the end of every sga-add endtag marker, again to prevent fused word tokens during the collation normalization process. -->
     <xsl:template match="sga-add[@eID]">
         <xsl:text> </xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
