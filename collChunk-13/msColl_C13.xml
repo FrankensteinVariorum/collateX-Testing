@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><xml><anchor type="collate" xml:id="C13"/>
+<?xml version="1.0" encoding="UTF-8"?><xml><anchor type="collate" xml:id="C13-a"/>
    <surface lrx="5364" lry="7104" partOf="#ox-frankenstein_volume_i" ulx="0" uly="0" folio="34r" shelfmark="MS. Abinger c. 56" base="ox-ms_abinger_c56/ox-ms_abinger_c56-0073.xml" id="ox-ms_abinger_c56-0073" sID="ox-ms_abinger_c56-0073"/>
    <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0073.jp2"/>
    <zone type="main" sID="c56-0073__main"/>
@@ -359,6 +359,7 @@
     <sga-add hand="#pbs" place="superlinear" sID="c56-0079__main__d5e16666"/>to <sga-add eID="c56-0079__main__d5e16666"/>
    <mod eID="c56-0079__main__d5e16658"/> prognosticate peace <lb n="c56-0079__main__20"/>or to mock<retrace cause="fix" hand="#pbs">
          </retrace> my unhappiness?<milestone unit="tei:p-END"/>
+ <anchor type="collate" xml:id="C13-b"/>
    <milestone unit="tei:p-START"/>
    <lb n="c56-0079__main__21"/>I fear, my friend <mod sID="c56-0079__main__d5e16683"/>
    <mdel>to</mdel>

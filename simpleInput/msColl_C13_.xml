@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="34r"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0073.xml"
+            id="ox-ms_abinger_c56-0073"
+            sID="ox-ms_abinger_c56-0073"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0073.jp2"/>
+   <zone type="main" sID="c56-0073__main"/>
+   <lb n="c56-0073__main__1"/>
+   <milestone spanTo="#c56-0073.05" unit="tei:head"/>
+   <longToken>Chap. 9</longToken>
+   <shi rend="sup">
+         </shi>
+   <anchor xml:id="c56-0073.05"/>
+   <lb n="c56-0073__main__2"/>On my return I found the following letter <lb n="c56-0073__main__3"/>from my father. <lb n="c56-0073__main__4"/>To V.–Frankenstein <lb n="c56-0073__main__5"/>Geneva – June 2<shi rend="sup">
+            d</shi>– 17— <lb n="c56-0073__main__6"/>My dear Victor
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0073__main__7"/>You have probably waited <w ana="start"/>impati<lb n="c56-0073__main__8"/>ently<w ana="end"/>
+   <del rend="strikethrough" xml:id="c56-0073__main__d5e15283">the</del> for <mod sID="c56-0073__main__d5e15286"/>
+   <del rend="strikethrough" xml:id="c56-0073__main__d5e15288">the</del>
+   <sga-add place="superlinear" sID="c56-0073__main__d5e15291"/>a <sga-add eID="c56-0073__main__d5e15291"/>
+   <mod eID="c56-0073__main__d5e15286"/>  letter <longToken>
+      <del rend="strikethrough" xml:id="c56-0073__main__d5e15296">which was</del> to fix <lb n="c56-0073__main__9"/>
+      <anchor xml:id="c56-0073.01"/>
+      <zone corresp="#c56-0073.01"
+            type="left_margin"
+            sID="c56-0073__left_margin"/>
+      <lb n="c56-0073__left_margin__1"/>
+      <sga-add sID="c56-0073__left_margin__d5e15307"/>the date of  <sga-add eID="c56-0073__left_margin__d5e15307"/>
+      <zone eID="c56-0073__left_margin"/>your return</longToken> and I was at first tempted <lb n="c56-0073__main__10"/>to write a few lines <del rend="strikethrough" xml:id="c56-0073__main__d5e15312">only</del>
+   <del rend="unmarked" xml:id="c56-0073__main__d5e15316">to</del>
+   <del rend="strikethrough" xml:id="c56-0073__main__d5e15319">fix</del>
+   <del rend="strikethrough" xml:id="c56-0073__main__d5e15322">that</del>
+   <sga-add place="superlinear" sID="c56-0073__main__d5e15325"/>merely mentioning the
+      day <sga-add eID="c56-0073__main__d5e15325"/>
+   <lb n="c56-0073__main__11"/>
+   <del rend="strikethrough" xml:id="c56-0073__main__d5e15330">date</del>
+   <anchor xml:id="c56-0073.03"/>
+   <zone corresp="#c56-0073.03"
+         type="left_margin"
+         sID="c56-0073__left_margin"/>
+   <addSpan spanTo="#c56-0073.04"/>
+   <lb n="c56-0073__left_margin__1"/>on which <lb n="c56-0073__left_margin__2"/>I should <lb n="c56-0073__left_margin__3"/>expect you<anchor xml:id="c56-0073.04"/>
+   <zone eID="c56-0073__left_margin"/>
+   <anchor xml:id="c56-0073.02"/> – but that would be <mod sID="c56-0073__main__d5e15351"/>
+   <sga-add place="sublinear" sID="c56-0073__main__d5e15353"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0073__main__d5e15353"/>
+   <sga-add place="superlinear" sID="c56-0073__main__d5e15359"/>a <sga-add eID="c56-0073__main__d5e15359"/>
+   <del rend="strikethrough" xml:id="c56-0073__main__d5e15362">very</del>
+   <mod eID="c56-0073__main__d5e15351"/>  cruel <mod sID="c56-0073__main__d5e15366"/>
+   <sga-add place="sublinear" sID="c56-0073__main__d5e15368"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0073__main__d5e15368"/>
+   <sga-add place="superlinear" sID="c56-0073__main__d5e15374"/>kindness <sga-add eID="c56-0073__main__d5e15374"/>
+   <mod eID="c56-0073__main__d5e15366"/>
+   <lb n="c56-0073__main__12"/>and I dare not do it. What would <mod sID="c56-0073__main__d5e15381"/>
+   <sga-add place="sublinear" sID="c56-0073__main__d5e15383"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0073__main__d5e15383"/>
+   <sga-add place="superlinear" sID="c56-0073__main__d5e15389"/>be <sga-add eID="c56-0073__main__d5e15389"/>
+   <mod eID="c56-0073__main__d5e15381"/>  your <lb n="c56-0073__main__13"/>surprise <del rend="strikethrough" xml:id="c56-0073__main__d5e15395">be</del>, my son<del rend="strikethrough" xml:id="c56-0073__main__d5e15398">e</del>, when
+      your <w ana="start"/>ex<lb n="c56-0073__main__14"/>pected<w ana="end"/> a happy and gay welcome to <del rend="strikethrough" xml:id="c56-0073__main__d5e15408">heho</del>
+   <lb n="c56-0073__main__15"/>beh<mod sID="c56-0073__main__d5e15413"/>
+   <mdel>o</mdel>
+   <sga-add place="intralinear" sID="c56-0073__main__d5e15417"/>e <sga-add eID="c56-0073__main__d5e15417"/>
+   <mod eID="c56-0073__main__d5e15413"/> ld on the contrary tears and <w ana="start"/>wretched<lb n="c56-0073__main__16"/>ness<w ana="end"/>. And how, Victor, can I relate our <lb n="c56-0073__main__17"/>misfortune<mod sID="c56-0073__main__d5e15430"/>
+   <mdel>
+            </mdel>
+   <sga-add place="intralinear" sID="c56-0073__main__d5e15437"/>? <sga-add eID="c56-0073__main__d5e15437"/>
+   <mod eID="c56-0073__main__d5e15430"/>  absence cannot have rendered <lb n="c56-0073__main__18"/>you callous to our joys and griefs and how <lb n="c56-0073__main__19"/>can I inflict pain on an absent child.? <lb n="c56-0073__main__20"/>I wish to prepare you for the woeful <lb n="c56-0073__main__21"/>news but I know it is impossible; even <lb n="c56-0073__main__22"/>now your eye skims over the page to <lb n="c56-0073__main__23"/>seek the words which are to convey to <lb n="c56-0073__main__24"/>you the horrible tidings.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0073__main__25"/>William is dead! That sweet child <lb n="c56-0073__main__26"/>whose smiles delighted &amp; warmed me <lb n="c56-0073__main__27"/>who was so gentle yet so gay, Victor, he <lb n="c56-0073__main__28"/>is Murdered!<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0073__main__29"/>I will not attempt to <del rend="strikethrough" xml:id="c56-0073__main__d5e15471">o</del>
+      console you <lb n="c56-0073__main__30"/>but will simply relate the circumstances <lb n="c56-0073__main__31"/>of the transaction.<zone eID="c56-0073__main"/>
+   <surface eID="ox-ms_abinger_c56-0073"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="34v"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0074.xml"
+            id="ox-ms_abinger_c56-0074"
+            sID="ox-ms_abinger_c56-0074"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0074.jp2"/>
+   <zone type="main" sID="c56-0074__main"/>
+   <milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0074__main__1"/>Last thurday (May <longToken>
+      <del rend="strikethrough" xml:id="c56-0074__main__d5e15491">26</del> 28<shi rend="underline">th</shi>)</longToken> I; <mod sID="c56-0074__main__d5e15497"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15499">your <sga-add place="superlinear" sID="c56-0074__main__d5e15501"/>my <sga-add eID="c56-0074__main__d5e15501"/>
+   </del>
+   <mod eID="c56-0074__main__d5e15497"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15507">cousin</del>
+   <lb n="c56-0074__main__2"/>my niece and your two brothers went to <lb n="c56-0074__main__3"/>walk in Plainpalais. The evening was <lb n="c56-0074__main__4"/>warm and serene, and we prolonged our <lb n="c56-0074__main__5"/>walk <del rend="strikethrough" xml:id="c56-0074__main__d5e15518">fat</del> farther than usual. It was <lb n="c56-0074__main__6"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15524">
+      <shi rend="underline">ale</shi>
+   </del> already dusk before we
+      thought of <lb n="c56-0074__main__7"/>returning <mod sID="c56-0074__main__d5e15532"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15534">When</del>
+   <sga-add place="superlinear" sID="c56-0074__main__d5e15537"/>and then <sga-add eID="c56-0074__main__d5e15537"/>
+   <mod eID="c56-0074__main__d5e15532"/>  we <mod sID="c56-0074__main__d5e15541"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15543">found</del>
+   <sga-add place="sublinear" sID="c56-0074__main__d5e15546"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0074__main__d5e15546"/>
+   <sga-add place="superlinear" sID="c56-0074__main__d5e15552"/>discovered <sga-add eID="c56-0074__main__d5e15552"/>
+   <mod eID="c56-0074__main__d5e15541"/>  that Ernest <lb n="c56-0074__main__8"/>and William who had gone on before, <lb n="c56-0074__main__9"/>were not to be found. We accordingly <lb n="c56-0074__main__10"/>rested on a seat untill they should <lb n="c56-0074__main__11"/>return. Presently Ernest came <del rend="strikethrough" xml:id="c56-0074__main__d5e15565">up</del> &amp; <lb n="c56-0074__main__12"/>enquired for his brother he said that <lb n="c56-0074__main__13"/>he had been playing <longToken>with <del rend="strikethrough" xml:id="c56-0074__main__d5e15573">them</del> him <lb n="c56-0074__main__14"/>and</longToken> that William had run away to <lb n="c56-0074__main__15"/>hide himself and that he had <mod sID="c56-0074__main__d5e15580"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15582">wai</del>
+   <sga-add place="superlinear" sID="c56-0074__main__d5e15585"/>vainly <sga-add eID="c56-0074__main__d5e15585"/>
+   <mod eID="c56-0074__main__d5e15580"/>
+   <lb n="c56-0074__main__16"/>sought <del rend="strikethrough" xml:id="c56-0074__main__d5e15591">fo</del> for him &amp; afterwards wai <lb n="c56-0074__main__17"/>ted a long time but that he did <lb n="c56-0074__main__18"/>not return.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0074__main__19"/>This rather alarmed us and we <del rend="strikethrough" xml:id="c56-0074__main__d5e15603">sought</del>
+   <lb n="c56-0074__main__20"/>continued to search  <sga-add place="superlinear" sID="c56-0074__main__d5e15609"/>for him <sga-add eID="c56-0074__main__d5e15609"/>untill night fell<del rend="strikethrough" xml:id="c56-0074__main__d5e15612">l</del>; <lb n="c56-0074__main__21"/>
+   <anchor xml:id="c56-0074.01"/>
+   <zone corresp="#c56-0074.01"
+         type="left_margin"
+         sID="c56-0074__left_margin"/>
+   <lb n="c56-0074__left_margin__1"/>
+   <sga-add sID="c56-0074__left_margin__d5e15623"/>when  <sga-add eID="c56-0074__left_margin__d5e15623"/>
+   <zone eID="c56-0074__left_margin"/>Elizabeth conjectured that he might have <lb n="c56-0074__main__22"/>returned to the house: <del rend="strikethrough" xml:id="c56-0074__main__d5e15629">but</del> he was <lb n="c56-0074__main__23"/>not there – We returned again with torches <lb n="c56-0074__main__24"/>for I could not rest when I thought my <lb n="c56-0074__main__25"/>sweet child had lost himself, and <lb n="c56-0074__main__26"/>was exposed to all the damps &amp; dews <lb n="c56-0074__main__27"/>of night; Elizabeth also suffered extreme <lb n="c56-0074__main__28"/>anguish. <del rend="strikethrough" xml:id="c56-0074__main__d5e15645">We found him</del>
+   <mod sID="c56-0074__main__d5e15648"/>
+   <mdel>a</mdel>
+   <sga-add place="intralinear" sID="c56-0074__main__d5e15652"/>A <sga-add eID="c56-0074__main__d5e15652"/>
+   <mod eID="c56-0074__main__d5e15648"/> bout <mod sID="c56-0074__main__d5e15656"/>
+   <del rend="strikethrough" xml:id="c56-0074__main__d5e15658">four</del>
+   <anchor xml:id="c56-0074.02"/>
+   <zone corresp="#c56-0074.02"
+         type="left_margin"
+         sID="c56-0074__left_margin"/>
+   <lb n="c56-0074__left_margin__1"/>
+   <sga-add sID="c56-0074__left_margin__d5e15667"/>seven <sga-add eID="c56-0074__left_margin__d5e15667"/>
+   <zone eID="c56-0074__left_margin"/>
+   <mod eID="c56-0074__main__d5e15656"/>
+   <lb n="c56-0074__main__29"/>in the morning I discovered my lovely <lb n="c56-0074__main__30"/>boy whom the night before I had seen <zone eID="c56-0074__main"/>
+   <surface eID="ox-ms_abinger_c56-0074"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="35r"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0075.xml"
+            id="ox-ms_abinger_c56-0075"
+            sID="ox-ms_abinger_c56-0075"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0075.jp2"/>
+   <zone type="main" sID="c56-0075__main"/>
+   <lb n="c56-0075__main__1"/>blooming &amp; active in health stretch<lb n="c56-0075__main__2"/>ed on the grass livid and motionless– <lb n="c56-0075__main__3"/>the print of the murderers finger was <lb n="c56-0075__main__4"/>on his neck.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0075__main__5"/>He was conveyed home and the <lb n="c56-0075__main__6"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15698">extreme</del>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15701">wh</del>
+   <mod sID="c56-0075__main__d5e15704"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15706">misery</del>
+   <sga-add place="superlinear" sID="c56-0075__main__d5e15709"/>anguish <sga-add eID="c56-0075__main__d5e15709"/>
+   <mod eID="c56-0075__main__d5e15704"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15713">agony</del> that was <lb n="c56-0075__main__7"/>visible in my countenance revealed <lb n="c56-0075__main__8"/>the secret to Elizabeth. She was <delSpan rend="strikethrough" spanTo="#c56-0075.02"/>
+   <w ana="start"/>extreme<lb n="c56-0075__main__9"/>ly <w ana="end"/>
+   <anchor xml:id="c56-0075.02"/>
+   <anchor xml:id="c56-0075.03"/>
+   <zone corresp="#c56-0075.03"
+         type="left_margin"
+         sID="c56-0075__left_margin"/>
+   <lb n="c56-0075__left_margin__1"/>
+   <sga-add sID="c56-0075__left_margin__d5e15738"/>very <sga-add eID="c56-0075__left_margin__d5e15738"/>
+   <zone eID="c56-0075__left_margin"/>
+   <anchor xml:id="c56-0075.01"/> earnest to see the corpse. <del rend="strikethrough" xml:id="c56-0075__main__d5e15743">which</del>
+   <mod sID="c56-0075__main__d5e15746"/>
+   <sga-add place="sublinear" sID="c56-0075__main__d5e15748"/>^ <sga-add eID="c56-0075__main__d5e15748"/>
+   <mdel>
+            </mdel>
+   <mod eID="c56-0075__main__d5e15746"/>
+   <delSpan rend="strikethrough" spanTo="#c56-0075.05"/>for a <lb n="c56-0075__main__10"/>long time<anchor xml:id="c56-0075.05"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15765">refused</del>
+   <anchor xml:id="c56-0075.07"/>
+   <zone corresp="#c56-0075.07"
+         type="left_margin"
+         sID="c56-0075__left_margin"/>
+   <lb n="c56-0075__left_margin__1"/>
+   <sga-add hand="#pbs"
+            next="#c56-0075.06"
+            sID="c56-0075__left_margin__d5e15774"/>At first I  <sga-add eID="c56-0075__left_margin__d5e15774"/>
+   <zone eID="c56-0075__left_margin"/>
+   <sga-add hand="#pbs"
+            place="superlinear"
+            xml:id="c56-0075.06"
+            sID="c56-0075__main__d5e15779"/>attempted to prevent her <sga-add eID="c56-0075__main__d5e15779"/>
+   <anchor xml:id="c56-0075.04"/>
+      but <del rend="strikethrough" xml:id="c56-0075__main__d5e15784">
+      <unclear extent="1" unit="chars"/>
+   </del> she persisted, <lb n="c56-0075__main__11"/>and entering the room where it lay <lb n="c56-0075__main__12"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15793">quickly</del> hastily examined the neck of <lb n="c56-0075__main__13"/>the victim and clasping her <del rend="strikethrough" xml:id="c56-0075__main__d5e15799">hads</del>
+   <lb n="c56-0075__main__14"/>hands exclaimed— <del rend="strikethrough" xml:id="c56-0075__main__d5e15804">Go</del> Oh God! I have <lb n="c56-0075__main__15"/>murdered <del rend="strikethrough" xml:id="c56-0075__main__d5e15809">this sweet</del>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15813">babe</del>
+   <del rend="unmarked" xml:id="c56-0075__main__d5e15816">.</del> my darling <lb n="c56-0075__main__16"/>infant.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0075__main__17"/>She fainted and was retored with <lb n="c56-0075__main__18"/>extreme difficulty; <del rend="strikethrough" xml:id="c56-0075__main__d5e15828">and</del> when she again <lb n="c56-0075__main__19"/>lived it was only to weep and sigh– <lb n="c56-0075__main__20"/>She told me that that same evening <lb n="c56-0075__main__21"/>William had teazed her to let him <lb n="c56-0075__main__22"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15839">we</del>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15843">we</del> wear a very valuable miniature <lb n="c56-0075__main__23"/>she possessed of your Mother. This <lb n="c56-0075__main__24"/>picture is gone and was doubtless <lb n="c56-0075__main__25"/>the temptation which urged the <w ana="start"/>mur<lb n="c56-0075__main__26"/>derer<w ana="end"/> to the deed. We have no trace <lb n="c56-0075__main__27"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15861">of</del>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15864">Come my dear Victor</del>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15867">him</del> at <lb n="c56-0075__main__28"/>present of him, <mod sID="c56-0075__main__d5e15873"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15875">but</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0075__main__d5e15878"/>altho <sga-add eID="c56-0075__main__d5e15878"/>
+   <mod eID="c56-0075__main__d5e15873"/>  our exertions <mod sID="c56-0075__main__d5e15882"/>
+   <del rend="strikethrough" xml:id="c56-0075__main__d5e15884">are</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0075__main__d5e15887"/>to discover him <sga-add eID="c56-0075__main__d5e15887"/>
+   <mod eID="c56-0075__main__d5e15882"/>
+   <lb n="c56-0075__main__29"/>are unremitted; but they will not restore <lb n="c56-0075__main__30"/>my beloved William.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0075__main__31"/>Come, dearest Victor, you alone can<zone eID="c56-0075__main"/>
+   <surface eID="ox-ms_abinger_c56-0075"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="35v"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0076.xml"
+            id="ox-ms_abinger_c56-0076"
+            sID="ox-ms_abinger_c56-0076"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0076.jp2"/>
+   <zone type="main" sID="c56-0076__main"/>
+   <lb n="c56-0076__main__1"/>console Elizabeth, <mod sID="c56-0076__main__d5e15909"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e15911">who</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0076__main__d5e15914"/>She <sga-add eID="c56-0076__main__d5e15914"/>
+   <mod eID="c56-0076__main__d5e15909"/>  weeps <mod sID="c56-0076__main__d5e15918"/>
+   <sga-add place="sublinear" sID="c56-0076__main__d5e15920"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0076__main__d5e15920"/>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0076__main__d5e15926"/>continually <sga-add eID="c56-0076__main__d5e15926"/>
+   <mod eID="c56-0076__main__d5e15918"/> &amp; accuses herself <lb n="c56-0076__main__2"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e15932">of all how u</del>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e15936">so</del> unjustly <mod sID="c56-0076__main__d5e15939"/>
+   <sga-add place="sublinear" sID="c56-0076__main__d5e15941"/>
+   <metamark function="displacement" xml:id="c56-0076.01">^</metamark>
+   <sga-add eID="c56-0076__main__d5e15941"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e15947">and</del>
+   <mod eID="c56-0076__main__d5e15939"/>  yet her words <lb n="c56-0076__main__3"/>
+   <sga-add corresp="#c56-0076.01"
+            hand="#pbs"
+            place="interlinear"
+            sID="c56-0076__main__d5e15953"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e15955">of th</del> as the cause of his death— <sga-add eID="c56-0076__main__d5e15953"/>
+   <lb n="c56-0076__main__4"/>pierce my heart. We are all unhappy <lb n="c56-0076__main__5"/>but <del rend="strikethrough" xml:id="c56-0076__main__d5e15964">that</del> will not that be an <w ana="start"/>additio<lb n="c56-0076__main__6"/>nal<w ana="end"/> motive <mod sID="c56-0076__main__d5e15973"/>
+   <mdel>to</mdel>
+   <sga-add place="intralinear" sID="c56-0076__main__d5e15977"/>for <sga-add eID="c56-0076__main__d5e15977"/>
+   <mod eID="c56-0076__main__d5e15973"/>  you, my <del rend="strikethrough" xml:id="c56-0076__main__d5e15981">co</del> son, to <mod sID="c56-0076__main__d5e15985"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e15987">come</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0076__main__d5e15990"/>return <sga-add eID="c56-0076__main__d5e15990"/>
+   <mod eID="c56-0076__main__d5e15985"/>
+   <lb n="c56-0076__main__7"/>and be our comforter. Your dear Mother! <lb n="c56-0076__main__8"/>Alas, Victor! I now say Thank God she did <lb n="c56-0076__main__9"/>not live to witness <del rend="strikethrough" xml:id="c56-0076__main__d5e16000">this grief</del>
+   <del rend="unmarked" xml:id="c56-0076__main__d5e16003">–</del>
+   <mod sID="c56-0076__main__d5e16007"/>
+   <mdel>T</mdel>
+   <sga-add place="intralinear" sID="c56-0076__main__d5e16011"/>t <sga-add eID="c56-0076__main__d5e16011"/>
+   <mod eID="c56-0076__main__d5e16007"/> he cruel <lb n="c56-0076__main__10"/>miserable death of her youngest darling.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0076__main__11"/>Come, Victor; not brooding <del rend="strikethrough" xml:id="c56-0076__main__d5e16021">w</del> thoughts <lb n="c56-0076__main__12"/>of vengeance against the assassin but <lb n="c56-0076__main__13"/>with feelings of peace and gentleness <lb n="c56-0076__main__14"/>that will heal instead of festering the <lb n="c56-0076__main__15"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e16033">woul</del> wound<del rend="strikethrough" xml:id="c56-0076__main__d5e16036">s</del> of our <del rend="strikethrough" xml:id="c56-0076__main__d5e16039">soul</del> minds. Enter <lb n="c56-0076__main__16"/>the house of mourning, my son &amp; friend <lb n="c56-0076__main__17"/>but with kindness and affection <lb n="c56-0076__main__18"/>for those who love you &amp; not with <lb n="c56-0076__main__19"/>hat<mod sID="c56-0076__main__d5e16051"/>
+   <mdel>e</mdel>
+   <sga-add place="intralinear" sID="c56-0076__main__d5e16055"/>red <sga-add eID="c56-0076__main__d5e16055"/>
+   <mod eID="c56-0076__main__d5e16051"/>  for your enemies. <lb n="c56-0076__main__20"/>Your affectionate &amp; afflicted father <lb n="c56-0076__main__21"/>Alphonse Frankenstein <lb n="c56-0076__main__22"/>
+   <del rend="smear" xml:id="c56-0076__main__d5e16066">Al</del>
+   <lb n="c56-0076__main__23"/>
+   <metamark function="separate">_______________</metamark>
+   <milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0076__main__24"/>Clerval who had watched my countenance <lb n="c56-0076__main__25"/>as I read this letter was surprised in observ- <lb n="c56-0076__main__26"/>ing the despair that succeeded to the joy <lb n="c56-0076__main__27"/>I expressed on receiving new <sga-add hand="#pbs" place="intralinear" sID="c56-0076__main__d5e16085"/>s <sga-add eID="c56-0076__main__d5e16085"/> from my
+      friends. <lb n="c56-0076__main__28"/>I threw the letter on the table and covered <lb n="c56-0076__main__29"/>my face with my hands.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0076__main__30"/>"My dear Frankenstien," exclaimed <lb n="c56-0076__main__31"/>
+   <del rend="strikethrough" xml:id="c56-0076__main__d5e16099">hen</del> Henry when he saw me weep with <zone eID="c56-0076__main"/>
+   <surface eID="ox-ms_abinger_c56-0076"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="36r"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0077.xml"
+            id="ox-ms_abinger_c56-0077"
+            sID="ox-ms_abinger_c56-0077"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0077.jp2"/>
+   <zone type="main" sID="c56-0077__main"/>
+   <lb n="c56-0077__main__1"/>bitterness "are you always to be unhappy? <lb n="c56-0077__main__2"/>"my dear friend, what has happened?"<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0077__main__3"/>I motioned to him to <mod sID="c56-0077__main__d5e16119"/>
+   <del rend="strikethrough" xml:id="c56-0077__main__d5e16121">read</del>
+   <sga-add place="superlinear" sID="c56-0077__main__d5e16124"/>take up <sga-add eID="c56-0077__main__d5e16124"/>
+   <mod eID="c56-0077__main__d5e16119"/>  the letter <lb n="c56-0077__main__4"/>while I walked up &amp; down the room <lb n="c56-0077__main__5"/>in the most extreme agitation. <delSpan rend="strikethrough" spanTo="#c56-0077.01"/>Clerval <lb n="c56-0077__main__6"/>read the letter<anchor xml:id="c56-0077.01"/> – <del rend="strikethrough" xml:id="c56-0077__main__d5e16139">and</del>
+      tears also <del rend="strikethrough" xml:id="c56-0077__main__d5e16143">gush</del>
+   <lb n="c56-0077__main__7"/>gushed <mod sID="c56-0077__main__d5e16148"/>
+   <sga-add place="sublinear" sID="c56-0077__main__d5e16150"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0077__main__d5e16150"/>
+   <sga-add place="superlinear" sID="c56-0077__main__d5e16156"/>also <sga-add eID="c56-0077__main__d5e16156"/>
+   <mod eID="c56-0077__main__d5e16148"/>  from <mod sID="c56-0077__main__d5e16160"/>
+   <del rend="strikethrough" xml:id="c56-0077__main__d5e16162">his</del>
+   <sga-add place="sublinear" sID="c56-0077__main__d5e16165"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0077__main__d5e16165"/>
+   <sga-add place="superlinear" sID="c56-0077__main__d5e16171"/>the <sga-add eID="c56-0077__main__d5e16171"/>
+   <mod eID="c56-0077__main__d5e16160"/>  eyes  <sga-add place="superlinear" sID="c56-0077__main__d5e16175"/>
+   <metamark function="displacement" xml:id="c56-0077.02">X</metamark>
+   <zone corresp="#c56-0077.02"
+         type="left_margin"
+         sID="c56-0077__left_margin"/>
+   <addSpan spanTo="#c56-0077.03"/>
+   <lb n="c56-0077__left_margin__1"/>
+   <metamark function="displacement">X</metamark>of Clerval <lb n="c56-0077__left_margin__2"/>as he read the <lb n="c56-0077__left_margin__3"/>account of my <lb n="c56-0077__left_margin__4"/>misfortune<anchor xml:id="c56-0077.03"/>
+   <zone eID="c56-0077__left_margin"/>
+   <sga-add eID="c56-0077__main__d5e16175"/> –"I can offer you <lb n="c56-0077__main__8"/>"no consolation, my friend," said he <del rend="strikethrough" xml:id="c56-0077__main__d5e16203">my</del>
+   <lb n="c56-0077__main__9"/>"your <mod sID="c56-0077__main__d5e16208"/>
+   <del rend="strikethrough" xml:id="c56-0077__main__d5e16210">misfortune</del>
+   <sga-add place="superlinear" sID="c56-0077__main__d5e16213"/>disaster <sga-add eID="c56-0077__main__d5e16213"/>
+   <mod eID="c56-0077__main__d5e16208"/>  is irreperable.<del rend="strikethrough" xml:id="c56-0077__main__d5e16217">"</del> What <lb n="c56-0077__main__10"/>"do you intend to do"?<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0077__main__11"/>"To go instantly to Geneva<del rend="strikethrough" xml:id="c56-0077__main__d5e16227">"</del> come <lb n="c56-0077__main__12"/>with me, Clerval, to order the horses"<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0077__main__13"/>During our walk <del rend="strikethrough" xml:id="c56-0077__main__d5e16236">C</del> Henry 
+      <w ana="start"/>endeav<lb n="c56-0077__main__14"/>oured<w ana="end"/> to raise my spirits– He did not <lb n="c56-0077__main__15"/>do this by the common topics of <del rend="strikethrough" xml:id="c56-0077__main__d5e16248">conversatio</del>
+   <lb n="c56-0077__main__16"/>consolation <longToken>but<del rend="strikethrough" xml:id="c56-0077__main__d5e16254">t</del> by shew<mod sID="c56-0077__main__d5e16257"/>
+      <mdel>e</mdel>
+      <sga-add place="intralinear" sID="c56-0077__main__d5e16261"/>i<sga-add eID="c56-0077__main__d5e16261"/>
+      <mod eID="c56-0077__main__d5e16257"/>ng the truest <lb n="c56-0077__main__17"/>sympathy.</longToken> "Poor William" said "that dear <lb n="c56-0077__main__18"/>"child he now sleeps with his angel <lb n="c56-0077__main__19"/>"mother. His friends mourn and weep but <lb n="c56-0077__main__20"/>"he is at rest he does not now feel the <lb n="c56-0077__main__21"/>"murderers grasp – a <del rend="strikethrough" xml:id="c56-0077__main__d5e16276">green</del> sod covers his <lb n="c56-0077__main__22"/>"gentle form and he knows no pain–He <lb n="c56-0077__main__23"/>"can no longer be a subject for pity his <lb n="c56-0077__main__24"/>"survivors are the greatest sufferers and <lb n="c56-0077__main__25"/>"for them time is the<del rend="vertical_line" xml:id="c56-0077__main__d5e16288">ir</del> only consolation. <lb n="c56-0077__main__26"/>"Those maxims of the stoics that death <lb n="c56-0077__main__27"/>"was no evil and that the mind of man <lb n="c56-0077__main__28"/>"ought to be sup<retrace cause="unclear">er</retrace>ior to <del rend="strikethrough" xml:id="c56-0077__main__d5e16300">that</del> despair <lb n="c56-0077__main__29"/>"on the eternal absence of a beloved <lb n="c56-0077__main__30"/>"object ought not to be urged – even <lb n="c56-0077__main__31"/>"Cato wept over the dead body of his <lb n="c56-0077__main__32"/>"brother."<zone eID="c56-0077__main"/>
+   <surface eID="ox-ms_abinger_c56-0077"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="36v"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0078.xml"
+            id="ox-ms_abinger_c56-0078"
+            sID="ox-ms_abinger_c56-0078"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0078.jp2"/>
+   <zone type="main" sID="c56-0078__main"/>
+   <milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0078__main__1"/>Clerval spoke this as we huried <lb n="c56-0078__main__2"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16326">thou</del> through the streets the words <lb n="c56-0078__main__3"/>impressed themselves on my <del rend="strikethrough" xml:id="c56-0078__main__d5e16332">memor</del>
+   <lb n="c56-0078__main__4"/>mind and I remembered them afterwads <lb n="c56-0078__main__5"/>in solitude. <del rend="strikethrough" xml:id="c56-0078__main__d5e16339">As soon</del> But now, as soon <lb n="c56-0078__main__6"/>as the horses arrived I hurried into <lb n="c56-0078__main__7"/>a Cabriolet and <del rend="strikethrough" xml:id="c56-0078__main__d5e16347">left Ingo</del> bad fare <lb n="c56-0078__main__8"/>well to my friend.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0078__main__9"/>My journey was very melancholy. <lb n="c56-0078__main__10"/>At first I wished to hurry on for I longed <lb n="c56-0078__main__11"/>to console &amp; sympathize  <sga-add place="superlinear" sID="c56-0078__main__d5e16361"/>with <sga-add eID="c56-0078__main__d5e16361"/>my loved and <lb n="c56-0078__main__12"/>sorrowing friends but when I drew <lb n="c56-0078__main__13"/>near my <del rend="strikethrough" xml:id="c56-0078__main__d5e16368">t</del> native town I sla<mod sID="c56-0078__main__d5e16371"/>
+   <sga-add place="sublinear" sID="c56-0078__main__d5e16373"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0078__main__d5e16373"/>
+   <sga-add place="superlinear" sID="c56-0078__main__d5e16379"/>c <sga-add eID="c56-0078__main__d5e16379"/>
+   <mod eID="c56-0078__main__d5e16371"/> kened <lb n="c56-0078__main__14"/>my <mod sID="c56-0078__main__d5e16386"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16388">pace</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0078__main__d5e16391"/>progress <sga-add eID="c56-0078__main__d5e16391"/>
+   <mod eID="c56-0078__main__d5e16386"/> . <del rend="strikethrough" xml:id="c56-0078__main__d5e16395">I</del>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16398">C</del> I could hardly sustain <lb n="c56-0078__main__15"/>the multitude of feelings that <lb n="c56-0078__main__16"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16405">crowed</del> crowded into my mind. I passed <lb n="c56-0078__main__17"/>though <del rend="strikethrough" xml:id="c56-0078__main__d5e16411">scee</del> scenes familiar to my youth <lb n="c56-0078__main__18"/>but which I had not seen for nearly <lb n="c56-0078__main__19"/>five years, how altered every thing might <lb n="c56-0078__main__20"/>be <mod sID="c56-0078__main__d5e16420"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16422">during</del>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0078__main__d5e16425"/>since <sga-add eID="c56-0078__main__d5e16425"/>
+   <mod eID="c56-0078__main__d5e16420"/> that time <sga-add hand="#pbs" place="intralinear" sID="c56-0078__main__d5e16430"/>? <sga-add eID="c56-0078__main__d5e16430"/> one great sudden <lb n="c56-0078__main__21"/>and desolating change had taken place <lb n="c56-0078__main__22"/>but a thousand little circumstance <lb n="c56-0078__main__23"/>might have <mod sID="c56-0078__main__d5e16439"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16441">sapped</del>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16444">
+      <sga-add place="superlinear" sID="c56-0078__main__d5e16446"/>worked <sga-add eID="c56-0078__main__d5e16446"/>
+   </del>
+   <mod eID="c56-0078__main__d5e16439"/>  by <del rend="strikethrough" xml:id="c56-0078__main__d5e16451">degreed</del> degrees <lb n="c56-0078__main__24"/>
+   <mod sID="c56-0078__main__d5e16457"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16459">worked</del>
+   <sga-add place="superlinear" sID="c56-0078__main__d5e16462"/>worked other<mdel>s</mdel>
+   <sga-add eID="c56-0078__main__d5e16462"/>
+   <mod eID="c56-0078__main__d5e16457"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16468">
+      <unclear>t</unclear>
+   </del>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16473">as great</del> alterations <mod sID="c56-0078__main__d5e16476"/>
+   <sga-add place="sublinear" sID="c56-0078__main__d5e16478"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0078__main__d5e16478"/>
+   <sga-add place="superlinear" sID="c56-0078__main__d5e16484"/>which <sga-add eID="c56-0078__main__d5e16484"/>
+   <mod eID="c56-0078__main__d5e16476"/>  although <lb n="c56-0078__main__25"/>it might be done more tranquilly would <lb n="c56-0078__main__26"/>not be less de<mod sID="c56-0078__main__d5e16493"/>
+   <mdel>s</mdel>
+   <sga-add place="intralinear" sID="c56-0078__main__d5e16497"/>c <sga-add eID="c56-0078__main__d5e16497"/>
+   <mod eID="c56-0078__main__d5e16493"/> isive. Fear overc<retrace cause="unclear">a</retrace>me me <lb n="c56-0078__main__27"/>I dared <del rend="strikethrough" xml:id="c56-0078__main__d5e16506">had</del>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16509">N</del> not advance <del rend="strikethrough" xml:id="c56-0078__main__d5e16513">fea</del>
+      dreading <lb n="c56-0078__main__28"/>a <del rend="strikethrough" xml:id="c56-0078__main__d5e16518">thoug</del> thousand nameless evils that <lb n="c56-0078__main__29"/>made me tremble <mod sID="c56-0078__main__d5e16523"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16525">while</del>
+   <sga-add place="superlinear" sID="c56-0078__main__d5e16528"/>although <sga-add eID="c56-0078__main__d5e16528"/>
+   <mod eID="c56-0078__main__d5e16523"/>  I <mod sID="c56-0078__main__d5e16532"/>
+   <del rend="strikethrough" xml:id="c56-0078__main__d5e16534">could not</del>
+   <sga-add place="superlinear" sID="c56-0078__main__d5e16537"/>was unable <sga-add eID="c56-0078__main__d5e16537"/>
+   <mod eID="c56-0078__main__d5e16532"/>
+   <zone eID="c56-0078__main"/>
+   <surface eID="ox-ms_abinger_c56-0078"/>
+   <surface lrx="5364"
+            lry="7104"
+            partOf="#ox-frankenstein_volume_i"
+            ulx="0"
+            uly="0"
+            folio="37r"
+            shelfmark="MS. Abinger c. 56"
+            base="ox-ms_abinger_c56/ox-ms_abinger_c56-0079.xml"
+            id="ox-ms_abinger_c56-0079"
+            sID="ox-ms_abinger_c56-0079"/>
+   <graphic url="http://shelleygodwinarchive.org/images/ox/ms_abinger_c56/ms_abinger_c56-0079.jp2"/>
+   <zone type="main" sID="c56-0079__main"/>
+   <lb n="c56-0079__main__1"/>to define them.<milestone unit="tei:p-END"/>
+   <milestone unit="tei:p-START"/>
+   <lb n="c56-0079__main__2"/>I remained <del rend="strikethrough" xml:id="c56-0079__main__d5e16555">thus</del> at
+      Lausanne for <lb n="c56-0079__main__3"/>two days not daring to proceed. I <w ana="start"/>contem<lb n="c56-0079__main__4"/>plated<w ana="end"/> the lake – the waters were <lb n="c56-0079__main__5"/>placid – all around was calm and the <lb n="c56-0079__main__6"/>Snowy mountains the "Palaces of Nature" <sga-add place="superlinear" sID="c56-0079__main__d5e16571"/>
+   <metamark function="displacement" xml:id="c56-0079.01">X</metamark>
+   <zone corresp="#c56-0079.01"
+         type="left_margin"
+         sID="c56-0079__left_margin"/>
+   <lb n="c56-0079__left_margin__1"/>
+   <sga-add sID="c56-0079__left_margin__d5e16580"/>
+   <metamark function="displacement">X</metamark>
+   <del rend="strikethrough" xml:id="c56-0079__left_margin__d5e16585">Lo<shi rend="underline">rd Byron</shi>
+   </del>
+   <sga-add eID="c56-0079__left_margin__d5e16580"/>
+   <zone eID="c56-0079__left_margin"/>
+   <sga-add eID="c56-0079__main__d5e16571"/>
+   <lb n="c56-0079__main__7"/>were not changed. By degrees, this calm <lb n="c56-0079__main__8"/>and heavenly scene restored me, and I <lb n="c56-0079__main__9"/>
+   <mod sID="c56-0079__main__d5e16601"/>
+   <del rend="strikethrough" xml:id="c56-0079__main__d5e16603">proceeded</del>
+   <anchor xml:id="c56-0079.03"/>
+   <zone corresp="#c56-0079.03"
+         type="left_margin"
+         sID="c56-0079__left_margin"/>
+   <lb n="c56-0079__left_margin__1"/>
+   <sga-add hand="#pbs"
+            next="#c56-0079.02"
+            sID="c56-0079__left_margin__d5e16612"/>continued my  <sga-add eID="c56-0079__left_margin__d5e16612"/>
+   <zone eID="c56-0079__left_margin"/>
+   <sga-add hand="#pbs"
+            place="superlinear"
+            xml:id="c56-0079.02"
+            sID="c56-0079__main__d5e16616"/>journey <sga-add eID="c56-0079__main__d5e16616"/>
+   <mod eID="c56-0079__main__d5e16601"/>  towards Geneva. The road <lb n="c56-0079__main__10"/>ran by the side of the lake which <lb n="c56-0079__main__11"/>became narrower as I approached <lb n="c56-0079__main__12"/>my native town – I discovered more <lb n="c56-0079__main__13"/>distinctly the black sides of Jura; <lb n="c56-0079__main__14"/>and the <mod sID="c56-0079__main__d5e16631"/>
+   <sga-add place="sublinear" sID="c56-0079__main__d5e16633"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0079__main__d5e16633"/>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0079__main__d5e16639"/>bright <sga-add eID="c56-0079__main__d5e16639"/>
+   <mod eID="c56-0079__main__d5e16631"/> summit of Mount Blanc– <lb n="c56-0079__main__15"/>I wept like a child– Dear mountains <lb n="c56-0079__main__16"/>my own beautiful lake how do you <lb n="c56-0079__main__17"/>welcome your wanderer Your <w ana="start"/>sum<lb n="c56-0079__main__18"/>mits<w ana="end"/> are clear the sky and lake <lb n="c56-0079__main__19"/>are blue is this <mod sID="c56-0079__main__d5e16658"/>
+   <sga-add place="sublinear" sID="c56-0079__main__d5e16660"/>
+   <metamark function="insert">^</metamark>
+   <sga-add eID="c56-0079__main__d5e16660"/>
+   <sga-add hand="#pbs" place="superlinear" sID="c56-0079__main__d5e16666"/>to <sga-add eID="c56-0079__main__d5e16666"/>
+   <mod eID="c56-0079__main__d5e16658"/> prognosticate peace <lb n="c56-0079__main__20"/>or to mock<retrace cause="fix" hand="#pbs">
+         </retrace> my unhappiness?<milestone unit="tei:p-END"/>
+</xml>
