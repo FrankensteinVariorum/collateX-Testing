@@ -36,6 +36,7 @@ RE_AB = re.compile(r'<ab.*?/>')
 # RE_AMP_SQUISH = re.compile(r'\S&amp;\S')
 # RE_AMP = re.compile(r'\s&amp;\s')
 RE_AMP = re.compile(r'&')
+RE_LT_AMP = re.compile(r'&amp;')
 # RE_MULTICAPS = re.compile(r'(?<=\W|\s|\>)[A-Z][A-Z]+[A-Z]*\s')
 # RE_INNERCAPS = re.compile(r'(?<=hi\d"/>)[A-Z]+[A-Z]+[A-Z]+[A-Z]*')
 # TITLE_MultiCaps = match(RE_MULTICAPS).lower()
@@ -206,6 +207,7 @@ def normalize(inputText):
     normalized = RE_MDEL.sub('', normalized)
 # 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
 # We do not think these are significant for comparison with the other editions, so we normalize them out.
+    normalized = RE_LT_AMP.sub('and', normalized)
     normalized = RE_AMP.sub('and', normalized)
     normalized = RE_DOTDASH.sub('.', normalized)
     normalized = RE_HEAD.sub('', normalized)
