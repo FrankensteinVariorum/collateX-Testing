@@ -95,8 +95,8 @@
    <zone type="main" sID="c56-0074__main"/>
    <milestone unit="tei:p-END"/>
    <milestone unit="tei:p-START"/>
-   <lb n="c56-0074__main__1"/>Last thurday (May <longToken>
-      <del rend="strikethrough" xml:id="c56-0074__main__d5e15491">26</del> 28<shi rend="underline">th</shi>)</longToken> I; <mod sID="c56-0074__main__d5e15497"/>
+   <lb n="c56-0074__main__1"/>Last thurday (May 
+      <del rend="strikethrough" xml:id="c56-0074__main__d5e15491">26</del> 28<shi rend="underline">th</shi>) I; <mod sID="c56-0074__main__d5e15497"/>
    <del rend="strikethrough" xml:id="c56-0074__main__d5e15499">your <sga-add place="superlinear" sID="c56-0074__main__d5e15501"/>my <sga-add eID="c56-0074__main__d5e15501"/>
    </del>
    <mod eID="c56-0074__main__d5e15497"/>
