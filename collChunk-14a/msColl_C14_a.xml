@@ -14,7 +14,7 @@
    <zone type="main" sID="c56-0091__Pt2__main"/>
    <milestone unit="tei:p-START"/>
    <lb n="c56-0091__Pt2__main__1"/>We passed a few sad hours untill eleven <lb n="c56-0091__Pt2__main__2"/>o'clock when the trial was to <mod sID="c56-0091__Pt2__main__d5e19572"/>
-   <del rend="strikethrough" xml:id="c56-0091__Pt2__main__d5e19574">begin</del>begin
+   <del rend="strikethrough" xml:id="c56-0091__Pt2__main__d5e19574">begin</del>begin 
     <sga-add place="superlinear" sID="c56-0091__Pt2__main__d5e19577"/>commence <sga-add eID="c56-0091__Pt2__main__d5e19577"/>
    <mod eID="c56-0091__Pt2__main__d5e19572"/>
    <del rend="strikethrough" xml:id="c56-0091__Pt2__main__d5e19581">and</del>and
@@ -59,7 +59,7 @@
    <milestone unit="tei:p-START"/>
    <lb n="c56-0092__main__17"/>The <del rend="strikethrough" xml:id="c56-0092__main__d5e19730">aff</del>aff appearance of
       Justine was <lb n="c56-0092__main__18"/>calm. She was dressed in <del rend="strikethrough" xml:id="c56-0092__main__d5e19736">morn</del>morn mourning and <lb n="c56-0092__main__19"/>her countenance, always engaging, was rendered <lb n="c56-0092__main__20"/>by the solemnity of her feelings exquisite <lb n="c56-0092__main__21"/>-ly beautiful. <del rend="strikethrough" xml:id="c56-0092__main__d5e19745">Yet she</del>Yet she
-   <del rend="strikethrough" xml:id="c56-0092__main__d5e19749">Her mann</del>Her mann Yet she <lb n="c56-0092__main__22"/>appeared confident in innocence and <lb n="c56-0092__main__23"/>did not tremble although gazed at and <lb n="c56-0092__main__24"/>execrated by thousands. <del rend="strikethrough" xml:id="c56-0092__main__d5e19758">fo</del>fo For all the kind <lb n="c56-0092__main__25"/>ness which her beauty might have <lb n="c56-0092__main__26"/>gained from others was obliterated by <lb n="c56-0092__main__27"/>the rememberance of the enormity she was <lb n="c56-0092__main__28"/>supposed to have committed. She was <lb n="c56-0092__main__29"/>tranquil yet her tranquillity was evident<zone eID="c56-0092__main"/>
+   <del rend="strikethrough" xml:id="c56-0092__main__d5e19749">Her mann</del>Her mann Yet she <lb n="c56-0092__main__22"/>appeared confident in innocence and <lb n="c56-0092__main__23"/>did not tremble although gazed at and <lb n="c56-0092__main__24"/>execrated by thousands. <del rend="strikethrough" xml:id="c56-0092__main__d5e19758">fo</del>fo For all the kind <lb n="c56-0092__main__25"/>ness which her beauty might have <lb n="c56-0092__main__26"/>gained from others was obliterated by <lb n="c56-0092__main__27"/>the rememberance of the enormity she was <lb n="c56-0092__main__28"/>supposed to have committed. She was <lb n="c56-0092__main__29"/>tranquil yet her tranquillity was evident <zone eID="c56-0092__main"/>
    <surface eID="ox-ms_abinger_c56-0092"/>
    <surface lrx="5364"
             lry="7104"
@@ -89,7 +89,7 @@
    <anchor xml:id="c56-0093.02"/>woman not far from the spot
       where <lb n="c56-0093__main__22"/>the body of the murdered child had been <lb n="c56-0093__main__23"/>afterwards found. <del rend="strikethrough" xml:id="c56-0093__main__d5e19889">He asked her wh</del>He asked her wh
    <mod sID="c56-0093__main__d5e19892"/>
-   <del rend="strikethrough" xml:id="c56-0093__main__d5e19894">She</del>She
+   <del rend="strikethrough" xml:id="c56-0093__main__d5e19894">She</del>She 
     <sga-add hand="#pbs" place="superlinear" sID="c56-0093__main__d5e19897"/>The woman <sga-add eID="c56-0093__main__d5e19897"/>
    <mod eID="c56-0093__main__d5e19892"/>
    <lb n="c56-0093__main__24"/>asked <mod sID="c56-0093__main__d5e19904"/>
@@ -119,7 +119,7 @@
     <sga-add place="superlinear" sID="c56-0093__main__d5e19976"/>She <sga-add eID="c56-0093__main__d5e19976"/>
    <mod eID="c56-0093__main__d5e19966"/>
    <del rend="strikethrough" xml:id="c56-0093__main__d5e19980">came</del>came returned to <lb n="c56-0093__main__27"/>the house about eight o'clock and when <lb n="c56-0093__main__28"/>some one enquired where she had <lb n="c56-0093__main__29"/>passed the night she replied that she <lb n="c56-0093__main__30"/>had been looking <mod sID="c56-0093__main__d5e19992"/>
-   <mdel>of</mdel>of
+   <mdel>of</mdel>of 
     <sga-add hand="#pbs" place="superlinear" sID="c56-0093__main__d5e19996"/>for <sga-add eID="c56-0093__main__d5e19996"/>
    <mod eID="c56-0093__main__d5e19992"/>  the child and <mod sID="c56-0093__main__d5e20000"/>
    <sga-add place="sublinear" sID="c56-0093__main__d5e20002"/>
@@ -128,7 +128,7 @@
    <del rend="strikethrough" xml:id="c56-0093__main__d5e20008">enquired</del>enquired
     <sga-add place="superlinear" sID="c56-0093__main__d5e20011"/>demanded <sga-add eID="c56-0093__main__d5e20011"/>
    <mod eID="c56-0093__main__d5e20000"/>
-   <lb n="c56-0093__main__31"/>earnestly if any thing had been heard <w ana="start"/>con<lb n="c56-0093__main__32"/>cerning<w ana="end"/> him. When the body was brought<zone eID="c56-0093__main"/>
+   <lb n="c56-0093__main__31"/>earnestly if any thing had been heard <w ana="start"/>con<lb n="c56-0093__main__32"/>cerning<w ana="end"/> him. When the body was brought <zone eID="c56-0093__main"/>
    <surface eID="ox-ms_abinger_c56-0093"/>
    <surface lrx="5364"
             lry="7104"
@@ -149,19 +149,19 @@
    <mod eID="c56-0094__main__d5e20056"/>
    <del rend="strikethrough" xml:id="c56-0094__main__d5e20065">the</del>the an hour before <del rend="strikethrough" xml:id="c56-0094__main__d5e20068">the
       murder</del>the
-      murder
+      murder 
    <lb n="c56-0094__main__8"/>the child had been missed, <sga-add hand="#pbs" place="superlinear" sID="c56-0094__main__d5e20073"/>she had <sga-add eID="c56-0094__main__d5e20073"/> placed
       round <lb n="c56-0094__main__9"/>his neck a murmur of indignation <lb n="c56-0094__main__10"/>and horror filled the court.<milestone unit="tei:p-END"/>
    <milestone unit="tei:p-START"/>
-   <lb n="c56-0094__main__11"/>Justine was then called on for <lb n="c56-0094__main__12"/>her defence. <delSpan spanTo="#c56-0094.01"/>God kno who reads all <lb n="c56-0094__main__13"/>hearts knows how<anchor xml:id="c56-0094.01"/> As the trial had <lb n="c56-0094__main__14"/>proceeded her countenance had altered. <lb n="c56-0094__main__15"/>Surprise horror and misery were strong <lb n="c56-0094__main__16"/>ly expressed. Sometimes she struggled <lb n="c56-0094__main__17"/>with her tears <del rend="strikethrough" xml:id="c56-0094__main__d5e20102">wh</del>wh but when she <lb n="c56-0094__main__18"/>was desired to speak she collected her <lb n="c56-0094__main__19"/>powers and spoke in an audible although <lb n="c56-0094__main__20"/>variable voice.<milestone unit="tei:p-END"/>
+   <lb n="c56-0094__main__11"/>Justine was then called on for <lb n="c56-0094__main__12"/>her defence. <delSpan spanTo="#c56-0094.01"/>God kno who reads all <lb n="c56-0094__main__13"/>hearts knows how<anchor xml:id="c56-0094.01"/> As the trial had <lb n="c56-0094__main__14"/>proceeded her countenance had altered. <lb n="c56-0094__main__15"/>Surprise horror and misery were strong<lb n="c56-0094__main__16"/>ly expressed. Sometimes she struggled <lb n="c56-0094__main__17"/>with her tears <del rend="strikethrough" xml:id="c56-0094__main__d5e20102">wh</del>wh but when she <lb n="c56-0094__main__18"/>was desired to speak she collected her <lb n="c56-0094__main__19"/>powers and spoke in an audible although <lb n="c56-0094__main__20"/>variable voice.<milestone unit="tei:p-END"/>
    <milestone unit="tei:p-START"/>
    <lb n="c56-0094__main__21"/>"God knows," she said, "<del rend="strikethrough" xml:id="c56-0094__main__d5e20116">w</del>who <sga-add place="intralinear" sID="c56-0094__main__d5e20120"/>w <sga-add eID="c56-0094__main__d5e20120"/> entirely I <lb n="c56-0094__main__22"/>am inocent. but I do not pretend to be <lb n="c56-0094__main__23"/>acquitted on account of my protestations <lb n="c56-0094__main__24"/>I rest my innocence <del rend="strikethrough" xml:id="c56-0094__main__d5e20129">a</del>a on a simple <lb n="c56-0094__main__25"/>explanation of the <mod sID="c56-0094__main__d5e20135"/>
-   <del rend="strikethrough" xml:id="c56-0094__main__d5e20137">facts</del>facts
+   <del rend="strikethrough" xml:id="c56-0094__main__d5e20137">facts</del>facts 
     <sga-add place="superlinear" sID="c56-0094__main__d5e20140"/>facts <sga-add eID="c56-0094__main__d5e20140"/>
    <mod eID="c56-0094__main__d5e20135"/>  which have <lb n="c56-0094__main__26"/>been adduced against me, and I hope <lb n="c56-0094__main__27"/>the character I have always borne will <lb n="c56-0094__main__28"/>encline my judges to a favourable <lb n="c56-0094__main__29"/>interpretation where any <mod sID="c56-0094__main__d5e20152"/>
-   <del rend="strikethrough" xml:id="c56-0094__main__d5e20154">fact</del>fact
+   <del rend="strikethrough" xml:id="c56-0094__main__d5e20154">fact</del>fact  
     <sga-add place="superlinear" sID="c56-0094__main__d5e20157"/>circumstance <sga-add eID="c56-0094__main__d5e20157"/>
-   <mod eID="c56-0094__main__d5e20152"/>  appears<zone eID="c56-0094__main"/>
+   <mod eID="c56-0094__main__d5e20152"/>  appears <zone eID="c56-0094__main"/>
    <surface eID="ox-ms_abinger_c56-0094"/>
    <surface lrx="5364"
             lry="7104"
@@ -226,7 +226,7 @@
    <mod sID="c56-0095__main__d5e20308"/>
    <del rend="strikethrough" xml:id="c56-0095__main__d5e20310">and she had been confused</del>and she had been confused
     <sga-add hand="#pbs" place="superlinear" sID="c56-0095__main__d5e20313"/>That if she had been bewildered <sga-add eID="c56-0095__main__d5e20313"/>
-   <mod eID="c56-0095__main__d5e20308"/>  when ques <lb n="c56-0095__main__26"/>tioned by the market woman, was <lb n="c56-0095__main__27"/>
+   <mod eID="c56-0095__main__d5e20308"/>  when ques<lb n="c56-0095__main__26"/>tioned by the market woman, was <lb n="c56-0095__main__27"/>
    <mod sID="c56-0095__main__d5e20322"/>
    <del rend="strikethrough" xml:id="c56-0095__main__d5e20324">that</del>that
     <sga-add hand="#pbs" place="superlinear" sID="c56-0095__main__d5e20327"/>not <sga-add eID="c56-0095__main__d5e20327"/>
@@ -235,7 +235,7 @@
    <del rend="strikethrough" xml:id="c56-0095__main__d5e20336">c</del>c was so wretched <mod sID="c56-0095__main__d5e20340"/>
    <mdel>on</mdel>on
     <sga-add hand="#pbs" place="superlinear" sID="c56-0095__main__d5e20344"/>for <sga-add eID="c56-0095__main__d5e20344"/>
-   <mod eID="c56-0095__main__d5e20340"/>  the loss of poor <lb n="c56-0095__main__29"/>William. Concerning the picture she <lb n="c56-0095__main__30"/>could give no account. "I know," continued<zone eID="c56-0095__main"/>
+   <mod eID="c56-0095__main__d5e20340"/>  the loss of poor <lb n="c56-0095__main__29"/>William. Concerning the picture she <lb n="c56-0095__main__30"/>could give no account. "I know," continued <zone eID="c56-0095__main"/>
    <surface eID="ox-ms_abinger_c56-0095"/>
    <surface lrx="5364"
             lry="7104"
@@ -287,7 +287,7 @@
    <lb n="c56-0096__main__20"/>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0096__main__d5e20502"/>testimony shall not overweigh <sga-add eID="c56-0096__main__d5e20502"/>my supposed guilt
         <del rend="strikethrough" xml:id="c56-0096__main__d5e20505">is an apparent</del>is an apparent I <mod sID="c56-0096__main__d5e20509"/>
-   <del rend="strikethrough" xml:id="c56-0096__main__d5e20511">shall</del>shall
+   <del rend="strikethrough" xml:id="c56-0096__main__d5e20511">shall</del>shall 
     <sga-add hand="#pbs" place="superlinear" sID="c56-0096__main__d5e20514"/>must <sga-add eID="c56-0096__main__d5e20514"/>
    <mod eID="c56-0096__main__d5e20509"/>
    <lb n="c56-0096__main__21"/>be condemned although I <del rend="strikethrough" xml:id="c56-0096__main__d5e20520">p</del>p would pledge <lb n="c56-0096__main__22"/>my salvation on my innocence."<milestone unit="tei:p-END"/>
@@ -380,7 +380,7 @@
    <metamark function="insert">^</metamark>^
     <sga-add eID="c56-0097__main__d5e20789"/>
    <sga-add place="superlinear" sID="c56-0097__main__d5e20795"/>all <sga-add eID="c56-0097__main__d5e20795"/>
-   <mod eID="c56-0097__main__d5e20787"/>  the evidence<zone eID="c56-0097__main"/>
+   <mod eID="c56-0097__main__d5e20787"/>  the evidence <zone eID="c56-0097__main"/>
    <surface eID="ox-ms_abinger_c56-0097"/>
    <surface lrx="5364"
             lry="7104"
@@ -442,7 +442,7 @@
     <sga-add eID="c56-0098__main__d5e20952"/>
    <sga-add place="superlinear" sID="c56-0098__main__d5e20958"/>&amp; anguish <sga-add eID="c56-0098__main__d5e20958"/>
    <mod eID="c56-0098__main__d5e20950"/>  was extreme <lb n="c56-0098__main__18"/>
-   <del rend="strikethrough" xml:id="c56-0098__main__d5e20965">wh</del>wh during the whole of the trial. <delSpan rend="strikethrough" spanTo="#c56-0098.04"/>The <lb n="c56-0098__main__19"/>picture was<anchor xml:id="c56-0098.04"/> I believed in her <w ana="start"/>inno<lb n="c56-0098__main__20"/>cence<w ana="end"/> I knew it. Could the monster <lb n="c56-0098__main__21"/>who had (I did not for a minute <lb n="c56-0098__main__22"/>doubt) murdered my brother, alo in <lb n="c56-0098__main__23"/>his hellish sport <sga-add place="superlinear" sID="c56-0098__main__d5e20987"/>have <sga-add eID="c56-0098__main__d5e20987"/> betrayed the <w ana="start"/>inno<lb n="c56-0098__main__24"/>cent<w ana="end"/> to death and ignominy. I could <lb n="c56-0098__main__25"/>not sustain the horror of my situa <lb n="c56-0098__main__26"/>tion and when I saw that the <w ana="start"/>popu<lb n="c56-0098__main__27"/>lar<w ana="end"/> voice and the countenance of the<zone eID="c56-0098__main"/>
+   <del rend="strikethrough" xml:id="c56-0098__main__d5e20965">wh</del>wh during the whole of the trial. <delSpan rend="strikethrough" spanTo="#c56-0098.04"/>The <lb n="c56-0098__main__19"/>picture was<anchor xml:id="c56-0098.04"/> I believed in her <w ana="start"/>inno<lb n="c56-0098__main__20"/>cence<w ana="end"/> I knew it. Could the monster <lb n="c56-0098__main__21"/>who had (I did not for a minute <lb n="c56-0098__main__22"/>doubt) murdered my brother, alo in <lb n="c56-0098__main__23"/>his hellish sport <sga-add place="superlinear" sID="c56-0098__main__d5e20987"/>have <sga-add eID="c56-0098__main__d5e20987"/> betrayed the <w ana="start"/>inno<lb n="c56-0098__main__24"/>cent<w ana="end"/> to death and ignominy. I could <lb n="c56-0098__main__25"/>not sustain the horror of my situa<lb n="c56-0098__main__26"/>tion and when I saw that the <w ana="start"/>popu<lb n="c56-0098__main__27"/>lar<w ana="end"/> voice and the countenance of the<zone eID="c56-0098__main"/>
    <surface eID="ox-ms_abinger_c56-0098"/>
    <surface lrx="5364"
             lry="7104"
