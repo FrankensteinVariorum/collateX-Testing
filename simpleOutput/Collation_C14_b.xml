@@ -2567,8 +2567,8 @@
 		<rdgGrp n="['girl,']">
 			<rdg wit="fMS">girl, </rdg>
 		</rdgGrp>
-		<rdgGrp n="['girl.']">
-			<rdg wit="f1831">girl. </rdg>
+		<rdgGrp n="['girl.', 'do not fear.']">
+			<rdg wit="f1831">girl. &lt;longToken&gt;Do not fear.&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['girl;']">
 			<rdg wit="f1818">girl; </rdg>
@@ -2577,11 +2577,32 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['i', 'will', 'every', 'where', 'proclaim', 'your']">
-			<rdg wit="f1818">I will every where proclaim your </rdg>
-			<rdg wit="f1823">I will every where proclaim your </rdg>
-			<rdg wit="fThomas">I will every where proclaim your </rdg>
-			<rdg wit="fMS">I will every where &lt;lb n=&quot;c56-0103__main__15&quot;/&gt;proclaim your </rdg>
+		<rdgGrp n="['i', 'will']">
+			<rdg wit="f1818">I will </rdg>
+			<rdg wit="f1823">I will </rdg>
+			<rdg wit="fThomas">I will </rdg>
+			<rdg wit="f1831">I will </rdg>
+			<rdg wit="fMS">I will </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['every', 'where', 'proclaim']">
+			<rdg wit="f1818">every where proclaim </rdg>
+			<rdg wit="f1823">every where proclaim </rdg>
+			<rdg wit="fThomas">every where proclaim </rdg>
+			<rdg wit="fMS">every where &lt;lb n=&quot;c56-0103__main__15&quot;/&gt;proclaim </rdg>
+		</rdgGrp>
+		<rdgGrp n="['proclaim,', 'i', 'will', 'prove']">
+			<rdg wit="f1831">proclaim, I will prove </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['your']">
+			<rdg wit="f1818">your </rdg>
+			<rdg wit="f1823">your </rdg>
+			<rdg wit="fThomas">your </rdg>
+			<rdg wit="f1831">your </rdg>
+			<rdg wit="fMS">your </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2592,6 +2613,9 @@
 			<rdg wit="f1818">innocence, </rdg>
 			<rdg wit="f1823">innocence, </rdg>
 			<rdg wit="fThomas">innocence, </rdg>
+		</rdgGrp>
+		<rdgGrp n="['innocence.', 'i']">
+			<rdg wit="f1831">innocence. I </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2604,15 +2628,28 @@
 	</app>
 	<app>
 		<rdgGrp n="['will']">
+			<rdg wit="f1831">will </rdg>
 			<rdg wit="fMS">will </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['force', 'belief.', 'yet', 'you']">
-			<rdg wit="f1818">force belief. Yet you </rdg>
-			<rdg wit="f1823">force belief. Yet you </rdg>
-			<rdg wit="fThomas">force belief. Yet you </rdg>
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__16&quot;/&gt;force belief. Yet you </rdg>
+		<rdgGrp n="['force', 'belief.', 'yet']">
+			<rdg wit="f1818">force belief. Yet </rdg>
+			<rdg wit="f1823">force belief. Yet </rdg>
+			<rdg wit="fThomas">force belief. Yet </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__16&quot;/&gt;force belief. Yet </rdg>
+		</rdgGrp>
+		<rdgGrp n="['melt the stony hearts of your enemies by my tears and prayers.']">
+			<rdg wit="f1831">&lt;longToken&gt;melt the stony hearts of your enemies by my tears and prayers.&lt;/longToken&gt; </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['you']">
+			<rdg wit="f1818">you </rdg>
+			<rdg wit="f1823">you </rdg>
+			<rdg wit="fThomas">you </rdg>
+			<rdg wit="f1831">You </rdg>
+			<rdg wit="fMS">you </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2624,12 +2661,16 @@
 			<rdg wit="f1823">&lt;longToken&gt;must die;&lt;/longToken&gt; you, my playfellow, my companion, &lt;longToken&gt;my more than sister.&lt;/longToken&gt; </rdg>
 			<rdg wit="fThomas">&lt;longToken&gt;must die;&lt;/longToken&gt; you, my playfellow, my companion, &lt;longToken&gt;my more than sister.&lt;/longToken&gt; </rdg>
 		</rdgGrp>
+		<rdgGrp n="['shall', 'not', 'die!', '—', 'you,', 'my play-fellow, my companion,', 'my sister, perish on the scaffold! no! no!']">
+			<rdg wit="f1831">shall not die! — You, &lt;longToken&gt;my play-fellow, my companion,&lt;/longToken&gt; &lt;longToken&gt;my sister, perish on the scaffold! No! no!&lt;/longToken&gt; </rdg>
+		</rdgGrp>
 	</app>
 	<app>
 		<rdgGrp n="['i']">
 			<rdg wit="f1818">I </rdg>
 			<rdg wit="f1823">I </rdg>
 			<rdg wit="fThomas">I </rdg>
+			<rdg wit="f1831">I </rdg>
 			<rdg wit="fMS">I </rdg>
 		</rdgGrp>
 	</app>
@@ -2639,11 +2680,32 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['never', 'can', 'survive', 'so', 'horrible', 'a']">
-			<rdg wit="f1818">never can survive so horrible a </rdg>
-			<rdg wit="f1823">never can survive so horrible a </rdg>
-			<rdg wit="fThomas">never can survive so horrible a </rdg>
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__19&quot;/&gt;never can survive so horrible &lt;lb n=&quot;c56-0103__main__20&quot;/&gt;a </rdg>
+		<rdgGrp n="['never']">
+			<rdg wit="f1818">never </rdg>
+			<rdg wit="f1823">never </rdg>
+			<rdg wit="fThomas">never </rdg>
+			<rdg wit="f1831">never </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__19&quot;/&gt;never </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['can']">
+			<rdg wit="f1818">can </rdg>
+			<rdg wit="f1823">can </rdg>
+			<rdg wit="fThomas">can </rdg>
+			<rdg wit="fMS">can </rdg>
+		</rdgGrp>
+		<rdgGrp n="['could']">
+			<rdg wit="f1831">could </rdg>
+		</rdgGrp>
+	</app>
+	<app>
+		<rdgGrp n="['survive', 'so', 'horrible', 'a']">
+			<rdg wit="f1818">survive so horrible a </rdg>
+			<rdg wit="f1823">survive so horrible a </rdg>
+			<rdg wit="fThomas">survive so horrible a </rdg>
+			<rdg wit="f1831">survive so horrible a </rdg>
+			<rdg wit="fMS">survive so horrible &lt;lb n=&quot;c56-0103__main__20&quot;/&gt;a </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2654,6 +2716,7 @@
 			<rdg wit="f1818">misfortune.” </rdg>
 			<rdg wit="f1823">misfortune.” </rdg>
 			<rdg wit="fThomas">misfortune.” </rdg>
+			<rdg wit="f1831">misfortune.” </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2768,23 +2831,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['do', 'not']">
-			<rdg wit="f1818">Do not </rdg>
-			<rdg wit="f1823">Do not </rdg>
-			<rdg wit="fThomas">Do not </rdg>
-			<rdg wit="f1831">Do not </rdg>
-			<rdg wit="fMS">Do not </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['fear.']">
-			<rdg wit="f1831">fear. </rdg>
-		</rdgGrp>
-		<rdgGrp n="['you,', 'excellent']">
-			<rdg wit="f1818">you, excellent </rdg>
-			<rdg wit="f1823">you, excellent </rdg>
-			<rdg wit="fThomas">you, excellent </rdg>
-			<rdg wit="fMS">you, excellent </rdg>
+		<rdgGrp n="['do', 'not', 'you,', 'excellent']">
+			<rdg wit="f1818">Do not you, excellent </rdg>
+			<rdg wit="f1823">Do not you, excellent </rdg>
+			<rdg wit="fThomas">Do not you, excellent </rdg>
+			<rdg wit="fMS">Do not you, excellent </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2851,7 +2902,6 @@
 			<rdg wit="f1818">I </rdg>
 			<rdg wit="f1823">I </rdg>
 			<rdg wit="fThomas">I </rdg>
-			<rdg wit="f1831">I </rdg>
 			<rdg wit="fMS">I </rdg>
 		</rdgGrp>
 	</app>
@@ -2863,9 +2913,6 @@
 			<rdg wit="f1818">fear, </rdg>
 			<rdg wit="f1823">fear, </rdg>
 			<rdg wit="fThomas">fear, </rdg>
-		</rdgGrp>
-		<rdgGrp n="['will', 'proclaim,']">
-			<rdg wit="f1831">will proclaim, </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -2985,31 +3032,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['how']">
-			<rdg wit="f1818">how </rdg>
-			<rdg wit="f1823">how </rdg>
-			<rdg wit="fThomas">how </rdg>
-			<rdg wit="fMS">how </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['i']">
-			<rdg wit="f1818">I </rdg>
-			<rdg wit="f1823">I </rdg>
-			<rdg wit="fThomas">I </rdg>
-			<rdg wit="f1831">I </rdg>
-			<rdg wit="fMS">I </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['hate']">
-			<rdg wit="f1818">hate </rdg>
-			<rdg wit="f1823">hate </rdg>
-			<rdg wit="fThomas">hate </rdg>
-			<rdg wit="fMS">hate </rdg>
-		</rdgGrp>
-		<rdgGrp n="['will', 'prove', 'your', 'innocence.']">
-			<rdg wit="f1831">will prove your innocence. </rdg>
+		<rdgGrp n="['how', 'i', 'hate']">
+			<rdg wit="f1818">how I hate </rdg>
+			<rdg wit="f1823">how I hate </rdg>
+			<rdg wit="fThomas">how I hate </rdg>
+			<rdg wit="fMS">how I hate </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3229,23 +3256,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['i']">
-			<rdg wit="f1818">I </rdg>
-			<rdg wit="f1823">I </rdg>
-			<rdg wit="fThomas">I </rdg>
-			<rdg wit="f1831">I </rdg>
-			<rdg wit="fMS">&lt;lb n=&quot;c56-0104__main__12&quot;/&gt;I </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['know']">
-			<rdg wit="f1818">know </rdg>
-			<rdg wit="f1823">know </rdg>
-			<rdg wit="fThomas">know </rdg>
-			<rdg wit="fMS">know </rdg>
-		</rdgGrp>
-		<rdgGrp n="['will', 'melt the stony hearts of your enemies by my tears and prayers.', 'you', 'shall']">
-			<rdg wit="f1831">will &lt;longToken&gt;melt the stony hearts of your enemies by my tears and prayers.&lt;/longToken&gt; You shall </rdg>
+		<rdgGrp n="['i', 'know']">
+			<rdg wit="f1818">I know </rdg>
+			<rdg wit="f1823">I know </rdg>
+			<rdg wit="fThomas">I know </rdg>
+			<rdg wit="fMS">&lt;lb n=&quot;c56-0104__main__12&quot;/&gt;I know </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3285,31 +3300,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['revenge.', 'yet', 'this', 'is']">
-			<rdg wit="f1818">revenge. Yet this is </rdg>
-			<rdg wit="f1823">revenge. Yet this is </rdg>
-			<rdg wit="fThomas">revenge. Yet this is </rdg>
-			<rdg wit="fMS">revenge. Yet this &lt;lb n=&quot;c56-0104__main__16&quot;/&gt;is </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['not']">
-			<rdg wit="f1818">not </rdg>
-			<rdg wit="f1823">not </rdg>
-			<rdg wit="fThomas">not </rdg>
-			<rdg wit="f1831">not </rdg>
-			<rdg wit="fMS">not </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['consolation']">
-			<rdg wit="f1818">consolation </rdg>
-			<rdg wit="f1823">consolation </rdg>
-			<rdg wit="fThomas">consolation </rdg>
-			<rdg wit="fMS">consolation </rdg>
-		</rdgGrp>
-		<rdgGrp n="['die!', '—']">
-			<rdg wit="f1831">die! — </rdg>
+		<rdgGrp n="['revenge.', 'yet', 'this', 'is', 'not', 'consolation']">
+			<rdg wit="f1818">revenge. Yet this is not consolation </rdg>
+			<rdg wit="f1823">revenge. Yet this is not consolation </rdg>
+			<rdg wit="fThomas">revenge. Yet this is not consolation </rdg>
+			<rdg wit="fMS">revenge. Yet this &lt;lb n=&quot;c56-0104__main__16&quot;/&gt;is not consolation </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3323,23 +3318,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['you,']">
-			<rdg wit="f1818">you, </rdg>
-			<rdg wit="f1823">you, </rdg>
-			<rdg wit="fThomas">you, </rdg>
-			<rdg wit="f1831">You, </rdg>
-			<rdg wit="fMS">you, </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['my play-fellow, my companion,', 'my sister, perish on the scaffold! no! no!']">
-			<rdg wit="f1831">&lt;longToken&gt;my play-fellow, my companion,&lt;/longToken&gt; &lt;longToken&gt;my sister, perish on the scaffold! No! no!&lt;/longToken&gt; </rdg>
-		</rdgGrp>
-		<rdgGrp n="['my', 'justine,', 'unless', 'indeed', 'that', 'you', 'may', 'glory', 'in', 'escaping']">
-			<rdg wit="f1818">my Justine, unless indeed that you may glory in escaping </rdg>
-			<rdg wit="f1823">my Justine, unless indeed that you may glory in escaping </rdg>
-			<rdg wit="fThomas">my Justine, unless indeed that you may glory in escaping </rdg>
-			<rdg wit="fMS">my Justine, &lt;lb n=&quot;c56-0104__main__17&quot;/&gt;unless indeed that you may glory &lt;lb n=&quot;c56-0104__main__18&quot;/&gt;in escaping </rdg>
+		<rdgGrp n="['you,', 'my', 'justine,', 'unless', 'indeed', 'that', 'you', 'may', 'glory', 'in', 'escaping']">
+			<rdg wit="f1818">you, my Justine, unless indeed that you may glory in escaping </rdg>
+			<rdg wit="f1823">you, my Justine, unless indeed that you may glory in escaping </rdg>
+			<rdg wit="fThomas">you, my Justine, unless indeed that you may glory in escaping </rdg>
+			<rdg wit="fMS">you, my Justine, &lt;lb n=&quot;c56-0104__main__17&quot;/&gt;unless indeed that you may glory &lt;lb n=&quot;c56-0104__main__18&quot;/&gt;in escaping </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3350,31 +3333,11 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['so', 'miserable', 'a', 'den.', 'alas!', 'i', 'would']">
-			<rdg wit="f1818">so miserable a den. Alas! I would </rdg>
-			<rdg wit="f1823">so miserable a den. Alas! I would </rdg>
-			<rdg wit="fThomas">so miserable a den. Alas! I would </rdg>
-			<rdg wit="fMS">so miserable a den. Alas! &lt;lb n=&quot;c56-0104__main__19&quot;/&gt;I would </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['i']">
-			<rdg wit="f1818">I </rdg>
-			<rdg wit="f1823">I </rdg>
-			<rdg wit="fThomas">I </rdg>
-			<rdg wit="f1831">I </rdg>
-			<rdg wit="fMS">I </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['never', 'could', 'survive', 'so', 'horrible']">
-			<rdg wit="f1831">never could survive so horrible </rdg>
-		</rdgGrp>
-		<rdgGrp n="['were']">
-			<rdg wit="f1818">were </rdg>
-			<rdg wit="f1823">were </rdg>
-			<rdg wit="fThomas">were </rdg>
-			<rdg wit="fMS">were </rdg>
+		<rdgGrp n="['so', 'miserable', 'a', 'den.', 'alas!', 'i', 'would', 'i', 'were']">
+			<rdg wit="f1818">so miserable a den. Alas! I would I were </rdg>
+			<rdg wit="f1823">so miserable a den. Alas! I would I were </rdg>
+			<rdg wit="fThomas">so miserable a den. Alas! I would I were </rdg>
+			<rdg wit="fMS">so miserable a den. Alas! &lt;lb n=&quot;c56-0104__main__19&quot;/&gt;I would I were </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -3427,24 +3390,13 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['a']">
-			<rdg wit="f1818">a </rdg>
-			<rdg wit="f1823">a </rdg>
-			<rdg wit="fThomas">a </rdg>
-			<rdg wit="f1831">a </rdg>
+		<rdgGrp n="['a', 'world']">
+			<rdg wit="f1818">a world </rdg>
+			<rdg wit="f1823">a world </rdg>
+			<rdg wit="fThomas">a world </rdg>
 		</rdgGrp>
 		<rdgGrp n="['light']">
 			<rdg wit="fMS">light </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['misfortune.&quot;']">
-			<rdg wit="f1831">misfortune.” </rdg>
-		</rdgGrp>
-		<rdgGrp n="['world']">
-			<rdg wit="f1818">world </rdg>
-			<rdg wit="f1823">world </rdg>
-			<rdg wit="fThomas">world </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -5474,4 +5426,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-10-04 15:31:24.930410 -->
+<!-- 2022-10-04 20:17:26.873587 -->
