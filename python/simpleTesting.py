@@ -17,7 +17,7 @@ now = datetime.utcnow()
 nowStr = str(now)
 
 print('test: ', dir(Collation))
-regexHyphen = re.compile(r'-')
+regexHyphen = re.compile(r'\S[\‑‒–—]\S')
 regexWhitespace = re.compile(r'\s+')
 regexNonWhitespace = re.compile(r'\S+')
 regexEmptyTag = re.compile(r'/>$')
@@ -106,6 +106,7 @@ inlineVariationEvent = ['del', 'add', 'note', 'longToken']
 
 def normalizeSpace(inText):
     """ Replaces all whitespace spans with a newline character for tokenization."""
+
     if regexNonWhitespace.search(inText):
         return regexWhitespace.sub('\n', inText)
     else:
@@ -150,10 +151,16 @@ def extract(input_xml):
         # elif event == pulldom.END_ELEMENT and node.localName in blockElement:
         #    output += '\n</' + node.localName + '>'
         elif event == pulldom.CHARACTERS:
-            output += normalizeSpace(node.data)
+            output += fixtoken(normalizeSpace(node.data))
         else:
             continue
     return output
+
+def fixtoken(inText):
+        fixToken = re.sub('(\S)(-|[‒–—])(\S)', '\\1\n\\2\n\\3', inText)
+        fixToken = re.sub('(\S)(-|[‒–—])(\s)', '\\1\n\\2\n\\3', fixToken)
+        fixToken = re.sub('(\s)(-|[‒–—])(\S)', '\\1\n\\2\n\\3', fixToken)
+        return fixToken
 
 def normalize(inputText):
 # 2022-07-16 ebb: Adding newlines here is too late: it just inserts a newline into a token.
