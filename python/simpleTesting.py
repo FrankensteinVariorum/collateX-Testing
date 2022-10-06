@@ -26,7 +26,8 @@ regexLeadingBlankLine = re.compile(r'^\n')
 regexPageBreak = re.compile(r'<pb.+?/>', re.DOTALL)
 RE_MARKUP = re.compile(r'<.+?>', re.DOTALL)
 RE_WORDMARKER = re.compile(r'<w ana.+?/>')
-RE_PARA = re.compile(r'<p\s.+?/>')
+RE_PARASTART = re.compile(r'<p\ssID.+?/>')
+RE_PARAEND = re.compile(r'<p\seID.+?/>')
 RE_INCLUDE = re.compile(r'<include.*?/>')
 RE_HEAD = re.compile(r'<head.*?/>')
 RE_AB = re.compile(r'<ab.*?/>')
@@ -67,7 +68,8 @@ RE_OPENQT = re.compile(r'“')
 RE_CLOSEQT = re.compile(r'”')
 RE_GAP = re.compile(r'<gap\s[^<]*/>')
 # &lt;milestone unit="tei:p"/&gt;
-RE_sgaP = re.compile(r'<milestone[^<]+?unit="tei:p.+?/>')
+RE_sgaPSTART = re.compile(r'<milestone[^<]+?unit="tei:p-START.+?/>')
+RE_sgaPEND = re.compile(r'<milestone[^<]+?unit="tei:p-END.+?/>')
 RE_MILESTONE = re.compile(r'<milestone.+?>')
 # 2022-07-16 amended 07-31 ebb: Milestone subbing is a special problem: In S-GA paragraphs
 # are marked w/ milestone elements with @unit="tei:p"
@@ -79,6 +81,9 @@ RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 RE_LT_START = re.compile(r'<longToken.*?>')
 RE_LT_END = re.compile(r'</longToken>')
 RE_DOTDASH = re.compile(r'\.–')
+
+
+
 # RE_DOTDASH captures a period followed by a dash, frequently seen in the S-GA edition, and not a word-dividing hyphen.
 # 2022-08-08 ebb: I'm currently treating the "dotdash" as just a period for normalization to improve alignments.
 
@@ -180,8 +185,10 @@ def normalize(inputText):
     normalized = RE_LG.sub('<lg/>', normalized)
     normalized = RE_AB.sub('', normalized)
 # 2022-08-06 <ab> wraps headings or starts of letters in the print editions
-    normalized = RE_PARA.sub('<p/>', normalized)
-    normalized = RE_sgaP.sub('<p/>', normalized)
+    normalized = RE_PARASTART.sub('<p-start/>', normalized)
+    normalized = RE_PARAEND.sub('<p-end/>', normalized)
+    normalized = RE_sgaPSTART.sub('<p-start/>', normalized)
+    normalized = RE_sgaPEND.sub('<p-end/>', normalized)
     normalized = RE_MILESTONE.sub('', normalized)
     normalized = RE_PB.sub('', normalized)
     normalized = RE_LB.sub('', normalized)
@@ -197,6 +204,8 @@ def normalize(inputText):
     normalized = RE_LT_END.sub('', normalized)
     normalized = RE_WORDMARKER.sub('', normalized)
     normalized = RE_HI.sub('', normalized)
+    normalized = RE_DELSTART.sub('<delstart/>', normalized)
+    normalized = RE_DELEND.sub('<delend/>', normalized)
 # 2022-08-08 ebb: Sometimes <hi> in the print editions seems irrelevant, in highlighting words at
 # chapter beginnings. However, it also sometimes indicates emphasis on a word.
 # Example: one or two little <hi sID="xxx"/>wives<hi eID="novel1_letter4_chapter6_div4_div6_p9_hi1"/>
