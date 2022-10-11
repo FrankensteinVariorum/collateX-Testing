@@ -162,6 +162,7 @@ def extract(input_xml):
     return output
 
 def fixtoken(inText):
+        # add space before and after dash and hyphen
         fixToken = re.sub('(\S)(-|[‒–—])(\S)', '\\1\n\\2\n\\3', inText)
         fixToken = re.sub('(\S)(-|[‒–—])(\s)', '\\1\n\\2\n\\3', fixToken)
         fixToken = re.sub('(\s)(-|[‒–—])(\S)', '\\1\n\\2\n\\3', fixToken)
@@ -204,8 +205,7 @@ def normalize(inputText):
     normalized = RE_LT_END.sub('', normalized)
     normalized = RE_WORDMARKER.sub('', normalized)
     normalized = RE_HI.sub('', normalized)
-    normalized = RE_DELSTART.sub('<delstart/>', normalized)
-    normalized = RE_DELEND.sub('<delend/>', normalized)
+
 # 2022-08-08 ebb: Sometimes <hi> in the print editions seems irrelevant, in highlighting words at
 # chapter beginnings. However, it also sometimes indicates emphasis on a word.
 # Example: one or two little <hi sID="xxx"/>wives<hi eID="novel1_letter4_chapter6_div4_div6_p9_hi1"/>
