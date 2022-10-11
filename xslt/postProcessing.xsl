@@ -18,7 +18,10 @@
         before a passage.
      *********************************************************************************************
     -->  
-    <xsl:template match="app[count(descendant::rdg) = 1][contains(descendant::rdg, '&lt;del')]">
+    <xsl:template match="app[count(descendant::rdg) = 1]">
+        <!-- 2022-10-11 yxj and ebb: let's not both just looking for deleted passages, but ANY loner rdg. We have
+        removed this XPath predicate from the @match: [contains(descendant::rdg, '&lt;del')] 
+        -->
   
         <xsl:if test="following-sibling::app[1][count(descendant::rdgGrp) = 1 and count(descendant::rdg) gt 1]">
                <xsl:apply-templates select="following-sibling::app[1]" mode="restructure">
@@ -30,7 +33,10 @@
     </xsl:template>
     
     
-    <xsl:template match="app[preceding-sibling::app[1][count(descendant::rdg) = 1][contains(descendant::rdg, '&lt;del')]]"/>
+    <xsl:template match="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]"/>
+    <!-- 2022-10-11 ebb and yxj: We also need to remove the predicate checking for the presence of &lt;del on this template
+    Removed this: [contains(descendant::rdg, '&lt;del')]  
+    -->
 
 
     <xsl:template match="app" mode="restructure">
