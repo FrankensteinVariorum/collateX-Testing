@@ -163,9 +163,9 @@ def extract(input_xml):
 
 def fixtoken(inText):
         # add space before and after dash and hyphen
-        fixToken = re.sub('(\S)(-|[‒–—])(\S)', '\\1\n\\2\n\\3', inText)
-        fixToken = re.sub('(\S)(-|[‒–—])(\s)', '\\1\n\\2\n\\3', fixToken)
-        fixToken = re.sub('(\s)(-|[‒–—])(\S)', '\\1\n\\2\n\\3', fixToken)
+        fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
+        fixToken = re.sub('(-|[‒–—])(\s)', '\n\\1\n\\2', fixToken)
+        fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
         return fixToken
 
 def normalize(inputText):

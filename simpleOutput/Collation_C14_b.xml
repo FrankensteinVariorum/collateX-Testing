@@ -901,19 +901,20 @@
 		<rdgGrp n="['guile,']">
 			<rdg wit="f1831">guile, </rdg>
 		</rdgGrp>
-		<rdgGrp n="['ill humour']">
-			<rdg wit="fMS">&lt;longToken&gt;ill humour&lt;/longToken&gt; </rdg>
-		</rdgGrp>
 		<rdgGrp n="['ill']">
 			<rdg wit="f1818">ill </rdg>
 			<rdg wit="f1823">ill </rdg>
 			<rdg wit="fThomas">ill </rdg>
+			<rdg wit="fMS">ill </rdg>
 		</rdgGrp>
 	</app>
 	<app>
 		<rdgGrp n="['-']">
 			<rdg wit="f1818">- </rdg>
 			<rdg wit="fThomas">- </rdg>
+		</rdgGrp>
+		<rdgGrp n="['humour']">
+			<rdg wit="fMS">humour </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -5389,4 +5390,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2022-10-11 19:42:21.520764 -->
+<!-- 2022-10-11 20:41:37.158493 -->
