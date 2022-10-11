@@ -40,6 +40,20 @@
 
 
     <xsl:template match="app" mode="restructure">
+        
+        <!-- 2022-10-11 yxj ebb: Let's try creating a conditional processing rule here: 
+        IF the $norm param only contains `['']` (string-length() = 4), do NOT create a new rdgGrp, and simply move
+        the $loner param into the existing structure. 
+        
+        Example
+        <app><rdgGrp n="['with', 'my', 'aunt', 'and', 'my']">
+			<rdg wit="f1818">with my aunt and my </rdg>
+			<rdg wit="f1823">with my aunt and my </rdg>
+			<rdg wit="fThomas">with my aunt and my </rdg>
+			<rdg wit="fMS">with my aunt &amp; my </rdg>
+		</rdgGrp><rdgGrp n="['', 'with', 'my', 'aunt', 'and', 'my']"><rdg wit="fMS">&lt;sga-add eID="c56-0104__main__d5e21929"/&gt; with my aunt &amp; my </rdg></rdgGrp></app>
+	
+        -->
         <xsl:param name="loner" tunnel="yes"/>
         <xsl:param name="norm" tunnel="yes"/>
         <app>
