@@ -133,6 +133,7 @@ def extract(input_xml):
         if event == pulldom.START_ELEMENT and node.localName in inlineVariationEvent:
             doc.expandNode(node)
             output += '\n' + node.toxml() + '\n'
+            # print(node.toxml());
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
         # We COULD set white spaces around these like this ' ' + node.toxml() + ' '
         # but what seems to happen is that the white spaces get added to tokens; they aren't used to
@@ -166,6 +167,7 @@ def fixtoken(inText):
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
         fixToken = re.sub('(-|[‒–—])(\s)', '\n\\1\n\\2', fixToken)
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
+        # fixToken = re.sub('(&amp;)([^&]+?;)', '&\\2', fixToken)
         return fixToken
 
 def normalize(inputText):

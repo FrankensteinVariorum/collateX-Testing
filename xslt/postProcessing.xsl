@@ -66,8 +66,11 @@
             <xsl:variable name="newToken">
                 <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
             </xsl:variable>
+            <xsl:variable name="newNorm">
+                <xsl:value-of select="replace(replace($newToken,'andquot;', '&#34;'),'&amp;','and')"/>
+            </xsl:variable>
            <rdgGrp n="{$newToken}">
-               <rdg wit="{$loner/@wit}"><xsl:value-of select="replace(replace($loner/text(),'&amp;quot;', '&quot;'),'&amp;amp;','&amp;')"/>
+               <rdg wit="{$loner/@wit}"><xsl:value-of select="replace(replace($loner/text(),'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
               <xsl:value-of select="descendant::rdg[@wit = $loner/@wit]"/>
               </rdg>
                
@@ -82,11 +85,16 @@
             <xsl:copy-of select="current()" />
         </xsl:if>
     </xsl:template>
+    
+    <!-- 2022-10-18 yxj ebb: For all rdgs, in the normalized @n value, replace 'andquot' to '&#34;', and replace '&amp;' to 'and'.
+    In the text nodes (the original text), replace '&amp;quot; to '&#34;', and replace '&amp;amp;' to '&amp;'. This template corrects a problem introduced by the use of expandNode() and node.toxml() in the Python pulldom script, used to output the contents of our added longtoken, add, del, and note (inlineVariationEvent elements). We made the same alterations in the restructured app processing above. It may be a good idea to move this processing to a function. 
+    -->
     <xsl:template match="rdg/text()">
         <!--<xsl:value-of select="replace(.,'(&amp;)([^&]+?;)','&\2')"/>-->  
-        <xsl:value-of select="replace(replace(.,'&amp;quot;', '&quot;'),'&amp;amp;','&amp;')"/>
+        <xsl:value-of select="replace(replace(.,'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
     </xsl:template>
-   
-    
-    
+    <xsl:template match="rdgGrp/@n">
+        <xsl:value-of select="replace(replace(.,'andquot;', '&#34;'),'&amp;','and')"/> 
+    </xsl:template>
+
 </xsl:stylesheet>
