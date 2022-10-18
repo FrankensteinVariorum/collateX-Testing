@@ -67,7 +67,7 @@
                 <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
             </xsl:variable>
            <rdgGrp n="{$newToken}">
-              <rdg wit="{$loner/@wit}"><xsl:value-of select="$loner/text()"/>
+               <rdg wit="{$loner/@wit}"><xsl:value-of select="replace(replace($loner/text(),'&amp;quot;', '&quot;'),'&amp;amp;','&amp;')"/>
               <xsl:value-of select="descendant::rdg[@wit = $loner/@wit]"/>
               </rdg>
                
@@ -81,6 +81,10 @@
            <xsl:if test="rdg[@wit ne $loner/@wit]">
             <xsl:copy-of select="current()" />
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="rdg/text()">
+        <!--<xsl:value-of select="replace(.,'(&amp;)([^&]+?;)','&\2')"/>-->  
+        <xsl:value-of select="replace(replace(.,'&amp;quot;', '&quot;'),'&amp;amp;','&amp;')"/>
     </xsl:template>
    
     
