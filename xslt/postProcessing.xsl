@@ -60,30 +60,109 @@
         <xsl:apply-templates select="rdgGrp" mode="restructure">
                 <xsl:with-param  as="node()" name="loner" tunnel="yes" select="$loner"/>
             </xsl:apply-templates>
-            <xsl:variable name="TokenSquished">
-                <xsl:value-of select="$norm ! string()||descendant::rdgGrp[descendant::rdg[@wit=$loner/@wit]]/@n"/>
-            </xsl:variable>
+            <xsl:choose>
+                <xsl:when test="$norm ! string-length() &gt; 4">
+                <xsl:variable name="TokenSquished">
+                
+                    <xsl:value-of select="$norm ! string()||descendant::rdgGrp[descendant::rdg[@wit=$loner/@wit]]/@n"/>
+               
+                </xsl:variable>
             <xsl:variable name="newToken">
                 <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
             </xsl:variable>
             <xsl:variable name="newNorm">
                 <xsl:value-of select="replace(replace($newToken,'andquot;', '&#34;'),'&amp;','and')"/>
             </xsl:variable>
-           <rdgGrp n="{$newToken}">
+           <rdgGrp n="{$newNorm}">
                <rdg wit="{$loner/@wit}"><xsl:value-of select="replace(replace($loner/text(),'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
-              <xsl:value-of select="descendant::rdg[@wit = $loner/@wit]"/>
+                   <xsl:value-of select="replace(descendant::rdg[@wit = $loner/@wit], '&amp;quot;', '&#34;') ! replace(., '&amp;amp;', '&amp;')"/>
               </rdg>
-               
-           </rdgGrp> 
+               <!-- ebb: LET'S MAKE THIS AMP REPLACEMENT A FUNCTION ALREADY!!!! :-D -->
+            </rdgGrp> 
+            </xsl:when>
+            <xsl:otherwise>
+                
+                <xsl:apply-templates select="rdgGrp" mode="emptyNormalize">
+                    <xsl:with-param  as="text()" name="lonerText" tunnel="yes" select="$loner/text()"/>
+                    <xsl:with-param as="xs:string" name="lonerWit" tunnel="yes" select="$loner/@wit"/>
+                </xsl:apply-templates>
+                
+               <!-- 2022-10-18 ebb: SOMEHOW WE ARE NOT PASSING $loner/text() TO THE NEXT TEMPLATE NOW. Yikes. -->
+                
+                
+                <!-- ebb: OTHERWISE would be in all cases when the @n has a string-length of 4: `['']`. 
+               We do this instead: We simply take the existing @n on the current rdgGrp and use it instead. 
+                
+                -->
+          <!--      <xsl:variable name="currentNorm">
+                    <xsl:value-of select="descendant::rdgGrp[descendant::rdg[@wit=$loner/@wit]]/@n"/>
+                </xsl:variable>      
+                <xsl:variable name="newNorm">
+                    <xsl:value-of select="replace(replace($currentNorm,'andquot;', '&#34;'),'&amp;','and')"/>
+                </xsl:variable>
+                
+                
+                <rdgGrp n="{$newNorm}">
+                    <xsl:for-each select="descendant::rdg[@wit ne $loner/@wit]">
+                        <xsl:apply-templates/>
+                    </xsl:for-each>
+                    <xsl:apply-templates select="descendant::rdg[@wit = $loner/@wit]" mode="restructure">
+                        <xsl:with-param  as="text()" name="lonerText" tunnel="yes" select="$loner/text()"/>
+                       
+                    </xsl:apply-templates>
+                    
+                </rdgGrp>-->
+                
+            <!-- <xsl:apply-templates select="rdgGrp[rdg[@wit = $loner/@wit]]" mode="restructure">
+                 <xsl:with-param  as="text()" name="lonerText" tunnel="yes" select="$loner/text()"/>
+                 <xsl:with-param as="xs:string" name="lonerWit" tunnel="yes" select="$loner/@wit"/>
+             </xsl:apply-templates>-->
+ 
+            </xsl:otherwise>
+            
+            </xsl:choose>
         </app> 
     </xsl:template>
     
+   
+    
     <xsl:template match="rdgGrp" mode="restructure">
+      
         <xsl:param name="loner" tunnel="yes"/>
 
            <xsl:if test="rdg[@wit ne $loner/@wit]">
             <xsl:copy-of select="current()" />
         </xsl:if>
+    </xsl:template>
+    
+   <!-- <xsl:template match="rdg" mode="restructure">
+        
+        <xsl:param name="lonerText" tunnel="yes"/>
+        
+        <rdg wit="{@wit}">
+            <xsl:value-of select="$lonerText"/>
+            <xsl:value-of select="replace(current(), 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"/>
+        </rdg>
+        
+    </xsl:template>
+    -->
+    <xsl:template match="rdgGrp" mode="emptyNormalize">
+        <xsl:param name="lonerText" tunnel="yes"/>
+        <xsl:param name="lonerWit" tunnel="yes"/>
+       <xsl:choose> <xsl:when test="rdg[@wit ne $lonerWit]">
+            <xsl:copy-of select="current()" />
+        </xsl:when>
+       <xsl:otherwise>
+           
+           <rdg wit="{$lonerWit}"><xsl:value-of select="$lonerText"/>
+               <xsl:value-of select="replace(current(), 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"/></rdg>
+           
+       </xsl:otherwise>
+       
+       
+       </xsl:choose>
+        
+        
     </xsl:template>
     
     <!-- 2022-10-18 yxj ebb: For all rdgs, in the normalized @n value, replace 'andquot' to '&#34;', and replace '&amp;' to 'and'.
@@ -93,8 +172,10 @@
         <!--<xsl:value-of select="replace(.,'(&amp;)([^&]+?;)','&\2')"/>-->  
         <xsl:value-of select="replace(replace(.,'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
     </xsl:template>
-    <xsl:template match="rdgGrp/@n">
-        <xsl:value-of select="replace(replace(.,'andquot;', '&#34;'),'&amp;','and')"/> 
+    <xsl:template match="rdgGrp">
+        <rdGrp n="{replace(replace(@n,'andquot;', '&#34;'),'&amp;','and')}">
+            <xsl:apply-templates/>
+        </rdGrp>
     </xsl:template>
 
 </xsl:stylesheet>
