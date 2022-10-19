@@ -19,7 +19,7 @@
      *********************************************************************************************
     -->  
     <xsl:template match="app[count(descendant::rdg) = 1]">
-        <!-- 2022-10-11 yxj and ebb: let's not both just looking for deleted passages, but ANY loner rdg. We have
+        <!-- 2022-10-11 yxj and ebb: let's not just look for deleted passages, but ANY loner rdg. We have
         removed this XPath predicate from the @match: [contains(descendant::rdg, '&lt;del')] 
         -->
   
@@ -32,9 +32,9 @@
            </xsl:if>
     </xsl:template>
     
-    
+
     <xsl:template match="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]"/>
-    <!-- 2022-10-11 ebb and yxj: We also need to remove the predicate checking for the presence of &lt;del on this template
+    <!-- 2022-10-11 ebb and yxj: We needed to remove the predicate checking for the presence of &lt;del on this template
     Removed this: [contains(descendant::rdg, '&lt;del')]  
     -->
 
@@ -77,54 +77,25 @@
                <rdg wit="{$loner/@wit}"><xsl:value-of select="replace(replace($loner/text(),'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
                    <xsl:value-of select="replace(descendant::rdg[@wit = $loner/@wit], '&amp;quot;', '&#34;') ! replace(., '&amp;amp;', '&amp;')"/>
               </rdg>
-               <!-- ebb: LET'S MAKE THIS AMP REPLACEMENT A FUNCTION ALREADY!!!! :-D -->
+               <!-- ebb: LET'S MAKE THIS AMP REPLACEMENT A FUNCTION ALREADY!  -->
             </rdgGrp> 
             </xsl:when>
             <xsl:otherwise>
+                
+            
                 
                 <xsl:apply-templates select="rdgGrp" mode="emptyNormalize">
                     <xsl:with-param  as="text()" name="lonerText" tunnel="yes" select="$loner/text()"/>
                     <xsl:with-param as="xs:string" name="lonerWit" tunnel="yes" select="$loner/@wit"/>
                 </xsl:apply-templates>
-                
-               <!-- 2022-10-18 ebb: SOMEHOW WE ARE NOT PASSING $loner/text() TO THE NEXT TEMPLATE NOW. Yikes. -->
-                
-                
-                <!-- ebb: OTHERWISE would be in all cases when the @n has a string-length of 4: `['']`. 
-               We do this instead: We simply take the existing @n on the current rdgGrp and use it instead. 
-                
-                -->
-          <!--      <xsl:variable name="currentNorm">
-                    <xsl:value-of select="descendant::rdgGrp[descendant::rdg[@wit=$loner/@wit]]/@n"/>
-                </xsl:variable>      
-                <xsl:variable name="newNorm">
-                    <xsl:value-of select="replace(replace($currentNorm,'andquot;', '&#34;'),'&amp;','and')"/>
-                </xsl:variable>
-                
-                
-                <rdgGrp n="{$newNorm}">
-                    <xsl:for-each select="descendant::rdg[@wit ne $loner/@wit]">
-                        <xsl:apply-templates/>
-                    </xsl:for-each>
-                    <xsl:apply-templates select="descendant::rdg[@wit = $loner/@wit]" mode="restructure">
-                        <xsl:with-param  as="text()" name="lonerText" tunnel="yes" select="$loner/text()"/>
-                       
-                    </xsl:apply-templates>
-                    
-                </rdgGrp>-->
-                
-            <!-- <xsl:apply-templates select="rdgGrp[rdg[@wit = $loner/@wit]]" mode="restructure">
-                 <xsl:with-param  as="text()" name="lonerText" tunnel="yes" select="$loner/text()"/>
-                 <xsl:with-param as="xs:string" name="lonerWit" tunnel="yes" select="$loner/@wit"/>
-             </xsl:apply-templates>-->
- 
+               
+               <!-- 2022-10-18 ebb: Now passing $lonerText, but still doubled output -->
+              
             </xsl:otherwise>
             
             </xsl:choose>
         </app> 
     </xsl:template>
-    
-   
     
     <xsl:template match="rdgGrp" mode="restructure">
       
@@ -135,28 +106,23 @@
         </xsl:if>
     </xsl:template>
     
-   <!-- <xsl:template match="rdg" mode="restructure">
-        
-        <xsl:param name="lonerText" tunnel="yes"/>
-        
-        <rdg wit="{@wit}">
-            <xsl:value-of select="$lonerText"/>
-            <xsl:value-of select="replace(current(), 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"/>
-        </rdg>
-        
-    </xsl:template>
-    -->
+
     <xsl:template match="rdgGrp" mode="emptyNormalize">
         <xsl:param name="lonerText" tunnel="yes"/>
         <xsl:param name="lonerWit" tunnel="yes"/>
-        <xsl:for-each select="rdg[@wit ne $lonerWit]">
+     <rdgGrp n="{@n}"> 
+         <xsl:for-each select="rdg[@wit ne $lonerWit]">
             <xsl:copy-of select="current()" /> 
         </xsl:for-each>
            <rdg wit="{$lonerWit}"><xsl:value-of select="$lonerText"/>
                <xsl:value-of select="replace(current()/rdg[@wit = $lonerWit], 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"/>
            </rdg>
+     </rdgGrp>
    
     </xsl:template>
+    
+   
+    
     
     <!-- 2022-10-18 yxj ebb: For all rdgs, in the normalized @n value, replace 'andquot' to '&#34;', and replace '&amp;' to 'and'.
     In the text nodes (the original text), replace '&amp;quot; to '&#34;', and replace '&amp;amp;' to '&amp;'. This template corrects a problem introduced by the use of expandNode() and node.toxml() in the Python pulldom script, used to output the contents of our added longtoken, add, del, and note (inlineVariationEvent elements). We made the same alterations in the restructured app processing above. It may be a good idea to move this processing to a function. 
