@@ -63,7 +63,7 @@
         <xsl:param name="loner" tunnel="yes"/>
         <xsl:param name="norm" tunnel="yes"/>
         <app>
-            <xsl:apply-templates select="rdgGrp" mode="restructure">
+          <xsl:apply-templates select="rdgGrp[not(preceding::app[1][count(rdgGrp) = 1 and rdgGrp/@n ! string-length() = 4])]" mode="restructure">
                 <xsl:with-param  as="node()" name="loner" tunnel="yes" select="$loner"/>
             </xsl:apply-templates>
             <xsl:choose>
@@ -108,16 +108,9 @@
            <xsl:if test="rdg[@wit != $loner/@wit]">
             <xsl:copy-of select="current()" />
         </xsl:if>
-        <xsl:if test="rdg[@wit = $loner/@wit]">
-            <xsl:apply-templates mode="restructure">
-                <xsl:with-param name="lonerWit" as="xs:string" select="$loner/@wit"/>
-            </xsl:apply-templates>
-        </xsl:if>
+    
     </xsl:template>
-    
-    <xsl:template match="rdg" mode="restructure"/>
-       
-    
+
 
     <xsl:template match="rdgGrp" mode="emptyNormalize">
         <xsl:param name="lonerText" tunnel="yes"/>
