@@ -108,11 +108,11 @@
        <!--    <xsl:if test="rdg[@wit != $loner/@wit]">
             <xsl:copy-of select="current()" />
         </xsl:if>-->
-        <xsl:for-each select="rdg">
-            <xsl:if test="current()/@wit = $loner/@wit">
+       <rdgGrp n="{@n}"> <xsl:for-each select="rdg">
+            <xsl:if test="current()/@wit ne $loner/@wit">
                 <xsl:copy-of select="current()"/>
             </xsl:if>
-        </xsl:for-each>
+        </xsl:for-each></rdgGrp>
     
     </xsl:template>
 
