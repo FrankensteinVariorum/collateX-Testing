@@ -51,7 +51,7 @@
         IF the $norm param only contains `['']` (string-length() = 4), do NOT create a new rdgGrp, and simply move
         the $loner param into the existing structure. 
         
-        Example
+        Example (features a PROBLEM: extra rdg element)
         <app><rdgGrp n="['with', 'my', 'aunt', 'and', 'my']">
 			<rdg wit="f1818">with my aunt and my </rdg>
 			<rdg wit="f1823">with my aunt and my </rdg>
@@ -105,9 +105,14 @@
       
         <xsl:param name="loner" tunnel="yes"/>
 
-           <xsl:if test="rdg[@wit != $loner/@wit]">
+       <!--    <xsl:if test="rdg[@wit != $loner/@wit]">
             <xsl:copy-of select="current()" />
-        </xsl:if>
+        </xsl:if>-->
+        <xsl:for-each select="rdg">
+            <xsl:if test="current()/@wit = $loner/@wit">
+                <xsl:copy-of select="current()"/>
+            </xsl:if>
+        </xsl:for-each>
     
     </xsl:template>
 
