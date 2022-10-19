@@ -230,13 +230,7 @@
 			<rdg wit="fThomas">sensations of </rdg>
 			<rdg wit="f1831">sensations of </rdg>
 			<rdg wit="fMS">sensations of </rdg>
-		</rdgGrp><rdgGrp n="['sensations', 'of']">
-			<rdg wit="f1818">sensations of </rdg>
-			<rdg wit="f1823">sensations of </rdg>
-			<rdg wit="fThomas">sensations of </rdg>
-			<rdg wit="f1831">sensations of </rdg>
-			<rdg wit="fMS">sensations of </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">sensations of </rdg><rdg wit="f1823">sensations of </rdg><rdg wit="fThomas">sensations of </rdg><rdg wit="f1831">sensations of </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0100__main__d5e21172"/&gt; sensations of </rdg></app>
 	
 	<app>
 		<rdGrp n="['horror', 'before']">
@@ -1474,13 +1468,7 @@
 			<rdg wit="fThomas">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg>
 			<rdg wit="f1831">sobs. &lt;p eID="novel1_letter4_chapter8_div4_div8_p20"/&gt; &lt;p sID="novel1_letter4_chapter8_div4_div8_p21"/&gt; </rdg>
 			<rdg wit="fMS">sobs. &lt;milestone unit="tei:p-END"/&gt; &lt;milestone unit="tei:p-START"/&gt; </rdg>
-		</rdgGrp><rdgGrp n="['sobs.', '&lt;p-end/&gt;', '&lt;p-start/&gt;']">
-			<rdg wit="f1818">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg>
-			<rdg wit="f1823">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg>
-			<rdg wit="fThomas">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg>
-			<rdg wit="f1831">sobs. &lt;p eID="novel1_letter4_chapter8_div4_div8_p20"/&gt; &lt;p sID="novel1_letter4_chapter8_div4_div8_p21"/&gt; </rdg>
-			<rdg wit="fMS">sobs. &lt;milestone unit="tei:p-END"/&gt; &lt;milestone unit="tei:p-START"/&gt; </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg><rdg wit="f1823">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg><rdg wit="fThomas">sobs. &lt;p eID="novel1_letter4_chapter7_div4_div7_p20"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p21"/&gt; </rdg><rdg wit="f1831">sobs. &lt;p eID="novel1_letter4_chapter8_div4_div8_p20"/&gt; &lt;p sID="novel1_letter4_chapter8_div4_div8_p21"/&gt; </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0101__main__d5e21472"/&gt; sobs. &lt;milestone unit="tei:p-END"/&gt; &lt;milestone unit="tei:p-START"/&gt; </rdg></app>
 	
 	<app>
 		<rdGrp n="['&#34;rise']">
@@ -2411,13 +2399,7 @@
 			<rdg wit="fThomas">confess? But do not </rdg>
 			<rdg wit="f1831">confess? But do not </rdg>
 			<rdg wit="fMS">confess? But do not </rdg>
-		</rdgGrp><rdgGrp n="['confess?', 'but', 'do', 'not']">
-			<rdg wit="f1818">confess? But do not </rdg>
-			<rdg wit="f1823">confess? But do not </rdg>
-			<rdg wit="fThomas">confess? But do not </rdg>
-			<rdg wit="f1831">confess? But do not </rdg>
-			<rdg wit="fMS">confess? But do not </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">confess? But do not </rdg><rdg wit="f1823">confess? But do not </rdg><rdg wit="fThomas">confess? But do not </rdg><rdg wit="f1831">confess? But do not </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0103__main__d5e21659"/&gt; confess? But do not </rdg></app>
 	
 	<app>
 		<rdGrp n="['mourn']">
@@ -2678,12 +2660,7 @@
 			<rdg wit="f1823">and elevate me from the petty cares of this world of injustice and </rdg>
 			<rdg wit="fThomas">and elevate me from the petty cares of this world of injustice and </rdg>
 			<rdg wit="fMS">and elevate me from the &lt;lb n="c56-0103__main__25"/&gt;petty cares of this world of injustice &lt;lb n="c56-0103__main__26"/&gt;and </rdg>
-		</rdgGrp><rdgGrp n="['and', 'elevate', 'me', 'from', 'the', 'petty', 'cares', 'of', 'this', 'world', 'of', 'injustice', 'and']">
-			<rdg wit="f1818">and elevate me from the petty cares of this world of injustice and </rdg>
-			<rdg wit="f1823">and elevate me from the petty cares of this world of injustice and </rdg>
-			<rdg wit="fThomas">and elevate me from the petty cares of this world of injustice and </rdg>
-			<rdg wit="fMS">and elevate me from the &lt;lb n="c56-0103__main__25"/&gt;petty cares of this world of injustice &lt;lb n="c56-0103__main__26"/&gt;and </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">and elevate me from the petty cares of this world of injustice and </rdg><rdg wit="f1823">and elevate me from the petty cares of this world of injustice and </rdg><rdg wit="fThomas">and elevate me from the petty cares of this world of injustice and </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0103__main__d5e21700"/&gt; and elevate me from the &lt;lb n="c56-0103__main__25"/&gt;petty cares of this world of injustice &lt;lb n="c56-0103__main__26"/&gt;and </rdg></app>
 	
 	<app>
 		<rdGrp n="['strife', '–']">
@@ -2848,12 +2825,7 @@
 			<rdg wit="f1823">elevated beyond this world. </rdg>
 			<rdg wit="fThomas">elevated beyond this world. </rdg>
 			<rdg wit="fMS">elevated &lt;lb n="c56-0104__main__5"/&gt;beyond this world. </rdg>
-		</rdgGrp><rdgGrp n="['elevated', 'beyond', 'this', 'world.']">
-			<rdg wit="f1818">elevated beyond this world. </rdg>
-			<rdg wit="f1823">elevated beyond this world. </rdg>
-			<rdg wit="fThomas">elevated beyond this world. </rdg>
-			<rdg wit="fMS">elevated &lt;lb n="c56-0104__main__5"/&gt;beyond this world. </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">elevated beyond this world. </rdg><rdg wit="f1823">elevated beyond this world. </rdg><rdg wit="fThomas">elevated beyond this world. </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0104__main__d5e21750"/&gt; elevated &lt;lb n="c56-0104__main__5"/&gt;beyond this world. </rdg></app>
 	
 	<app>
 		<rdGrp n="['oh!']">
@@ -2939,12 +2911,7 @@
 			<rdg wit="f1823">immediately </rdg>
 			<rdg wit="fThomas">immediately </rdg>
 			<rdg wit="fMS">immediately </rdg>
-		</rdgGrp><rdgGrp n="['immediately']">
-			<rdg wit="f1818">immediately </rdg>
-			<rdg wit="f1823">immediately </rdg>
-			<rdg wit="fThomas">immediately </rdg>
-			<rdg wit="fMS">immediately </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">immediately </rdg><rdg wit="f1823">immediately </rdg><rdg wit="fThomas">immediately </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0104__main__d5e21778"/&gt; immediately </rdg></app>
 	
 	<app>
 		<rdGrp n="['deprived']">
@@ -3120,12 +3087,7 @@
 			<rdg wit="f1823">revenge. Yet this is not consolation </rdg>
 			<rdg wit="fThomas">revenge. Yet this is not consolation </rdg>
 			<rdg wit="fMS">revenge. Yet this &lt;lb n="c56-0104__main__16"/&gt;is not consolation </rdg>
-		</rdgGrp><rdgGrp n="['revenge.', 'yet', 'this', 'is', 'not', 'consolation']">
-			<rdg wit="f1818">revenge. Yet this is not consolation </rdg>
-			<rdg wit="f1823">revenge. Yet this is not consolation </rdg>
-			<rdg wit="fThomas">revenge. Yet this is not consolation </rdg>
-			<rdg wit="fMS">revenge. Yet this &lt;lb n="c56-0104__main__16"/&gt;is not consolation </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">revenge. Yet this is not consolation </rdg><rdg wit="f1823">revenge. Yet this is not consolation </rdg><rdg wit="fThomas">revenge. Yet this is not consolation </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0104__main__d5e21895"/&gt; revenge. Yet this &lt;lb n="c56-0104__main__16"/&gt;is not consolation </rdg></app>
 	
 	<app>
 		<rdGrp n="['', 'to', '', '^for', '']">
@@ -3183,12 +3145,7 @@
 			<rdg wit="f1823">with my aunt and my </rdg>
 			<rdg wit="fThomas">with my aunt and my </rdg>
 			<rdg wit="fMS">with my aunt &amp; my </rdg>
-		</rdgGrp><rdgGrp n="['with', 'my', 'aunt', 'and', 'my']">
-			<rdg wit="f1818">with my aunt and my </rdg>
-			<rdg wit="f1823">with my aunt and my </rdg>
-			<rdg wit="fThomas">with my aunt and my </rdg>
-			<rdg wit="fMS">with my aunt &amp; my </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">with my aunt and my </rdg><rdg wit="f1823">with my aunt and my </rdg><rdg wit="fThomas">with my aunt and my </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0104__main__d5e21929"/&gt; with my aunt and my </rdg></app>
 	
 	<app>
 		<rdGrp n="['lovely', 'william,']">
@@ -3865,13 +3822,7 @@
 			<rdg wit="fThomas">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg>
 			<rdg wit="f1831">it.” &lt;p eID="novel1_letter4_chapter8_div4_div8_p27"/&gt; &lt;p sID="novel1_letter4_chapter8_div4_div8_p28"/&gt; “I truly thank </rdg>
 			<rdg wit="fMS">it." &lt;milestone unit="tei:p-END"/&gt; &lt;milestone unit="tei:p-START"/&gt; &lt;lb n="c56-0105__main__23"/&gt;"I truly than&lt;sga-add place="intralinear" sID="c56-0105__main__d5e22089"/&gt;k </rdg>
-		</rdgGrp><rdgGrp n="['it.&#34;', '&lt;p-end/&gt;', '&lt;p-start/&gt;', '&#34;i', 'truly', 'thank']">
-			<rdg wit="f1818">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg>
-			<rdg wit="f1823">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg>
-			<rdg wit="fThomas">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg>
-			<rdg wit="f1831">it.” &lt;p eID="novel1_letter4_chapter8_div4_div8_p27"/&gt; &lt;p sID="novel1_letter4_chapter8_div4_div8_p28"/&gt; “I truly thank </rdg>
-			<rdg wit="fMS">it." &lt;milestone unit="tei:p-END"/&gt; &lt;milestone unit="tei:p-START"/&gt; &lt;lb n="c56-0105__main__23"/&gt;"I truly than&lt;sga-add place="intralinear" sID="c56-0105__main__d5e22089"/&gt;k </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg><rdg wit="f1823">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg><rdg wit="fThomas">it.” &lt;p eID="novel1_letter4_chapter7_div4_div7_p29"/&gt; &lt;p sID="novel1_letter4_chapter7_div4_div7_p30"/&gt; “I truly thank </rdg><rdg wit="f1831">it.” &lt;p eID="novel1_letter4_chapter8_div4_div8_p27"/&gt; &lt;p sID="novel1_letter4_chapter8_div4_div8_p28"/&gt; “I truly thank </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0105__left_margin__d5e22081"/&gt; it." &lt;milestone unit="tei:p-END"/&gt; &lt;milestone unit="tei:p-START"/&gt; &lt;lb n="c56-0105__main__23"/&gt;"I truly than&lt;sga-add place="intralinear" sID="c56-0105__main__d5e22089"/&gt;k </rdg></app>
 	
 	<app>
 		<rdGrp n="['', 'him&#34;–', 'said', 'justine', '&#34;in']">
@@ -4245,13 +4196,7 @@
 			<rdg wit="fThomas">passes over the fair </rdg>
 			<rdg wit="f1831">passes over the fair </rdg>
 			<rdg wit="fMS">passes over the &lt;lb n="c56-0106__main__12"/&gt;fair </rdg>
-		</rdgGrp><rdgGrp n="['passes', 'over', 'the', 'fair']">
-			<rdg wit="f1818">passes over the fair </rdg>
-			<rdg wit="f1823">passes over the fair </rdg>
-			<rdg wit="fThomas">passes over the fair </rdg>
-			<rdg wit="f1831">passes over the fair </rdg>
-			<rdg wit="fMS">passes over the &lt;lb n="c56-0106__main__12"/&gt;fair </rdg>
-		</rdgGrp></app>
+		</rdgGrp><rdg wit="f1818">passes over the fair </rdg><rdg wit="f1823">passes over the fair </rdg><rdg wit="fThomas">passes over the fair </rdg><rdg wit="f1831">passes over the fair </rdg><rdg wit="fMS">&lt;sga-add eID="c56-0106__main__d5e22212"/&gt; passes over the &lt;lb n="c56-0106__main__12"/&gt;fair </rdg></app>
 	
 	<app>
 		<rdGrp n="['moon', '&lt;delstart/&gt;which&lt;delend/&gt;', 'which', 'and']">

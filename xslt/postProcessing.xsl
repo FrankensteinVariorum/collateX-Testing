@@ -149,20 +149,13 @@
     <xsl:template match="rdgGrp" mode="emptyNormalize">
         <xsl:param name="lonerText" tunnel="yes"/>
         <xsl:param name="lonerWit" tunnel="yes"/>
-       <xsl:choose> <xsl:when test="rdg[@wit ne $lonerWit]">
-            <xsl:copy-of select="current()" />
-        </xsl:when>
-       <xsl:otherwise>
-           
+        <xsl:for-each select="rdg[@wit ne $lonerWit]">
+            <xsl:copy-of select="current()" /> 
+        </xsl:for-each>
            <rdg wit="{$lonerWit}"><xsl:value-of select="$lonerText"/>
-               <xsl:value-of select="replace(current(), 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"/></rdg>
-           
-       </xsl:otherwise>
-       
-       
-       </xsl:choose>
-        
-        
+               <xsl:value-of select="replace(current()/rdg[@wit = $lonerWit], 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"/>
+           </rdg>
+   
     </xsl:template>
     
     <!-- 2022-10-18 yxj ebb: For all rdgs, in the normalized @n value, replace 'andquot' to '&#34;', and replace '&amp;' to 'and'.
