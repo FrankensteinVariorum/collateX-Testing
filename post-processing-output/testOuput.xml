@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xml>
+    <app xmlns:cx="http://interedition.eu/collatex/ns/1.0" xmlns:fv="http://fv"><rdgGrp n="['and']"><rdg wit="f1818">and </rdg><rdg wit="f1823">and </rdg><rdg wit="fThomas">and </rdg></rdgGrp><rdgGrp n="['&lt;delstart/&gt;and&lt;delend/&gt;', 'and']"><rdg wit="fMS">&lt;del rend="strikethrough" xml:id="c56-0107__main__d5e22411"&gt;&amp;&lt;/del&gt; &amp; </rdg></rdgGrp></app>
+    
+    <app>
+        <rdGrp xmlns:cx="http://interedition.eu/collatex/ns/1.0" xmlns:fv="http://fv" n="['', '&lt;delstart/&gt;&#34;&lt;delend/&gt;', '&#34;i']">
+            <rdg wit="fMS">&lt;lb n="c56-0105__main__17"/&gt; &lt;del rend="strikethrough" xml:id="c56-0105__main__d5e22055"&gt;"&lt;/del&gt; "I </rdg>
+        </rdGrp>
+        <rdGrp xmlns:cx="http://interedition.eu/collatex/ns/1.0" xmlns:fv="http://fv" n="['i']">
+            <rdg wit="f1818">I </rdg>
+            <rdg wit="f1823">I </rdg>
+            <rdg wit="fThomas">I </rdg>
+            <rdg wit="f1831">I </rdg>
+        </rdGrp>
+    </app>
+</xml>

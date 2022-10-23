@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <app>
+        <rdgGrp n="['&lt;delstart/&gt;and&lt;delend/&gt;']">
+            <rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0107__main__d5e22411&quot;&gt;&amp;amp;&lt;/del&gt; </rdg>
+        </rdgGrp>
+    </app>
+    <app>
+        <rdgGrp n="['and']">
+            <rdg wit="f1818">and </rdg>
+            <rdg wit="f1823">and </rdg>
+            <rdg wit="fThomas">and </rdg>
+            <rdg wit="fMS">&amp; </rdg>
+        </rdgGrp>
+    </app>
+    <app>
+        <rdgGrp n="['', '&lt;delstart/&gt;andquot;&lt;delend/&gt;', '&quot;i']">
+            <rdg wit="fMS">&lt;lb n=&quot;c56-0105__main__17&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0105__main__d5e22055&quot;&gt;&amp;quot;&lt;/del&gt; &quot;I </rdg>
+        </rdgGrp>
+        <rdgGrp n="['i']">
+            <rdg wit="f1818">I </rdg>
+            <rdg wit="f1823">I </rdg>
+            <rdg wit="fThomas">I </rdg>
+            <rdg wit="f1831">I </rdg>
+        </rdgGrp>
+    </app>
+</xml>
