@@ -137,6 +137,7 @@ def extract(input_xml):
             # output += '\n' + node.toxml() + '\n'
             # print(node.toxml());
             output += '\n' + regexEmptyTag.sub('>', node.toxml())
+            # output += '\n' + node.toxml()
         elif event == pulldom.END_ELEMENT and node.localName in inlineVariationEvent:
             output += '</' + node.localName + '>' + '\n'
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
@@ -155,6 +156,7 @@ def extract(input_xml):
         # non-empty inline elements: mdel, shi, metamark
         elif event == pulldom.START_ELEMENT and node.localName in inlineContent:
             output += '\n' + regexEmptyTag.sub('>', node.toxml())
+            # output += '\n' + node.toxml()
         elif event == pulldom.END_ELEMENT and node.localName in inlineContent:
             output += '</' + node.localName + '>' + '\n'
         # elif event == pulldom.START_ELEMENT and node.localName in blockElement:
@@ -288,7 +290,7 @@ for name in glob.glob('../collChunk-14b/1818_fullFlat_*'):
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
         # print(collation_input)
-        outputFile = open('../simpleOutputBeta/Collation_' + matchString, 'w', encoding='utf-8')
+        outputFile = open('../simpleOutputGamma/Collation_' + matchString, 'w', encoding='utf-8')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
