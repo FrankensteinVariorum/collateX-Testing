@@ -131,15 +131,14 @@ def extract(input_xml):
         #     doc.expandNode(node)
         #     output += node.toxml()
         if event == pulldom.START_ELEMENT and node.localName in inlineVariationEvent:
-            # doc.expandNode(node)
+            doc.expandNode(node)
             # 2022-10-25 ebb: The line above may be sending the characters inside the node to be processed twice,
             # resulting in the patterns of `&amp;&amp; for a single &amp; or &amp;&amp;quot; and andquot
             # output += '\n' + node.toxml() + '\n'
-            # print(node.toxml());
-            output += '\n' + regexEmptyTag.sub('>', node.toxml())
-            # output += '\n' + node.toxml()
-        elif event == pulldom.END_ELEMENT and node.localName in inlineVariationEvent:
-            output += '</' + node.localName + '>' + '\n'
+            # print(node.toxml()); Today, we cannot find a good pre-processing solution, but I hypothesize that
+            # we might run this node.toxml() output through a sub function to do the equivalent of
+            # the XSLT replace() we're now doing to handle this problem in post-processing.
+            output += '\n' + node.toxml()
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
         # We COULD set white spaces around these like this ' ' + node.toxml() + ' '
         # but what seems to happen is that the white spaces get added to tokens; they aren't used to
