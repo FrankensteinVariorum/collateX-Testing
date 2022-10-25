@@ -131,9 +131,14 @@ def extract(input_xml):
         #     doc.expandNode(node)
         #     output += node.toxml()
         if event == pulldom.START_ELEMENT and node.localName in inlineVariationEvent:
-            doc.expandNode(node)
-            output += '\n' + node.toxml() + '\n'
+            # doc.expandNode(node)
+            # 2022-10-25 ebb: The line above may be sending the characters inside the node to be processed twice,
+            # resulting in the patterns of `&amp;&amp; for a single &amp; or &amp;&amp;quot; and andquot
+            # output += '\n' + node.toxml() + '\n'
             # print(node.toxml());
+            output += '\n' + regexEmptyTag.sub('>', node.toxml())
+        elif event == pulldom.END_ELEMENT and node.localName in inlineVariationEvent:
+            output += '</' + node.localName + '>' + '\n'
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
         # We COULD set white spaces around these like this ' ' + node.toxml() + ' '
         # but what seems to happen is that the white spaces get added to tokens; they aren't used to
@@ -283,7 +288,7 @@ for name in glob.glob('../collChunk-14b/1818_fullFlat_*'):
         tokenLists = tokenizeFiles(name, matchString)
         collation_input = {"witnesses": tokenLists}
         # print(collation_input)
-        outputFile = open('../simpleOutput/Collation_' + matchString, 'w', encoding='utf-8')
+        outputFile = open('../simpleOutputBeta/Collation_' + matchString, 'w', encoding='utf-8')
         # table = collate(collation_input, output='tei', segmentation=True)
         # table = collate(collation_input, segmentation=True, layout='vertical')
         table = collate(collation_input, output='xml', segmentation=True)
