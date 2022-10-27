@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.jenitennison.com/xslt/xspec"
+        xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec"
+        stylesheet="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xsl"
+        date="2022-10-27T13:58:13.486-04:00">
+   <scenario id="x645b9013-0c8d-3c92-ae53-9216f2a60443"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'app[count(descendant::rdg) = 1]</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec">
+            <app>
+               <rdgGrp n="['never']">
+                  <rdg wit="fMS">never </rdg>
+               </rdgGrp>
+            </app>
+            <app>
+               <rdgGrp n="['never']">
+                  <rdg wit="f1818">never </rdg>
+                  <rdg wit="f1823">never </rdg>
+                  <rdg wit="fThomas">never </rdg>
+                  <rdg wit="f1831">never </rdg>
+                  <rdg wit="fMS">&lt;lb n="c56-0103__main__19"/&gt;never </rdg>
+               </rdgGrp>
+            </app>
+         </x:context>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <app xmlns:cx="http://interedition.eu/collatex/ns/1.0">
+               <rdgGrp n="['never']">
+                  <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec" wit="f1818">never </rdg>
+                  <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec" wit="f1823">never </rdg>
+                  <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec" wit="fThomas">never </rdg>
+                  <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec" wit="f1831">never </rdg>
+               </rdgGrp>
+               <rdgGrp n="['never', 'never']">
+                  <rdg wit="fMS">never &lt;lb n="c56-0103__main__19"/&gt;never </rdg>
+               </rdgGrp>
+            </app>
+         </content-wrap>
+      </result>
+      <test id="x645b9013-0c8d-3c92-ae53-9216f2a60443-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+   <scenario id="x18929eca-33b4-34df-ba59-bfec579288a4"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'app[preceding-sibling::app[1][count(descendant::rdg) = 1]]</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec">
+            <app>
+               <rdgGrp n="['never']">
+                  <rdg wit="f1818">never </rdg>
+                  <rdg wit="f1823">never </rdg>
+                  <rdg wit="fThomas">never </rdg>
+                  <rdg wit="f1831">never </rdg>
+                  <rdg wit="fMS">&lt;lb n="c56-0103__main__19"/&gt;never </rdg>
+               </rdgGrp>
+            </app>
+         </x:context>
+      </input-wrap>
+      <result select="/element()">
+         <content-wrap xmlns="">
+            <app xmlns:x="http://www.jenitennison.com/xslt/xspec">
+               <rdGrp xmlns:cx="http://interedition.eu/collatex/ns/1.0" n="['never']">
+                  <rdg wit="f1818">never </rdg>
+                  <rdg wit="f1823">never </rdg>
+                  <rdg wit="fThomas">never </rdg>
+                  <rdg wit="f1831">never </rdg>
+                  <rdg wit="fMS">&lt;lb n="c56-0103__main__19"/&gt;never </rdg>
+               </rdGrp>
+            </app>
+         </content-wrap>
+      </result>
+      <test id="x18929eca-33b4-34df-ba59-bfec579288a4-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+   <scenario id="xb74bbc6e-24cd-3892-830e-e1df568f6d5a"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'app' and mode 'restructure'</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec" mode="restructure">
+            <x:param name="loner" select="'no_value'" tunnel="yes"/>
+            <x:param name="norm" select="'no_value'" tunnel="yes"/>
+         </x:context>
+      </input-wrap>
+      <result select="()"/>
+      <test id="xb74bbc6e-24cd-3892-830e-e1df568f6d5a-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+   <scenario id="x79f59b8b-37f2-3e30-8a1a-eebfdaa620c7"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'rdgGrp' and mode 'restructure'</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec" mode="restructure">
+            <x:param name="loner" select="'no_value'" tunnel="yes"/>
+         </x:context>
+      </input-wrap>
+      <result select="()"/>
+      <test id="x79f59b8b-37f2-3e30-8a1a-eebfdaa620c7-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+   <scenario id="x8f5ab7e9-27b7-35c5-9c46-662859f9c74a"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'rdgGrp' and mode 'emptyNormalize'</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec" mode="emptyNormalize">
+            <x:param name="lonerText" select="'no_value'" tunnel="yes"/>
+            <x:param name="lonerWit" select="'no_value'" tunnel="yes"/>
+         </x:context>
+      </input-wrap>
+      <result select="()"/>
+      <test id="x8f5ab7e9-27b7-35c5-9c46-662859f9c74a-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+   <scenario id="xd5341b0b-0dc2-3aa9-899f-ae8296367d1a"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'rdg/text()</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/simpleOutput/Collation_C14_b.xml"
+                    select="rdg/text()"/>
+      </input-wrap>
+      <result select="()"/>
+      <test id="xd5341b0b-0dc2-3aa9-899f-ae8296367d1a-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+   <scenario id="xee3396ba-0f4a-3f13-b4d0-2a446a848210"
+             xspec="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/xslt/postProcessing.xspec">
+      <label>Scenario for testing template with match 'rdgGrp</label>
+      <input-wrap xmlns="">
+         <x:context xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                    href="file:/C:/Users/Jessie/Documents/Github/collateX-Testing/simpleOutput/Collation_C14_b.xml"
+                    select="rdgGrp"/>
+      </input-wrap>
+      <result select="()"/>
+      <test id="xee3396ba-0f4a-3f13-b4d0-2a446a848210-expect1" successful="false">
+         <label>Not yet implemented</label>
+         <expect select="'Not yet implemented'"/>
+      </test>
+   </scenario>
+</report>

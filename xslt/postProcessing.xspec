@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="postProcessing.xsl">
+    <x:variable name="testFile" select="../simpleOutput/Collation_C14_b.xml"/>
+
+    <x:scenario label="Scenario for testing template with match 'app[count(descendant::rdg) = 1]">
+        <!--        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[count(descendant::rdg)=1]"/>-->
+        <x:context>
+            <app>
+                <rdgGrp n="['never']">
+                    <rdg wit="fMS">never </rdg>
+                </rdgGrp>
+            </app>
+            <app>
+                <rdgGrp n="['never']">
+                    <rdg wit="f1818">never </rdg>
+                    <rdg wit="f1823">never </rdg>
+                    <rdg wit="fThomas">never </rdg>
+                    <rdg wit="f1831">never </rdg>
+                    <rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__19&quot;/&gt;never </rdg>
+                </rdgGrp>
+            </app>
+        </x:context>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'">
+            <app>
+                <rdgGrp n="['never']">
+                    <rdg wit="f1818">never </rdg>
+                    <rdg wit="f1823">never </rdg>
+                    <rdg wit="fThomas">never </rdg>
+                    <rdg wit="f1831">never </rdg>
+                </rdgGrp>
+                <rdgGrp n="['never', 'never']">
+                    <rdg wit="fMS">never &lt;lb n="c56-0103__main__19"/&gt;never </rdg>
+                </rdgGrp>
+            </app>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing template with match 'app[preceding-sibling::app[1][count(descendant::rdg) = 1]]">
+        <!--        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]"/>-->
+        <x:context>
+            <app>
+                <rdgGrp n="['never']">
+                    <rdg wit="f1818">never </rdg>
+                    <rdg wit="f1823">never </rdg>
+                    <rdg wit="fThomas">never </rdg>
+                    <rdg wit="f1831">never </rdg>
+                    <rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__19&quot;/&gt;never </rdg>
+                </rdgGrp>
+            </app>
+        </x:context>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"></x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'app' and mode 'restructure'">
+        <x:context mode="restructure">
+            <x:param name="loner" select="'no_value'" tunnel="yes"/>
+            <x:param name="norm" select="'no_value'" tunnel="yes"/>
+        </x:context>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'rdgGrp' and mode 'restructure'">
+        <x:context mode="restructure">
+            <x:param name="loner" select="'no_value'" tunnel="yes"/>
+        </x:context>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'rdgGrp' and mode 'emptyNormalize'">
+        <x:context mode="emptyNormalize">
+            <x:param name="lonerText" select="'no_value'" tunnel="yes"/>
+            <x:param name="lonerWit" select="'no_value'" tunnel="yes"/>
+        </x:context>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'rdg/text()">
+        <x:context href="../simpleOutput/Collation_C14_b.xml" select="rdg/text()"/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'rdgGrp">
+        <x:context href="../simpleOutput/Collation_C14_b.xml" select="rdgGrp"/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+</x:description>
