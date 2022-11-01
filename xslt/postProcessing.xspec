@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="postProcessing.xsl">
-    <x:variable name="testFile" select="../simpleOutput/Collation_C14_b.xml"/>
+<!--    <x:variable name="testFile" select="../simpleOutput/Collation_C14_b.xml"/>-->
 
-    <x:scenario label="Scenario for testing template with match 'app[count(descendant::rdg) = 1]">
-        <!--        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[count(descendant::rdg)=1]"/>-->
+    <!--<x:scenario label="Scenario for testing template with match 'app[count(descendant::rdg) = 1]">
+        <!-\-        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[count(descendant::rdg)=1]"/>-\->
         <x:context>
             <app>
                 <rdgGrp n="['never']">
@@ -33,11 +33,11 @@
                 </rdgGrp>
             </app>
         </x:expect>
-    </x:scenario>
+    </x:scenario>-->
 
-    <x:scenario
+    <!--<x:scenario
         label="Scenario for testing template with match 'app[preceding-sibling::app[1][count(descendant::rdg) = 1]]">
-        <!--        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]"/>-->
+        <!-\-        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]"/>-\->
         <x:context>
             <app>
                 <rdgGrp n="['never']">
@@ -49,9 +49,9 @@
                 </rdgGrp>
             </app>
         </x:context>
-        <x:expect label="Not yet implemented" select="'Not yet implemented'"></x:expect>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
     </x:scenario>
-
+-->
     <x:scenario label="Scenario for testing template with match 'app' and mode 'restructure'">
         <x:context mode="restructure">
             <x:param name="loner" select="'no_value'" tunnel="yes"/>

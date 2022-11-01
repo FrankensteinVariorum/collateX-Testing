@@ -83,7 +83,6 @@ RE_LT_END = re.compile(r'</longToken>')
 RE_DOTDASH = re.compile(r'\.–')
 
 
-
 # RE_DOTDASH captures a period followed by a dash, frequently seen in the S-GA edition, and not a word-dividing hyphen.
 # 2022-08-08 ebb: I'm currently treating the "dotdash" as just a period for normalization to improve alignments.
 
@@ -111,7 +110,6 @@ inlineVariationEvent = ['del', 'add', 'note', 'longToken']
 
 def normalizeSpace(inText):
     """ Replaces all whitespace spans with a newline character for tokenization."""
-
     if regexNonWhitespace.search(inText):
         return regexWhitespace.sub('\n', inText)
     else:
@@ -172,9 +170,8 @@ def extract(input_xml):
 def fixtoken(inText):
         # add space before and after dash and hyphen
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
-        fixToken = re.sub('(-|[‒–—])(\s)', '\n\\1\n\\2', fixToken)
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
-        # fixToken = re.sub('(&amp;)([^&]+?;)', '&\\2', fixToken)
+        fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
         return fixToken
 
 def normalize(inputText):
@@ -281,24 +278,25 @@ def tokenize(inputFile):
 # declare a list inlineAdd for <add>
 # add  '\n' before <add> nodes in extract function
 
-for name in glob.glob('../collChunk-14b/1818_fullFlat_*'):
-    try:
-        matchString = name.split("fullFlat_", 1)[1]
-        # ebb: above gets C30.xml for example
-        # matchStr = matchString.split(".", 1)[0]
-        # ebb: above strips off the file extension
-        tokenLists = tokenizeFiles(name, matchString)
-        collation_input = {"witnesses": tokenLists}
-        # print(collation_input)
-        outputFile = open('../simpleOutputGamma/Collation_' + matchString, 'w', encoding='utf-8')
-        # table = collate(collation_input, output='tei', segmentation=True)
-        # table = collate(collation_input, segmentation=True, layout='vertical')
-        table = collate(collation_input, output='xml', segmentation=True)
-        print(table)
-        print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+def main():
+    for name in glob.glob('../collChunk-14b/1818_fullFlat_*'):
+        try:
+            matchString = name.split("fullFlat_", 1)[1]
+            # ebb: above gets C30.xml for example
+            # matchStr = matchString.split(".", 1)[0]
+            # ebb: above strips off the file extension
+            tokenLists = tokenizeFiles(name, matchString)
+            collation_input = {"witnesses": tokenLists}
+            # print(collation_input)
+            outputFile = open('../simpleOutputGamma/Collation_' + matchString, 'w', encoding='utf-8')
+            # table = collate(collation_input, output='tei', segmentation=True)
+            # table = collate(collation_input, segmentation=True, layout='vertical')
+            table = collate(collation_input, output='xml', segmentation=True)
+            # print(table)
+            # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
 
-    except IOError:
-        pass
-
+        except IOError:
+            pass
+# main()
 
 
