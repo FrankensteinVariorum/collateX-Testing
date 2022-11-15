@@ -162,13 +162,13 @@ def extract(input_xml):
         # elif event == pulldom.END_ELEMENT and node.localName in blockElement:
         #    output += '\n</' + node.localName + '>'
         elif event == pulldom.CHARACTERS:
-            output += fixtoken(normalizeSpace(node.data))
+            output += fixToken(normalizeSpace(node.data))
         else:
             continue
     return output
 
-def fixtoken(inText):
-        # add space before and after dash and hyphen
+def fixToken(inText):
+        """ Add space before and after dash and hyphen """
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
         fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
@@ -246,6 +246,17 @@ def processToken(inputText):
 def processWitness(inputWitness, id):
     return {'id': id, 'tokens': [processToken(token) for token in inputWitness]}
 
+def tokenize(inputFile):
+    return regexLeadingBlankLine.sub('\n', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+# 2022-06-21 ebb and yxj: We think this function is what we need to modify:
+# the making of tokens is problematic because it is fusing text nodes with element tags.
+# Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
+# to find `<.+?>` and split before and after it somehow to make sure markup is in its own token.
+
+# 2022-07-03 yxj: modify extract function:
+# declare a list inlineAdd for <add>
+# add  '\n' before <add> nodes in extract function
+
 def tokenizeFiles(name, matchString):
     with open(name, 'rb') as f1818file, \
             open('../collChunk-14b/1823_fullFlat_' + matchString, 'rb') as f1823file, \
@@ -267,16 +278,7 @@ def tokenizeFiles(name, matchString):
         return [f1818_tokenlist, f1823_tokenlist, fThomas_tokenlist, f1831_tokenlist, fMS_tokenlist]
 
 
-def tokenize(inputFile):
-        return regexLeadingBlankLine.sub('\n', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
-# 2022-06-21 ebb and yxj: We think this function is what we need to modify:
-# the making of tokens is problematic because it is fusing text nodes with element tags.
-# Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
-# to find `<.+?>` and split before and after it somehow to make sure markup is in its own token.
 
-# 2022-07-03 yxj: modify extract function:
-# declare a list inlineAdd for <add>
-# add  '\n' before <add> nodes in extract function
 
 def main():
     for name in glob.glob('../collChunk-14b/1818_fullFlat_*'):
@@ -286,8 +288,9 @@ def main():
             # matchStr = matchString.split(".", 1)[0]
             # ebb: above strips off the file extension
             tokenLists = tokenizeFiles(name, matchString)
+            # 2022-11-14 yxj: For easier doing unit testing,
+            # can we import 4 filenames instead of only 1 into tokenizeFiles()?
             collation_input = {"witnesses": tokenLists}
-            # print(collation_input)
             outputFile = open('../simpleOutputGamma/Collation_' + matchString, 'w', encoding='utf-8')
             # table = collate(collation_input, output='tei', segmentation=True)
             # table = collate(collation_input, segmentation=True, layout='vertical')
