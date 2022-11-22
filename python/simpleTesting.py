@@ -82,7 +82,6 @@ RE_LT_START = re.compile(r'<longToken.*?>')
 RE_LT_END = re.compile(r'</longToken>')
 RE_DOTDASH = re.compile(r'\.–')
 
-
 # RE_DOTDASH captures a period followed by a dash, frequently seen in the S-GA edition, and not a word-dividing hyphen.
 # 2022-08-08 ebb: I'm currently treating the "dotdash" as just a period for normalization to improve alignments.
 
@@ -101,11 +100,14 @@ RE_DOTDASH = re.compile(r'\.–')
 # 2017-05-30 ebb: collated but the tags are not). Decision to make the comments into self-closing elements with text
 # 2017-05-30 ebb: contents as attribute values, and content such as tags simplified to be legal attribute values.
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
-ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage', 'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
+ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage',
+          'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
 blockEmpty = ['p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'head']
-inlineEmpty = ['pb', 'sga-add', 'lb', 'gap',  'hi', 'w', 'ab']
+inlineEmpty = ['pb', 'sga-add', 'lb', 'gap', 'hi', 'w', 'ab']
 inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
 inlineVariationEvent = ['del', 'add', 'note', 'longToken']
+
+
 # 10-23-2017 ebb rv:
 
 def normalizeSpace(inText):
@@ -114,6 +116,7 @@ def normalizeSpace(inText):
         return regexWhitespace.sub('\n', inText)
     else:
         return ''
+
 
 def extract(input_xml):
     """Process entire input XML document, firing on events"""
@@ -167,22 +170,24 @@ def extract(input_xml):
             continue
     return output
 
+
 def fixToken(inText):
-        """ Add space before and after dash and hyphen """
-        fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
-        fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
-        fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
-        return fixToken
+    """ Add space before and after dash and hyphen """
+    fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
+    fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
+    fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
+    return fixToken
+
 
 def normalize(inputText):
-# 2022-07-16 ebb: Adding newlines here is too late: it just inserts a newline into a token.
-# 2022-08-06 ebb: I have rewritten this series of operations using a normalized variable for legibility.
-# These need to run in sequence: the order of replacements matters.
-# The lower() at the end lowercases all the normalized strings to simplify the comparison.
+    # 2022-07-16 ebb: Adding newlines here is too late: it just inserts a newline into a token.
+    # 2022-08-06 ebb: I have rewritten this series of operations using a normalized variable for legibility.
+    # These need to run in sequence: the order of replacements matters.
+    # The lower() at the end lowercases all the normalized strings to simplify the comparison.
 
     normalized = RE_METAMARK.sub('', inputText)
- #  normalized = RE_MOD.sub('', normalized)
-# <mod> is in the ignore list like anchor, etc, so why are we presuming it's being read?
+    #  normalized = RE_MOD.sub('', normalized)
+    # <mod> is in the ignore list like anchor, etc, so why are we presuming it's being read?
     normalized = RE_GAP.sub('', normalized)
     normalized = RE_CLOSEQT.sub('"', normalized)
     normalized = RE_OPENQT.sub('"', normalized)
@@ -191,7 +196,7 @@ def normalize(inputText):
     normalized = RE_L.sub('<l/>', normalized)
     normalized = RE_LG.sub('<lg/>', normalized)
     normalized = RE_AB.sub('', normalized)
-# 2022-08-06 <ab> wraps headings or starts of letters in the print editions
+    # 2022-08-06 <ab> wraps headings or starts of letters in the print editions
     normalized = RE_PARASTART.sub('<p-start/>', normalized)
     normalized = RE_PARAEND.sub('<p-end/>', normalized)
     normalized = RE_sgaPSTART.sub('<p-start/>', normalized)
@@ -212,32 +217,33 @@ def normalize(inputText):
     normalized = RE_WORDMARKER.sub('', normalized)
     normalized = RE_HI.sub('', normalized)
 
-# 2022-08-08 ebb: Sometimes <hi> in the print editions seems irrelevant, in highlighting words at
-# chapter beginnings. However, it also sometimes indicates emphasis on a word.
-# Example: one or two little <hi sID="xxx"/>wives<hi eID="novel1_letter4_chapter6_div4_div6_p9_hi1"/>
-# On analysis of <hi> and <shi> in the print and SG-A editions, it is difficult to distinguish
-# meaningful highlights from conventional superscripts/underlining, so it seems best to ignore it in normalization,
-# or return to the source texts and add markup to distinguish passages giving emphasis.
-#  normalized = RE_SHI.sub('', normalized)
+    # 2022-08-08 ebb: Sometimes <hi> in the print editions seems irrelevant, in highlighting words at
+    # chapter beginnings. However, it also sometimes indicates emphasis on a word.
+    # Example: one or two little <hi sID="xxx"/>wives<hi eID="novel1_letter4_chapter6_div4_div6_p9_hi1"/>
+    # On analysis of <hi> and <shi> in the print and SG-A editions, it is difficult to distinguish
+    # meaningful highlights from conventional superscripts/underlining, so it seems best to ignore it in normalization,
+    # or return to the source texts and add markup to distinguish passages giving emphasis.
+    #  normalized = RE_SHI.sub('', normalized)
     normalized = RE_SHI_START.sub('', normalized)
     normalized = RE_SHI_END.sub('', normalized)
-# 2022-08-08 ebb: <shi> elements mark briefly highlighted words or passages in the S-GA edition.
-# The highlights themselves are not usually significant, but the text inside must be preserved for comparison.
-# Example: <shi rend="underline">should be</shi>
-# Previously, we were eliminating these passages entirely from the normalization, which was a serious error!
-# We have not been considering highlighting or emphasis <hi> or <shi> as a significant difference in the normalization.
+    # 2022-08-08 ebb: <shi> elements mark briefly highlighted words or passages in the S-GA edition.
+    # The highlights themselves are not usually significant, but the text inside must be preserved for comparison.
+    # Example: <shi rend="underline">should be</shi>
+    # Previously, we were eliminating these passages entirely from the normalization, which was a serious error!
+    # We have not been considering highlighting or emphasis <hi> or <shi> as a significant difference in the normalization.
     normalized = RE_MDEL.sub('', normalized)
-# 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
-# We do not think these are significant for comparison with the other editions, so we normalize them out.
+    # 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
+    # We do not think these are significant for comparison with the other editions, so we normalize them out.
     normalized = RE_LT_AMP.sub('and', normalized)
     normalized = RE_AMP.sub('and', normalized)
     normalized = RE_DOTDASH.sub('.', normalized)
     normalized = RE_HEAD.sub('', normalized)
-    normalized = RE_INCLUDE.sub('',  normalized)
+    normalized = RE_INCLUDE.sub('', normalized)
     normalized = RE_MULTI_RIGHTANGLE.sub('>', normalized)
     normalized = RE_MULTI_LEFTANGLE.sub('<', normalized)
     normalized = normalized.lower()
     return normalized
+
 
 def processToken(inputText):
     return {"t": inputText + ' ', "n": normalize(inputText)}
@@ -246,8 +252,11 @@ def processToken(inputText):
 def processWitness(inputWitness, id):
     return {'id': id, 'tokens': [processToken(token) for token in inputWitness]}
 
+
 def tokenize(inputFile):
     return regexLeadingBlankLine.sub('\n', regexBlankLine.sub('\n', extract(inputFile))).split('\n')
+
+
 # 2022-06-21 ebb and yxj: We think this function is what we need to modify:
 # the making of tokens is problematic because it is fusing text nodes with element tags.
 # Let's experiment with breaking tokens apart in other ways, maybe adding a step AFTER splitting on newlines
@@ -257,49 +266,46 @@ def tokenize(inputFile):
 # declare a list inlineAdd for <add>
 # add  '\n' before <add> nodes in extract function
 
-def tokenizeFiles(name, matchString):
-    with open(name, 'rb') as f1818file, \
-            open('../collChunk-14b/1823_fullFlat_' + matchString, 'rb') as f1823file, \
-            open('../collChunk-14b/Thomas_fullFlat_' + matchString, 'rb') as fThomasfile, \
-            open('../collChunk-14b/1831_fullFlat_' + matchString, 'rb') as f1831file, \
-            open('../collChunk-14b/msColl_' + matchString, 'rb') as fMSfile:
-        f1818_tokens = tokenize(f1818file)
-        f1823_tokens = tokenize(f1823file)
-        fThomas_tokens = tokenize(fThomasfile)
-        f1831_tokens = tokenize(f1831file)
-        fMS_tokens = tokenize(fMSfile)
-
-        f1818_tokenlist = processWitness(f1818_tokens, 'f1818')
-        fThomas_tokenlist = processWitness(fThomas_tokens, 'fThomas')
-        f1823_tokenlist = processWitness(f1823_tokens, 'f1823')
-        f1831_tokenlist = processWitness(f1831_tokens, 'f1831')
-        fMS_tokenlist = processWitness(fMS_tokens, 'fMS')
-
+def tokenizeFiles(f1818, f1823, fThomas, f1831, fMS):
+    with open(f1818, 'rb') as f1818file, \
+            open(f1823, 'rb') as f1823file, \
+            open(fThomas, 'rb') as fThomasfile, \
+            open(f1831, 'rb') as f1831file, \
+            open(fMS, 'rb') as fMSfile:
+        f1818_tokenlist = processWitness(tokenize(f1818file), 'f1818')
+        fThomas_tokenlist = processWitness(tokenize(f1823file), 'fThomas')
+        f1823_tokenlist = processWitness(tokenize(fThomasfile), 'f1823')
+        f1831_tokenlist = processWitness(tokenize(f1831file), 'f1831')
+        fMS_tokenlist = processWitness(tokenize(fMSfile), 'fMS')
         return [f1818_tokenlist, f1823_tokenlist, fThomas_tokenlist, f1831_tokenlist, fMS_tokenlist]
 
 
-
-
 def main():
-    for name in glob.glob('../collChunk-14b/1818_fullFlat_*'):
+    chunk = '14b'
+    for f1818 in glob.glob('../collChunk-' + chunk + '/1818_fullFlat_*'):
         try:
-            matchString = name.split("fullFlat_", 1)[1]
+            collChunk = f1818.split("fullFlat_", 1)[1]
             # ebb: above gets C30.xml for example
             # matchStr = matchString.split(".", 1)[0]
             # ebb: above strips off the file extension
-            tokenLists = tokenizeFiles(name, matchString)
+
+            f1823 = '../collChunk-' + chunk + '/1823_fullFlat_' + collChunk
+            fThomas = '../collChunk-' + chunk + '/Thomas_fullFlat_' + collChunk
+            f1831 = '../collChunk-' + chunk + '/1831_fullFlat_' + collChunk
+            fMS = '../collChunk-' + chunk + '/msColl_' + collChunk
+            tokenLists = tokenizeFiles(f1818, f1823, fThomas, f1831, fMS)
+            print(tokenLists)
             # 2022-11-14 yxj: For easier doing unit testing,
             # can we import 4 filenames instead of only 1 into tokenizeFiles()?
+
             collation_input = {"witnesses": tokenLists}
-            outputFile = open('../simpleOutputGamma/Collation_' + matchString, 'w', encoding='utf-8')
+            outputFile = open('../simpleOutputGamma/Collation_' + collChunk, 'w', encoding='utf-8')
             # table = collate(collation_input, output='tei', segmentation=True)
             # table = collate(collation_input, segmentation=True, layout='vertical')
             table = collate(collation_input, output='xml', segmentation=True)
-            # print(table)
-            # print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
+
+            print(table + '<!-- ' + nowStr + ' -->', file=outputFile)
 
         except IOError:
             pass
-# main()
-
-
+main()

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="postProcessing.xsl">
-<!--    <x:variable name="testFile" select="../simpleOutput/Collation_C14_b.xml"/>-->
+
+
+    <!-- yxj: Set a document-node() variable for an input file  -->
+    <x:variable name="infile" as="document-node()" href="../simpleOutput/Collation_C14_b.xml"/>
 
     <x:scenario label="Scenario for testing template with match 'app[count(descendant::rdg) = 1]">
-        <!--        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[count(descendant::rdg)=1]"/>-->
+        <!-- yxj: This code can input a xml file Collation_C14_b.xml to test, but I comment it because the output is a little bit long. -->
+        <!--                <x:context select="$infile//app[count(descendant::rdg)=1]"/>-->
+
+        <!-- the input content to test -->
         <x:context>
             <app>
                 <rdgGrp n="['never']">
@@ -20,7 +26,15 @@
                 </rdgGrp>
             </app>
         </x:context>
-        <x:expect label="Not yet implemented" select="'Not yet implemented'">
+
+        <!-- yxj: This is the template we want to test.
+        We should notice that for testing a specific template, we need to set a name for the template in xslt file,
+        so that we can call it here.
+        -->
+        <x:call template="mergeLoner"/>
+
+        <!-- yxj: the expect result -->
+        <x:expect label="merge the loner rdg into the next app">
             <app>
                 <rdgGrp n="['never']">
                     <rdg wit="f1818">never </rdg>
@@ -35,37 +49,87 @@
         </x:expect>
     </x:scenario>
 
-<!--    <x:scenario
+    <x:scenario
         label="Scenario for testing template with match 'app[preceding-sibling::app[1][count(descendant::rdg) = 1]]">
-        <!-\-        <x:context href="../simpleOutput/Collation_C14_b.xml" select="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]"/>-\->
+        <!--        <x:context href="../simpleOutput/Collation_C14_b.xml"/>-->
         <x:context>
             <app>
-                <rdgGrp n="['never']">
-                    <rdg wit="f1818">never </rdg>
-                    <rdg wit="f1823">never </rdg>
-                    <rdg wit="fThomas">never </rdg>
-                    <rdg wit="f1831">never </rdg>
-                    <rdg wit="fMS">&lt;lb n=&quot;c56-0103__main__19&quot;/&gt;never </rdg>
+                <rdgGrp n="['&lt;delstart/&gt;of&lt;delend/&gt;', 'of']">
+                    <rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot;
+                        xml:id=&quot;c56-0107__main__d5e22344&quot;&gt;of&lt;/del&gt; of </rdg>
+                </rdgGrp>
+            </app>
+            <app>
+                <rdgGrp n="['others']">
+                    <rdg wit="f1818">others </rdg>
+                    <rdg wit="f1823">others </rdg>
+                    <rdg wit="fThomas">others </rdg>
+                    <rdg wit="f1831">others </rdg>
+                    <rdg wit="fMS">others </rdg>
+                </rdgGrp>
+            </app>
+            <app>
+                <rdgGrp n="['so.&quot;']">
+                    <rdg wit="f1818">so.” </rdg>
+                    <rdg wit="f1823">so.” </rdg>
+                    <rdg wit="fThomas">so.” </rdg>
+                    <rdg wit="f1831">so.” </rdg>
+                </rdgGrp>
+                <rdgGrp n="['so.']">
+                    <rdg wit="fMS">so. </rdg>
                 </rdgGrp>
             </app>
         </x:context>
+
+        <x:call template="removeApp"/>
+
+        <!-- yxj: This template should not be tested alone, because whatever we input, the actual result is always empty. 
+        That means we cannot ensure if this template exactly remove the original app modified. 
+        I will try nested scenario to test it later.
+        -->
+        <x:expect label="Remove the original app modified"/>
+
+    </x:scenario>
+
+    <!-- yxj: These tests refers to the parameter, and the terminal always said my parameter $loner is unreadable whatever I input.
+        I will continue to work on these later. 
+    -->
+    <!--  
+    <x:scenario label="Scenario for testing template with match 'app' and mode 'restructure'">
+<!-\-        <x:context select="$infile"/>-\->
+        <x:context mode="restructure">
+            <app>
+                <rdgGrp n="['']">
+                    <rdg wit="fMS">&lt;sga-add eID=&quot;c56-0104__main__d5e21929&quot;/&gt; </rdg>
+                </rdgGrp>
+            </app>
+            <app>
+                <rdgGrp n="['with', 'my', 'aunt', 'and', 'my']">
+                    <rdg wit="f1818">with my aunt and my </rdg>
+                    <rdg wit="f1823">with my aunt and my </rdg>
+                    <rdg wit="fThomas">with my aunt and my </rdg>
+                    <rdg wit="fMS">with my aunt &amp; my </rdg>
+                </rdgGrp>
+            </app>
+        </x:context>
+
+        <x:call template="restructureApp">
+            <x:param name="lonerText" select="'app'" tunnel="yes"/>
+            <x:param name="lonerWit" select="'no_value'" tunnel="yes"/>
+        </x:call>
+
         <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
     </x:scenario>
 
-    <x:scenario label="Scenario for testing template with match 'app' and mode 'restructure'">
-        <x:context mode="restructure">
-            <x:param name="loner" select="'no_value'" tunnel="yes"/>
-            <x:param name="norm" select="'no_value'" tunnel="yes"/>
-        </x:context>
-        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
-    </x:scenario>
 
     <x:scenario label="Scenario for testing template with match 'rdgGrp' and mode 'restructure'">
         <x:context mode="restructure">
             <x:param name="loner" select="'no_value'" tunnel="yes"/>
         </x:context>
+        <x:call template="restructure-rdgGrp"></x:call>
         <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
     </x:scenario>
+    
 
     <x:scenario label="Scenario for testing template with match 'rdgGrp' and mode 'emptyNormalize'">
         <x:context mode="emptyNormalize">
@@ -74,14 +138,41 @@
         </x:context>
         <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
     </x:scenario>
+-->
 
+
+<!-- To test the following templates, we need to look out \t, \n, \s in expected result, because xspec is sensitive to these. -->
     <x:scenario label="Scenario for testing template with match 'rdg/text()">
-        <x:context href="../simpleOutput/Collation_C14_b.xml" select="rdg/text()"/>
-        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+        <x:context>
+            <app>
+                <rdgGrp n="['&lt;delstart/&gt;and&lt;delend/&gt;']">
+                    <rdg wit="fMS">&lt;del rend=&quot;strikethrough&quot;xml:id=&quot;c56-0107__main__d5e22411&quot;&gt;&amp;amp;&lt;/del&gt;</rdg>
+                </rdgGrp>
+            </app>
+        </x:context>
+        <x:call template="textAmpFix"/>
+         <x:expect label="replace &amp;amp; to &amp; for text()">&lt;del rend=&quot;strikethrough&quot;xml:id=&quot;c56-0107__main__d5e22411&quot;&gt;&amp;&lt;/del&gt;</x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'rdg/text() again">
+        <x:context>
+            <rdgGrp n="['', '&lt;delstart/&gt;andquot;&lt;delend/&gt;', '&quot;i']">
+                <rdg wit="fMS">&lt;lb n=&quot;c56-0105__main__17&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0105__main__d5e22055&quot;&gt;&amp;quot;&lt;/del&gt; &quot;I</rdg>
+            </rdgGrp>
+        </x:context>
+        <x:call template="textAmpFix"/>
+        <x:expect label="replace &amp;quot; to &quot; for text()">&lt;lb n=&quot;c56-0105__main__17&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0105__main__d5e22055&quot;&gt;&quot;&lt;/del&gt; &quot;I</x:expect>
     </x:scenario>
 
     <x:scenario label="Scenario for testing template with match 'rdgGrp">
-        <x:context href="../simpleOutput/Collation_C14_b.xml" select="rdgGrp"/>
-        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
-    </x:scenario>-->
+        <x:context>
+            <rdgGrp n="['', '&lt;delstart/&gt;andquot;&lt;delend/&gt;', '&quot;i']">
+                <rdg wit="fMS">&lt;lb n=&quot;c56-0105__main__17&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0105__main__d5e22055&quot;&gt;&amp;quot;&lt;/del&gt; &quot;I </rdg>
+            </rdgGrp>
+        </x:context>
+        <x:call template="normAmpFix"/>
+        <x:expect label="Not yet implemented"><rdgGrp n="['', '&lt;delstart/&gt;&quot;&lt;delend/&gt;', '&quot;i']">
+            <rdg wit="fMS">&lt;lb n=&quot;c56-0105__main__17&quot;/&gt; &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0105__main__d5e22055&quot;&gt;&quot;&lt;/del&gt; &quot;I </rdg>
+        </rdgGrp></x:expect>
+    </x:scenario>
 </x:description>
