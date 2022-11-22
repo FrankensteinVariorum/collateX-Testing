@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    xmlns:cx="http://interedition.eu/collatex/ns/1.0" xmlns:fv="http://fv"
+    xmlns:cx="http://interedition.eu/collatex/ns/1.0"
     exclude-result-prefixes="xs math" version="3.0">
     <!--2021-09-24 ebb with wdjacca and amoebabyte: We are writing XSLT to try to move
     solitary apps reliably into their neighboring app elements representing all witnesses. 
@@ -68,12 +68,9 @@
             </xsl:apply-templates>
             <xsl:choose>
                 <xsl:when test="$norm ! string-length() &gt; 4">
-
                     <xsl:variable name="TokenSquished">
-
                         <xsl:value-of
                             select="$norm ! string() || descendant::rdgGrp[descendant::rdg[@wit = $loner/@wit]]/@n"/>
-
                     </xsl:variable>
                     <xsl:variable name="newToken">
                         <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
@@ -122,7 +119,7 @@
         </rdgGrp>
     </xsl:template>
 
-    <xsl:template match="rdgGrp" mode="emptyNormalize">
+    <xsl:template match="rdgGrp" mode="emptyNormalize" name="emptyNormalize">
         <xsl:param name="lonerText" tunnel="yes"/>
         <xsl:param name="lonerWit" tunnel="yes"/>
         <rdgGrp n="{@n}">
