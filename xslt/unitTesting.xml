@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <app>
+        <rdgGrp n="['']">
+            <rdg wit="fMS">&lt;sga-add eID=&quot;c56-0104__main__d5e21929&quot;/&gt;
+            </rdg>
+        </rdgGrp>
+    </app>
+    <app>
+        <rdgGrp n="['with', 'my', 'aunt', 'and', 'my']">
+            <rdg wit="f1818">with my aunt and my </rdg>
+            <rdg wit="f1823">with my aunt and my </rdg>
+            <rdg wit="fThomas">with my aunt and my </rdg>
+            <rdg wit="fMS">with my aunt &amp; my </rdg>
+        </rdgGrp>
+    </app>
+</xml>
