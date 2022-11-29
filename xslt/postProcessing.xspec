@@ -34,12 +34,16 @@
 
         <!-- yxj: the expect result -->
         <x:expect label="merge the loner rdg into the next app">
-            <app>
+            <app xmlns:cx="http://interedition.eu/collatex/ns/1.0">
                 <rdgGrp n="['never']">
-                    <rdg wit="f1818">never </rdg>
-                    <rdg wit="f1823">never </rdg>
-                    <rdg wit="fThomas">never </rdg>
-                    <rdg wit="f1831">never </rdg>
+                    <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                        wit="f1818">never </rdg>
+                    <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                        wit="f1823">never </rdg>
+                    <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                        wit="fThomas">never </rdg>
+                    <rdg xmlns:x="http://www.jenitennison.com/xslt/xspec"
+                        wit="f1831">never </rdg>
                 </rdgGrp>
                 <rdgGrp n="['never', 'never']">
                     <rdg wit="fMS">never &lt;lb n="c56-0103__main__19"/&gt;never </rdg>
@@ -93,11 +97,11 @@
     -->
     <x:scenario label="restructure">
         <x:variable name="loner" as="node()"
-            select="$infile/descendant::rdgGrp[not(preceding::app[1][count(rdgGrp) = 1 and rdgGrp/@n ! string-length() = 4])]"/>
+            select="$infile//app[count(descendant::rdg) = 1][1]"/>
         <x:scenario label="Scenario for testing template with match 'app' and mode 'restructure'">
             <x:context select="$infile"/>
             <x:call template="restructureApp">
-                <x:param name="loner" select="$loner/rdg" tunnel="yes"/>
+                <x:param name="loner" select="$loner//rdg" tunnel="yes"/>
                 <x:param name="norm" select="$loner/@n" tunnel="yes"/>
             </x:call>
             <x:expect label="restructure app" select="'Not yet implemented'"/>
