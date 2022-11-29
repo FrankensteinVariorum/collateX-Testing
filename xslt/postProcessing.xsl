@@ -3,19 +3,18 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:cx="http://interedition.eu/collatex/ns/1.0"
-    exclude-result-prefixes="xs math" version="3.0">
+    xmlns:fv="yeah"
+    exclude-result-prefixes="xs math fv" version="3.0">
     <!--2021-09-24 ebb with wdjacca and amoebabyte: We are writing XSLT to try to move
     solitary apps reliably into their neighboring app elements representing all witnesses. 
     -->
     <xsl:mode on-no-match="shallow-copy"/>
 
-    <!-- ********************************************************************************************  
-    yxj: Since using function will add namespace in the output file, I comment it.
-    
+
     <xsl:function name="fv:ampFix"  as="xs:string">
         <xsl:param name="text" as="item()"/> 
         <xsl:value-of select="$text ! replace(.,'&amp;amp;','&amp;') ! replace(.,'&amp;quot;', '&#34;') ! replace(.,'andquot;', '&#34;')"/>
-    </xsl:function> -->
+    </xsl:function>
 
     <!-- ********************************************************************************************
         LONER DELS: These templates deal with collateX output of app elements 
@@ -77,14 +76,14 @@
                     </xsl:variable>
                     <xsl:variable name="newNorm">
                         <xsl:value-of
-                            select="replace(replace($newToken,'andquot;', '&#34;'),'&amp;','and')"/>
+                            select="fv:ampFix($newToken)"/>
                     </xsl:variable>
                     <rdgGrp n="{$newNorm}">
                         <rdg wit="{$loner/@wit}">
                             <xsl:value-of
-                                select="replace(replace($loner/text(),'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
+                                select="fv:ampFix($loner/text())"/>
                             <xsl:value-of
-                                select="replace(descendant::rdg[@wit = $loner/@wit], '&amp;quot;', '&#34;') ! replace(., '&amp;amp;', '&amp;')"
+                                select="fv:ampFix(descendant::rdg[@wit = $loner/@wit])"
                             />
                         </rdg>
                         <!-- ebb: LET'S MAKE THIS AMP REPLACEMENT A FUNCTION ALREADY!  -->
@@ -129,7 +128,7 @@
             <rdg wit="{$lonerWit}">
                 <xsl:value-of select="$lonerText"/>
                 <xsl:value-of
-                    select="replace(current()/rdg[@wit = $lonerWit], 'andquot;', '&#34;') ! replace(., '&amp;', 'and')"
+                    select="fv:ampFix(current()/rdg[@wit = $lonerWit])"
                 />
             </rdg>
         </rdgGrp>
@@ -141,10 +140,10 @@
     We made the same alterations in the restructured app processing above. It may be a good idea to move this processing to a function. 
     -->
     <xsl:template match="rdg/text()" name="textAmpFix">
-        <xsl:value-of select="replace(replace(.,'&amp;quot;', '&#34;'),'&amp;amp;','&amp;')"/>
+        <xsl:value-of select="fv:ampFix(.)"/>
     </xsl:template>
     <xsl:template match="rdgGrp" name="normAmpFix">
-        <rdgGrp n="{replace(replace(@n,'andquot;', '&#34;'),'&amp;','and')}">
+        <rdgGrp n="{fv:ampFix(@n)}">
             <xsl:apply-templates/>
         </rdgGrp>
     </xsl:template>
