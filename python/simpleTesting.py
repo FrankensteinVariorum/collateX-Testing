@@ -132,15 +132,15 @@ def extract(input_xml):
         #     doc.expandNode(node)
         #     output += node.toxml()
         if event == pulldom.START_ELEMENT and node.localName in inlineVariationEvent:
-            # doc.expandNode(node)
+            doc.expandNode(node)
             # 2022-10-25 ebb: The line above may be sending the characters inside the node to be processed twice,
             # resulting in the patterns of `&amp;&amp; for a single &amp; or &amp;&amp;quot; and andquot
             # output += '\n' + node.toxml() + '\n'
-            # print(node.toxml());
-            output += '\n' + regexEmptyTag.sub('>', node.toxml())
+            # print(node.toxml()); Today, we cannot find a good pre-processing solution, but I hypothesize that
+            # we might run this node.toxml() output through a sub function to do the equivalent of
+            # the XSLT replace() we're now doing to handle this problem in post-processing.
+            output += '\n' + node.toxml() + '\n'
             # output += '\n' + node.toxml()
-        elif event == pulldom.END_ELEMENT and node.localName in inlineVariationEvent:
-            output += '</' + node.localName + '>' + '\n'
         # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
         # We COULD set white spaces around these like this ' ' + node.toxml() + ' '
         # but what seems to happen is that the white spaces get added to tokens; they aren't used to
@@ -273,8 +273,8 @@ def tokenizeFiles(f1818, f1823, fThomas, f1831, fMS):
             open(f1831, 'rb') as f1831file, \
             open(fMS, 'rb') as fMSfile:
         f1818_tokenlist = processWitness(tokenize(f1818file), 'f1818')
-        fThomas_tokenlist = processWitness(tokenize(f1823file), 'fThomas')
-        f1823_tokenlist = processWitness(tokenize(fThomasfile), 'f1823')
+        fThomas_tokenlist = processWitness(tokenize(fThomasfile), 'fThomas')
+        f1823_tokenlist = processWitness(tokenize(f1823file), 'f1823')
         f1831_tokenlist = processWitness(tokenize(f1831file), 'f1831')
         fMS_tokenlist = processWitness(tokenize(fMSfile), 'fMS')
         return [f1818_tokenlist, f1823_tokenlist, fThomas_tokenlist, f1831_tokenlist, fMS_tokenlist]
