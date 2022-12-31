@@ -13,7 +13,7 @@
             
        
             <xsl:result-document
-                href="../collChunk14-reassembled/{$matchPart}.xml"
+                href="../collChunk14RA/{$matchPart}RA.xml"
                 method="xml" indent="yes">
                 <xml>
                    <xsl:apply-templates select="$currFile//xml/node()"/>
