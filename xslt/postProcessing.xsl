@@ -5,28 +5,34 @@
     xmlns:cx="http://interedition.eu/collatex/ns/1.0"
     xmlns:fv="yeah"
     exclude-result-prefixes="xs math fv" version="3.0">
-    <!-- 
-        
-        2021-09-24 ebb with wdjacca and amoebabyte: We are writing XSLT to try to move
-    solitary apps reliably into their neighboring app elements representing all witnesses. 
+    <!-- ********************************************************************************************
+             POST-PROCESSING XSLT FOR THE FRANKENSTEIN VARIORUM: 
+       This stylesheet corrects common alignment problems in the output of the Python collation script. 
+       ebb began work on this in Fall of 2021 with wdjacca and amoebabyte and continued with yxj in 2022.
     
-    2023-01-01 ebb: A summary of high-level decisions we have made for post-processing:
-    * We are post-processing 
-        * "Orphan apps" that contain a single rdGrp and a single witness
-        * Deleted passages that are aligned in apps with empty normalized tokens, and where the very next app
-        does not contain the witness with a deleted passage.
-    Both of these special cases are aligned with the next following app. 
+    2023-01-01 ebb: Here is a  high-level summary of our post-processing algorithm:
+    We are post-processing 
+        1. "Orphan apps" that contain a single rdGrp and a single witness
+        2. Deleted passages that are aligned in apps with empty normalized tokens, and where the very next app
+        does not contain the witness with a deleted passage. Both of these special cases are aligned with the next following app. 
+        
         * In the case of the deleted passages, we wanted to check whether the next following-sibling app contains some of the content, but
-        this is tricky. Often it does (think of simple deleted letters or generic like "and", etc. It was better to test for
-        the specific shape of this alignment problem:
-            * A witness with a deleted passage is aligned with empty witnesses and 
+        this is tricky and raised problems because it happens far too frequently. (Think of simple deleted letters or generic like "and", etc. Just because those
+        characters or words appear in the next app doesn't mean they are relevant for the alignment, and quite often it was better to leave the deleted passage in its
+        original app.)
+        
+        Instead we needed to recognize the real need to move a deleted passage, and it was better to test for this specific alignment problem:
+            * A witness with a deleted passage is aligned with emtpy-content witnesses (aligned against meaningless markup), and 
             * the very next following-sibling app contains all witnesses except the one with the deletion. This limits changes that warp
         the alignment. 
+        This case captures the need to move: If we left the deleted passage in its original app, it would be comparable with empty space in the Variorum reader, 
+        not aligned with any meaningful content.
+        
     * To simplify processing, all changes are moved by default from one app to the very next following-sibling app. 
     This stylesheet does not move content backwards to the next preceding-sibling. This seems to work to improve alignments based on
     how collateX is distributing variants in this project: empty passages (representing alignments of markup tokens) tend to precede collation of meaningful variants
     
-    -->
+    ******************************************************************************************** -->
     <xsl:mode on-no-match="shallow-copy"/>
     
     <!-- 2023-01-01 ebb: This is now set to post-process a collection of output files from the Python collation script. 
