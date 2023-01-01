@@ -16,7 +16,7 @@
        <xsl:for-each select="$collection">
            <xsl:variable name="filename" as="xs:string" select="current() ! base-uri() ! tokenize(., '/')[last()]"/>
            <xsl:result-document
-               href="../postprocOutputDelta/{$filename}"
+               href="../postprocOutputEpsilon/{$filename}"
                method="xml" indent="yes">
            <xsl:apply-templates/>
            </xsl:result-document>
@@ -46,22 +46,37 @@
             </xsl:apply-templates>
         </xsl:if>
     </xsl:template>
-    <!-- 2022-12-31 ebb: Below is an attempt to migrate solitary deletions to the next app. It's generating a lot of errors right now. -->
-  <!--  <xsl:template match="app[rdgGrp[@n ! contains(., 'delstart')]/rdg => count() = 1 and count(descendant::rdg) gt 1]" name="mergeOutofPlace">
+    <!-- 2022-01-01 ebb: Below is an attempt to migrate solitary deletions to the next app. It is working, but sometimes too well.
+     1. It moves some del passages when they are parallel to current app contents: we need to stop those moves.
+     2. We need to remove the following app[1] after it has been restructured. 
+     
+    -->
+    <xsl:template match="app[rdgGrp[@n ! contains(., 'delstart')]/rdg => count() = 1][count(descendant::rdg) gt 1]" name="mergeOutofPlace">
         <xsl:variable name="currentApp" as="element()" select="current()"/>
-     <xsl:variable name="testMatches" as="xs:string+" select="rdgGrp/@n[contains(., 'delstart')] ! substring-after(., '&lt;delstart/&gt;') ! substring-before(., '&lt;delend/&gt;')"/>
-      <xsl:for-each select="$testMatches">
-          <xsl:if test="$currentApp/following-sibling::app[1]/rdgGrp/@n[contains(., current())]">
-          <xsl:apply-templates select="$currentApp/following-sibling::app[1]" mode="restructure">
-              <xsl:with-param as="node()" name="loner" select="$currentApp/rdgGrp[@n[contains(., current()) and contains(., 'delstart')]]/rdg" tunnel="yes"/>
-              <xsl:with-param as="attribute()" name="norm" select="$currentApp/rdgGrp/@n[contains(., current()) and contains(., 'delstart')]" tunnel="yes"/>
+       <!-- <xsl:variable name="testMatches" as="xs:string+" select="rdgGrp/@n[contains(., 'delstart')] ! substring-after(., '&lt;delstart/&gt;') ! substring-before(., '&lt;delend/&gt;')"/>-->
+      
+         <xsl:choose> 
+             <xsl:when test="not($currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/rdg/@wit = following-sibling::app[1]//rdg/@wit)">
+                 <xsl:apply-templates select="$currentApp" mode="reduceCurrentApp">
+                     <xsl:with-param name="witToRemove" as="attribute()" select="rdgGrp[@n ! contains(., 'delstart')]/rdg/@wit" tunnel="yes"/>
+                 </xsl:apply-templates>
+                 <xsl:apply-templates select="($currentApp/following-sibling::app)[1]" mode="restructure">
+                     <xsl:with-param as="node()" name="loner" select="$currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/rdg" tunnel="yes"/>
+                     <xsl:with-param as="attribute()" name="norm" select="$currentApp/rdgGrp[rdg => count() = 1]/@n[contains(., 'delstart')]" tunnel="yes"/>
           </xsl:apply-templates>
-          <xsl:apply-templates select="$currentApp/rdgGrp[@n ! contains(., current())]" mode="destroy"/>
-          
-      </xsl:if>
-      </xsl:for-each>
+            </xsl:when>   
+         <xsl:otherwise>
+             <xsl:apply-templates mode="copyOriginal" select="$currentApp"/>
+         </xsl:otherwise>
+       </xsl:choose>
   
-    </xsl:template>-->
+    </xsl:template>
+    
+    <xsl:template match="app" mode="copyOriginal">
+       <app> 
+           <xsl:apply-templates/>
+       </app>
+    </xsl:template>
 
     <!-- **************************************************************************
     DESTRUCTION MODE: Destroy the original app or rdgGrp elements that are being modified by
@@ -69,10 +84,23 @@
     ****************************************************************************
     -->
     <xsl:template match="app[preceding-sibling::app[1][count(descendant::rdg) = 1]]" name="removeApp"/>
-    <!-- 2022-10-11 ebb and yxj: We needed to remove the predicate checking for the presence of &lt;del on this template
+    <!-- The template above prevents the old unrestructured app from being output with the new one.
+        2022-10-11 ebb and yxj: We needed to remove the predicate checking for the presence of &lt;del on this template
     Removed this: [contains(descendant::rdg, '&lt;del')]  
     -->
-  <!--  <xsl:template match="rdgGrp" mode="destroy"/>-->
+    
+    <xsl:template match="app" mode="reduceCurrentApp">
+      <xsl:param name="witToRemove" tunnel="yes"/>
+        <app>
+           <xsl:apply-templates mode="destroy" select="rdgGrp[rdg/@wit = $witToRemove]"/>
+                
+           <xsl:apply-templates select="rdgGrp[not(rdg/@wit = $witToRemove)]"/>
+            
+            
+        </app>
+    </xsl:template>
+    
+    <xsl:template match="rdgGrp" mode="destroy"/>
 
     <xsl:template match="app" mode="restructure" name="restructureApp">
         <!-- 2022-10-11 yxj ebb: Let's try creating a conditional processing rule here: 
@@ -96,7 +124,7 @@
                 <xsl:with-param as="node()" name="loner" tunnel="yes" select="$loner"/>
             </xsl:apply-templates>
             <xsl:choose>
-                <xsl:when test="$norm ! string-length() &gt; 4">
+                <xsl:when test="$norm ! string-length() &gt; 4 and descendant::rdg/@wit = $loner/@wit">
                     <xsl:variable name="TokenSquished">
                         <xsl:value-of
                             select="$norm ! string() || descendant::rdgGrp[descendant::rdg[@wit = $loner/@wit]]/@n"/>
@@ -116,10 +144,18 @@
                                 select="fv:ampFix(descendant::rdg[@wit = $loner/@wit])"
                             />
                         </rdg>
-                        <!-- ebb: LET'S MAKE THIS AMP REPLACEMENT A FUNCTION ALREADY!  -->
                     </rdgGrp>
                 </xsl:when>
-                <xsl:otherwise>
+                <xsl:when test="not(descendant::rdg/@wit = $loner/@wit)"><!--2023-01-01 ebb: This should handle delstart cases not represented in following apps-->
+                    <rdgGrp n="{fv:ampFix($norm)}">
+                        <rdg wit="{$loner/@wit}">
+                            <xsl:value-of
+                                select="fv:ampFix($loner/text())"/>
+                        </rdg>
+                    </rdgGrp>
+                    
+                </xsl:when>
+                <xsl:otherwise><!-- This handles an empty loner witness and doesn't disturb the rdgGrp structure. -->
                     <xsl:apply-templates select="rdgGrp" mode="emptyNormalize">
                         <xsl:with-param as="text()" name="lonerText" tunnel="yes"
                             select="$loner/text()"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
    <milestone unit="chapter" type="start" n="7"/>
-   <head sID="novel1_letter4_chapter7_div4_div7_head1"/>CHAPTER VII.<head eID="novel1_letter4_chapter7_div4_div7_head1"/>
+   <head sID="novel1_letter4_chapter7_div4_div7_head1"/><longToken>CHAPTER VII.</longToken><head eID="novel1_letter4_chapter7_div4_div7_head1"/>
    <p sID="novel1_letter4_chapter7_div4_div7_p1"/>W<hi sID="novel1_letter4_chapter7_div4_div7_p1_hi1"/>E<hi eID="novel1_letter4_chapter7_div4_div7_p1_hi1"/> passed a few sad hours, until eleven o’clock, when the
             trial was to commence. My father and the rest of the family being obliged to attend as
             witnesses, I accompanied them to the court. During the whole of this wretched mockery of
@@ -24,8 +24,7 @@
             yet her tranquillity was evidently constrained; and as her confusion had before been
             adduced as a proof of her guilt, she worked up her mind to an appearance of courage.
             When she entered the court, she threw her eyes round it, and quickly discovered where we
-            were seated. A tear seemed to dim her eye when she saw us; but she <del rend="strikethrough">quickly</del>quickly
-   <add place="margin">instantly</add>instantly recovered
+            were seated. A tear seemed to dim her eye when she saw us; but she quickly recovered
             herself, and a look of sorrowful affection seemed to attest her utter guiltlessness.<p eID="novel1_letter4_chapter7_div4_div7_p2"/>
    <p sID="novel1_letter4_chapter7_div4_div7_p3"/>The trial began; and after the advocate against her had stated the charge, several
             witnesses were called. Several strange facts combined against her, which might have
@@ -34,7 +33,9 @@
             committed, and towards morning had been perceived by a market-woman not far from the
             spot where the body of the murdered child had been afterwards found. The woman asked her
             what she did there; but she looked very strangely, and only returned a confused and
-            unintelligible answer. She returned to the house about eight o’clock; and when <add place="margin">some </add>some one inquired where she had passed the night, she replied, that she had been looking for the child, and demanded earnestly, if any thing had been heard concerning him. When shewn
+            unintelligible answer. She returned to the house about eight o’clock; and when one
+            inquired where she had passed the night, she replied, that she had been looking for the
+            child, and demanded earnestly, if any thing had been heard concerning him. When shewn
             the body, she fell into violent hysterics, and kept her bed for several days. The
             picture was then produced, which the servant had found in her pocket; and when
             Elizabeth, in <pb xml:id="F1818_v1_176" n="164"/>a faltering voice, proved that it
@@ -54,8 +55,7 @@
             village situated at about a league from Geneva. On her return, at about nine o’clock,
             she met a man, who asked her if she had seen any thing of the child who was lost. She
             was alarmed by this account, and passed several hours in looking for him, when the gates
-            of Geneva were shut, and she was forced to remain <del rend="strikethrough">several hours</del>several hours
-   <add place="margin">the greater part</add>the greater part of the night in a barn
+            of Geneva were shut, and she was forced to remain several hours of the night in a barn
             belonging to a cottage, being unwilling to call up the inhabitants, to whom she was well
             known. Unable to rest or sleep, she quitted her asylum early, that she might again
             endeavour to find my brother. If she had gone near the spot <pb xml:id="F1818_v1_178" n="166"/>where his body lay, it was without her knowledge. That she had been
@@ -71,7 +71,7 @@
             the jewel, to part with it again so soon?<p eID="novel1_letter4_chapter7_div4_div7_p7"/>
    <p sID="novel1_letter4_chapter7_div4_div7_p8"/>“I commit my cause to the justice of my judges, yet I see no room for hope. I beg
             permission to have a few witnesses examined concerning my character; and if their
-            testimony shall not overweigh my supposed guilt, I must be condemned, although I <del rend="strikethrough">would</del>would
+            testimony shall not overweigh my supposed guilt, I must be condemned, although I would
             pledge my salvation on my innocence.”<p eID="novel1_letter4_chapter7_div4_div7_p8"/>
    <p sID="novel1_letter4_chapter7_div4_div7_p9"/>Several witnesses were called, who had known her for many years, and they spoke well of
             her; but fear, and hatred of the crime of which they supposed her guilty, rendered them

@@ -281,7 +281,7 @@ def tokenizeFiles(f1818, f1823, fThomas, f1831, fMS):
 
 
 def main():
-    chunks = ['13a', '13b', '14a', '14b', '13', '14', '13RA', '14RA']
+    chunks = ['13RA', '14RA']
     for chunk in chunks:
         for f1818 in glob.glob('../collChunk-' + chunk + '/1818_fullFlat_*'):
             try:

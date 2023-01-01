@@ -18,8 +18,8 @@
    <shi rend="sup">
          </shi>
    <anchor xml:id="c56-0073.05"/>
-   <lb n="c56-0073__main__2"/>On my return I found the following letter <lb n="c56-0073__main__3"/>from my father. <lb n="c56-0073__main__4"/>To V.–Frankenstein <lb n="c56-0073__main__5"/>Geneva – June 2<shi rend="sup">
-            d</shi>– 17— <lb n="c56-0073__main__6"/>My dear Victor
+   <lb n="c56-0073__main__2"/>On my return I found the following letter <lb n="c56-0073__main__3"/>from my father. <lb n="c56-0073__main__4"/><longToken>To V.–Frankenstein <lb n="c56-0073__main__5"/>Geneva – June 2<shi rend="sup">
+            d</shi>– 17—</longToken> <lb n="c56-0073__main__6"/><longToken>My dear Victor</longToken>
    <milestone unit="tei:p-START"/>
    <lb n="c56-0073__main__7"/>You have probably waited <w ana="start"/>impati<lb n="c56-0073__main__8"/>ently<w ana="end"/>
    <del rend="strikethrough" xml:id="c56-0073__main__d5e15283">the</del> for <mod sID="c56-0073__main__d5e15286"/>
