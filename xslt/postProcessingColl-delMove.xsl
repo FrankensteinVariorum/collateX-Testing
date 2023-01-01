@@ -54,9 +54,16 @@
     <xsl:template match="app[rdgGrp[@n ! contains(., 'delstart')]/rdg => count() = 1][count(descendant::rdg) gt 1]" name="mergeOutofPlace">
         <xsl:variable name="currentApp" as="element()" select="current()"/>
        <!-- <xsl:variable name="testMatches" as="xs:string+" select="rdgGrp/@n[contains(., 'delstart')] ! substring-after(., '&lt;delstart/&gt;') ! substring-before(., '&lt;delend/&gt;')"/>-->
-      
-         <xsl:choose> 
-             <xsl:when test="not($currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/rdg/@wit = following-sibling::app[1]//rdg/@wit)">
+        <xsl:variable name="delPassageAtt" as="attribute()" select="$currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/@n"/>
+        <xsl:variable name="otherRdgGrpAtts" as="attribute()+" select="$currentApp/rdgGrp[not(contains(@n, 'delstart'))]/@n"/>
+        <xsl:variable name="booleanTest" as="xs:boolean+">
+            <xsl:for-each select="$otherRdgGrpAtts">
+                <xsl:value-of select="$delPassageAtt ! contains(., current() ! string())"/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:choose> 
+             <xsl:when test="not($currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/rdg/@wit = following-sibling::app[1]//rdg/@wit)
+                 and $booleanTest => distinct-values() = false()">
                  <xsl:apply-templates select="$currentApp" mode="reduceCurrentApp">
                      <xsl:with-param name="witToRemove" as="attribute()" select="rdgGrp[@n ! contains(., 'delstart')]/rdg/@wit" tunnel="yes"/>
                  </xsl:apply-templates>
