@@ -118,15 +118,6 @@
       </rdgGrp>
    </app>
    <app>
-      <rdgGrp n="['   &#34;to v. frankenstein.']">
-         <rdg wit="f1818">   &lt;hi sID="novel1_letter4_chapter6_div4_div6_ab1_hi1"/&gt;”To&lt;hi eID="novel1_letter4_chapter6_div4_div6_ab1_hi1"/&gt; V. F&lt;hi sID="novel1_letter4_chapter6_div4_div6_ab1_hi2"/&gt;RANKENSTEIN&lt;hi eID="novel1_letter4_chapter6_div4_div6_ab1_hi2"/&gt;.&lt;ab eID="novel1_letter4_chapter6_div4_div6_ab1"/&gt;&lt;/longToken&gt; </rdg>
-         <rdg wit="f1823">   &lt;hi sID="novel1_letter4_chapter6_div4_div6_ab1_hi1"/&gt;”To&lt;hi eID="novel1_letter4_chapter6_div4_div6_ab1_hi1"/&gt; V. F&lt;hi sID="novel1_letter4_chapter6_div4_div6_ab1_hi2"/&gt;RANKENSTEIN&lt;hi eID="novel1_letter4_chapter6_div4_div6_ab1_hi2"/&gt;.&lt;ab eID="novel1_letter4_chapter6_div4_div6_ab1"/&gt;&lt;/longToken&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['to v.frankenstein geneva – june 2', '            d– 17—']">
-         <rdg wit="fMS">&lt;longToken&gt;To V.–Frankenstein &lt;lb n="c56-0073__main__5"/&gt;Geneva – June 2&lt;shi rend="sup"&gt;             d&lt;/shi&gt;– 17—&lt;/longToken&gt; </rdg>
-      </rdgGrp>
-   </app>
-   <app>
       <rdgGrp n="['']">
          <rdg wit="f1818">&lt;ab sID="novel1_letter4_chapter6_div4_div6_p2"/&gt;&lt;hi sID="novel1_letter4_chapter6_div4_div6_p2_hi1"/&gt; </rdg>
          <rdg wit="f1823">&lt;ab sID="novel1_letter4_chapter6_div4_div6_p2"/&gt;&lt;hi sID="novel1_letter4_chapter6_div4_div6_p2_hi1"/&gt; </rdg>
@@ -857,14 +848,6 @@
       <rdgGrp n="['7th),']">
          <rdg wit="f1831">7th), </rdg>
       </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['i,']">
-         <rdg wit="f1818">I, </rdg>
-         <rdg wit="f1823">I, </rdg>
-         <rdg wit="fThomas">I, </rdg>
-         <rdg wit="f1831">I, </rdg>
-      </rdgGrp>
       <rdgGrp n="['&lt;delstart/&gt;26&lt;delend/&gt;', '28', 'th', ')', 'i;', '&lt;delstart/&gt;your my ', '   &lt;delend/&gt;', '&lt;delstart/&gt;cousin&lt;delend/&gt;']">
          <rdg wit="fMS">&lt;del rend="strikethrough" xml:id="c56-0074__main__d5e15491"&gt;26&lt;/del&gt; 28 &lt;shi rend="underline"&gt;th&lt;/shi&gt; ) I; &lt;del rend="strikethrough" xml:id="c56-0074__main__d5e15499"&gt;your &lt;sga-add place="superlinear" sID="c56-0074__main__d5e15501"/&gt;my &lt;sga-add eID="c56-0074__main__d5e15501"/&gt;    &lt;/del&gt; &lt;del rend="strikethrough" xml:id="c56-0074__main__d5e15507"&gt;cousin&lt;/del&gt; </rdg>
       </rdgGrp>
@@ -1058,24 +1041,14 @@
       </rdgGrp>
    </app>
    <app>
+      <rdgGrp n="['came', '&lt;delstart/&gt;up&lt;delend/&gt;', 'andenquired', 'for']">
+         <rdg wit="fMS">came &lt;del rend="strikethrough" xml:id="c56-0074__main__d5e15565"&gt;up&lt;/del&gt; &amp;&lt;lb n="c56-0074__main__12"/&gt;enquired for </rdg>
+      </rdgGrp>
       <rdgGrp n="['came,', 'and']">
          <rdg wit="f1818">came, and </rdg>
          <rdg wit="f1823">came, and </rdg>
          <rdg wit="fThomas">came, and </rdg>
          <rdg wit="f1831">came, and </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['enquired']">
-         <rdg wit="f1831">enquired </rdg>
-      </rdgGrp>
-      <rdgGrp n="['inquired']">
-         <rdg wit="f1818">inquired </rdg>
-         <rdg wit="f1823">inquired </rdg>
-         <rdg wit="fThomas">inquired </rdg>
-      </rdgGrp>
-      <rdgGrp n="['came', '&lt;delstart/&gt;up&lt;delend/&gt;', 'andenquired', 'for']">
-         <rdg wit="fMS">came &lt;del rend="strikethrough" xml:id="c56-0074__main__d5e15565"&gt;up&lt;/del&gt; &amp;&lt;lb n="c56-0074__main__12"/&gt;enquired for </rdg>
       </rdgGrp>
    </app>
    <app>
@@ -5875,24 +5848,14 @@
       </rdgGrp>
    </app>
    <app>
+      <rdgGrp n="['&lt;delstart/&gt;very fine&lt;delend/&gt;', 'serene', '', 'and', '', '&lt;delstart/&gt;unable&lt;delend/&gt;']">
+         <rdg wit="fMS">&lt;del rend="strikethrough" xml:id="c56-0081__main__d5e16943"&gt;very fine&lt;/del&gt; &lt;sga-add hand="#pbs" place="superlinear" sID="c56-0081__main__d5e16946"/&gt;serene &lt;sga-add eID="c56-0081__main__d5e16946"/&gt; and &lt;lb n="c56-0081__main__6"/&gt; &lt;del rend="strikethrough" xml:id="c56-0081__main__d5e16953"&gt;unable&lt;/del&gt; </rdg>
+      </rdgGrp>
       <rdgGrp n="['serene;']">
          <rdg wit="f1818">serene; </rdg>
          <rdg wit="f1823">serene; </rdg>
          <rdg wit="fThomas">serene; </rdg>
          <rdg wit="f1831">serene; </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['&lt;delstart/&gt;and,&lt;delend/&gt;']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;and,&lt;/del&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['and,']">
-         <rdg wit="f1818">and, </rdg>
-         <rdg wit="f1823">and, </rdg>
-         <rdg wit="f1831">and, </rdg>
-      </rdgGrp>
-      <rdgGrp n="['&lt;delstart/&gt;very fine&lt;delend/&gt;', 'serene', '', 'and', '', '&lt;delstart/&gt;unable&lt;delend/&gt;']">
-         <rdg wit="fMS">&lt;del rend="strikethrough" xml:id="c56-0081__main__d5e16943"&gt;very fine&lt;/del&gt; &lt;sga-add hand="#pbs" place="superlinear" sID="c56-0081__main__d5e16946"/&gt;serene &lt;sga-add eID="c56-0081__main__d5e16946"/&gt; and &lt;lb n="c56-0081__main__6"/&gt; &lt;del rend="strikethrough" xml:id="c56-0081__main__d5e16953"&gt;unable&lt;/del&gt; </rdg>
       </rdgGrp>
    </app>
    <app>
@@ -9614,18 +9577,13 @@
       </rdgGrp>
    </app>
    <app>
+      <rdgGrp n="['&lt;delstart/&gt;our father looks so sorrowful:', '            this dreadful event seems to have revived in his mind his grief on the death of mamma.', '            poor elizabeth also is quite inconsolable.&#34;&lt;delend/&gt;', '&lt;addedthomas-start/&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow and lustreless&lt;addedthomas-end/&gt;']">
+         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Our father looks so sorrowful:             this dreadful event seems to have revived in his mind his grief on the death of Mamma.             Poor Elizabeth also is quite inconsolable.”&lt;/del&gt; &lt;add&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor Elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow &amp; lustreless&lt;/add&gt; </rdg>
+      </rdgGrp>
       <rdgGrp n="['our']">
          <rdg wit="f1818">Our </rdg>
          <rdg wit="f1823">Our </rdg>
          <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18427"/&gt;&lt;sga-add place="superlinear" sID="c56-0086__main__d5e18433"/&gt;our </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['']">
-         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18433"/&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['&lt;delstart/&gt;our father looks so sorrowful:', '            this dreadful event seems to have revived in his mind his grief on the death of mamma.', '            poor elizabeth also is quite inconsolable.&#34;&lt;delend/&gt;', '&lt;addedthomas-start/&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow and lustreless&lt;addedthomas-end/&gt;']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Our father looks so sorrowful:             this dreadful event seems to have revived in his mind his grief on the death of Mamma.             Poor Elizabeth also is quite inconsolable.”&lt;/del&gt; &lt;add&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor Elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow &amp; lustreless&lt;/add&gt; </rdg>
       </rdgGrp>
    </app>
    <app>
@@ -9884,22 +9842,15 @@
       </rdgGrp>
    </app>
    <app>
+      <rdgGrp n="['&lt;delstart/&gt;but, tell me, how does my father support his misfortunes? and how is &lt;delend/&gt;', '&lt;addedthomas-start/&gt;you must assist me in acquiring sufficient calmness to console my father and support&lt;addedthomas-end/&gt;']">
+         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;But, tell me, how does my father support his misfortunes? and how is &lt;/del&gt; &lt;add&gt;You must assist me in acquiring sufficient calmness to console my father and support&lt;/add&gt; </rdg>
+      </rdgGrp>
       <rdgGrp n="['but']">
          <rdg wit="fMS">&lt;lb n="c56-0086__main__14"/&gt;But </rdg>
       </rdgGrp>
       <rdgGrp n="['but,']">
          <rdg wit="f1818">But, </rdg>
          <rdg wit="f1823">But, </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['tell', 'me,', 'how', 'does']">
-         <rdg wit="f1818">tell me, how does </rdg>
-         <rdg wit="f1823">tell me, how does </rdg>
-         <rdg wit="fMS">tell me, How &lt;sga-add hand="#pbs" place="superlinear" sID="c56-0086__main__d5e18507"/&gt;does </rdg>
-      </rdgGrp>
-      <rdgGrp n="['&lt;delstart/&gt;but, tell me, how does my father support his misfortunes? and how is &lt;delend/&gt;', '&lt;addedthomas-start/&gt;you must assist me in acquiring sufficient calmness to console my father and support&lt;addedthomas-end/&gt;']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;But, tell me, how does my father support his misfortunes? and how is &lt;/del&gt; &lt;add&gt;You must assist me in acquiring sufficient calmness to console my father and support&lt;/add&gt; </rdg>
       </rdgGrp>
    </app>
    <app>
@@ -9943,22 +9894,13 @@
       </rdgGrp>
    </app>
    <app>
+      <rdgGrp n="['&lt;delstart/&gt;?&lt;delend/&gt;', '&#34;']">
+         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;?&lt;/del&gt; ” </rdg>
+      </rdgGrp>
       <rdgGrp n="['his']">
          <rdg wit="f1818">his </rdg>
          <rdg wit="f1823">his </rdg>
          <rdg wit="fMS">his </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['&lt;delstart/&gt;f&lt;delend/&gt;', 'misfortunes;']">
-         <rdg wit="fMS">&lt;del rend="strikethrough" xml:id="c56-0086__main__d5e18517"&gt;f&lt;/del&gt; misfortunes; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['misfortunes?']">
-         <rdg wit="f1818">misfortunes? </rdg>
-         <rdg wit="f1823">misfortunes? </rdg>
-      </rdgGrp>
-      <rdgGrp n="['&lt;delstart/&gt;?&lt;delend/&gt;', '&#34;']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;?&lt;/del&gt; ” </rdg>
       </rdgGrp>
    </app>
    <app>
