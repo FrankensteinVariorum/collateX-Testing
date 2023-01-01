@@ -97,7 +97,7 @@
         <xsl:variable name="otherRdgGrpAtts" as="attribute()+" select="$currentApp/rdgGrp[not(contains(@n, 'delstart'))]/@n"/>
         <xsl:variable name="booleanTest" as="xs:boolean+">
             <xsl:for-each select="$otherRdgGrpAtts">
-                <!--<xsl:value-of select="$delPassageAtt ! contains(. ! replace(., 'W', ''), current() ! replace(., '\W', ''))"/>-->
+                <!--<xsl:value-of select="$delPassageAtt ! contains(. ! replace(., '\W', ''), current() ! replace(., '\W', ''))"/>-->
                 <xsl:value-of select="matches(., '^\W+$')"/>
                 <!-- This means, the other rdgGrps must contain nothing by empty (non-alphanumeric characters) in the normalized tokens.
                 That way, there is nothing comparable to the words in the deleted passage. The witness with the deleted passage has just been aligned to witnesses with empty tokens. 
@@ -108,7 +108,7 @@
              <xsl:when test="not($currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/rdg/@wit = following-sibling::app[1]//rdg/@wit)
                  and $booleanTest => distinct-values() = true()">
                  <xsl:variable name="nextApp" as="element()" select="($currentApp/following-sibling::app)[1]"/>
-                 <!-- This test is simply to make sure the very next following-sibling app is missing the witness with the deleted passage.  -->
+                 <!-- This test is simply to make sure the very next following-sibling app is missing the witness that carries the deleted passage.  -->
                  <xsl:apply-templates select="$currentApp" mode="reduceCurrentApp">
                      <xsl:with-param name="witToRemove" as="attribute()" select="rdgGrp[@n ! contains(., 'delstart')]/rdg/@wit" tunnel="yes"/>
                  </xsl:apply-templates>
@@ -155,7 +155,7 @@
     <xsl:template match="rdgGrp" mode="destroy"/>
     
     <!--  The next template locates the app elements that met the conditions for accepting deleted passages from a preceding app, 
-        and it eliminates the original version. LOTS of conditions set below to make sure we don't eliminate the wrong apps -->
+        and it eliminates the original version. We have set LOTS of predicate conditions set below to make sure we don't eliminate the wrong apps -->
     <xsl:template match="app[preceding-sibling::app[1][rdgGrp[@n ! matches(., '^\W+$')] and rdgGrp[@n ! contains(., 'delstart') and count(rdg) = 1]]][not(.//rdg/@wit = preceding-sibling::app[1]/rdgGrp[@n ! contains(., 'delstart') and count(rdg) = 1]/rdg/@wit)][count(descendant::rdg) gt 1] " 
         name="removeAppAfterProblemDel"/>
     
