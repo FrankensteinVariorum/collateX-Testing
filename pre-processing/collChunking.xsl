@@ -7,7 +7,7 @@
             <xsl:variable name="currFile" as="document-node()" select="current()"/>
         <xsl:for-each-group select="$currFile//anchor/following-sibling::node()" group-starting-with="anchor">
             <xsl:result-document
-                href="collationChunks/{substring-before(tokenize(base-uri(), '/')[last()], '.')}_{current()/@xml:id}.xml"
+                href="2023_collationChunks/{current()/@xml:id}/{base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.')}_{current()/@xml:id}.xml"
                 method="xml" indent="yes">
                 <xml>
                     <xsl:apply-templates select="current-group()"/>
