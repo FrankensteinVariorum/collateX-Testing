@@ -9496,8 +9496,8 @@
       </rdgGrp>
    </app>
    <app>
-      <rdgGrp n="['welcome', '', '', '', '', '', 'our ', '   &lt;mod eid=&#34;c56-0086__main__d5e18423&#34;/&gt; father looks so sorrowful', 'and', 'it']">
-         <rdg wit="fMS">welcome &lt;lb n="c56-0086__main__5"/&gt; &lt;mdel&gt;my&lt;/mdel&gt; &lt;sga-add place="sublinear" sID="c56-0086__main__d5e18427"/&gt; &lt;metamark function="insert"&gt;^&lt;/metamark&gt; &lt;sga-add eID="c56-0086__main__d5e18427"/&gt;&lt;sga-add place="superlinear" sID="c56-0086__main__d5e18433"/&gt; &lt;longToken&gt;our &lt;sga-add eID="c56-0086__main__d5e18433"/&gt;    &lt;mod eID="c56-0086__main__d5e18423"/&gt; father looks so sorrowful&lt;/longToken&gt; and it </rdg>
+      <rdgGrp n="['welcome', '', '', '', '']">
+         <rdg wit="fMS">welcome &lt;lb n="c56-0086__main__5"/&gt; &lt;mdel&gt;my&lt;/mdel&gt; &lt;sga-add place="sublinear" sID="c56-0086__main__d5e18427"/&gt; &lt;metamark function="insert"&gt;^&lt;/metamark&gt; </rdg>
       </rdgGrp>
       <rdgGrp n="['welcome.']">
          <rdg wit="f1818">welcome. </rdg>
@@ -9509,9 +9509,26 @@
       <rdgGrp n="['&lt;delstart/&gt;our father looks so sorrowful:', '            this dreadful event seems to have revived in his mind his grief on the death of mamma.', '            poor elizabeth also is quite inconsolable.&#34;&lt;delend/&gt;', '&lt;addedthomas-start/&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow and lustreless&lt;addedthomas-end/&gt;']">
          <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Our father looks so sorrowful:             this dreadful event seems to have revived in his mind his grief on the death of Mamma.             Poor Elizabeth also is quite inconsolable.”&lt;/del&gt; &lt;add&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor Elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow &amp; lustreless&lt;/add&gt; </rdg>
       </rdgGrp>
-      <rdgGrp n="['our father looks so sorrowful:', 'this', 'dreadful', 'event']">
-         <rdg wit="f1818">&lt;longToken&gt;Our father looks so sorrowful:&lt;/longToken&gt; this dreadful event </rdg>
-         <rdg wit="f1823">&lt;longToken&gt;Our father looks so sorrowful:&lt;/longToken&gt; this dreadful event </rdg>
+      <rdgGrp n="['our']">
+         <rdg wit="f1818">Our </rdg>
+         <rdg wit="f1823">Our </rdg>
+         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18427"/&gt;&lt;sga-add place="superlinear" sID="c56-0086__main__d5e18433"/&gt;our </rdg>
+      </rdgGrp>
+   </app>
+   <app>
+      <rdgGrp n="['father', 'looks', 'so']">
+         <rdg wit="f1818">father looks so </rdg>
+         <rdg wit="f1823">father looks so </rdg>
+         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18433"/&gt; father looks so </rdg>
+      </rdgGrp>
+   </app>
+   <app>
+      <rdgGrp n="['sorrowful', 'and', 'it']">
+         <rdg wit="fMS">sorrowful and it </rdg>
+      </rdgGrp>
+      <rdgGrp n="['sorrowful:', 'this', 'dreadful', 'event']">
+         <rdg wit="f1818">sorrowful: this dreadful event </rdg>
+         <rdg wit="f1823">sorrowful: this dreadful event </rdg>
       </rdgGrp>
    </app>
    <app>
@@ -12822,4 +12839,4 @@
       </rdgGrp>
    </app>
 </cx:apparatus>
-<!-- 2023-01-02 20:12:16.943911 -->
+<!-- 2023-01-02 03:06:40.777546 -->

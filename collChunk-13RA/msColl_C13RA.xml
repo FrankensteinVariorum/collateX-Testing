@@ -1059,7 +1059,7 @@
    <metamark function="insert">^</metamark>
    <sga-add eID="c56-0086__main__d5e18427"/>
    <sga-add place="superlinear" sID="c56-0086__main__d5e18433"/>our <sga-add eID="c56-0086__main__d5e18433"/>
-   <mod eID="c56-0086__main__d5e18423"/>  father looks so sorrowful and it seems <lb n="c56-0086__main__6"/>to have revived in his mind his sorrow <lb n="c56-0086__main__7"/>for the death of Mamma and poor <w ana="start"/>Eliza<lb n="c56-0086__main__8"/>beth<w ana="end"/> is quite inconsolable." Ernest began <lb n="c56-0086__main__9"/>to weep as he said these words.<milestone unit="tei:p-END"/>
+   <mod eID="c56-0086__main__d5e18423"/> <longToken>father looks so sorrowful</longToken> and it seems <lb n="c56-0086__main__6"/>to have revived in his mind his sorrow <lb n="c56-0086__main__7"/>for the death of Mamma and poor <w ana="start"/>Eliza<lb n="c56-0086__main__8"/>beth<w ana="end"/> is quite inconsolable." Ernest began <lb n="c56-0086__main__9"/>to weep as he said these words.<milestone unit="tei:p-END"/>
    <milestone unit="tei:p-START"/>
    <lb n="c56-0086__main__10"/>"Do not <mod sID="c56-0086__main__d5e18454"/>
    <sga-add place="sublinear" sID="c56-0086__main__d5e18456"/>

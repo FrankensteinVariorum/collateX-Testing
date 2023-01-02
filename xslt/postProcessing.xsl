@@ -92,14 +92,12 @@
        We also destroy the original version of its first following-sibling app.
        
      ********************************************************************************************* -->    
-
-     
     <xsl:template match="app[rdgGrp[@n ! contains(., 'delstart')]/rdg => count() = 1][count(descendant::rdg) gt 1]" name="mergeOutofPlace">
         <xsl:variable name="currentApp" as="element()" select="current()"/>
        <!-- <xsl:variable name="testMatches" as="xs:string+" select="rdgGrp/@n[contains(., 'delstart')] ! substring-after(., '&lt;delstart/&gt;') ! substring-before(., '&lt;delend/&gt;')"/>-->
         <xsl:variable name="delPassageAtt" as="attribute()" select="$currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/@n"/>
         <xsl:variable name="otherRdgGrpAtts" as="attribute()+" select="$currentApp/rdgGrp[not(contains(@n, 'delstart'))]/@n"/>
-        <xsl:variable name="booleanTest" as="xs:boolean+">
+        <xsl:variable name="testOtherRdgGrpsEmpty" as="xs:boolean+">
             <xsl:for-each select="$otherRdgGrpAtts">
                 <!--<xsl:value-of select="$delPassageAtt ! contains(. ! replace(., '\W', ''), current() ! replace(., '\W', ''))"/>-->
                 <xsl:value-of select="matches(., '^\W+$')"/>
@@ -110,7 +108,7 @@
         </xsl:variable>
         <xsl:choose> 
              <xsl:when test="not($currentApp/rdgGrp[@n[contains(., 'delstart')] and rdg => count() = 1]/rdg/@wit = following-sibling::app[1]//rdg/@wit)
-                 and $booleanTest => distinct-values() = true()">
+                 and $testOtherRdgGrpsEmpty => distinct-values() = true()">
                  <xsl:variable name="nextApp" as="element()" select="($currentApp/following-sibling::app)[1]"/>
                  <!-- This test is simply to make sure the very next following-sibling app is missing the witness that carries the deleted passage.  -->
                  <xsl:apply-templates select="$currentApp" mode="reduceCurrentApp">
@@ -168,20 +166,53 @@
       be picked up as a longer rdgGrp and runs the risk of being invisible in the Variorum viewer unless moved. 
       
       WHAT TO DO:
-      1. Spot pattern: 
+      1. Spot the pattern: 
          * app contains less than 4 rdg elements, and may have one more more rdgGrp 
          * (If it only had one rdgGrp and one rdg it would be picked up by our other postprocessing templates)
-         * All or rdgGrp/@n contains "delstart" or rdg contains longToken
+         * rdgGrp/@n contains "delstart" or rdg contains longToken
          
-     2. Look at first preceding-sibling app AND first following-sibling app for 
+     2. Look at first preceding-sibling app for 
          * matching content in their rdgGrp/@n 
          * the outright absence of the rdg/@wit present in this app
          * the presence of the witnesses but with empty (non-meaningful) content in rdgGrp/@n 
+         * NOTE: we run into ambiguous rule matches with the restructuring templates that move the other direction.
+         So maybe best to ONLY handle preceding-sibling restructuring here?
          
      3. Where we find this, we move to process and restructure those apps (and delete their original forms)
-      
-       
+
      ********************************************************************************************* -->    
+    <!-- BUGGY TEMPLATE -->
+    <xsl:template match="app[count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]][preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)][not(preceding-sibling::app[1]/rdgGrp[contains(@n, 'delstart') or rdg[contains(., 'longToken')]])]">
+        <xsl:variable name="currentApp" as="element()" select="current()"/>
+        <xsl:variable name="targetRdgGrps" as="element()+" select="rdgGrp[@n ! contains(., 'delstart') or descendant::rdg ! contains(., 'longToken')]"/>
+        <xsl:variable name="prevApp" as="element()" select="($currentApp/preceding-sibling::app)[1]"/>
+        <xsl:variable name="nextApp" as="element()" select="($currentApp/following-sibling::app)[1]"/>
+        <xsl:choose>
+            <xsl:when test="preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit">
+                <xsl:for-each select="$targetRdgGrps">
+                    <xsl:if test="$prevApp[rdgGrp/@n ! matches(., '^\W+$')][rdg/@wit = $currentApp//rdg/@wit] or not($prevApp//rdg/@wit = descendant::rdg/@wit)">
+                   <xsl:apply-templates mode="restructure" select="$currentApp/preceding-sibling::app[1]">
+                       <xsl:with-param as="node()" name="loner" select="current()/rdg" tunnel="yes"/>
+                       <!-- ebb: There will almost certainly be only one rdg if it's a deletion or longToken in this stranded situation. -->
+                       <xsl:with-param as="attribute()" name="norm" select="current()/@n" tunnel="yes"/>
+                   </xsl:apply-templates>
+                    </xsl:if>
+                    <xsl:if test="$nextApp[rdgGrp/@n ! matches(., '^\W+$')][rdg/@wit = $currentApp//rdg/@wit] or not($nextApp//rdg/@wit = descendant::rdg/@wit)">
+                        <xsl:apply-templates mode="restructure" select="$currentApp/following-sibling::app[1]">
+                            <xsl:with-param as="node()" name="loner" select="current()/rdg" tunnel="yes"/>
+                            <!-- ebb: There will almost certainly be only one rdg if it's a deletion or longToken in this stranded situation. -->
+                            <xsl:with-param as="attribute()" name="norm" select="current()/@n" tunnel="yes"/>
+                        </xsl:apply-templates>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates mode="copyOriginal" select="$currentApp"/>
+            </xsl:otherwise>
+            
+        </xsl:choose>
+    </xsl:template>
+    
     
 
     <!-- **************************************************************************
@@ -235,8 +266,7 @@
         <xsl:param name="norm" tunnel="yes"/>
         <app>
             <xsl:apply-templates
-                select="rdgGrp[not(preceding::app[1][count(rdgGrp) = 1 and rdgGrp/@n ! string-length() = 4])]"
-                mode="restructure">
+                select="rdgGrp[not(preceding::app[1][count(rdgGrp) = 1 and rdgGrp/@n ! string-length() = 4])]" mode="restructure">
                 <xsl:with-param as="node()" name="loner" tunnel="yes" select="$loner"/>
             </xsl:apply-templates>
             <xsl:choose>

@@ -23,25 +23,44 @@
     <!--ADDED TO PRE-PROCESSING XSLT 2022-08-08 ebb: This template  ensures a space preceding the end of every sga-add endtag marker, again to prevent fused word tokens during the collation normalization process.
         <xsl:template match="sga-add[@eID]">
         <xsl:text> </xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
-    </xsl:template>-->
+    </xsl:template>
+    
+Apparently we *also* need to make sure there's a space before sga-add START markers. 
+Add this with an "or" pipe to the template match in the preprocessing XSLT> 
+     <xsl:template match="sga-add[@sID]">
+        <xsl:text> </xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
+    </xsl:template>
+    
+    
+ 2022-08-08 ebb: Discovered that characters immediately following <mod eID="..."/> aren't picked up as normalized tokens, 
+        so let's add a space after those. 
+    
+ <xsl:template match="mod[@eID]">
+        <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
+    </xsl:template>
+    
+    
+    -->
+    
+    <!-- 2023-01-02 ebb: Add space plus newline before these S-GA elements to ensure proper tokenization: -->
+    
+    <xsl:template match="(lb | anchor | zone[@sID] | mod[@sID])[not(preceding-sibling::*[1][name() = 'w' and @ana='start'])]">
+        <xsl:choose> 
+            <xsl:when test="preceding-sibling::text()[1][not(matches(., '\n'))]">
+                <xsl:text> &#10;</xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
     
     
     <!-- ############################# -->
     <!-- NOT YET ADDED TO PRE-PROCESSING XSLT  -->
-    <!-- 2022-08-08 ebb: Discovered that characters immediately following <mod eID="..."/> aren't picked up as normalized tokens, 
-        so let's add a space after those. -->
-  
-   <!-- <xsl:template match="mod[@eID]">
-        <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
-    </xsl:template>-->
- 
- <!-- Apparently we *also* need to make sure there's a space before sga-add START markers. 
-Add this with an "or" pipe to the template match in the preprocessing XSLT>  -->
-    <xsl:template match="sga-add[@sID]">
-        <xsl:text> </xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
-    </xsl:template>
- 
     
+ 
     <!-- If we continue to set subcollation anchors manually, run this template on ALL editions (msColl and print) -->
   <!--  <xsl:template match="anchor">
         <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
