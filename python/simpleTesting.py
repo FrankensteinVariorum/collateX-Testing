@@ -300,7 +300,7 @@ def main():
                 # can we import 4 filenames instead of only 1 into tokenizeFiles()?
 
                 collation_input = {"witnesses": tokenLists}
-                outputFile = open('../simpleOutputDelta/Collation_' + collChunk, 'w', encoding='utf-8')
+                outputFile = open('../simpleOutputEpsilon/Collation_' + collChunk, 'w', encoding='utf-8')
                 # table = collate(collation_input, output='tei', segmentation=True)
                 # table = collate(collation_input, segmentation=True, layout='vertical')
                 table = collate(collation_input, output='xml', segmentation=True)
