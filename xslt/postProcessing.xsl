@@ -16,6 +16,10 @@
         2. Deleted passages that are aligned in apps with empty normalized tokens, and where the very next app
         does not contain the witness with a deleted passage. Both of these special cases are aligned with the next following app. 
         
+        3. [NEW] We may be adding templates to handle apps that contain less than four witnesses, where those witnesses contain deleted passages
+        or longTokens aligned only with themselves. For this we need to look to the first preceding-sibling OR first following-sibling app 
+        to find the best location to move the content. 
+        
         * In the case of the deleted passages, we wanted to check whether the next following-sibling app contains some of the content, but
         this is tricky and raised problems because it happens far too frequently. (Think of simple deleted letters or generic like "and", etc. Just because those
         characters or words appear in the next app doesn't mean they are relevant for the alignment, and quite often it was better to leave the deleted passage in its
@@ -28,7 +32,7 @@
         This case captures the need to move: If we left the deleted passage in its original app, it would be comparable with empty space in the Variorum reader, 
         not aligned with any meaningful content.
         
-    * To simplify processing, all changes are moved by default from one app to the very next following-sibling app. 
+    * To simplify processing, MOST changes are moved by default from one app to the very next following-sibling app. 
     This stylesheet does not move content backwards to the next preceding-sibling. This seems to work to improve alignments based on
     how collateX is distributing variants in this project: empty passages (representing alignments of markup tokens) tend to precede collation of meaningful variants
     
@@ -130,6 +134,55 @@
            <xsl:apply-templates/>
        </app>
     </xsl:template>
+    
+    <!-- ********************************************************************************************
+       DELETIONS (OR LONGTOKENS) ALIGNED WITH ONLY THEMSELVES
+      2023-01-01 ebb: Reviewing the collation of C13, I discover this phenomenon. It may be rare, but it seems like 
+      a predictable pattern:
+      
+        <app>
+      <rdgGrp n="['']">
+         <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_163" n="151"/&gt; </rdg>
+         <rdg wit="fMS">&lt;sga-add eID="c56-0084__main__d5e18134"/&gt; </rdg>
+      </rdgGrp>
+      <rdgGrp n="['and then']">
+         <rdg wit="f1831">&lt;longToken&gt;And then&lt;/longToken&gt; </rdg>
+      </rdgGrp>
+      <rdgGrp n="['besides,']">
+         <rdg wit="f1818">&lt;pb xml:id="F1818_v1_163" n="151"/&gt;Besides, </rdg>
+         <rdg wit="f1823">Besides, </rdg>
+      </rdgGrp>
+   </app>
+   <app>
+      <rdgGrp n="['&lt;delstart/&gt;besides&lt;delend/&gt;', '&lt;addedthomas-start/&gt;and&lt;addedthomas-end/&gt;', ',']">
+         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Besides&lt;/del&gt; &lt;add place="margin"&gt;And&lt;/add&gt; , </rdg>
+      </rdgGrp>
+      <rdgGrp n="['–', '&lt;delstart/&gt;the com&lt;delend/&gt;', 'mon', 'people', 'would', 'believe', 'it', 'to', 'be', 'a', 'real', 'devil', 'and', 'who', 'could', 'attempt', 'besides']">
+         <rdg wit="fMS">– &lt;del rend="strikethrough" xml:id="c56-0084__main__d5e18152"&gt;the com&lt;/del&gt; &lt;lb n="c56-0085__main__1"/&gt;mon people would believe it to &lt;lb n="c56-0085__main__2"/&gt;be a real devil and who could attempt &lt;lb n="c56-0085__left_margin__1"/&gt;Besides </rdg>
+      </rdgGrp>
+   </app>
+      
+      
+      This is the first time I've seen a case where we should move a special passage to an immediately preceding app. 
+      It may sometimes happen with longToken passages or delstart....delend passages. Because Thomas AND fMS are involved, this wouldn't
+      be picked up as a longer rdgGrp and runs the risk of being invisible in the Variorum viewer unless moved. 
+      
+      WHAT TO DO:
+      1. Spot pattern: 
+         * app contains less than 4 rdg elements, and may have one more more rdgGrp 
+         * (If it only had one rdgGrp and one rdg it would be picked up by our other postprocessing templates)
+         * All or rdgGrp/@n contains "delstart" or rdg contains longToken
+         
+     2. Look at first preceding-sibling app AND first following-sibling app for 
+         * matching content in their rdgGrp/@n 
+         * the outright absence of the rdg/@wit present in this app
+         * the presence of the witnesses but with empty (non-meaningful) content in rdgGrp/@n 
+         
+     3. Where we find this, we move to process and restructure those apps (and delete their original forms)
+      
+       
+     ********************************************************************************************* -->    
+    
 
     <!-- **************************************************************************
     DESTRUCTION MODES: Destroy the original app or rdgGrp elements that are being modified by
