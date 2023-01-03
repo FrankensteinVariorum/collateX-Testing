@@ -3,6 +3,15 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
     version="3.0">
+    <!-- 2023-01-02 ebb: This stylesheet chunks flattened S-GA source files into collation unit or "chunk" files
+        by creating a new XML file at each collation anchor element. It also handles pre-processing adding spaces and newlines
+        strategically to optimize tokenization that involves the markup. 
+        
+        INPUT FILES: msColl-fullFlat directory. We run them individually because several files represent overlapping/extra
+    collation units for the same material. It's complicated. :-) 
+       c56 and c57 represent the ones we've been aligning to C01 - C33 units.
+       Remember to add dummy empty files for units where msColl is absent.
+    -->
 
     <xsl:template match="/">
         <xsl:for-each-group select="//anchor[@type='collate']/following-sibling::node()" group-starting-with="anchor[@type='collate']">
