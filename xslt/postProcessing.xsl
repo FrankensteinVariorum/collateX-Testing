@@ -39,8 +39,11 @@
     ******************************************************************************************** -->
     <xsl:mode on-no-match="shallow-copy"/>
     
-    <!-- 2023-01-01 ebb: This is now set to post-process a collection of output files from the Python collation script. 
+    <!--*****************************************************************************************
+        FILE HANDLING: INPUTS AND OUTPUTS
+        2023-01-01 ebb: This is now set to post-process a collection of output files from the Python collation script. 
         It's okay to run over a single file in an output directory but is more versatile for handling batches. 
+    **************************************************************************************
     -->
     
     <xsl:variable name="collection" as="document-node()+" select="collection('../simpleOutputEpsilon/?select=*.xml')"/>
@@ -356,14 +359,18 @@
     This template corrects a problem introduced by the use of expandNode() and node.toxml() in the Python pulldom script, 
     used to output the contents of our added longtoken, add, del, and note (inlineVariationEvent elements). 
     We made the same alterations in the restructured app processing above. It may be a good idea to move this processing to a function. 
+    
+    2023-01-03: We're also applying these templates to normalize spaces, removing extra spaces introduced in the inlineVariationEvent elements inserted by pullDom in the Python processing
+    of del, add, note, and longToken whole elements.
     -->
     <xsl:template match="rdg/text()" name="textAmpFix">
-        <xsl:value-of select="fv:ampFix(.)"/>
+        <xsl:value-of select="fv:ampFix(normalize-space(.))"/>
     </xsl:template>
     <xsl:template match="rdgGrp" name="normAmpFix">
-        <rdgGrp n="{fv:ampFix(@n)}">
+        <xsl:variable name="reducedNormTokens" as="xs:string" select="@n ! replace(., '\s{2,}', '')"/>
+        <rdgGrp n="{fv:ampFix($reducedNormTokens)}">
             <xsl:apply-templates/>
         </rdgGrp>
     </xsl:template>
-
+ 
 </xsl:stylesheet>

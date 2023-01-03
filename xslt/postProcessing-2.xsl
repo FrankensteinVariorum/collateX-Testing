@@ -44,8 +44,11 @@
     ******************************************************************************************** -->
     <xsl:mode on-no-match="shallow-copy"/>
     
-    <!-- 2023-01-01 ebb: This is now set to process the output of postProcessing.xsl stage 1.   
+    <!--*****************************************************************************************
+        FILE HANDLING: INPUTS AND OUTPUTS
+        2023-01-01 ebb: This is now set to post-process a collection of output files from the Python collation script. 
         It's okay to run over a single file in an output directory but is more versatile for handling batches. 
+    **************************************************************************************
     -->
     
     <xsl:variable name="collection" as="document-node()+" select="collection('../postprocOutputEpsilon/?select=*.xml')"/>
@@ -61,13 +64,6 @@
        </xsl:for-each> 
     </xsl:template>
 
-
-    <xsl:function name="fv:ampFix"  as="xs:string">
-        <xsl:param name="text" as="item()?"/> 
-        <xsl:value-of select="$text ! replace(.,'&amp;amp;','&amp;') ! replace(.,'&amp;quot;', '&#34;') ! replace(.,'andquot;', '&#34;')"/>
-    </xsl:function>
-
-    
     <!-- ********************************************************************************************
        DELETIONS (OR LONGTOKENS) ALIGNED WITH ONLY THEMSELVES
       2023-01-01 ebb: Reviewing the collation of C13, I discover this phenomenon. It may be rare, but it seems like 
@@ -117,16 +113,16 @@
 
      ********************************************************************************************* -->    
 
-    <xsl:template match="app[count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] 
-        (:  :)
-        or descendant::rdg[contains(., 'longToken')]][preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit 
-        (:  :)
-        or not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)][not(preceding-sibling::app[1]/rdgGrp[contains(@n, 'delstart') 
-        or rdg[contains(., 'longToken')]])]
-        (:  :)
+    <xsl:template match="app[count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4]
+        (:looks for an app with suspiciously few rdg elements...  :)
+        [rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]
+        (: checks that it has a deleted passage or longToken... :)
+        [preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
+        not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit) or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or not(following-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
+        (: checks if the first preceding-sibling::app or first following-sibling::app either contains an empty-content rdg for the del/longToken witness OR no matching witness:)
         ">
         <xsl:variable name="currentApp" as="element()" select="current()"/>
-        <xsl:variable name="targetRdgGrps" as="element()+" select="rdgGrp[@n ! contains(., 'delstart') or descendant::rdg ! contains(., 'longToken')]"/>
+        <xsl:variable name="targetRdgGrps" as="element()+" select="rdgGrp[@n ! contains(., 'delstart') or descendant::rdg[contains(., 'longToken')]]"/>
         <xsl:variable name="prevApp" as="element()" select="($currentApp/preceding-sibling::app)[1]"/>
         <xsl:variable name="nextApp" as="element()" select="($currentApp/following-sibling::app)[1]"/>
         <xsl:choose>
@@ -160,7 +156,56 @@
             <xsl:apply-templates/>
         </app>
     </xsl:template>
+    
+ <!-- *************************
+    Handles del, add, note, or longToken sequestered tokens where most of the content is in
+    following-sibling::app[1]
+    
+    Example from C-13:
+       <app>
+      <rdgGrp n="['&lt;delstart/&gt;our father looks so sorrowful:', 'this dreadful event seems to have revived in his mind his grief on the death of mamma.', 'poor elizabeth also is quite inconsolable.&#34;&lt;delend/&gt;', '&lt;addedthomas-start/&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow and lustreless&lt;addedthomas-end/&gt;']">
+         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Our father looks so sorrowful: this dreadful event seems to have revived in his mind his grief on the death of Mamma. Poor Elizabeth also is quite inconsolable.”&lt;/del&gt; &lt;add&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor Elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow &amp; lustreless&lt;/add&gt;</rdg>
+      </rdgGrp>
+      <rdgGrp n="['our']">
+         <rdg wit="f1818">Our</rdg>
+         <rdg wit="f1823">Our</rdg>
+         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18427"/&gt;&lt;sga-add place="superlinear" sID="c56-0086__main__d5e18433"/&gt;our</rdg>
+      </rdgGrp>
+   </app>
+   <app>
+      <rdgGrp n="['', 'father looks so sorrowful', 'and', 'it']">
+         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18433"/&gt; &lt;longToken&gt;father looks so sorrowful&lt;/longToken&gt; and it</rdg>
+      </rdgGrp>
+      <rdgGrp n="['father looks so sorrowful:', 'this', 'dreadful', 'event']">
+         <rdg wit="f1818">&lt;longToken&gt;father looks so sorrowful:&lt;/longToken&gt; this dreadful event</rdg>
+         <rdg wit="f1823">&lt;longToken&gt;father looks so sorrowful:&lt;/longToken&gt; this dreadful event</rdg>
+      </rdgGrp>
+   </app>
 
+************************* -->
+    
+    <!-- BUGGY TEMPLATE: generates ambiguous rule matches -->
+<xsl:template match="app[rdgGrp/@n[contains(., 'delstart') or contains(., 'note_start') or contains(., 'addedThomas')] or descendant::rdg[contains(., 'longToken')]]">
+    <xsl:variable name="currentApp" as="element()" select="current()"/>
+    <xsl:variable name="testFollowingApp" as="xs:boolean+">
+        <xsl:for-each select="rdgGrp/@n ! tokenize(., ',') ! replace(., '&lt;.+?&gt;', '')">          <xsl:variable name="currToken" as="xs:string" select="current()"/>         
+            <xsl:for-each select="$currentApp/following-sibling::app[1]/rdgGrp/@n">   
+            <xsl:value-of select="contains(., $currToken)"/>
+            </xsl:for-each>
+        </xsl:for-each> 
+        
+        
+    </xsl:variable>
+    <xsl:if test="$testFollowingApp = true()">
+     
+        
+        <xsl:text>SHOUT!</xsl:text>
+        
+        
+    </xsl:if>
+</xsl:template>
+    
+    
     <!-- **************************************************************************
     DESTRUCTION MODES: Destroy the original app or rdgGrp elements that are being modified by
     this stylesheet.
@@ -179,13 +224,32 @@
     <!-- 2023-01-01 ebb The template above processes the removal of a rdgGrp contain a witness that is moving to the next following app.
         It alters the source app.
     -->
+    
 
     <xsl:template match="rdgGrp" mode="destroy"/>
     
-    <!--  The next template locates the app elements that met the conditions for accepting deleted passages from a preceding app, 
-        and it eliminates the original version. We have set LOTS of predicate conditions set below to make sure we don't eliminate the wrong apps -->
-    <xsl:template match="app[preceding-sibling::app[1][rdgGrp[@n ! matches(., '^\W+$')] and rdgGrp[@n ! contains(., 'delstart') and count(rdg) = 1]]][not(.//rdg/@wit = preceding-sibling::app[1]/rdgGrp[@n ! contains(., 'delstart') and count(rdg) = 1]/rdg/@wit)][count(descendant::rdg) gt 1] " 
-        name="removeAppAfterProblemDel"/>
+    <!--  The next two templates locates the app elements that met the conditions for accepting deleted or longToken passages from a following OR preceding app, 
+        and it eliminates the original version. 
+      
+        app[count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4]
+        (:looks for an app with suspiciously few rdg elements...  :)
+        [rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]
+        (: checks that it has a deleted passage or longToken... :)
+        [preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
+        not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit) or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or not(following-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
+        (: checks if the first preceding-sibling::app or first following-sibling::app either contains an empty-content rdg for the del/longToken witness OR no matching witness:)
+
+        -->
+    
+    <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
+        not(following-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
+        [following-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
+        name="removeAppBeforeStrandedDel"/>
+    
+    <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
+        not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
+        [preceding-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
+        name="removeAppBeforeAfterStrandedDel"/>
     
     
     <!-- **************************************************************************
@@ -224,23 +288,23 @@
                     </xsl:variable>
                     <xsl:variable name="newNorm">
                         <xsl:value-of
-                            select="fv:ampFix($newToken)"/>
+                            select="$newToken"/>
                     </xsl:variable>
                     <rdgGrp n="{$newNorm}">
                         <rdg wit="{$loner/@wit}">
                             <xsl:value-of
-                                select="fv:ampFix($loner/text())"/>
+                                select="$loner/text()"/>
                             <xsl:value-of
-                                select="fv:ampFix(descendant::rdg[@wit = $loner/@wit])"
+                                select="descendant::rdg[@wit = $loner/@wit]"
                             />
                         </rdg>
                     </rdgGrp>
                 </xsl:when>
                 <xsl:when test="not(descendant::rdg/@wit = $loner/@wit)"><!--2023-01-01 ebb: This should handle delstart cases not represented in following apps-->
-                    <rdgGrp n="{fv:ampFix($norm)}">
+                    <rdgGrp n="{$norm}">
                         <rdg wit="{$loner/@wit}">
                             <xsl:value-of
-                                select="fv:ampFix($loner/text())"/>
+                                select="$loner/text()"/>
                         </rdg>
                     </rdgGrp>
                     
@@ -284,23 +348,9 @@
             <rdg wit="{$lonerWit}">
                 <xsl:value-of select="$lonerText"/>
                 <xsl:value-of
-                    select="fv:ampFix(current()/rdg[@wit = $lonerWit])"
+                    select="current()/rdg[@wit = $lonerWit]"
                 />
             </rdg>
-        </rdgGrp>
-    </xsl:template>
-    <!-- 2022-10-18 yxj ebb: For all rdgs, in the normalized @n value, replace 'andquot' to '&#34;', and replace '&amp;' to 'and'.
-    In the text nodes (the original text), replace '&amp;quot; to '&#34;', and replace '&amp;amp;' to '&amp;'. 
-    This template corrects a problem introduced by the use of expandNode() and node.toxml() in the Python pulldom script, 
-    used to output the contents of our added longtoken, add, del, and note (inlineVariationEvent elements). 
-    We made the same alterations in the restructured app processing above. It may be a good idea to move this processing to a function. 
-    -->
-    <xsl:template match="rdg/text()" name="textAmpFix">
-        <xsl:value-of select="fv:ampFix(.)"/>
-    </xsl:template>
-    <xsl:template match="rdgGrp" name="normAmpFix">
-        <rdgGrp n="{fv:ampFix(@n)}">
-            <xsl:apply-templates/>
         </rdgGrp>
     </xsl:template>
 
