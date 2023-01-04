@@ -8622,24 +8622,17 @@
          <rdg wit="f1831">it.</rdg>
       </rdgGrp>
    </app>
-   <app><!--YO! I'M BEING RESTRUCTURED HERE! --><!--fThomas fMS-->
-      <rdgGrp n="['and then']">
-         <rdg wit="f1831">&lt;longToken&gt;And then&lt;/longToken&gt;</rdg>
-      </rdgGrp>
-      <!--It's Me-->
-      <!--fThomas fMS-->
-      <rdgGrp n="['besides,']">
-         <rdg wit="f1818">&lt;pb xml:id="F1818_v1_163" n="151"/&gt;Besides,</rdg>
-         <rdg wit="f1823">Besides,</rdg>
-      </rdgGrp>
-      <!--It's Me-->
-      <rdgGrp n="['', '&lt;delstart/&gt;besides&lt;delend/&gt;', '&lt;addedthomas-start/&gt;and&lt;addedthomas-end/&gt;', ',', '–', '&lt;delstart/&gt;the com&lt;delend/&gt;', 'mon', 'people', 'would', 'believe', 'it', 'to', 'be', 'a', 'real', 'devil', 'and', 'who', 'could', 'attempt', 'besides']">
+   <app><!--YO! I'M BEING RESTRUCTURED HERE! -->
+      <rdgGrp n="$newNorm">
          <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_163" n="151"/&gt;&lt;del rend="strikethrough"&gt;Besides&lt;/del&gt; &lt;add place="margin"&gt;And&lt;/add&gt; ,</rdg>
-      </rdgGrp>
-      <rdgGrp n="['', '&lt;delstart/&gt;besides&lt;delend/&gt;', '&lt;addedthomas-start/&gt;and&lt;addedthomas-end/&gt;', ',', '–', '&lt;delstart/&gt;the com&lt;delend/&gt;', 'mon', 'people', 'would', 'believe', 'it', 'to', 'be', 'a', 'real', 'devil', 'and', 'who', 'could', 'attempt', 'besides']">
          <rdg wit="fMS">&lt;sga-add eID="c56-0084__main__d5e18134"/&gt;– &lt;del rend="strikethrough" xml:id="c56-0084__main__d5e18152"&gt;the com&lt;/del&gt; &lt;lb n="c56-0085__main__1"/&gt;mon people would believe it to &lt;lb n="c56-0085__main__2"/&gt;be a real devil and who could attempt &lt;lb n="c56-0085__left_margin__1"/&gt;Besides</rdg>
       </rdgGrp>
-   </app>
+      <rdgGrp n="$newNorm">
+         <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_163" n="151"/&gt;&lt;del rend="strikethrough"&gt;Besides&lt;/del&gt; &lt;add place="margin"&gt;And&lt;/add&gt; ,</rdg>
+         <rdg wit="fMS">&lt;sga-add eID="c56-0084__main__d5e18134"/&gt;– &lt;del rend="strikethrough" xml:id="c56-0084__main__d5e18152"&gt;the com&lt;/del&gt; &lt;lb n="c56-0085__main__1"/&gt;mon people would believe it to &lt;lb n="c56-0085__main__2"/&gt;be a real devil and who could attempt &lt;lb n="c56-0085__left_margin__1"/&gt;Besides</rdg>
+      </rdgGrp>
+=
+         </app>
    <app>
       <rdgGrp n="['of', 'what', 'use', 'would', 'be', 'pursuit?', 'who', 'could', 'arrest', 'a', 'creature']">
          <rdg wit="f1818">of what use would be pursuit? Who could arrest a creature</rdg>
@@ -12771,30 +12764,13 @@
       </rdgGrp>
    </app>
    <app><!--YO! I'M BEING RESTRUCTURED HERE! -->
-      <rdgGrp n="['', '', '']">
+      <rdgGrp n="$newNorm">
          <rdg wit="f1818">&lt;pb xml:id="F1818_v1_172" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
          <rdg wit="f1823">&lt;pb xml:id="F1823_v1_179" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
          <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_172" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-      </rdgGrp>
-      <rdgGrp n="['', '', '']">
-         <rdg wit="f1818">&lt;pb xml:id="F1818_v1_172" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-         <rdg wit="f1823">&lt;pb xml:id="F1823_v1_179" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-         <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_172" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-      </rdgGrp>
-      <rdgGrp n="['', '', '']">
-         <rdg wit="f1818">&lt;pb xml:id="F1818_v1_172" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-         <rdg wit="f1823">&lt;pb xml:id="F1823_v1_179" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-         <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_172" n="160"/&gt;&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-      </rdgGrp>
-      <rdgGrp n="['', '', '']"/>
-   </app>
-   <app>
-      <rdgGrp n="['', '']">
-         <rdg wit="f1818">&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-         <rdg wit="f1823">&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
-         <rdg wit="fThomas">&lt;milestone unit="chapter" type="end" n="6"/&gt;</rdg>
          <rdg wit="f1831">&lt;milestone unit="chapter" type="end" n="7"/&gt;</rdg>
       </rdgGrp>
-   </app>
+=
+         </app>
 </cx:apparatus>
 <!-- 2023-01-04 03:49:27.576709 -->

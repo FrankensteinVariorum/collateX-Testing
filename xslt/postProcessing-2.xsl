@@ -6,10 +6,11 @@
     xmlns:fv="yeah"
     exclude-result-prefixes="xs math fv" version="3.0">
     <!-- ********************************************************************************************
-           2023-01-04 ebb: DO NOT RUN THIS YET: IT CAN MUNCH APPS!
-           If it finds an <app> to move, but cannot successfully move it, the result is to destroy all trace
+           2023-01-04 ebb: DO NOT RUN THIS YET: IT COULD MUNCH APPS!
+           If it finds an <app> to move, but cannot successfully move it, the result can destroy all trace
            of the rdgGrps being moved. The destruction occurs in the restructure template. 
-           TO WORK ON FIXING SEE LINE 185 below! 
+           We are seeing ambiguous rule match errors on the templates for destruction and restructure modes, not a good sign. 
+
             
             
             POST-PROCESSING XSLT FOR THE FRANKENSTEIN VARIORUM: STAGE 2 
@@ -161,12 +162,12 @@
     
     <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
         not(following-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
-        [following-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
+        [following-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4](:[rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]:)]" 
         name="removeAppBeforeStrandedDel"/>
     
       <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
         not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
-        [preceding-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
+        [preceding-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4](:[rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]:)]" 
         name="removeAppAfterStrandedDel"/>
     
     
@@ -181,22 +182,179 @@
         <xsl:variable name="currentApp" as="element()" select="current()"/>
 
         <app><xsl:comment>YO! I'M BEING RESTRUCTURED HERE! </xsl:comment>
-           <xsl:for-each select="rdgGrp[not(rdg/@wit = $misplacedRdgGrps/rdg/@wit)]">
+            <xsl:variable name="testMatcher" as="xs:string" select="string-join($misplacedRdgGrps/rdg/@wit)"/>
+            <xsl:variable name="matchRdgGrp" as="xs:string*">
+                <xsl:for-each select="$currentApp//rdg[contains($testMatcher, @wit)]">
+                    <xsl:value-of select="current()/parent::rdgGrp/@n ! string()"/>
+                </xsl:for-each>
+            </xsl:variable>
+            <xsl:message>What is matchRdgGrp? <xsl:value-of select="$matchRdgGrp"/></xsl:message>
+           
+            <xsl:variable name="otherRdgGrp" as="node()+">
+                <xsl:for-each select="$currentApp//rdg[not(contains($testMatcher, @wit))]">
+                    <xsl:copy-of select="current()/parent::rdgGrp"/>
+                </xsl:for-each>
+            </xsl:variable>
+            
+         <xsl:for-each select="$matchRdgGrp => distinct-values()">
+             <!-- This should match on the rdgGrp @n attribute values that contain the same reading witnesses as the misplacedRdgGrps. -->
+             <xsl:variable name="matchWitnesses" as="xs:string+" select="$currentApp/rdgGrp[@n = current()]//rdg/@wit ! string()"/>
+             <xsl:variable name="matchingMisplacedRdgGrps" as="element()+">
+                 <xsl:for-each select="$matchWitnesses">
+                     <xsl:copy-of select="$misplacedRdgGrps[rdg/@wit = current()]"/>
+                 </xsl:for-each>
+             </xsl:variable>
+             <xsl:variable name="matchNorm" as="xs:string" select="current() ! string()"/>
+             <xsl:variable name="misplacedNorms" as="xs:string+" select="$matchingMisplacedRdgGrps/@n ! string()"/>
+             <xsl:choose>
+                 <xsl:when test="$misplacedNorms => distinct-values() => count() gt 1">
+                <xsl:for-each select="$misplacedNorms"> 
+                    <xsl:variable name="TokenSquished">
+                         <xsl:choose>
+                             <xsl:when test="$whereMoving = 'backward'"> 
+                                 <xsl:value-of select="$matchNorm || current()"/>
+                             </xsl:when>
+                             <xsl:when test="$whereMoving = 'forward'"> 
+                                 <xsl:value-of select="current() || $matchNorm"/>
+                             </xsl:when>
+                         </xsl:choose>
+             </xsl:variable>
+             <xsl:variable name="newNorm">
+                 <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
+             </xsl:variable>
+
+                          <rdgGrp n="$newNorm">
+                              <xsl:for-each select="$matchWitnesses">
+                                  <rdg wit="{current()}">
+                                      <xsl:choose>
+                                          <xsl:when test="$whereMoving = 'backward'">
+                                              <xsl:value-of select="$currentApp//rdg[@wit=current()]"/>
+                                              <xsl:value-of select="$misplacedRdgGrps/rdg[@wit=current()]"/>
+                                          </xsl:when>
+                                          <xsl:when test="$whereMoving = 'forward'">
+                                              <xsl:value-of select="$misplacedRdgGrps/rdg[@wit=current()]"/>
+                                              <xsl:value-of select="$currentApp//rdg[@wit=current()]"/>
+                                          </xsl:when>
+                                      </xsl:choose>
+                                      
+                                  </rdg>
+                              </xsl:for-each> 
+                          </rdgGrp>
+                </xsl:for-each>
+                 </xsl:when>
+                 <xsl:otherwise>
+                     <xsl:variable name="TokenSquished">
+                         <xsl:choose>
+                             <xsl:when test="$whereMoving = 'backward'"> 
+                                 <xsl:value-of select="$matchNorm || $misplacedNorms"/>
+                             </xsl:when>
+                             <xsl:when test="$whereMoving = 'forward'"> 
+                                 <xsl:value-of select="$misplacedNorms || $matchNorm"/>
+                             </xsl:when>
+                         </xsl:choose>
+                     </xsl:variable>
+                     <xsl:variable name="newNorm">
+                         <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
+                     </xsl:variable>
+                     
+                     <rdgGrp n="$newNorm">
+                         <xsl:for-each select="$matchWitnesses">
+                             <rdg wit="{current()}">
+                                 <xsl:choose>
+                                     <xsl:when test="$whereMoving = 'backward'">
+                                         <xsl:value-of select="$currentApp//rdg[@wit=current()]"/>
+                                         <xsl:value-of select="$misplacedRdgGrps/rdg[@wit=current()]"/>
+                                     </xsl:when>
+                                     <xsl:when test="$whereMoving = 'forward'">
+                                         <xsl:value-of select="$misplacedRdgGrps/rdg[@wit=current()]"/>
+                                         <xsl:value-of select="$currentApp//rdg[@wit=current()]"/>
+                                     </xsl:when>
+                                 </xsl:choose>
+                                 
+                             </rdg>
+                         </xsl:for-each> 
+                     </rdgGrp>
+                     
+                 </xsl:otherwise>
+                 
+             </xsl:choose>
+=
+         </xsl:for-each>
+        </app>
+
+          
+     
+             
+       
+           
+            
+            
+            
+   <!--         <xsl:for-each select="$misplacedRdgGrps">
+                <xsl:variable name="misplacedNormAtt" as="attribute()" select="current()/@n"/>
+                <xsl:variable name="misplacedRdgs" as="element()+" select="current()/rdg"/>
+                <xsl:for-each select="$misplacedRdgs">
+                    <xsl:choose>
+                        <xsl:when test="$currentApp//rdg[@wit = current()/@wit]">
+                            <xsl:variable name="matchWit" as="text()" select="$currentApp//rdg[@wit = current()/@wit]/text()"/>
+                            <xsl:variable name="matchNorm" as="xs:string" select="$matchWit/ancestor::rdgGrp/@n ! string()"/>
+                            <xsl:variable name="TokenSquished">
+                                <xsl:choose>
+                                    <xsl:when test="$whereMoving = 'backward'"> 
+                                        <xsl:value-of select="$matchNorm || $misplacedNormAtt ! string()"/>
+                                    </xsl:when>
+                                    <xsl:when test="$whereMoving = 'forward'"> 
+                                        <xsl:value-of select="$misplacedNormAtt || $matchNorm"/>
+                                    </xsl:when>
+                                </xsl:choose>
+                            </xsl:variable>
+                            <xsl:variable name="newNorm">
+                                <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
+                            </xsl:variable>
+                            <rdgGrp n="{$newNorm}">
+                                <rdg wit="{@wit}">
+                                    <xsl:choose>
+                                        <xsl:when test="$whereMoving = 'backward'">
+                                            <xsl:value-of select="$matchWit"/>
+                                            <xsl:value-of select="current()"/>
+                                        </xsl:when>
+                                        <xsl:when test="$whereMoving = 'forward'">
+                                            <xsl:value-of select="current()"/>
+                                            <xsl:value-of select="$matchWit"/>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                    
+                                </rdg>
+                            </rdgGrp>
+                            
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <!-\- There is no matching rdg in the app -\->
+                            <rdgGrp n="{$misplacedNormAtt}">
+                                <xsl:copy-of select="current()"/>
+                            </rdgGrp>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </xsl:for-each>-->
+            
+            
+           <!--<xsl:for-each select="rdgGrp[not(rdg/@wit = $misplacedRdgGrps/rdg/@wit)]">
                <xsl:comment><xsl:value-of select="$misplacedRdgGrps/rdg/@wit"/></xsl:comment>
-               <!-- The comment above shows me that in C14RA (app toward the end), the only witness being recognized is f1831, NOT the other two.
+               <!-\- The comment above shows me that in C14RA (app toward the end), the only witness being recognized is f1831, NOT the other two.
                Think WHY: We only looked for longToken or del...OR the idea of the next/prev app NOT HAVING the witness at all.  f1831 isn't present
                in the next witness, so it's delivered, but the others are not. Should we expand the scope of our transformation? 
                * Move ANYTHING that is bearing meaningful content forward to the prev or next app that either lacks the witness entirely or carries
                only empty content.
-               -->
+               -\->
                <xsl:copy-of select="current()"/><xsl:comment>It's Me</xsl:comment>
-           </xsl:for-each>
-           <xsl:for-each select="rdgGrp[rdg/@wit = $misplacedRdgGrps/rdg/@wit]/rdg">
+           </xsl:for-each>-->
+         <!--  <xsl:for-each select="rdgGrp[rdg/@wit = $misplacedRdgGrps/rdg/@wit]/rdg">
                 <xsl:variable name="thisMisplacedNorm" as="attribute()+" select="$misplacedRdgGrps/@n"/>
                 <xsl:message><xsl:value-of select="$thisMisplacedNorm"/></xsl:message>
                 <xsl:variable name="thisMisplacedRdg" as="element()+" select="$misplacedRdgGrps[rdg/@wit = current()/@wit]/rdg"/>
                 <xsl:message><xsl:value-of select="$thisMisplacedRdg"/></xsl:message>
-               <!-- 2023-01-04 ebb: WE"RE HAVING TROUBLE HERE WITH PROCESSING MULTIPLE RDG ELEMENTS IN TWO RDGGRPS.  -->
+               <!-\- 2023-01-04 ebb: WE"RE HAVING TROUBLE HERE WITH PROCESSING MULTIPLE RDG ELEMENTS IN TWO RDGGRPS.  -\->
                 <xsl:variable name="TokenSquished">
                    <xsl:choose>
                        <xsl:when test="$whereMoving = 'backward'"> 
@@ -226,8 +384,8 @@
                     </rdg>
                    </xsl:for-each>
                 </rdgGrp>
-            </xsl:for-each>
-       </app>
+            </xsl:for-each>-->
+
     </xsl:template>
 
 </xsl:stylesheet>

@@ -10140,23 +10140,12 @@
       </rdgGrp>
    </app>
    <app><!--YO! I'M BEING RESTRUCTURED HERE! -->
-      <rdgGrp n="['', '', 'end', 'of', 'vol.', 'i.', '', '', '&lt;p-start/&gt;', 'thus spoke my prophetic soul, as, torn by remorse, horror, and despair, i beheld those', 'i loved spend vain sorrow upon the graves of william and justine, the first hapless', 'victims to my unhallowed arts.', '&lt;p-end/&gt;', '']">
+      <rdgGrp n="$newNorm">
          <rdg wit="f1818">&lt;milestone unit="chapter" type="end" n="7"/&gt; &lt;head sID="novel1_letter4_div4_head6"/&gt; END OF VOL. I. &lt;head eID="novel1_letter4_div4_head6"/&gt; &lt;milestone unit="volume" n="2"/&gt;&lt;milestone unit="frontmatter" type="start" n="2"/&gt;</rdg>
+         <rdg wit="f1823">&lt;pb xml:id="F1823_v1_201" n="182"/&gt;</rdg>
          <rdg wit="fThomas">&lt;milestone unit="chapter" type="end" n="7"/&gt; &lt;head sID="novel1_letter4_div4_head6"/&gt; END OF VOL. I. &lt;head eID="novel1_letter4_div4_head6"/&gt; &lt;milestone unit="volume" n="2"/&gt;&lt;milestone unit="frontmatter" type="start" n="2"/&gt;</rdg>
       </rdgGrp>
-      <rdgGrp n="['', '', 'end', 'of', 'vol.', 'i.', '', '', '&lt;p-start/&gt;', 'thus spoke my prophetic soul, as, torn by remorse, horror, and despair, i beheld those', 'i loved spend vain sorrow upon the graves of william and justine, the first hapless', 'victims to my unhallowed arts.', '&lt;p-end/&gt;', '']"/>
-      <rdgGrp n="['', '', 'end', 'of', 'vol.', 'i.', '', '', '&lt;p-start/&gt;', 'thus spoke my prophetic soul, as, torn by remorse, horror, and despair, i beheld those', 'i loved spend vain sorrow upon the graves of william and justine, the first hapless', 'victims to my unhallowed arts.', '&lt;p-end/&gt;', '']">
-         <rdg wit="f1818">&lt;milestone unit="chapter" type="end" n="7"/&gt; &lt;head sID="novel1_letter4_div4_head6"/&gt; END OF VOL. I. &lt;head eID="novel1_letter4_div4_head6"/&gt; &lt;milestone unit="volume" n="2"/&gt;&lt;milestone unit="frontmatter" type="start" n="2"/&gt;</rdg>
-         <rdg wit="fThomas">&lt;milestone unit="chapter" type="end" n="7"/&gt; &lt;head sID="novel1_letter4_div4_head6"/&gt; END OF VOL. I. &lt;head eID="novel1_letter4_div4_head6"/&gt; &lt;milestone unit="volume" n="2"/&gt;&lt;milestone unit="frontmatter" type="start" n="2"/&gt;</rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['', '']">
-         <rdg wit="f1818">&lt;milestone unit="frontmatter" type="end" n="2"/&gt;</rdg>
-         <rdg wit="f1823">&lt;milestone unit="chapter" type="end" n="7"/&gt;</rdg>
-         <rdg wit="fThomas">&lt;milestone unit="frontmatter" type="end" n="2"/&gt;</rdg>
-         <rdg wit="f1831">&lt;milestone unit="chapter" type="end" n="8"/&gt;</rdg>
-      </rdgGrp>
-   </app>
+=
+         </app>
 </cx:apparatus>
 <!-- 2023-01-04 03:49:27.576709 -->
