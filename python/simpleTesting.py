@@ -211,6 +211,8 @@ def normalize(inputText):
     normalized = RE_sgaPEND.sub('<p-end/>', normalized)
     normalized = RE_MILESTONE.sub('', normalized)
     normalized = RE_PB.sub('', normalized)
+    normalized = RE_LT_AMP.sub('and', normalized)
+    normalized = RE_AMP.sub('and', normalized)
     normalized = RE_LB.sub('', normalized)
     normalized = RE_NOTE_START.sub('<note_start/>', normalized)
     normalized = RE_NOTE_END.sub('<note_end/>', normalized)
@@ -242,8 +244,6 @@ def normalize(inputText):
     normalized = RE_MDEL.sub('', normalized)
     # 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
     # We do not think these are significant for comparison with the other editions, so we normalize them out.
-    normalized = RE_LT_AMP.sub('and', normalized)
-    normalized = RE_AMP.sub('and', normalized)
     normalized = RE_DOTDASH.sub('.', normalized)
     normalized = RE_HEAD.sub('', normalized)
     normalized = RE_INCLUDE.sub('', normalized)

@@ -782,7 +782,7 @@
    <mod eID="c56-0083__main__d5e17596"/>  in vain for another <lb n="c56-0083__main__10"/>flash discovered him to me <delSpan rend="strikethrough" spanTo="#c56-0083.06"/>climbing <lb n="c56-0083__main__11"/>up the steep and <anchor xml:id="c56-0083.06"/>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0083__main__d5e17617"/>hanging
         among the rocks of the <sga-add eID="c56-0083__main__d5e17617"/>
-   <anchor xml:id="c56-0083.05"/> nearly perpendicular <lb n="c56-0083__main__12"/>ascent of the <longToken>Mont-Salêve;</longToken> he soon reached <lb n="c56-0083__main__13"/>the summit and dissap<mod sID="c56-0083__main__d5e17627"/>
+   <anchor xml:id="c56-0083.05"/> nearly perpendicular <lb n="c56-0083__main__12"/>ascent of <longToken>the Mont-Salêve;</longToken> he soon reached <lb n="c56-0083__main__13"/>the summit and dissap<mod sID="c56-0083__main__d5e17627"/>
    <mdel>p</mdel>
    <sga-add place="intralinear" sID="c56-0083__main__d5e17631"/>e <sga-add eID="c56-0083__main__d5e17631"/>
    <mod eID="c56-0083__main__d5e17627"/> ared.<milestone unit="tei:p-END"/>
@@ -903,7 +903,8 @@
    <milestone unit="tei:p-START"/>
    <lb n="c56-0084__main__11"/>Day dawned and I directed my <lb n="c56-0084__main__12"/>steps towards the town – the gates were <lb n="c56-0084__main__13"/>open and I hastened to my father's <lb n="c56-0084__main__14"/>house<del rend="strikethrough" xml:id="c56-0084__main__d5e17968">s</del>.–My <del rend="strikethrough" xml:id="c56-0084__main__d5e17971">n</del> first
       thought was to <w ana="start"/>disco<lb n="c56-0084__main__15"/>ver<w ana="end"/> what I knew of the murderer &amp; 
-   <lb n="c56-0084__main__16"/>cause instant <del rend="strikethrough" xml:id="c56-0084__main__d5e17983">search</del> pursuit to <lb n="c56-0084__main__17"/>be made. But I paused when I <w ana="start"/>reflect<lb n="c56-0084__main__18"/>ed<w ana="end"/> what the story was that I had <lb n="c56-0084__main__19"/>to tell. A <mod sID="c56-0084__main__d5e17997"/>
+   <lb n="c56-0084__main__16"/>
+   cause instant <del rend="strikethrough" xml:id="c56-0084__main__d5e17983">search</del> pursuit to <lb n="c56-0084__main__17"/>be made. But I paused when I <w ana="start"/>reflect<lb n="c56-0084__main__18"/>ed<w ana="end"/> what the story was that I had <lb n="c56-0084__main__19"/>to tell. A <mod sID="c56-0084__main__d5e17997"/>
    <del rend="strikethrough" xml:id="c56-0084__main__d5e17999">creature</del>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0084__main__d5e18002"/>being <sga-add eID="c56-0084__main__d5e18002"/>
    <mod eID="c56-0084__main__d5e17997"/>  whom I myself <lb n="c56-0084__main__20"/>had created and endued with life, <anchor xml:id="c56-0084.04"/>
@@ -1311,7 +1312,8 @@
    <del rend="strikethrough" xml:id="c56-0090__main__d5e19254">humoured</del>
    <sga-add place="superlinear" sID="c56-0090__main__d5e19257"/>caressed <sga-add eID="c56-0090__main__d5e19257"/>
    <mod eID="c56-0090__main__d5e19252"/> . She was now a woman <lb n="c56-0090__main__8"/>in stature and expression of countenance <lb n="c56-0090__main__9"/>which was uncommonly lovely — An open &amp; 
-   <lb n="c56-0090__main__10"/>capacious for<mod sID="c56-0090__main__d5e19268"/>
+   <lb n="c56-0090__main__10"/>
+   capacious for<mod sID="c56-0090__main__d5e19268"/>
    <sga-add place="sublinear" sID="c56-0090__main__d5e19270"/>
    <metamark function="insert">^</metamark>
    <sga-add eID="c56-0090__main__d5e19270"/>

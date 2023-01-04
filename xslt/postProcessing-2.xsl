@@ -16,31 +16,7 @@
      3. app elements that contain less than four witnesses, where those witnesses contain deleted passages
         or longTokens aligned only with themselves. For this we need to look to the first preceding-sibling OR first following-sibling app 
         to find the best location to move the content. 
-        
-     4. Stranded deleted passages where the contents of the deletion are mostly represented in the next following-sibling::app. Example:
-             <app>
-      <rdgGrp n="['']">
-         <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_163" n="151"/&gt; </rdg>
-         <rdg wit="fMS">&lt;sga-add eID="c56-0084__main__d5e18134"/&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['and then']">
-         <rdg wit="f1831">&lt;longToken&gt;And then&lt;/longToken&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['besides,']">
-         <rdg wit="f1818">&lt;pb xml:id="F1818_v1_163" n="151"/&gt;Besides, </rdg>
-         <rdg wit="f1823">Besides, </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['&lt;delstart/&gt;besides&lt;delend/&gt;', '&lt;addedthomas-start/&gt;and&lt;addedthomas-end/&gt;', ',']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Besides&lt;/del&gt; &lt;add place="margin"&gt;And&lt;/add&gt; , </rdg>
-      </rdgGrp>
-      <rdgGrp n="['–', '&lt;delstart/&gt;the com&lt;delend/&gt;', 'mon', 'people', 'would', 'believe', 'it', 'to', 'be', 'a', 'real', 'devil', 'and', 'who', 'could', 'attempt', 'besides']">
-         <rdg wit="fMS">– &lt;del rend="strikethrough" xml:id="c56-0084__main__d5e18152"&gt;the com&lt;/del&gt; &lt;lb n="c56-0085__main__1"/&gt;mon people would believe it to &lt;lb n="c56-0085__main__2"/&gt;be a real devil and who could attempt &lt;lb n="c56-0085__left_margin__1"/&gt;Besides </rdg>
-      </rdgGrp>
-   </app>
-    
-        
+
     ******************************************************************************************** -->
     <xsl:mode on-no-match="shallow-copy"/>
     
@@ -157,54 +133,7 @@
         </app>
     </xsl:template>
     
- <!-- *************************
-    Handles del, add, note, or longToken sequestered tokens where most of the content is in
-    following-sibling::app[1]
-    
-    Example from C-13:
-       <app>
-      <rdgGrp n="['&lt;delstart/&gt;our father looks so sorrowful:', 'this dreadful event seems to have revived in his mind his grief on the death of mamma.', 'poor elizabeth also is quite inconsolable.&#34;&lt;delend/&gt;', '&lt;addedthomas-start/&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow and lustreless&lt;addedthomas-end/&gt;']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Our father looks so sorrowful: this dreadful event seems to have revived in his mind his grief on the death of Mamma. Poor Elizabeth also is quite inconsolable.”&lt;/del&gt; &lt;add&gt;the sense of our misfortune is yet unalleviated; the silence of our father is uninterrupted, and there is something more distressing than tears in his unaltered sadness—while poor Elizabeth, seeking solitude and for ever weeping, already begins to feel the effects of incessant grief—for her colour is gone, and her eyes are hollow &amp; lustreless&lt;/add&gt;</rdg>
-      </rdgGrp>
-      <rdgGrp n="['our']">
-         <rdg wit="f1818">Our</rdg>
-         <rdg wit="f1823">Our</rdg>
-         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18427"/&gt;&lt;sga-add place="superlinear" sID="c56-0086__main__d5e18433"/&gt;our</rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['', 'father looks so sorrowful', 'and', 'it']">
-         <rdg wit="fMS">&lt;sga-add eID="c56-0086__main__d5e18433"/&gt; &lt;longToken&gt;father looks so sorrowful&lt;/longToken&gt; and it</rdg>
-      </rdgGrp>
-      <rdgGrp n="['father looks so sorrowful:', 'this', 'dreadful', 'event']">
-         <rdg wit="f1818">&lt;longToken&gt;father looks so sorrowful:&lt;/longToken&gt; this dreadful event</rdg>
-         <rdg wit="f1823">&lt;longToken&gt;father looks so sorrowful:&lt;/longToken&gt; this dreadful event</rdg>
-      </rdgGrp>
-   </app>
 
-************************* -->
-    
-    <!-- BUGGY TEMPLATE: generates ambiguous rule matches -->
-<xsl:template match="app[rdgGrp/@n[contains(., 'delstart') or contains(., 'note_start') or contains(., 'addedThomas')] or descendant::rdg[contains(., 'longToken')]]">
-    <xsl:variable name="currentApp" as="element()" select="current()"/>
-    <xsl:variable name="testFollowingApp" as="xs:boolean+">
-        <xsl:for-each select="rdgGrp/@n ! tokenize(., ',') ! replace(., '&lt;.+?&gt;', '')">          <xsl:variable name="currToken" as="xs:string" select="current()"/>         
-            <xsl:for-each select="$currentApp/following-sibling::app[1]/rdgGrp/@n">   
-            <xsl:value-of select="contains(., $currToken)"/>
-            </xsl:for-each>
-        </xsl:for-each> 
-        
-        
-    </xsl:variable>
-    <xsl:if test="$testFollowingApp = true()">
-     
-        
-        <xsl:text>SHOUT!</xsl:text>
-        
-        
-    </xsl:if>
-</xsl:template>
-    
     
     <!-- **************************************************************************
     DESTRUCTION MODES: Destroy the original app or rdgGrp elements that are being modified by
@@ -249,7 +178,7 @@
     <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
         not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
         [preceding-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
-        name="removeAppBeforeAfterStrandedDel"/>
+        name="removeAppAfterStrandedDel"/>
     
     
     <!-- **************************************************************************

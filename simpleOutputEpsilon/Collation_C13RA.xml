@@ -7715,31 +7715,14 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['mont', 'salêve,', 'a', 'hill', 'that', 'bounds', 'plainpalais', 'on']">
-			<rdg wit="f1818">Mont Salêve, a hill that bounds Plainpalais on </rdg>
-			<rdg wit="f1823">Mont Salêve, a hill that bounds Plainpalais on </rdg>
-			<rdg wit="fThomas">Mont Salêve, a hill that bounds Plainpalais on </rdg>
-			<rdg wit="f1831">Mont Salêve, a hill that bounds Plainpalais on </rdg>
+		<rdgGrp n="['mont', 'salêve,', 'a', 'hill', 'that', 'bounds', 'plainpalais', 'on', 'the', 'south.']">
+			<rdg wit="f1818">Mont Salêve, a hill that bounds Plainpalais on the south. </rdg>
+			<rdg wit="f1823">Mont Salêve, a hill that bounds Plainpalais on the south. </rdg>
+			<rdg wit="fThomas">Mont Salêve, a hill that bounds Plainpalais on the south. </rdg>
+			<rdg wit="f1831">Mont Salêve, a hill that bounds Plainpalais on the south. </rdg>
 		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['the']">
-			<rdg wit="f1818">the </rdg>
-			<rdg wit="f1823">the </rdg>
-			<rdg wit="fThomas">the </rdg>
-			<rdg wit="f1831">the </rdg>
-			<rdg wit="fMS">the </rdg>
-		</rdgGrp>
-	</app>
-	<app>
-		<rdgGrp n="['mont-salêve;']">
-			<rdg wit="fMS">Mont-Salêve; </rdg>
-		</rdgGrp>
-		<rdgGrp n="['south.']">
-			<rdg wit="f1818">south. </rdg>
-			<rdg wit="f1823">south. </rdg>
-			<rdg wit="fThomas">south. </rdg>
-			<rdg wit="f1831">south. </rdg>
+		<rdgGrp n="['the mont-salêve;']">
+			<rdg wit="fMS">&lt;longToken&gt;the Mont-Salêve;&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -8744,23 +8727,23 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['murderer', 'andcause']">
-			<rdg wit="fMS">murderer &amp;&lt;lb n=&quot;c56-0084__main__16&quot;/&gt;cause </rdg>
+		<rdgGrp n="['murderer']">
+			<rdg wit="fMS">murderer </rdg>
 		</rdgGrp>
-		<rdgGrp n="['murderer,', 'and', 'cause']">
-			<rdg wit="f1818">murderer, and cause </rdg>
-			<rdg wit="f1823">murderer, and cause </rdg>
-			<rdg wit="fThomas">murderer, and cause </rdg>
-			<rdg wit="f1831">murderer, and cause </rdg>
+		<rdgGrp n="['murderer,']">
+			<rdg wit="f1818">murderer, </rdg>
+			<rdg wit="f1823">murderer, </rdg>
+			<rdg wit="fThomas">murderer, </rdg>
+			<rdg wit="f1831">murderer, </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['instant']">
-			<rdg wit="f1818">instant </rdg>
-			<rdg wit="f1823">instant </rdg>
-			<rdg wit="fThomas">instant </rdg>
-			<rdg wit="f1831">instant </rdg>
-			<rdg wit="fMS">instant </rdg>
+		<rdgGrp n="['and', 'cause', 'instant']">
+			<rdg wit="f1818">and cause instant </rdg>
+			<rdg wit="f1823">and cause instant </rdg>
+			<rdg wit="fThomas">and cause instant </rdg>
+			<rdg wit="f1831">and cause instant </rdg>
+			<rdg wit="fMS">&amp;&lt;lb n=&quot;c56-0084__main__16&quot;/&gt; cause instant </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -12412,21 +12395,21 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['an', 'open']">
-			<rdg wit="f1818">An open </rdg>
-			<rdg wit="f1823">An open </rdg>
-			<rdg wit="fThomas">An open </rdg>
-			<rdg wit="fMS">An open </rdg>
+		<rdgGrp n="['an', 'open', 'and', 'capacious']">
+			<rdg wit="f1818">An open and capacious </rdg>
+			<rdg wit="f1823">An open and capacious </rdg>
+			<rdg wit="fThomas">An open and capacious </rdg>
+			<rdg wit="fMS">An open &amp;&lt;lb n=&quot;c56-0090__main__10&quot;/&gt; capacious </rdg>
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="['and', 'capacious', 'forehead']">
-			<rdg wit="f1818">and capacious forehead </rdg>
-			<rdg wit="f1823">and capacious forehead </rdg>
-			<rdg wit="fThomas">and capacious forehead </rdg>
+		<rdgGrp n="['for', '', 'e', '', 'head']">
+			<rdg wit="fMS">for&lt;sga-add place=&quot;sublinear&quot; sID=&quot;c56-0090__main__d5e19270&quot;/&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; &lt;sga-add eID=&quot;c56-0090__main__d5e19270&quot;/&gt;&lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0090__main__d5e19276&quot;/&gt;e &lt;sga-add eID=&quot;c56-0090__main__d5e19276&quot;/&gt; head </rdg>
 		</rdgGrp>
-		<rdgGrp n="['andcapacious', 'for', '', 'e', '', 'head']">
-			<rdg wit="fMS">&amp;&lt;lb n=&quot;c56-0090__main__10&quot;/&gt;capacious for&lt;sga-add place=&quot;sublinear&quot; sID=&quot;c56-0090__main__d5e19270&quot;/&gt; &lt;metamark function=&quot;insert&quot;&gt;^&lt;/metamark&gt; &lt;sga-add eID=&quot;c56-0090__main__d5e19270&quot;/&gt;&lt;sga-add place=&quot;superlinear&quot; sID=&quot;c56-0090__main__d5e19276&quot;/&gt;e &lt;sga-add eID=&quot;c56-0090__main__d5e19276&quot;/&gt; head </rdg>
+		<rdgGrp n="['forehead']">
+			<rdg wit="f1818">forehead </rdg>
+			<rdg wit="f1823">forehead </rdg>
+			<rdg wit="fThomas">forehead </rdg>
 		</rdgGrp>
 	</app>
 	<app>
@@ -13505,4 +13488,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2023-01-04 00:12:05.946353 -->
+<!-- 2023-01-04 03:26:50.122761 -->

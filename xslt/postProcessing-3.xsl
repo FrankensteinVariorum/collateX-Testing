@@ -13,11 +13,8 @@
     2023-01-01 ebb: Here is a  high-level summary of our second post-processing algorithm:
     In this stage, we are post-processing:
     
-     * app elements that contain less than four witnesses, where those witnesses contain deleted passages
-        or longTokens aligned only with themselves. For this we need to look to the first preceding-sibling OR first following-sibling app 
-        to find the best location to move the content. 
         
-     * Stranded passages where the contents of a deletion are represented in the next following-sibling::app and should be moved back: Example:
+     4. Stranded passages where the contents of a deletion are represented in the next following-sibling::app and should be moved back: Example:
              <app>
       <rdgGrp n="['']">
          <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_163" n="151"/&gt; </rdg>
@@ -67,97 +64,6 @@
        </xsl:for-each> 
     </xsl:template>
 
-    <!-- ********************************************************************************************
-       DELETIONS (OR LONGTOKENS) ALIGNED WITH ONLY THEMSELVES
-      2023-01-01 ebb: Reviewing the collation of C13, I discover this phenomenon. It may be rare, but it seems like 
-      a predictable pattern:
-      
-        <app>
-      <rdgGrp n="['']">
-         <rdg wit="fThomas">&lt;pb xml:id="F1818_v1_163" n="151"/&gt; </rdg>
-         <rdg wit="fMS">&lt;sga-add eID="c56-0084__main__d5e18134"/&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['and then']">
-         <rdg wit="f1831">&lt;longToken&gt;And then&lt;/longToken&gt; </rdg>
-      </rdgGrp>
-      <rdgGrp n="['besides,']">
-         <rdg wit="f1818">&lt;pb xml:id="F1818_v1_163" n="151"/&gt;Besides, </rdg>
-         <rdg wit="f1823">Besides, </rdg>
-      </rdgGrp>
-   </app>
-   <app>
-      <rdgGrp n="['&lt;delstart/&gt;besides&lt;delend/&gt;', '&lt;addedthomas-start/&gt;and&lt;addedthomas-end/&gt;', ',']">
-         <rdg wit="fThomas">&lt;del rend="strikethrough"&gt;Besides&lt;/del&gt; &lt;add place="margin"&gt;And&lt;/add&gt; , </rdg>
-      </rdgGrp>
-      <rdgGrp n="['–', '&lt;delstart/&gt;the com&lt;delend/&gt;', 'mon', 'people', 'would', 'believe', 'it', 'to', 'be', 'a', 'real', 'devil', 'and', 'who', 'could', 'attempt', 'besides']">
-         <rdg wit="fMS">– &lt;del rend="strikethrough" xml:id="c56-0084__main__d5e18152"&gt;the com&lt;/del&gt; &lt;lb n="c56-0085__main__1"/&gt;mon people would believe it to &lt;lb n="c56-0085__main__2"/&gt;be a real devil and who could attempt &lt;lb n="c56-0085__left_margin__1"/&gt;Besides </rdg>
-      </rdgGrp>
-   </app>
-      
-      
-      This is the first time I've seen a case where we should move a special passage to an immediately preceding app. 
-      It may sometimes happen with longToken passages or delstart....delend passages. Because Thomas AND fMS are involved, this wouldn't
-      be picked up as a loner rdgGrp and runs the risk of being invisible in the Variorum viewer unless moved. 
-      
-      WHAT TO DO:
-      1. Spot the pattern: 
-         * app contains less than 4 rdg elements, and may have one more more rdgGrp 
-         * (If it only had one rdgGrp and one rdg it would be picked up by our other postprocessing templates)
-         * rdgGrp/@n contains "delstart" or rdg contains longToken
-         
-     2. Look at first preceding-sibling app for 
-         * matching content in their rdgGrp/@n 
-         * the outright absence of the rdg/@wit present in this app
-         * the presence of the witnesses but with empty (non-meaningful) content in rdgGrp/@n 
-       
-         
-     3. Where we find this, we move to process and restructure those apps (and delete their original forms)
-
-     ********************************************************************************************* -->    
-
-    <xsl:template match="app[count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4]
-        (:looks for an app with suspiciously few rdg elements...  :)
-        [rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]
-        (: checks that it has a deleted passage or longToken... :)
-        [preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
-        not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit) or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or not(following-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
-        (: checks if the first preceding-sibling::app or first following-sibling::app either contains an empty-content rdg for the del/longToken witness OR no matching witness:)
-        ">
-        <xsl:variable name="currentApp" as="element()" select="current()"/>
-        <xsl:variable name="targetRdgGrps" as="element()+" select="rdgGrp[@n ! contains(., 'delstart') or descendant::rdg[contains(., 'longToken')]]"/>
-        <xsl:variable name="prevApp" as="element()" select="($currentApp/preceding-sibling::app)[1]"/>
-        <xsl:variable name="nextApp" as="element()" select="($currentApp/following-sibling::app)[1]"/>
-        <xsl:choose>
-            <xsl:when test="preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit">
-                <xsl:for-each select="$targetRdgGrps">
-                    <xsl:if test="$prevApp[rdgGrp/@n ! matches(., '^\W+$')][rdg/@wit = $currentApp//rdg/@wit] or not($prevApp//rdg/@wit = descendant::rdg/@wit)">
-                   <xsl:apply-templates mode="restructure" select="$currentApp/preceding-sibling::app[1]">
-                       <xsl:with-param as="node()" name="loner" select="current()/rdg" tunnel="yes"/>
-                       <!-- ebb: There will almost certainly be only one rdg if it's a deletion or longToken in this stranded situation. -->
-                       <xsl:with-param as="attribute()" name="norm" select="current()/@n" tunnel="yes"/>
-                   </xsl:apply-templates>
-                    </xsl:if>
-                    <xsl:if test="$nextApp[rdgGrp/@n ! matches(., '^\W+$')][rdg/@wit = $currentApp//rdg/@wit] or not($nextApp//rdg/@wit = descendant::rdg/@wit)">
-                        <xsl:apply-templates mode="restructure" select="$currentApp/following-sibling::app[1]">
-                            <xsl:with-param as="node()" name="loner" select="current()/rdg" tunnel="yes"/>
-                            <!-- ebb: There will almost certainly be only one rdg if it's a deletion or longToken in this stranded situation. -->
-                            <xsl:with-param as="attribute()" name="norm" select="current()/@n" tunnel="yes"/>
-                        </xsl:apply-templates>
-                    </xsl:if>
-                </xsl:for-each>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates mode="copyOriginal" select="$currentApp"/>
-            </xsl:otherwise>
-            
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="app" mode="copyOriginal">
-        <app> 
-            <xsl:apply-templates/>
-        </app>
-    </xsl:template>
     
  <!-- *************************
     Handles del, add, note, or longToken sequestered tokens where most of the content is in
@@ -186,7 +92,7 @@
 
 ************************* -->
     
-    <!-- BUGGY TEMPLATE: generates ambiguous rule matches -->
+    <!-- UNFINISHED TEMPLATE-->
 <xsl:template match="app[rdgGrp/@n[contains(., 'delstart') or contains(., 'note_start') or contains(., 'addedThomas')] or descendant::rdg[contains(., 'longToken')]]">
     <xsl:variable name="currentApp" as="element()" select="current()"/>
     <xsl:variable name="testFollowingApp" as="xs:boolean+">
@@ -206,6 +112,13 @@
         
     </xsl:if>
 </xsl:template>
+    
+    
+    <xsl:template match="app"mode="copyOriginal">
+        <app> 
+            <xsl:apply-templates/>
+        </app>
+    </xsl:template>
     
     
     <!-- **************************************************************************
