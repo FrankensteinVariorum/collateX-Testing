@@ -78,12 +78,9 @@ Add this with an "or" pipe to the template match in the preprocessing XSLT>  -->
     -->
     <xsl:template match="(lb | anchor | zone[@sID] | mod[@sID])[not(preceding-sibling::*[1][name() = 'w' and @ana='start'])]">
        <xsl:choose> 
-           <xsl:when test="preceding-sibling::text()[1][not(matches(., '\n')) and not(contains(., '&amp;'))]">
+           <xsl:when test="preceding-sibling::text()[1][not(matches(., '\n'))]">
             <xsl:text> &#10;</xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
         </xsl:when>
-           <xsl:when test="preceding-sibling::text()[1][matches(, '&amp;')]">
-               <xsl:text> &#10;</xsl:text><xsl:copy><xsl:apply-templates select="@*"/></xsl:copy><xsl:text> </xsl:text>
-           </xsl:when>
        <xsl:otherwise>
            <xsl:copy><xsl:apply-templates select="@*"/></xsl:copy>
        </xsl:otherwise>
