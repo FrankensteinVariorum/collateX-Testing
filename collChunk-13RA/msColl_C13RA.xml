@@ -782,7 +782,7 @@
    <mod eID="c56-0083__main__d5e17596"/>  in vain for another <lb n="c56-0083__main__10"/>flash discovered him to me <delSpan rend="strikethrough" spanTo="#c56-0083.06"/>climbing <lb n="c56-0083__main__11"/>up the steep and <anchor xml:id="c56-0083.06"/>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0083__main__d5e17617"/>hanging
         among the rocks of the <sga-add eID="c56-0083__main__d5e17617"/>
-   <anchor xml:id="c56-0083.05"/> nearly perpendicular <lb n="c56-0083__main__12"/>ascent of the Mont-Salêve; he soon reached <lb n="c56-0083__main__13"/>the summit and dissap<mod sID="c56-0083__main__d5e17627"/>
+   <anchor xml:id="c56-0083.05"/> nearly perpendicular <lb n="c56-0083__main__12"/>ascent of the <longToken>Mont-Salêve;</longToken> he soon reached <lb n="c56-0083__main__13"/>the summit and dissap<mod sID="c56-0083__main__d5e17627"/>
    <mdel>p</mdel>
    <sga-add place="intralinear" sID="c56-0083__main__d5e17631"/>e <sga-add eID="c56-0083__main__d5e17631"/>
    <mod eID="c56-0083__main__d5e17627"/> ared.<milestone unit="tei:p-END"/>

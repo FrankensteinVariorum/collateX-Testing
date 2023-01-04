@@ -165,18 +165,26 @@ def extract(input_xml):
         # elif event == pulldom.END_ELEMENT and node.localName in blockElement:
         #    output += '\n</' + node.localName + '>'
         elif event == pulldom.CHARACTERS:
-            output += fixToken(normalizeSpace(node.data))
+            # output += fixToken(normalizeSpace(node.data))
+            output += normalizeSpace(node.data)
+
         else:
             continue
     return output
 
 
-def fixToken(inText):
-    """ Add space before and after dash and hyphen """
-    fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
-    fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
-    fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
-    return fixToken
+# 2023-01-03 ebb: We created the fixToken function to make hyphens and dashes all be tokenized.
+# Reviewing the collation outputs with and without the function in effect, the function does not seem
+# to improve alignments: it splits up the collation into more app elements and is not as helpful as we
+# thought at first.
+# I'm commenting it out and removing the call to it in line 168 to determine
+# whether there is any difference in the output:
+# def fixToken(inText):
+#     """ Add space before and after dash and hyphen """
+#     fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', inText)
+#     fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
+#     fixToken = re.sub('(-|[‒–—])(\S)', '\n\\1\n\\2', fixToken)
+#     return fixToken
 
 
 def normalize(inputText):
