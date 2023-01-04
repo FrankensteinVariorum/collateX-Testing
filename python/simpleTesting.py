@@ -244,7 +244,7 @@ def normalize(inputText):
     normalized = RE_MDEL.sub('', normalized)
     # 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
     # We do not think these are significant for comparison with the other editions, so we normalize them out.
-    normalized = RE_DOTDASH.sub('.', normalized)
+    normalized = RE_DOTDASH.sub('. ', normalized)
     normalized = RE_HEAD.sub('', normalized)
     normalized = RE_INCLUDE.sub('', normalized)
     normalized = RE_MULTI_RIGHTANGLE.sub('>', normalized)

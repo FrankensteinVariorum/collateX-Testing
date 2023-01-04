@@ -273,6 +273,7 @@
         -->
         <xsl:param name="loner" tunnel="yes"/>
         <xsl:param name="norm" tunnel="yes"/>
+        <xsl:variable name="reducedNormParam" as="xs:string" select="$norm ! replace(., '\s{2,}', '')"/>
         <app>
             <xsl:apply-templates
                 select="rdgGrp[not(preceding::app[1][count(rdgGrp) = 1 and rdgGrp/@n ! string-length() = 4])]" mode="restructure">
@@ -282,7 +283,7 @@
                 <xsl:when test="$norm ! string-length() &gt; 4 and descendant::rdg/@wit = $loner/@wit">
                     <xsl:variable name="TokenSquished">
                         <xsl:value-of
-                            select="$norm ! string() || descendant::rdgGrp[descendant::rdg[@wit = $loner/@wit]]/@n"/>
+                            select="$reducedNormParam ! string() || descendant::rdgGrp[descendant::rdg[@wit = $loner/@wit]]/@n ! replace(., '\s{2,}', '')"/>
                     </xsl:variable>
                     <xsl:variable name="newToken">
                         <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
@@ -294,18 +295,18 @@
                     <rdgGrp n="{$newNorm}">
                         <rdg wit="{$loner/@wit}">
                             <xsl:value-of
-                                select="fv:ampFix($loner/text())"/>
+                                select="fv:ampFix($loner)"/>
                             <xsl:value-of
-                                select="fv:ampFix(descendant::rdg[@wit = $loner/@wit])"
+                                select="fv:ampFix(descendant::rdg[@wit = $loner/@wit] ! normalize-space())"
                             />
                         </rdg>
                     </rdgGrp>
                 </xsl:when>
                 <xsl:when test="not(descendant::rdg/@wit = $loner/@wit)"><!--2023-01-01 ebb: This should handle delstart cases not represented in following apps-->
-                    <rdgGrp n="{fv:ampFix($norm)}">
+                    <rdgGrp n="{fv:ampFix($reducedNormParam)}">
                         <rdg wit="{$loner/@wit}">
                             <xsl:value-of
-                                select="fv:ampFix($loner/text())"/>
+                                select="fv:ampFix($loner ! normalize-space())"/>
                         </rdg>
                     </rdgGrp>
                     
@@ -330,10 +331,11 @@
         <!--    <xsl:if test="rdg[@wit != $loner/@wit]">
             <xsl:copy-of select="current()" />
         </xsl:if>-->
-        <rdgGrp n="{@n}">
+        <xsl:variable name="reducedNormTokens" as="xs:string" select="@n ! replace(., '\s{2,}', '')"/>
+        <rdgGrp n="{$reducedNormTokens}">
             <xsl:for-each select="rdg">
                 <xsl:if test="current()/@wit ne $loner/@wit">
-                    <xsl:copy-of select="current()"/>
+                    <xsl:apply-templates select="current()"/>
                 </xsl:if>
             </xsl:for-each>
         </rdgGrp>
@@ -342,14 +344,15 @@
     <xsl:template match="rdgGrp" mode="emptyNormalize" name="emptyNormalize">
         <xsl:param name="lonerText" tunnel="yes"/>
         <xsl:param name="lonerWit" tunnel="yes"/>
-        <rdgGrp n="{@n}">
+        <xsl:variable name="reducedNormTokens" as="xs:string" select="@n ! replace(., '\s{2,}', '')"/>
+        <rdgGrp n="{$reducedNormTokens}">
             <xsl:for-each select="rdg[@wit ne $lonerWit]">
-                <xsl:copy-of select="current()"/>
+                <rdg wit="{@wit}"><xsl:apply-templates select="fv:ampFix(current())"/></rdg>
             </xsl:for-each>
             <rdg wit="{$lonerWit}">
-                <xsl:value-of select="$lonerText"/>
+                <xsl:value-of select="$lonerText ! normalize-space()"/>
                 <xsl:value-of
-                    select="fv:ampFix(current()/rdg[@wit = $lonerWit])"
+                    select="fv:ampFix(current()/rdg[@wit = $lonerWit] ! normalize-space())"
                 />
             </rdg>
         </rdgGrp>
@@ -363,8 +366,8 @@
     2023-01-03: We're also applying these templates to normalize spaces, removing extra spaces introduced in the inlineVariationEvent elements inserted by pullDom in the Python processing
     of del, add, note, and longToken whole elements.
     -->
-    <xsl:template match="rdg/text()" name="textAmpFix">
-        <xsl:value-of select="fv:ampFix(normalize-space(.))"/>
+    <xsl:template match="rdg" name="textAmpFix">
+        <rdg wit="{@wit}"><xsl:value-of select="fv:ampFix(normalize-space(text()))"/></rdg>
     </xsl:template>
     <xsl:template match="rdgGrp" name="normAmpFix">
         <xsl:variable name="reducedNormTokens" as="xs:string" select="@n ! replace(., '\s{2,}', '')"/>

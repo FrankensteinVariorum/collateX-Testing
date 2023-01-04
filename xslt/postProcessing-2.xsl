@@ -6,7 +6,13 @@
     xmlns:fv="yeah"
     exclude-result-prefixes="xs math fv" version="3.0">
     <!-- ********************************************************************************************
-             POST-PROCESSING XSLT FOR THE FRANKENSTEIN VARIORUM: STAGE 2 
+           2023-01-04 ebb: DO NOT RUN THIS YET: IT CAN MUNCH APPS!
+           If it finds an <app> to move, but cannot successfully move it, the result is to destroy all trace
+           of the rdgGrps being moved. The destruction occurs in the restructure template. 
+           TO WORK ON FIXING SEE LINE 185 below! 
+            
+            
+            POST-PROCESSING XSLT FOR THE FRANKENSTEIN VARIORUM: STAGE 2 
        This Stylesheet represents stage 2 of post-processing collation to improve alignments. 
        Run this over the output of postProcessing.xsl
     
@@ -91,34 +97,32 @@
 
     <xsl:template match="app[count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4]
         (:looks for an app with suspiciously few rdg elements...  :)
-        [rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]
-        (: checks that it has a deleted passage or longToken... :)
+       (: [rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]] :)
+        (: checks that it has a deleted passage or longToken. CAREFUL: THIS CAN RESULT IN MUNGING THINGS! .. :)
         [preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
         not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit) or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or not(following-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
         (: checks if the first preceding-sibling::app or first following-sibling::app either contains an empty-content rdg for the del/longToken witness OR no matching witness:)
         ">
         <xsl:variable name="currentApp" as="element()" select="current()"/>
-        <xsl:variable name="targetRdgGrps" as="element()+" select="rdgGrp[@n ! contains(., 'delstart') or descendant::rdg[contains(., 'longToken')]]"/>
-        <xsl:variable name="prevApp" as="element()" select="($currentApp/preceding-sibling::app)[1]"/>
-        <xsl:variable name="nextApp" as="element()" select="($currentApp/following-sibling::app)[1]"/>
+      <!--  <xsl:variable name="targetRdgGrps" as="element()+" select="(rdgGrp[@n ! contains(., 'delstart') or descendant::rdg[contains(., 'longToken')]])"/>-->
+        <xsl:variable name="targetRdgGrps" as="element()+" select="rdgGrp"/>
+        <xsl:variable name="prevApp" as="element()" select="$currentApp/preceding-sibling::app[1]"/>
+        <xsl:variable name="nextApp" as="element()" select="$currentApp/following-sibling::app[1]"/>
         <xsl:choose>
             <xsl:when test="preceding-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or following-sibling::app[1]/rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit">
-                <xsl:for-each select="$targetRdgGrps">
-                    <xsl:if test="$prevApp[rdgGrp/@n ! matches(., '^\W+$')][rdg/@wit = $currentApp//rdg/@wit] or not($prevApp//rdg/@wit = descendant::rdg/@wit)">
-                   <xsl:apply-templates mode="restructure" select="$currentApp/preceding-sibling::app[1]">
-                       <xsl:with-param as="node()" name="loner" select="current()/rdg" tunnel="yes"/>
-                       <!-- ebb: There will almost certainly be only one rdg if it's a deletion or longToken in this stranded situation. -->
-                       <xsl:with-param as="attribute()" name="norm" select="current()/@n" tunnel="yes"/>
-                   </xsl:apply-templates>
-                    </xsl:if>
-                    <xsl:if test="$nextApp[rdgGrp/@n ! matches(., '^\W+$')][rdg/@wit = $currentApp//rdg/@wit] or not($nextApp//rdg/@wit = descendant::rdg/@wit)">
-                        <xsl:apply-templates mode="restructure" select="$currentApp/following-sibling::app[1]">
-                            <xsl:with-param as="node()" name="loner" select="current()/rdg" tunnel="yes"/>
-                            <!-- ebb: There will almost certainly be only one rdg if it's a deletion or longToken in this stranded situation. -->
-                            <xsl:with-param as="attribute()" name="norm" select="current()/@n" tunnel="yes"/>
-                        </xsl:apply-templates>
-                    </xsl:if>
-                </xsl:for-each>
+
+                <xsl:if test="$prevApp[rdgGrp/@n[matches(., '^\W+$')] and descendant::rdg/@wit = $currentApp//rdg/@wit] or not($prevApp//rdg/@wit = $currentApp//rdg/@wit)">
+                    <xsl:apply-templates mode="restructure" select="$prevApp">
+                        <xsl:with-param as="node()+" name="misplacedRdgGrps" select="$targetRdgGrps" tunnel="yes"/>
+                        <xsl:with-param as="xs:string" name="whereMoving" select="'backward'" tunnel="yes"/>
+                    </xsl:apply-templates>
+                </xsl:if>
+          <xsl:if test="$nextApp[rdgGrp/@n[matches(., '^\W+$')] and descendant::rdg/@wit = $currentApp//rdg/@wit] or not($nextApp//rdg/@wit = $currentApp//rdg/@wit)">
+                    <xsl:apply-templates mode="restructure" select="$nextApp">
+                        <xsl:with-param as="element()+" name="misplacedRdgGrps" select="$targetRdgGrps" tunnel="yes"/>
+                        <xsl:with-param as="xs:string" name="whereMoving" select="'forward'" tunnel="yes"/>
+                    </xsl:apply-templates>
+                </xsl:if>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates mode="copyOriginal" select="$currentApp"/>
@@ -140,22 +144,7 @@
     this stylesheet.
     ****************************************************************************
     -->
-  
-    
-    <xsl:template match="app" mode="reduceCurrentApp">
-      <xsl:param name="witToRemove" tunnel="yes"/>
-        <app>
-           <xsl:apply-templates mode="destroy" select="rdgGrp[rdg/@wit = $witToRemove]"/>
-                
-           <xsl:apply-templates select="rdgGrp[not(rdg/@wit = $witToRemove)]"/>
-        </app>
-    </xsl:template>
-    <!-- 2023-01-01 ebb The template above processes the removal of a rdgGrp contain a witness that is moving to the next following app.
-        It alters the source app.
-    -->
-    
 
-    <xsl:template match="rdgGrp" mode="destroy"/>
     
     <!--  The next two templates locates the app elements that met the conditions for accepting deleted or longToken passages from a following OR preceding app, 
         and it eliminates the original version. 
@@ -175,7 +164,7 @@
         [following-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
         name="removeAppBeforeStrandedDel"/>
     
-    <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
+      <xsl:template match="app[rdgGrp[@n ! matches(., '^\W+$')]/rdg/@wit = descendant::rdg/@wit or
         not(preceding-sibling::app[1]//rdg/@wit = descendant::rdg/@wit)]
         [preceding-sibling::app[1][count(descendant::rdg) gt 1 and count(descendant::rdg) lt 4][rdgGrp/@n[contains(., 'delstart')] or descendant::rdg[contains(., 'longToken')]]]" 
         name="removeAppAfterStrandedDel"/>
@@ -187,100 +176,58 @@
     -->
 
     <xsl:template match="app" mode="restructure" name="restructureApp">
-        <!-- 2022-10-11 yxj ebb: Let's try creating a conditional processing rule here: 
-        IF the $norm param only contains `['']` (string-length() = 4), do NOT create a new rdgGrp, and simply move
-        the $loner param into the existing structure. 
-        
-        Example (features a PROBLEM: extra rdg element)
-        <app><rdgGrp n="['with', 'my', 'aunt', 'and', 'my']">
-			<rdg wit="f1818">with my aunt and my </rdg>
-			<rdg wit="f1823">with my aunt and my </rdg>
-			<rdg wit="fThomas">with my aunt and my </rdg>
-			<rdg wit="fMS">with my aunt &amp; my </rdg>
-		</rdgGrp><rdgGrp n="['', 'with', 'my', 'aunt', 'and', 'my']"><rdg wit="fMS">&lt;sga-add eID="c56-0104__main__d5e21929"/&gt; with my aunt &amp; my </rdg></rdgGrp></app>
-        -->
-        <xsl:param name="loner" tunnel="yes"/>
-        <xsl:param name="norm" tunnel="yes"/>
-        <app>
-            <xsl:apply-templates
-                select="rdgGrp[not(preceding::app[1][count(rdgGrp) = 1 and rdgGrp/@n ! string-length() = 4])]" mode="restructure">
-                <xsl:with-param as="node()" name="loner" tunnel="yes" select="$loner"/>
-            </xsl:apply-templates>
-            <xsl:choose>
-                <xsl:when test="$norm ! string-length() &gt; 4 and descendant::rdg/@wit = $loner/@wit">
-                    <xsl:variable name="TokenSquished">
-                        <xsl:value-of
-                            select="$norm ! string() || descendant::rdgGrp[descendant::rdg[@wit = $loner/@wit]]/@n"/>
-                    </xsl:variable>
-                    <xsl:variable name="newToken">
-                        <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
-                    </xsl:variable>
-                    <xsl:variable name="newNorm">
-                        <xsl:value-of
-                            select="$newToken"/>
-                    </xsl:variable>
-                    <rdgGrp n="{$newNorm}">
-                        <rdg wit="{$loner/@wit}">
-                            <xsl:value-of
-                                select="$loner/text()"/>
-                            <xsl:value-of
-                                select="descendant::rdg[@wit = $loner/@wit]"
-                            />
-                        </rdg>
-                    </rdgGrp>
-                </xsl:when>
-                <xsl:when test="not(descendant::rdg/@wit = $loner/@wit)"><!--2023-01-01 ebb: This should handle delstart cases not represented in following apps-->
-                    <rdgGrp n="{$norm}">
-                        <rdg wit="{$loner/@wit}">
-                            <xsl:value-of
-                                select="$loner/text()"/>
-                        </rdg>
-                    </rdgGrp>
-                    
-                </xsl:when>
-                <xsl:otherwise><!-- This handles an empty loner witness and doesn't disturb the rdgGrp structure. -->
-                    <xsl:apply-templates select="rdgGrp" mode="emptyNormalize">
-                        <xsl:with-param as="text()" name="lonerText" tunnel="yes"
-                            select="$loner/text()"/>
-                        <xsl:with-param as="xs:string" name="lonerWit" tunnel="yes"
-                            select="$loner/@wit"/>
-                    </xsl:apply-templates>
+        <xsl:param name="misplacedRdgGrps" tunnel="yes"/>
+        <xsl:param name="whereMoving" tunnel="yes"/>
+        <xsl:variable name="currentApp" as="element()" select="current()"/>
 
-                    <!-- 2022-10-18 ebb: Now passing $lonerText, but still doubled output -->
-
-                </xsl:otherwise>
-            </xsl:choose>
-        </app>
-    </xsl:template>
-
-    <xsl:template match="rdgGrp" mode="restructure" name="restructure-rdgGrp">
-        <xsl:param name="loner" tunnel="yes"/>
-        <!--    <xsl:if test="rdg[@wit != $loner/@wit]">
-            <xsl:copy-of select="current()" />
-        </xsl:if>-->
-        <rdgGrp n="{@n}">
-            <xsl:for-each select="rdg">
-                <xsl:if test="current()/@wit ne $loner/@wit">
-                    <xsl:copy-of select="current()"/>
-                </xsl:if>
+        <app><xsl:comment>YO! I'M BEING RESTRUCTURED HERE! </xsl:comment>
+           <xsl:for-each select="rdgGrp[not(rdg/@wit = $misplacedRdgGrps/rdg/@wit)]">
+               <xsl:comment><xsl:value-of select="$misplacedRdgGrps/rdg/@wit"/></xsl:comment>
+               <!-- The comment above shows me that in C14RA (app toward the end), the only witness being recognized is f1831, NOT the other two.
+               Think WHY: We only looked for longToken or del...OR the idea of the next/prev app NOT HAVING the witness at all.  f1831 isn't present
+               in the next witness, so it's delivered, but the others are not. Should we expand the scope of our transformation? 
+               * Move ANYTHING that is bearing meaningful content forward to the prev or next app that either lacks the witness entirely or carries
+               only empty content.
+               -->
+               <xsl:copy-of select="current()"/><xsl:comment>It's Me</xsl:comment>
+           </xsl:for-each>
+           <xsl:for-each select="rdgGrp[rdg/@wit = $misplacedRdgGrps/rdg/@wit]/rdg">
+                <xsl:variable name="thisMisplacedNorm" as="attribute()+" select="$misplacedRdgGrps/@n"/>
+                <xsl:message><xsl:value-of select="$thisMisplacedNorm"/></xsl:message>
+                <xsl:variable name="thisMisplacedRdg" as="element()+" select="$misplacedRdgGrps[rdg/@wit = current()/@wit]/rdg"/>
+                <xsl:message><xsl:value-of select="$thisMisplacedRdg"/></xsl:message>
+               <!-- 2023-01-04 ebb: WE"RE HAVING TROUBLE HERE WITH PROCESSING MULTIPLE RDG ELEMENTS IN TWO RDGGRPS.  -->
+                <xsl:variable name="TokenSquished">
+                   <xsl:choose>
+                       <xsl:when test="$whereMoving = 'backward'"> 
+                           <xsl:value-of select="current()/parent::rdgGrp/@n ! string() || $thisMisplacedNorm ! string()"/>
+                       </xsl:when>
+                       <xsl:when test="$whereMoving = 'forward'"> 
+                           <xsl:value-of select="$thisMisplacedNorm ! string() || current()/parent::rdgGrp/@n ! string()"/>
+                       </xsl:when>
+                   </xsl:choose>
+                </xsl:variable>
+                <xsl:variable name="newNorm">
+                    <xsl:value-of select="replace($TokenSquished, '\]\[', ', ')"/>
+                </xsl:variable>
+                <rdgGrp n="{$newNorm}">
+                   <xsl:for-each select="$thisMisplacedRdg"> 
+                       <rdg wit="{current()/@wit}">
+                        <xsl:choose>
+                            <xsl:when test="$whereMoving = 'backward'">
+                                <xsl:value-of select="$currentApp//rdg[@wit=current()/@wit]"/>
+                                <xsl:value-of select="current()"/>
+                            </xsl:when>
+                            <xsl:when test="$whereMoving = 'forward'">
+                                <xsl:value-of select="current()"/>
+                                <xsl:value-of select="$currentApp//rdg[@wit=current()/@wit]"/>
+                            </xsl:when>
+                        </xsl:choose>
+                    </rdg>
+                   </xsl:for-each>
+                </rdgGrp>
             </xsl:for-each>
-        </rdgGrp>
-    </xsl:template>
-
-    <xsl:template match="rdgGrp" mode="emptyNormalize" name="emptyNormalize">
-        <xsl:param name="lonerText" tunnel="yes"/>
-        <xsl:param name="lonerWit" tunnel="yes"/>
-        <rdgGrp n="{@n}">
-            <xsl:for-each select="rdg[@wit ne $lonerWit]">
-                <xsl:copy-of select="current()"/>
-            </xsl:for-each>
-            <rdg wit="{$lonerWit}">
-                <xsl:value-of select="$lonerText"/>
-                <xsl:value-of
-                    select="current()/rdg[@wit = $lonerWit]"
-                />
-            </rdg>
-        </rdgGrp>
+       </app>
     </xsl:template>
 
 </xsl:stylesheet>

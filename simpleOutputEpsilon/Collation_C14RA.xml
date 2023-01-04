@@ -8188,7 +8188,7 @@
 			<rdg wit="f1823">mock&lt;pb xml:id=&quot;F1823_v1_196&quot; n=&quot;177&quot;/&gt;eries! </rdg>
 			<rdg wit="fThomas">mock&lt;pb xml:id=&quot;F1818_v1_189&quot; n=&quot;177&quot;/&gt;eries! </rdg>
 		</rdgGrp>
-		<rdgGrp n="['mockeries.']">
+		<rdgGrp n="['mockeries. ']">
 			<rdg wit="fMS">mockeries.– </rdg>
 		</rdgGrp>
 	</app>
@@ -10536,4 +10536,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2023-01-04 03:26:50.122761 -->
+<!-- 2023-01-04 03:49:27.576709 -->

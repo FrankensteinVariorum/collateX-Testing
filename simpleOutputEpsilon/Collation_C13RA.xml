@@ -113,7 +113,7 @@
 			<rdg wit="f1818">   &lt;hi sID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi1&quot;/&gt;”To&lt;hi eID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi1&quot;/&gt; V. F&lt;hi sID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi2&quot;/&gt;RANKENSTEIN&lt;hi eID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi2&quot;/&gt;.&lt;ab eID=&quot;novel1_letter4_chapter6_div4_div6_ab1&quot;/&gt;&lt;/longToken&gt; </rdg>
 			<rdg wit="f1823">   &lt;hi sID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi1&quot;/&gt;”To&lt;hi eID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi1&quot;/&gt; V. F&lt;hi sID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi2&quot;/&gt;RANKENSTEIN&lt;hi eID=&quot;novel1_letter4_chapter6_div4_div6_ab1_hi2&quot;/&gt;.&lt;ab eID=&quot;novel1_letter4_chapter6_div4_div6_ab1&quot;/&gt;&lt;/longToken&gt; </rdg>
 		</rdgGrp>
-		<rdgGrp n="['to v.frankenstein geneva – june 2', '            d– 17—']">
+		<rdgGrp n="['to v. frankenstein geneva – june 2', '            d– 17—']">
 			<rdg wit="fMS">&lt;longToken&gt;To V.–Frankenstein &lt;lb n=&quot;c56-0073__main__5&quot;/&gt;Geneva – June 2&lt;shi rend=&quot;sup&quot;&gt;             d&lt;/shi&gt;– 17—&lt;/longToken&gt; </rdg>
 		</rdgGrp>
 	</app>
@@ -8707,7 +8707,7 @@
 		</rdgGrp>
 	</app>
 	<app>
-		<rdgGrp n="[&quot;father's&quot;, 'house', '&lt;delstart/&gt;s&lt;delend/&gt;', '.my', '&lt;delstart/&gt;n&lt;delend/&gt;']">
+		<rdgGrp n="[&quot;father's&quot;, 'house', '&lt;delstart/&gt;s&lt;delend/&gt;', '. my', '&lt;delstart/&gt;n&lt;delend/&gt;']">
 			<rdg wit="fMS">father's &lt;lb n=&quot;c56-0084__main__14&quot;/&gt;house &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0084__main__d5e17968&quot;&gt;s&lt;/del&gt; .–My &lt;del rend=&quot;strikethrough&quot; xml:id=&quot;c56-0084__main__d5e17971&quot;&gt;n&lt;/del&gt; </rdg>
 		</rdgGrp>
 		<rdgGrp n="['father’s', 'house.', 'my']">
@@ -13488,4 +13488,4 @@
 		</rdgGrp>
 	</app>
 </cx:apparatus>
-<!-- 2023-01-04 03:26:50.122761 -->
+<!-- 2023-01-04 03:49:27.576709 -->
