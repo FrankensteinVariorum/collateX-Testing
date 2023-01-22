@@ -293,9 +293,9 @@ def tokenizeFiles(f1818, f1823, fThomas, f1831, fMS):
 
 
 def main():
-    chunks = ['13RA', '14RA']
+    chunks = ['13', '14']
     for chunk in chunks:
-        for f1818 in glob.glob('../collChunk-' + chunk + '/1818_fullFlat_*'):
+        for f1818 in glob.glob('../collationChunks' + chunk + '/1818_fullFlat_*'):
             try:
                 collChunk = f1818.split("fullFlat_", 1)[1]
                 # ebb: above gets C30.xml for example
