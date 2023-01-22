@@ -36,7 +36,7 @@
     </xsl:template>
     
     
-    <xsl:template match="text//*[text() | *][not(self::div) and not(self::note[@resp]) and not(self::add) and not(self::del)]">
+    <xsl:template match="text//*[text() | *][not(self::div) and not(self::head) and not(self::note[@resp]) and not(self::add) and not(self::del)]">
         <xsl:variable name="nodeName" as="xs:string" select="name()"/>
         <xsl:variable name="locationFlag">
             <xsl:for-each select="ancestor::div">

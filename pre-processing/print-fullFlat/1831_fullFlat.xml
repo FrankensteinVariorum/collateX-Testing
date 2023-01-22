@@ -15,7 +15,7 @@
       <milestone unit="preface" type="start" n="1"/>
       <pb xml:id="F1831_v_017"/>
       <comment text="ebb: this is page unnumbered."/>
-      <head sID="preface1_head1"/>PREFACE.<head eID="preface1_head1"/>
+      <head>PREFACE.</head>
       <comment text="ebb: centered underscore a few lines beneath. "/>
       <p sID="preface1_p1"/>T<hi sID="preface1_p1_hi1"/>HE<hi eID="preface1_p1_hi1"/> event on which this fiction is founded has been supposed, by
         Dr. Darwin, and some of the physiological writers of Germany, as not of impossible
@@ -63,16 +63,16 @@
       <milestone unit="novel" type="start" n="1"/>
       <pb xml:id="F1831_v_019"/>
       <comment text="ebb: This page is unnumbered."/>
-      <head sID="novel1_head1"/>FRANKENSTEIN;<head eID="novel1_head1"/>
-      <head sID="novel1_head2"/>
-      <hi sID="novel1_head2_hi1"/>OR<hi eID="novel1_head2_hi1"/>,<head eID="novel1_head2"/>
-      <head sID="novel1_head3"/>THE MODERN PROMETHEUS.<head eID="novel1_head3"/>
+      <head>FRANKENSTEIN;</head>
+      <head>
+         <hi sID="novel1_head2_hi1"/>OR<hi eID="novel1_head2_hi1"/>,</head>
+      <head>THE MODERN PROMETHEUS.</head>
       <comment text="ebb: centered underscore beneath"/>
       <milestone unit="letter" type="start" n="1"/>
-      <head sID="novel1_letter1_div1_head1"/>LETTER I.<head eID="novel1_letter1_div1_head1"/>
-      <head sID="novel1_letter1_div1_head2"/>
-      <hi sID="novel1_letter1_div1_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter1_div1_head2_hi1"/>
-      <head eID="novel1_letter1_div1_head2"/>
+      <head>LETTER I.</head>
+      <head>
+         <hi sID="novel1_letter1_div1_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter1_div1_head2_hi1"/>
+      </head>
       <p sID="novel1_letter1_div1_p1"/>St. Petersburgh, Dec. 11th, 17—.<p eID="novel1_letter1_div1_p1"/>
       <p sID="novel1_letter1_div1_p2"/>Y<hi sID="novel1_letter1_div1_p2_hi1"/>OU<hi eID="novel1_letter1_div1_p2_hi1"/> will rejoice to hear that no disaster has accompanied the
           commencement of an enterprise which you have regarded with such evil forebodings. I
@@ -160,10 +160,10 @@
       <milestone unit="letter" type="end" n="1"/>
       <anchor type="collate" xml:id="C03"/>
       <milestone unit="letter" type="start" n="2"/>
-      <head sID="novel1_letter2_div2_head1"/>LETTER II.<head eID="novel1_letter2_div2_head1"/>
-      <head sID="novel1_letter2_div2_head2"/>
-      <hi sID="novel1_letter2_div2_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter2_div2_head2_hi1"/>
-      <head eID="novel1_letter2_div2_head2"/>
+      <head>LETTER II.</head>
+      <head>
+         <hi sID="novel1_letter2_div2_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter2_div2_head2_hi1"/>
+      </head>
       <p sID="novel1_letter2_div2_p1"/>Archangel, 28th March, 17—.<p eID="novel1_letter2_div2_p1"/>
       <p sID="novel1_letter2_div2_p2"/>How slowly the time passes here, encompassed as I am by frost and snow! yet a second step
           is taken towards my enterprise. I have hired a vessel, and am occupied in collecting my
@@ -258,10 +258,10 @@
       <milestone unit="letter" type="end" n="2"/>
       <anchor type="collate" xml:id="C04"/>
       <milestone unit="letter" type="start" n="3"/>
-      <head sID="novel1_letter3_div3_head1"/>LETTER III.<head eID="novel1_letter3_div3_head1"/>
-      <head sID="novel1_letter3_div3_head2"/>
-      <hi sID="novel1_letter3_div3_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter3_div3_head2_hi1"/>
-      <head eID="novel1_letter3_div3_head2"/>
+      <head>LETTER III.</head>
+      <head>
+         <hi sID="novel1_letter3_div3_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter3_div3_head2_hi1"/>
+      </head>
       <p sID="novel1_letter3_div3_p1"/>July 7th, 17—.<p eID="novel1_letter3_div3_p1"/>
       <p sID="novel1_letter3_div3_p2"/>M<hi sID="novel1_letter3_div3_p2_hi1"/>Y DEAR<hi eID="novel1_letter3_div3_p2_hi1"/> S<hi sID="novel1_letter3_div3_p2_hi2"/>ISTER<hi eID="novel1_letter3_div3_p2_hi2"/>,<p eID="novel1_letter3_div3_p2"/>
       <p sID="novel1_letter3_div3_p3"/>I <hi sID="novel1_letter3_div3_p3_hi1"/>WRITE<hi eID="novel1_letter3_div3_p3_hi1"/> a few lines in haste, to say that I am safe, and well
@@ -291,10 +291,10 @@
       <milestone unit="letter" type="end" n="3"/>
       <anchor type="collate" xml:id="C05"/>
       <milestone unit="letter" type="start" n="4"/>
-      <head sID="novel1_letter4_div4_head1"/>LETTER IV.<head eID="novel1_letter4_div4_head1"/>
-      <head sID="novel1_letter4_div4_head2"/>
-      <hi sID="novel1_letter4_div4_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter4_div4_head2_hi1"/>
-      <head eID="novel1_letter4_div4_head2"/>
+      <head>LETTER IV.</head>
+      <head>
+         <hi sID="novel1_letter4_div4_head2_hi1"/>To Mrs. Saville, England.<hi eID="novel1_letter4_div4_head2_hi1"/>
+      </head>
       <p sID="novel1_letter4_div4_p1"/>August 5th, 17—.<p eID="novel1_letter4_div4_p1"/>
       <p sID="novel1_letter4_div4_p2"/>So strange an accident has happened to us, that I cannot forbear recording it, although
           it is very probable that you will see me before these papers can come into your
@@ -497,7 +497,7 @@
       <comment text="ebb: centered underscore a few lines below"/>
       <anchor type="collate" xml:id="C07"/>
       <milestone unit="chapter" type="start" n="1"/>
-      <head sID="novel1_letter4_chapter1_div4_div1_head1"/>CHAPTER I.<head eID="novel1_letter4_chapter1_div4_div1_head1"/>
+      <head>CHAPTER I.</head>
       <p sID="novel1_letter4_chapter1_div4_div1_p1"/> I <hi sID="novel1_letter4_chapter1_div4_div1_p1_hi1"/>AM<hi eID="novel1_letter4_chapter1_div4_div1_p1_hi1"/> by birth a Genevese; and my family is one of the most
             distinguished of that republic. My ancestors had been for many years counsellors and
             syndics; and my father had filled several public situations with honour and reputation.
@@ -627,7 +627,7 @@
       <comment text="ebb: centered underscore a few lines below"/>
       <milestone unit="chapter" type="end" n="1"/>
       <milestone unit="chapter" type="start" n="2"/>
-      <head sID="novel1_letter4_chapter2_div4_div2_head1"/>CHAPTER II.<head eID="novel1_letter4_chapter2_div4_div2_head1"/>
+      <head>CHAPTER II.</head>
       <p sID="novel1_letter4_chapter2_div4_div2_p1"/> W<hi sID="novel1_letter4_chapter2_div4_div2_p1_hi1"/>E<hi eID="novel1_letter4_chapter2_div4_div2_p1_hi1"/> were brought up together; there was not quite a year
             difference in our ages. I need not say that we were strangers to any species of disunion
             or dispute. Harmony was the soul of our companionship, and the diversity and contrast
@@ -790,7 +790,7 @@
       <milestone unit="chapter" type="end" n="2"/>
       <anchor type="collate" xml:id="C08"/>
       <milestone unit="chapter" type="start" n="3"/>
-      <head sID="novel1_letter4_chapter3_div4_div3_head1"/>CHAPTER III.<head eID="novel1_letter4_chapter3_div4_div3_head1"/>
+      <head>CHAPTER III.</head>
       <p sID="novel1_letter4_chapter3_div4_div3_p1"/> W<hi sID="novel1_letter4_chapter3_div4_div3_p1_hi1"/>HEN<hi eID="novel1_letter4_chapter3_div4_div3_p1_hi1"/> I had attained the age of seventeen, my parents
             resolved that I should become a student at the university of Ingolstadt. I had hitherto
             attended the schools of Geneva; but my father thought it necessary, for the completion
@@ -990,7 +990,7 @@
       <milestone unit="chapter" type="end" n="3"/>
       <anchor type="collate" xml:id="C09"/>
       <milestone unit="chapter" type="start" n="4"/>
-      <head sID="novel1_letter4_chapter4_div4_div4_head1"/>CHAPTER IV.<head eID="novel1_letter4_chapter4_div4_div4_head1"/>
+      <head>CHAPTER IV.</head>
       <p sID="novel1_letter4_chapter4_div4_div4_p1"/>F<hi sID="novel1_letter4_chapter4_div4_div4_p1_hi1"/>ROM<hi eID="novel1_letter4_chapter4_div4_div4_p1_hi1"/> this day natural philosophy, and particularly chemistry,
             in the most comprehensive sense of the term, became nearly my sole occupation. I read
             with ardour those works, so full of genius and discrimination, which modern inquirers
@@ -1172,7 +1172,7 @@
       <pb xml:id="F1831_v_059" n="43"/>
       <anchor type="collate" xml:id="C10"/>
       <milestone unit="chapter" type="start" n="5"/>
-      <head sID="novel1_letter4_chapter5_div4_div5_head1"/>CHAPTER V.<head eID="novel1_letter4_chapter5_div4_div5_head1"/>
+      <head>CHAPTER V.</head>
       <p sID="novel1_letter4_chapter5_div4_div5_p1"/> I<hi sID="novel1_letter4_chapter5_div4_div5_p1_hi1"/>T<hi eID="novel1_letter4_chapter5_div4_div5_p1_hi1"/> was on a dreary night of November, that I beheld the
             accomplishment of my toils. With an anxiety that almost amounted to agony, I collected
             the instruments of life around me, that I might infuse a spark of being into the
@@ -1358,7 +1358,7 @@
       <milestone unit="chapter" type="end" n="5"/>
       <anchor type="collate" xml:id="C11"/>
       <milestone unit="chapter" type="start" n="6"/>
-      <head sID="novel1_letter4_chapter6_div4_div6_head1"/>CHAPTER VI.<head eID="novel1_letter4_chapter6_div4_div6_head1"/>
+      <head>CHAPTER VI.</head>
       <p sID="novel1_letter4_chapter6_div4_div6_p1"/> C<hi sID="novel1_letter4_chapter6_div4_div6_p1_hi1"/>LERVAL<hi eID="novel1_letter4_chapter6_div4_div6_p1_hi1"/> then put the following letter into my hands. It was
             from my own Elizabeth:—<p eID="novel1_letter4_chapter6_div4_div6_p1"/>
       <p sID="novel1_letter4_chapter6_div4_div6_p2"/>“My dearest Cousin,<p eID="novel1_letter4_chapter6_div4_div6_p2"/>
@@ -1560,7 +1560,7 @@
       <milestone unit="chapter" type="end" n="6"/>
       <anchor type="collate" xml:id="C13"/>
       <milestone unit="chapter" type="start" n="7"/>
-      <head sID="novel1_letter4_chapter7_div4_div7_head1"/>CHAPTER VII.<head eID="novel1_letter4_chapter7_div4_div7_head1"/>
+      <head>CHAPTER VII.</head>
       <p sID="novel1_letter4_chapter7_div4_div7_p1"/>O<hi sID="novel1_letter4_chapter7_div4_div7_p1_hi1"/>N<hi eID="novel1_letter4_chapter7_div4_div7_p1_hi1"/> my return, I found the following letter from my
             father:—<p eID="novel1_letter4_chapter7_div4_div7_p1"/>
       <p sID="novel1_letter4_chapter7_div4_div7_p2"/>“My dear Victor,<p eID="novel1_letter4_chapter7_div4_div7_p2"/>
@@ -1821,7 +1821,7 @@
       <milestone unit="chapter" type="end" n="7"/>
       <anchor type="collate" xml:id="C14"/>
       <milestone unit="chapter" type="start" n="8"/>
-      <head sID="novel1_letter4_chapter8_div4_div8_head1"/>CHAPTER VIII.<head eID="novel1_letter4_chapter8_div4_div8_head1"/>
+      <head>CHAPTER VIII.</head>
       <p sID="novel1_letter4_chapter8_div4_div8_p1"/>W<hi sID="novel1_letter4_chapter8_div4_div8_p1_hi1"/>E<hi eID="novel1_letter4_chapter8_div4_div8_p1_hi1"/> passed a few sad hours, until eleven o’clock, when the
             trial was to commence. My father and the rest of the family being obliged to attend as
             witnesses, I accompanied them to the court. During the whole of this wretched mockery of
@@ -2044,7 +2044,7 @@
       <milestone unit="chapter" type="end" n="8"/>
       <anchor type="collate" xml:id="C15"/>
       <milestone unit="chapter" type="start" n="9"/>
-      <head sID="novel1_letter4_chapter9_div4_div9_head1"/>CHAPTER IX.<head eID="novel1_letter4_chapter9_div4_div9_head1"/>
+      <head>CHAPTER IX.</head>
       <p sID="novel1_letter4_chapter9_div4_div9_p1"/>N<hi sID="novel1_letter4_chapter9_div4_div9_p1_hi1"/>OTHING<hi eID="novel1_letter4_chapter9_div4_div9_p1_hi1"/> is more painful to the human mind, than, after the
             feelings have been worked up by a quick succession of events, the dead calmness of
             inaction and certainty which follows, and deprives the soul both of hope and fear.
@@ -2205,7 +2205,7 @@
       <milestone unit="chapter" type="end" n="9"/>
       <anchor type="collate" xml:id="C16"/>
       <milestone unit="chapter" type="start" n="10"/>
-      <head sID="novel1_letter4_chapter10_div4_div10_head1"/>CHAPTER X.<head eID="novel1_letter4_chapter10_div4_div10_head1"/>
+      <head>CHAPTER X.</head>
       <p sID="novel1_letter4_chapter10_div4_div10_p1"/>I <hi sID="novel1_letter4_chapter10_div4_div10_p1_hi1"/>SPENT<hi eID="novel1_letter4_chapter10_div4_div10_p1_hi1"/> the following day roaming through the valley. I stood
             beside the sources of the Arveiron, which take their rise in a glacier, that with slow
             pace is advancing down from the summit of the hills, to barricade the valley. The abrupt
@@ -2378,7 +2378,7 @@
       <milestone unit="chapter" type="end" n="10"/>
       <anchor type="collate" xml:id="C17"/>
       <milestone unit="chapter" type="start" n="11"/>
-      <head sID="novel1_letter4_chapter11_div4_div11_head1"/>CHAPTER XI.<head eID="novel1_letter4_chapter11_div4_div11_head1"/>
+      <head>CHAPTER XI.</head>
       <p sID="novel1_letter4_chapter11_div4_div11_p1"/> “I<hi sID="novel1_letter4_chapter11_div4_div11_p1_hi1"/>T<hi eID="novel1_letter4_chapter11_div4_div11_p1_hi1"/> is with considerable difficulty that I remember the
             original era of my being: all the events of that period appear confused and indistinct.
             A strange multiplicity of sensations seized me, and I saw, felt, heard, and smelt, at
@@ -2580,7 +2580,7 @@
       <milestone unit="chapter" type="end" n="11"/>
       <anchor type="collate" xml:id="C18"/>
       <milestone unit="chapter" type="start" n="12"/>
-      <head sID="novel1_letter4_chapter12_div4_div12_head1"/>CHAPTER XII.<head eID="novel1_letter4_chapter12_div4_div12_head1"/>
+      <head>CHAPTER XII.</head>
       <p sID="novel1_letter4_chapter12_div4_div12_p1"/>“I <hi sID="novel1_letter4_chapter12_div4_div12_p1_hi1"/>LAY<hi eID="novel1_letter4_chapter12_div4_div12_p1_hi1"/> on my straw, but I could not sleep. I thought of the
             occurrences of the day. What chiefly struck me was the gentle manners of these people;
             and I longed to join them, but dared not. I remembered too well the treatment I had
@@ -2732,7 +2732,7 @@
       <milestone unit="chapter" type="end" n="12"/>
       <anchor type="collate" xml:id="C19"/>
       <milestone unit="chapter" type="start" n="13"/>
-      <head sID="novel1_letter4_chapter13_div4_div13_head1"/>CHAPTER XIII.<head eID="novel1_letter4_chapter13_div4_div13_head1"/>
+      <head>CHAPTER XIII.</head>
       <p sID="novel1_letter4_chapter13_div4_div13_p1"/>“I <hi sID="novel1_letter4_chapter13_div4_div13_p1_hi1"/>NOW<hi eID="novel1_letter4_chapter13_div4_div13_p1_hi1"/> hasten to the more moving part of my story. I shall
             relate events, that impressed me with feelings which, from what I had been, have made me
             what I am.<p eID="novel1_letter4_chapter13_div4_div13_p1"/>
@@ -2882,7 +2882,7 @@
       <milestone unit="chapter" type="end" n="13"/>
       <anchor type="collate" xml:id="C20"/>
       <milestone unit="chapter" type="start" n="14"/>
-      <head sID="novel1_letter4_chapter14_div4_div14_head1"/>CHAPTER XIV.<head eID="novel1_letter4_chapter14_div4_div14_head1"/>
+      <head>CHAPTER XIV.</head>
       <p sID="novel1_letter4_chapter14_div4_div14_p1"/>“S<hi sID="novel1_letter4_chapter14_div4_div14_p1_hi1"/>OME<hi eID="novel1_letter4_chapter14_div4_div14_p1_hi1"/> time elapsed before I learned the history of my
             friends. It was one which could not fail to impress itself deeply on my mind, unfolding
             as it did a number of circumstances, each interesting and wonderful to one so utterly
@@ -3021,7 +3021,7 @@
       <milestone unit="chapter" type="end" n="14"/>
       <anchor type="collate" xml:id="C21"/>
       <milestone unit="chapter" type="start" n="15"/>
-      <head sID="novel1_letter4_chapter15_div4_div15_head1"/>CHAPTER XV.<head eID="novel1_letter4_chapter15_div4_div15_head1"/>
+      <head>CHAPTER XV.</head>
       <p sID="novel1_letter4_chapter15_div4_div15_p1"/>“S<hi sID="novel1_letter4_chapter15_div4_div15_p1_hi1"/>UCH<hi eID="novel1_letter4_chapter15_div4_div15_p1_hi1"/> was the history of my beloved cottagers. It impressed
             me deeply. I learned, from the views of social life which it developed, to admire their
             virtues, and to deprecate the vices of mankind.<p eID="novel1_letter4_chapter15_div4_div15_p1"/>
@@ -3251,7 +3251,7 @@
       <anchor type="collate" xml:id="C22"/>
       <milestone unit="chapter" type="start" n="16"/>
       <pb xml:id="F1831_v_134" n="118"/>
-      <head sID="novel1_letter4_chapter16_div4_div16_head1"/>CHAPTER XVI.<head eID="novel1_letter4_chapter16_div4_div16_head1"/>
+      <head>CHAPTER XVI.</head>
       <p sID="novel1_letter4_chapter16_div4_div16_p1"/>“C<hi sID="novel1_letter4_chapter16_div4_div16_p1_hi1"/>URSED<hi eID="novel1_letter4_chapter16_div4_div16_p1_hi1"/>, cursed creator! Why did I live? Why, in that
             instant, did I not extinguish the spark of existence which you had so wantonly bestowed?
             I know not; despair had not yet taken possession of me; my feelings were those of rage
@@ -3476,7 +3476,7 @@
       <milestone unit="chapter" type="end" n="16"/>
       <anchor type="collate" xml:id="C23"/>
       <milestone unit="chapter" type="start" n="17"/>
-      <head sID="novel1_letter4_chapter17_div4_div17_head1"/>CHAPTER XVII.<head eID="novel1_letter4_chapter17_div4_div17_head1"/>
+      <head>CHAPTER XVII.</head>
       <p sID="novel1_letter4_chapter17_div4_div17_p1"/>T<hi sID="novel1_letter4_chapter17_div4_div17_p1_hi1"/>HE<hi eID="novel1_letter4_chapter17_div4_div17_p1_hi1"/> being finished speaking, and fixed his looks upon me in
             expectation of a reply. But I was bewildered, perplexed, and unable to arrange my ideas
             sufficiently to understand the full extent of his proposition. He continued—<p eID="novel1_letter4_chapter17_div4_div17_p1"/>
@@ -3609,7 +3609,7 @@
       <milestone unit="chapter" type="end" n="17"/>
       <anchor type="collate" xml:id="C24"/>
       <milestone unit="chapter" type="start" n="18"/>
-      <head sID="novel1_letter4_chapter18_div4_div18_head1"/>CHAPTER XVIII.<head eID="novel1_letter4_chapter18_div4_div18_head1"/>
+      <head>CHAPTER XVIII.</head>
       <p sID="novel1_letter4_chapter18_div4_div18_p1"/>D<hi sID="novel1_letter4_chapter18_div4_div18_p1_hi1"/>AY<hi eID="novel1_letter4_chapter18_div4_div18_p1_hi1"/> after day, week after week, passed away on my return to
             Geneva; and I could not collect the courage to recommence my work. I feared the
             vengeance of the disappointed fiend, yet I was unable to overcome my repugnance to the
@@ -3830,7 +3830,7 @@
       <anchor type="collate" xml:id="C25"/>
       <milestone unit="chapter" type="start" n="19"/>
       <pb xml:id="F1831_v_155" n="139"/>
-      <head sID="novel1_letter4_chapter19_div4_div19_head1"/>CHAPTER XIX.<head eID="novel1_letter4_chapter19_div4_div19_head1"/>
+      <head>CHAPTER XIX.</head>
       <p sID="novel1_letter4_chapter19_div4_div19_p1"/>L<hi sID="novel1_letter4_chapter19_div4_div19_p1_hi1"/>ONDON<hi eID="novel1_letter4_chapter19_div4_div19_p1_hi1"/> was our present point of rest; we determined to remain
             several months in this wonderful and celebrated city. Clerval desired the intercourse of
             the men of genius and talent who flourished at this time; but this was with me a
@@ -4021,7 +4021,7 @@
       <anchor type="collate" xml:id="C26"/>
       <milestone unit="chapter" type="start" n="20"/>
       <pb xml:id="F1831_v_162" n="146"/>
-      <head sID="novel1_letter4_chapter20_div4_div20_head1"/>CHAPTER XX.<head eID="novel1_letter4_chapter20_div4_div20_head1"/>
+      <head>CHAPTER XX.</head>
       <p sID="novel1_letter4_chapter20_div4_div20_p1"/>I <hi sID="novel1_letter4_chapter20_div4_div20_p1_hi1"/>SAT<hi eID="novel1_letter4_chapter20_div4_div20_p1_hi1"/> one evening in my laboratory; the sun had set, and the
             moon was just rising from the sea; I had not sufficient light for my employment, and I
             remained idle, in a pause of consideration of whether I should leave my labour for the
@@ -4271,7 +4271,7 @@
       <anchor type="collate" xml:id="C27"/>
       <milestone unit="chapter" type="start" n="21"/>
       <pb xml:id="F1831_v_171" n="155"/>
-      <head sID="novel1_letter4_chapter21_div4_div21_head1"/>CHAPTER XXI.<head eID="novel1_letter4_chapter21_div4_div21_head1"/>
+      <head>CHAPTER XXI.</head>
       <p sID="novel1_letter4_chapter21_div4_div21_p1"/>I <hi sID="novel1_letter4_chapter21_div4_div21_p1_hi1"/>WAS<hi eID="novel1_letter4_chapter21_div4_div21_p1_hi1"/> soon introduced into the presence of the magistrate, an
             old benevolent man, with calm and mild manners. He looked upon me, however, with some
             degree of severity: and then, turning towards my conductors, he asked who appeared as
@@ -4541,7 +4541,7 @@
       <anchor type="collate" xml:id="C28"/>
       <milestone unit="chapter" type="start" n="22"/>
       <pb xml:id="F1831_v_181" n="165"/>
-      <head sID="novel1_letter4_chapter22_div4_div22_head1"/>CHAPTER XXII.<head eID="novel1_letter4_chapter22_div4_div22_head1"/>
+      <head>CHAPTER XXII.</head>
       <p sID="novel1_letter4_chapter22_div4_div22_p1"/>T<hi sID="novel1_letter4_chapter22_div4_div22_p1_hi1"/>HE<hi eID="novel1_letter4_chapter22_div4_div22_p1_hi1"/> voyage came to an end. We landed, and proceeded to Paris.
             I soon found that I had overtaxed my strength, and that I must repose before I could
             continue my journey. My father’s care and attentions were indefatigable; but he did not
@@ -4795,7 +4795,7 @@
       <anchor type="collate" xml:id="C30"/>
       <milestone unit="chapter" type="start" n="23"/>
       <pb xml:id="F1831_v_190" n="174"/>
-      <head sID="novel1_letter4_chapter23_div4_div23_head1"/>CHAPTER XXIII.<head eID="novel1_letter4_chapter23_div4_div23_head1"/>
+      <head>CHAPTER XXIII.</head>
       <p sID="novel1_letter4_chapter23_div4_div23_p1"/>I<hi sID="novel1_letter4_chapter23_div4_div23_p1_hi1"/>T<hi eID="novel1_letter4_chapter23_div4_div23_p1_hi1"/> was eight o’clock when we landed; we walked for a short
             time on the shore, enjoying the transitory light, and then retired to the inn, and
             contemplated the lovely scene of waters, woods, and mountains, obscured in darkness, yet
@@ -4981,7 +4981,7 @@
       <milestone unit="chapter" type="end" n="23"/>
       <anchor type="collate" xml:id="C31"/>
       <milestone unit="chapter" type="start" n="24"/>
-      <head sID="novel1_letter4_chapter24_div4_div24_head1"/>CHAPTER XXIV.<head eID="novel1_letter4_chapter24_div4_div24_head1"/>
+      <head>CHAPTER XXIV.</head>
       <p sID="novel1_letter4_chapter24_div4_div24_p1"/>M<hi sID="novel1_letter4_chapter24_div4_div24_p1_hi1"/>Y<hi eID="novel1_letter4_chapter24_div4_div24_p1_hi1"/> present situation was one in which all voluntary thought
             was swallowed up and lost. I was hurried away by fury; revenge alone endowed me with
             strength and composure; it moulded my feelings, and allowed me to be calculating <pb xml:id="F1831_v_197" n="181"/>and calm, at periods when otherwise delirium or death
@@ -5185,7 +5185,7 @@
             near, and direct the steel aright.<p eID="novel1_letter4_chapter24_div4_div24_p26"/>
       <milestone unit="chapter" type="end" n="24"/>
       <anchor type="collate" xml:id="C32"/>
-      <head sID="novel1_letter4_div4_head3"/>W<hi sID="novel1_letter4_div4_head3_hi1"/>ALTON<hi eID="novel1_letter4_div4_head3_hi1"/>, <hi sID="novel1_letter4_div4_head3_hi2"/>in continuation<hi eID="novel1_letter4_div4_head3_hi2"/>.<head eID="novel1_letter4_div4_head3"/>
+      <head>W<hi sID="novel1_letter4_div4_head3_hi1"/>ALTON<hi eID="novel1_letter4_div4_head3_hi1"/>, <hi sID="novel1_letter4_div4_head3_hi2"/>in continuation<hi eID="novel1_letter4_div4_head3_hi2"/>.</head>
       <p sID="novel1_letter4_div4_p39"/>August 26th, 17—.<p eID="novel1_letter4_div4_p39"/>
       <p sID="novel1_letter4_div4_p40"/>Y<hi sID="novel1_letter4_div4_p40_hi1"/>OU<hi eID="novel1_letter4_div4_p40_hi1"/> have read this strange and terrific story, Margaret; and do
           you not feel your blood congeal with horror, like that which even now curdles mine?
@@ -5551,7 +5551,7 @@
           surely think thus. Farewell.”<p eID="novel1_letter4_div4_p91"/>
       <p sID="novel1_letter4_div4_p92"/>He sprung from the cabin-window, as he said this, upon the ice-raft which lay close to
           the vessel. He was soon borne away by the waves, and lost in darkness and distance.<p eID="novel1_letter4_div4_p92"/>
-      <head sID="novel1_letter4_div4_head4"/>THE END.<head eID="novel1_letter4_div4_head4"/>
+      <head>THE END.</head>
       <milestone unit="letter" type="end" n="4"/>
       <milestone unit="novel" type="end" n="1"/>
       <milestone unit="backmatter" type="start" n="1"/>
