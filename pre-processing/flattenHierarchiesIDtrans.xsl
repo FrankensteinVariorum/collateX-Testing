@@ -3,20 +3,21 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
     version="3.0">
-<!-- 2022-07-30 ebb: This XSLT stylesheet is designed to "flatten" most of the elements
+<!-- UPDATED 2023-01-21 to add <head> to the elements we are not flattening. 
+        2022-07-30 ebb: This XSLT stylesheet is designed to "flatten" most of the elements
         in the print edition edition XML files in the Frankenstein Variorum project.
         Flattening the files involves transforming hierarchical structure elements 
         including <div> and <p> into milestone-style self-closing elements with attributes 
-        indicating whether they are a start or end position. F
-        lattening these elements permits us to break them into fine tokens for comparison 
-        such that passages that change around paragraph or chapter or 
+        indicating whether they are a start or end position. Flattening these elements permits us 
+        to break them into fine tokens for comparison so passages that change around paragraph or chapter or 
         letter boundaries in the source texts can be captured as moments of variation.
         
         I have updated the stylesheet so it does *not* flatten certain elements that we never expect 
-        to be broken around structural hierarchy elements: these are <add>, <del>, and <note> elements 
+        to be broken around structural hierarchy elements: these are <head>, <add>, <del>, and <note> elements 
         that represent Mary Shelley's comments added to the Thomas edition. We will attempt 
         to treat these whole elements as very long single tokens for the purposes of
         improving the alignment of our collation output. 
+       
     -->
     <xsl:mode on-no-match="shallow-copy"/>
     <xsl:variable name="printColl" as="document-node()+" select="collection('print-full/?select=*.xml')[tokenize(base-uri(), '/')[last()][not(contains(., 'C'))]]"/>
@@ -95,7 +96,7 @@
             </xsl:choose>
             </milestone>
     </xsl:template>
-    <xsl:template match="note">
+    <xsl:template match="note | head">
         <xsl:element name="{name()}">
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
