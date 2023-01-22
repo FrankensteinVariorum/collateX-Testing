@@ -1,11 +1,12 @@
 from typing import BinaryIO
 # 2022-07-30 ebb: We are altering this python script to handle inputs marked in a new way.
-# ALL file have <note>...</note>
+# ALL files have <note>...</note>
 # Thomas edition has <add>....</add>, <del>....</del>,
 # as well as <add-INNER>...</add-INNER> and <del-INNER>...</del-INNER>
 # msColl edition has <sga-add sID="..""/> and <sga-add eID="..""/>: to be set in IGNORE list
 # msColl edition has <del>...</del> and <del-INNER>...</del-INNER>
 # msColl edition has <milestone unit="tei:p-START"/> and <milestone unit="tei:p-END"/>
+# 2023-01-21: We have now prepared <head>...</head> elements that wrap chapter/letter/section headings as well.
 # We now try to create very long tokens out of these to improve the collation alignments.
 from collatex import *
 from xml.dom import pulldom
@@ -80,6 +81,8 @@ RE_MULTI_LEFTANGLE = re.compile(r'<{2,}')
 RE_MULTI_RIGHTANGLE = re.compile(r'>{2,}')
 RE_LT_START = re.compile(r'<longToken.*?>')
 RE_LT_END = re.compile(r'</longToken>')
+RE_HEAD_START = re.compile(r'<head.*?>')
+RE_HEAD_END = re.compile(r'</head>')
 RE_DOTDASH = re.compile(r'\.–')
 
 # RE_DOTDASH captures a period followed by a dash, frequently seen in the S-GA edition, and not a word-dividing hyphen.
@@ -102,10 +105,10 @@ RE_DOTDASH = re.compile(r'\.–')
 # 2017-05-22 ebb: I've set anchor elements with @xml:ids to be the indicators of collation "chunks" to process together
 ignore = ['mod', 'sourceDoc', 'xml', 'comment', 'anchor', 'include', 'delSpan', 'addSpan', 'handShift', 'damage',
           'restore', 'zone', 'surface', 'graphic', 'unclear', 'retrace']
-blockEmpty = ['p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl', 'head']
+blockEmpty = ['p', 'div', 'milestone', 'lg', 'l', 'cit', 'quote', 'bibl']
 inlineEmpty = ['pb', 'sga-add', 'lb', 'gap', 'hi', 'w', 'ab']
 inlineContent = ['del-INNER', 'add-INNER', 'metamark', 'mdel', 'shi']
-inlineVariationEvent = ['del', 'add', 'note', 'longToken']
+inlineVariationEvent = ['head', 'del', 'add', 'note', 'longToken']
 
 
 # 10-23-2017 ebb rv:
@@ -141,7 +144,7 @@ def extract(input_xml):
             # the XSLT replace() we're now doing to handle this problem in post-processing.
             output += '\n' + node.toxml() + '\n'
             # output += '\n' + node.toxml()
-        # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, head, hi,
+        # ebb: Next (below): empty block elements: pb, milestone, lb, lg, l, p, ab, hi,
         # We COULD set white spaces around these like this ' ' + node.toxml() + ' '
         # but what seems to happen is that the white spaces get added to tokens; they aren't used to
         # isolate the markup into separate tokens, which is really what we'd want.
@@ -224,6 +227,8 @@ def normalize(inputText):
     normalized = RE_DELEND.sub('<delend/>', normalized)
     normalized = RE_LT_START.sub('', normalized)
     normalized = RE_LT_END.sub('', normalized)
+    normalized = RE_HEAD_START.sub('', normalized)
+    normalized = RE_HEAD_END.sub('', normalized)
     normalized = RE_WORDMARKER.sub('', normalized)
     normalized = RE_HI.sub('', normalized)
 
@@ -245,7 +250,6 @@ def normalize(inputText):
     # 2022-08-08 ebb: <mdel> elements are tiny struck-out characters in the S-GA edition.
     # We do not think these are significant for comparison with the other editions, so we normalize them out.
     normalized = RE_DOTDASH.sub('. ', normalized)
-    normalized = RE_HEAD.sub('', normalized)
     normalized = RE_INCLUDE.sub('', normalized)
     normalized = RE_MULTI_RIGHTANGLE.sub('>', normalized)
     normalized = RE_MULTI_LEFTANGLE.sub('<', normalized)
