@@ -9,14 +9,22 @@
         <xsl:for-each select="$printCollFlat">
             <xsl:variable name="currFile" as="document-node()" select="current()"/>
         <xsl:for-each-group select="$currFile//anchor/following-sibling::node()" group-starting-with="anchor">
-            <xsl:result-document
+            <!-- ebb: outputs folders for each unit: <xsl:result-document
                 href="2023_collationChunks/{current()/@xml:id}/{base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.')}_{current()/@xml:id}.xml"
+                method="xml" indent="yes">-->
+     <!-- 2023-04-11 outputting just a single directory with all unit inside to help support interface work. -->
+            <xsl:result-document
+                href="collationChunks-simple/{base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.')}_{current()/@xml:id}.xml"
                 method="xml" indent="yes">
+            
+            
                 <xml>
                     <xsl:apply-templates select="current-group()"/>
                 </xml>
-
+                
             </xsl:result-document>
+
+            <!--</xsl:result-document>-->
         </xsl:for-each-group>
         </xsl:for-each>
     </xsl:template>
