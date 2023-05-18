@@ -897,15 +897,14 @@
    <metamark function="insert">^</metamark>
    <sga-add eID="c56-0009__Pt2__main__d6e2488"/>
    <sga-add hand="#pbs" place="superlinear" sID="c56-0009__Pt2__main__d6e2494"/>cheerfully<sga-add eID="c56-0009__Pt2__main__d6e2494"/>
-   <!-- 2023-05-17 ebb: Added a special longToken below here by hand (following sga-flattenIDtrans.xsl) to wrap overlapping delSpan hierachies. The entire passage is effectively deleted.  -->
-   <mod eID="c56-0009__Pt2__main__d6e2486"/>consented <longToken type="longDel"><delSpan rend="strikethrough" spanTo="#c56-0009.02"/>and <lb n="c56-0009__Pt2__main__23"/>
+   <mod eID="c56-0009__Pt2__main__d6e2486"/>consented <delSpan rend="strikethrough" spanTo="#c56-0009.02"/>and <lb n="c56-0009__Pt2__main__23"/>
    <delSpan rend="vertical_line" spanTo="#c56-0009.01"/>one evening<delSpan anchor="c56-0009.02"/> that I spent in town at the <lb n="c56-0009__Pt2__main__24"/>house of Clerval's father I <delSpan rend="strikethrough" spanTo="#c56-0009.03"/>heard
               that <lb n="c56-0009__Pt2__main__25"/>M<shi rend="sup">r</shi> — was lef at<delSpan anchor="c56-0009.03"/> met M. <del rend="strikethrough" xml:id="c56-0009__Pt2__main__d6e2518">O P</del> a proficient <lb n="c56-0009__Pt2__main__26"/>in Chemistry who left the company at <lb n="c56-0009__Pt2__main__27"/>an early hour to <del rend="strikethrough" xml:id="c56-0009__Pt2__main__d6e2526">h</del> give his lecture upon <lb n="c56-0009__Pt2__main__28"/>
    <w ana="start"/>tha<mod sID="c56-0009__Pt2__main__d6e2533"/>
    <mdel>n</mdel>
    <sga-add place="intralinear" sID="c56-0009__Pt2__main__d6e2537"/>t<w ana="end"/>
    <sga-add eID="c56-0009__Pt2__main__d6e2537"/>
-   <mod eID="c56-0009__Pt2__main__d6e2533"/> science enquiring as he went out<delSpan anchor="c56-0009.01"/></longToken>
+   <mod eID="c56-0009__Pt2__main__d6e2533"/> science enquiring as he went out<delSpan anchor="c56-0009.01"/>
    <zone eID="c56-0009__Pt2__main"/>
    <surface eID="ox-ms_abinger_c56-0009__Pt2"/>
    <surface lrx="5088"

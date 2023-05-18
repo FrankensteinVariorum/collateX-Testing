@@ -152,6 +152,18 @@ exclude-result-prefixes="#all"
             <xsl:apply-templates/>
         </xsl:element>     
     </xsl:template>
+    <!-- 2023-05-17 ebb and nlh: Adding handling for delSpan anchors only here. delSpan elements are used to cross over multiple lines and sometimes other deletions.
+        Technically they should be a single complete token, representing a deletion event, but they can be complicated when they contain multiple modifications inside.
+        Because these do not start out as matching element pairs, we are simply matching them here so we can (we hope) process them later as a completely deleted passage.
+        We change the anchor into a matching delSpan with an anchor attribute, intended to substitute for the original <anchor> element so it's distinct from other <anchor> elements
+        less meaningful to the collation. 
+        
+        <delSpan spanTo="#id"/>......<delSpan anchor="id"/>
+        
+        We can follow up on this by handling the new matching delSpan elements in a second pre-processing XSLT stage. -->
+    <xsl:template match="anchor[@xml:id = preceding::delSpan/substring-after(@spanTo, '#')]">
+           <delSpan anchor="{@xml:id}"/>
+    </xsl:template>    
     <xsl:template match="milestone[@unit='tei:p']">
         <xsl:element name="{local-name()}">
             <xsl:copy-of select="@*[not(name() = 'unit')]" copy-namespaces="no"/>
