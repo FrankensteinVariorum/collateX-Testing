@@ -15,7 +15,7 @@
        <include href="../standOff_Includes/1831_introduction.xml" parse="xml"/>-->
         <pb xml:id="F1831_v_009"></pb>
         <head>INTRODUCTION.</head>
-        <comment>ebb: centered underscore a few lines below</comment>
+      <comment text="ebb: centered underscore a few lines below"/>
         <p>The Publishers of the Standard Novels, in selecting “Frankenstein” for one of their series,
           expressed a wish that I should furnish them with some account of the origin of the story. I
           am the more willing to comply, because I shall thus give a general answer to the question,
