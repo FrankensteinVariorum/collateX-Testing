@@ -14,7 +14,7 @@
                 method="xml" indent="yes">-->
      <!-- 2023-04-11 outputting just a single directory with all unit inside to help support interface work. -->
             <xsl:result-document
-                href="collationChunks-simple/{base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.')}_{current()/@xml:id}.xml"
+                href="../collationChunks-simple/{base-uri() ! tokenize(., '/')[last()] ! substring-before(., '.')}_{current()/@xml:id}.xml"
                 method="xml" indent="yes">
             
             
